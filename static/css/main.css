@@ -1,0 +1,1176 @@
+
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700|Arvo:400,700,400italic,700italic);
+
+@media all {
+	/*
+	 * HTML5 ✰ Boilerplate
+	 *
+	 * What follows is the result of much research on cross-browser styling.
+	 * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+	 * Kroc Camen, and the H5BP dev community and team.
+	 *
+	 * Detailed information about this CSS: h5bp.com/css
+	 *
+	 * ==|== normalize ==========================================================
+	 */
+
+
+	/* =============================================================================
+	   HTML5 display definitions
+	   ========================================================================== */
+
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+	audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+	audio:not([controls]) { display: none; }
+	[hidden] { display: none; }
+
+
+	/* =============================================================================
+	   Base
+	   ========================================================================== */
+
+	/*
+	 * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+	 * 2. Force vertical scrollbar in non-IE
+	 * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+	 */
+
+	html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+	body { margin: 0; font-size: 62.5%; }
+
+	body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+
+	/* =============================================================================
+	   Links
+	   ========================================================================== */
+
+	a { color: #00e; }
+	a:visited { color: #551a8b; }
+	a:hover { color: #06e; }
+	a:focus { outline: thin dotted; }
+
+	/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+	a:hover, a:active { outline: 0; }
+
+
+	/* =============================================================================
+	   Typography
+	   ========================================================================== */
+
+	abbr[title] { border-bottom: 1px dotted; }
+
+	b, strong { font-weight: bold; }
+
+	blockquote { margin: 1em 40px; }
+
+	dfn { font-style: italic; }
+
+	hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+	ins { background: #ff9; color: #000; text-decoration: none; }
+
+	mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+	/* Redeclare monospace font family: h5bp.com/j */
+	pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+	/* Improve readability of pre-formatted text in all browsers */
+	pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+	q { quotes: none; }
+	q:before, q:after { content: ""; content: none; }
+
+	small { font-size: 85%; }
+
+	/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+	sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+	sup { top: -0.5em; }
+	sub { bottom: -0.25em; }
+
+
+	/* =============================================================================
+	   Lists
+	   ========================================================================== */
+
+	ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+	dd { margin: 0 0 0 40px; }
+	nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+	/* =============================================================================
+	   Embedded content
+	   ========================================================================== */
+
+	/*
+	 * 1. Improve image quality when scaled in IE7: h5bp.com/d
+	 * 2. Remove the gap between images and borders on image containers: h5bp.com/e
+	 */
+
+	img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+	/*
+	 * Correct overflow not hidden in IE9
+	 */
+
+	svg:not(:root) { overflow: hidden; }
+
+
+	/* =============================================================================
+	   Figures
+	   ========================================================================== */
+
+	figure { margin: 0; }
+
+
+	/* =============================================================================
+	   Forms
+	   ========================================================================== */
+
+	form { margin: 0; }
+	fieldset { border: 0; margin: 0; padding: 0; }
+
+	/* Indicate that 'label' will shift focus to the associated form element */
+	label { cursor: pointer; }
+
+	/*
+	 * 1. Correct color not inheriting in IE6/7/8/9
+	 * 2. Correct alignment displayed oddly in IE6/7
+	 */
+
+	legend { border: 0; *margin-left: -7px; padding: 0; }
+
+	/*
+	 * 1. Correct font-size not inheriting in all browsers
+	 * 2. Remove margins in FF3/4 S5 Chrome
+	 * 3. Define consistent vertical alignment display in all browsers
+	 */
+
+	button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+	/*
+	 * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+	 * 2. Correct inner spacing displayed oddly in IE6/7
+	 */
+
+	button, input { line-height: normal; *overflow: visible; }
+
+	/*
+	 * Reintroduce inner spacing in 'table' to avoid overlap and whitespace issues in IE6/7
+	 */
+
+	table button, table input { *overflow: auto; }
+
+	/*
+	 * 1. Display hand cursor for clickable form elements
+	 * 2. Allow styling of clickable form elements in iOS
+	 */
+
+	button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+	/*
+	 * Consistent box sizing and appearance
+	 */
+
+	input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+	input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+	input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+	/*
+	 * Remove inner padding and border in FF3/4: h5bp.com/l
+	 */
+
+	button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+	/*
+	 * 1. Remove default vertical scrollbar in IE6/7/8/9
+	 * 2. Allow only vertical resizing
+	 */
+
+	textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+	/* Colors for form validity */
+	input:valid, textarea:valid {  }
+	input:invalid, textarea:invalid {  }
+
+
+	/* =============================================================================
+	   Tables
+	   ========================================================================== */
+
+	table { border-collapse: collapse; border-spacing: 0; }
+	td { vertical-align: top; }
+}
+
+/* ==|== primary styles =====================================================
+	Client:
+	Author: , Optiem LLC
+	========================================================================== */
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	position: relative;
+	padding: 0 0 215px 0;
+	background: url("../images/global/bg-body.png") left 220px repeat-x;
+}
+
+h1 {
+	margin: .25em 0;
+	font-family: 'Amatic SC', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 4em;
+	font-weight: 700;
+	text-align: center;
+}
+
+	h1 a {
+		color: rgb(0, 0, 0);
+	}
+
+		h1 a:link, h1 a:visited {
+			text-decoration: none;
+			color: rgb(0, 0, 0);
+		}
+
+p {
+	margin: 0 0 1em;
+	font-family: Georgia, serif;
+	font-size: 1.2em;
+}
+
+header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: 0;
+	z-index: 1000;
+}
+
+	header h1 {
+		margin: 0;
+		font-family: Arvo;
+		font-size: 2em;
+		font-weight: 700;
+		line-height: 2em;
+		background: url("../images/global/sprites.png") center -810px no-repeat;
+	}
+
+		.ie7 header h1 {
+			margin: 0;
+		}
+
+		header h1 em {
+			font-weight: 700;
+			font-style: normal;
+			color: rgb(255,255,255);
+		}
+
+		header h1 strong {
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			width: 600px;
+			color: rgb(0,0,0);
+			font-size: 3.2em;
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: 1.2em;
+		}
+
+	header p {
+		position: absolute;
+		left: 2%;
+		top: 1em;
+		width: 174px;
+		height: 136px;
+		overflow: hidden;
+	}
+
+		header p a,
+		header p a:link,
+		header p a:visited {
+			display: block;
+			padding: 50px 0 0 0;
+			width: 174px;
+			height: 0;
+			background:  url("../images/global/sprites.png") 0 -290px no-repeat;
+			overflow: hidden;
+
+		}
+
+		header p + p {
+			left: auto;
+			right: 2%;
+			width: 200px;
+			height: 85px;
+		}
+
+			header p + p a,
+			header p + p a:link,
+			header p + p a:visited {
+				padding: 85px 0 0 0;
+				width: 200px;
+				background:  url("../images/global/sprites.png") -800px -100px no-repeat;
+			}
+			
+			header p + p a:hover,
+			header p + p a:active {
+				background:  url("../images/global/sprites.png") -800px -387px no-repeat;
+			}
+
+	header ul.social {
+		position: absolute;
+		top: 74px;
+		left: 3.5%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+		header ul.social li {
+			float: left;
+			margin: 0 2px;
+			width: 36px;
+			height: 36px;
+		}
+
+		header ul.social li a,
+		header ul.social li a:link,
+		header ul.social li a:visited {
+			display: block;
+			padding: 36px 0 0 0;
+			width: 36px;
+			height: 0;
+			background:  url("../images/global/sprites.png") -866px -186px no-repeat;
+			overflow: hidden;	
+		}
+
+			header ul.social li a.facebook {
+				background-position: -866px -186px;
+			}
+
+			header ul.social li a.google {
+				background-position: -905px -186px;
+			}
+
+			header ul.social li a.twitter {
+				background-position: -944px -186px;
+			}
+
+	header nav {
+		position: absolute;
+		top: 600px;
+		width: 100%;
+		font-family: 'Arvo';
+		font-size: 2em;
+		font-weight: 400;
+		text-align: center;
+		border-width: 4px 0 4px;
+		border-style: solid;
+		border-color: rgb(0,0,0);
+		border-image: url("../images/global/br-nav.png") 1.5% repeat repeat;
+		-moz-border-image: url("../images/global/br-nav.png") 1.5% repeat repeat;
+		background: rgb(255,255,255);
+	}
+
+		.ie7 header nav {
+			position: fixed;
+			top: 110px;
+		}
+
+		header nav ul {
+			margin: 0 auto;
+			padding: 10px 0 0 0;
+			width: 960px;
+		}
+
+			.ie7 header nav ul {
+				padding: 0;
+			}
+
+			header nav ul li {
+				float: left;
+				margin: 0 3% 2px;
+				padding: 0 0 10px;
+				width: 14%;
+				
+			}
+
+				.ie7 header nav ul li {
+					padding: 0;
+				}
+
+				header nav ul li a,
+				header nav ul li a:link,
+				header nav ul li a:visited {
+					text-decoration: none;
+					text-transform: uppercase;
+					display: block;
+					padding: 10px 0 70px;
+					margin: 0 auto;
+					width: 100%;
+				}
+				
+				header nav ul li a:link,
+				header nav ul li a:visited {
+					border-width: 3px;
+					border-style: solid;
+					border-radius: 10px;
+					border-color: transparent;
+					border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+					-moz-border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+
+				}
+
+				
+				header nav ul li a:link,
+				header nav ul li a:visited {
+					color: rgb(107,183,230); 
+					background:  url("../images/global/sprites.png") 45px -560px no-repeat;
+				}
+
+					header nav ul li a:active,
+					header nav ul li a:hover,
+					header nav ul li.active a:link,
+					header nav ul li.active a:visited {
+						color: rgb(255,255,255); 
+						background: rgb(107,183,230) url("../images/global/sprites.png") 45px -660px no-repeat;
+					}
+				
+				header nav ul li + li a:link,
+				header nav ul li + li a:visited {
+					color: rgb(232,151,25); 
+					background: url("../images/global/sprites.png") -180px -555px no-repeat;
+				}
+				
+					header nav ul li + li a:active,
+					header nav ul li + li a:hover,
+					header nav ul li + li.active a:link,
+					header nav ul li + li.active a:visited {
+						color: rgb(255,255,255); 
+						background: rgb(232,151,25) url("../images/global/sprites.png") -180px -655px no-repeat;
+					}
+				
+				header nav ul li + li + li a:link,
+				header nav ul li + li + li a:visited {
+					color: rgb(181,18,27); 
+					background: url("../images/global/sprites.png") -360px -560px no-repeat;
+				}
+				
+					header nav ul li + li + li a:active,
+					header nav ul li + li + li a:hover,
+					header nav ul li + li + li.active a:link,
+					header nav ul li + li + li.active a:visited {
+						color: rgb(255,255,255); 
+						background: rgb(181,18,27) url("../images/global/sprites.png") -360px -660px no-repeat;
+					}
+				
+				header nav ul li + li + li + li a:link,
+				header nav ul li + li + li + li a:visited {
+					color: rgb(213,186,55); 
+					background: url("../images/global/sprites.png") -555px -560px no-repeat;
+				}
+				
+					header nav ul li + li + li + li a:active,
+					header nav ul li + li + li + li a:hover,
+					header nav ul li + li + li + li.active a:link,
+					header nav ul li + li + li + li.active a:visited {
+						color: rgb(255,255,255); 
+						background: rgb(213,186,55) url("../images/global/sprites.png") -555px -660px no-repeat;
+					}
+				
+				header nav ul li + li + li + li + li a:link,
+				header nav ul li + li + li + li + li a:visited {
+					color: rgb(146,184,92); 
+					background: url("../images/global/sprites.png") -750px -560px no-repeat;
+				}
+				
+					header nav ul li + li + li + li + li a:active,
+					header nav ul li + li + li + li + li a:hover,
+					header nav ul li + li + li + li + li.active a:link,
+					header nav ul li + li + li + li + li.active a:visited {
+						color: rgb(255,255,255); 
+						background: rgb(146,184,92) url("../images/global/sprites.png") -750px -660px no-repeat;
+					}
+
+#pane {
+	width: 100%;
+	height: 650px;
+	overflow: hidden;
+}
+
+.ie7 #pane {
+	height: auto;
+}
+
+#main {
+	clear: both;
+}
+
+	#main article {
+		display: none;
+		position: relative;
+		float: left;
+		margin: 0 auto;
+		padding: 120px 0 0 0;
+		width: 900px;
+		height: 500px;
+		color: rgb(255, 255, 255);
+		overflow: hidden;
+	}
+
+		.ie7 #main article {
+			float: none;
+		}
+
+		#main article.active {
+			
+		}
+		
+		#main article#home {
+				
+		}
+		
+			#main article#home img {
+				margin: 1em 15% .25em 15%;
+				max-width: 70%;
+			}
+		
+			#main article#home p {
+				font-family: 'Arvo', Helvetica, Arial, Verdana, sans-serif;
+				font-size: 4em;
+				font-weight: 700;
+				text-align: center;
+				text-transform: uppercase;
+				color: rgb(0, 0, 0);
+			}
+
+		#main article.intro {
+			padding-top: 150px;
+		}
+			.ie7 #main article#home {
+				padding-top: 200px;
+			}
+
+		#main article.inspire {
+		
+		}
+
+			#main article.inspire > section {
+				background: rgb(107, 183, 230);
+			}
+
+		#main article.network {
+		
+		}
+
+			#main article.network > section {
+				background: rgb(232,151,25);
+			}
+
+		#main article.create {
+		
+		}
+
+			#main article.create > section {
+				background: rgb(185, 30, 39);
+			}
+
+		#main article.mentor {
+		
+		}
+
+			#main article.mentor > section {
+				background: rgb(213,186,55);
+			}
+
+		#main article.capital {
+		
+		}
+
+			#main article.capital > section {
+				background: rgb(146,184,92);
+			}
+
+		#main article > section {
+			float: left;
+			padding: 1% 2%;
+			width: 26%;
+			background: rgb(0, 0, 0);
+			border-width: 3px;
+			border-style: solid;
+			border-radius: 10px;
+			border-color: transparent;
+			border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+			-moz-border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+		}
+
+			#main article > section p {
+				font-family: Arvo;
+				font-weight: 400;
+				line-height: 1.8em;
+			}
+
+		#main article > aside {
+			position: absolute;
+			right: 5%;
+			top: 600px;
+			padding: 1% 2%;
+			width: 32%;
+			background: rgb(0, 0, 0);
+			border-width: 3px;
+			border-style: solid;
+			border-radius: 5px;
+			border-color: transparent;
+			border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+			-moz-border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+		}
+
+			.ie7 #main article > aside {
+				display: none;
+			}
+
+			#main article > aside p {
+				font-family: arvo;
+				font-style: normal;
+			}
+		
+			#main article > aside p.button {
+				position: absolute;
+				top: -42px;
+				left: 50%;
+				display: block;
+				padding: 18px 0 0;
+				margin: 0 0 0 -138px;
+				width: 180px;
+				height: 22px;
+				color: #000000;
+				font-family: 'Amatic SC',Helvetica,Arial,Verdana,sans-serif;
+				font-size: 2.4em;
+				font-style: normal;
+				font-weight: 700;
+				line-height: 0.5em;
+				overflow: hidden;
+				cursor: pointer;
+				background: url("../images/global/sprites.png") no-repeat scroll 100px -199px transparent;
+			}
+
+			#main article.active > aside p.button {
+
+				
+				 -webkit-animation: bounce 6s alternate infinite cubic-bezier(0.600, -0.280, 0.735, 0.045);
+				 -moz-animation:    bounce 6s alternate infinite cubic-bezier(0.600, -0.280, 0.735, 0.045);
+				 -ms-animation:     bounce 6s alternate infinite cubic-bezier(0.600, -0.280, 0.735, 0.045);
+				 -o-animation:     bounce 6s alternate infinite cubic-bezier(0.600, -0.280, 0.735, 0.045);
+			}
+
+				#main article.active > aside.open p.button {
+					-webkit-animation-name: none;
+					-moz-animation-name: none;
+					-ms-animation-name: none;
+					-o-animation-name: none;
+				}
+			
+			@-webkit-keyframes bounce {
+				0%   { top: -42px;}
+				88%	{ top: -42px; }
+				100% { top: -30px; }
+			}
+			
+			@-moz-keyframes bounce {
+				0%   { top: -42px;}
+				88%	{ top: -42px; }
+				100% { top: -30px; }
+			}
+			
+			@-ms-keyframes bounce {
+				0%   { top: -42px;}
+				88%	{ top: -42px; }
+				100% { top: -30px; }
+			}
+			
+			@-o-keyframes bounce {
+				0%   { top: -42px;}
+				88%	{ top: -42px; }
+				100% { top: -30px; }
+			}
+			
+
+			#main article > aside h2 {
+				margin: .25em 0 0;
+				padding: 0 0 .25em;
+				font-family: 'Amatic SC', Helvetica, Arial, Verdana, sans-serif;
+				font-size: 4em;
+				font-weight: 700;
+				text-align: center;
+				text-transform: uppercase;
+				line-height: 1em;
+				letter-spacing: .0125em;
+				border-width: 0 0 1px;
+				border-style: solid;
+				border-color: rgb(255,255,255);
+			}
+
+			#main article > aside p {
+				font-family: arvo;
+				font-style: normal;
+				line-height: 1.8em;
+			}
+
+				#main article > aside p a,
+				#main article > aside p a:link,
+				#main article > aside p a:visited {
+					text-decoration: underline;
+				}
+
+				#main article > aside p a:hover,
+				#main article > aside p a:active {
+					color: rgb(230,230,230);
+				}
+
+		#main article h1 {
+			padding-top: 0;
+			padding-bottom: .5em;
+			background: url("../images/global/bg-rule.png") bottom left repeat-x;
+			text-align: left;
+		}
+
+			#main article.properties h1 {
+				position: absolute;
+				top: 3.3em;
+				margin: 0 5%;
+				padding: 0 1% 0.25em;
+				width: 88%;
+				max-width: 900px;
+				background: rgb(0, 0, 0) url("../images/global/bg-propertiesH1.png") bottom left no-repeat;
+				color: rgb(0, 0, 0);
+			}
+
+				.ie7 #main article.properties h1 {
+					left: 0;
+				}
+
+
+				/* inspire blue: rgb(107,183,230) */
+				/* network orange: rgb(232,151,25) */
+				/* create red: rgb(181,18,27) */
+				/* mentor gold: rgb(213,186,55) */
+				/* capital green: rgb(146,184,92) */
+
+			#main article.properties.inspire > h1 {
+				color: rgb(107,183,230); 
+				background-color: rgb(107,183,230); 
+			}
+
+			#main article.properties.network > h1 {
+				color: rgb(232,151,25); 
+				background-color: rgb(232,151,25); 
+			}
+
+			#main article.properties.create > h1 {
+				color: rgb(181,18,27); 
+				background-color: rgb(181,18,27); 
+			}
+
+			#main article.properties.mentor > h1 {
+				color: rgb(213,186,55); 
+				background-color: rgb(213,186,55); 
+			}
+
+			#main article.properties.capital > h1 {
+				color: rgb(146,184,92); 
+				background-color: rgb(146,184,92); 
+			}
+
+
+		#main article nav {
+			position: absolute;
+			top: 6em;
+			right: 2%;
+			font-family: 'Amatic SC', Helvetica, Arial, Verdana, sans-serif;
+			font-size: 2.4em;
+			font-weight: 400;
+			color: rgb(0, 0, 0);
+		}
+
+			#main article nav a {
+				position: relative;
+				padding: .2em 1em;
+			}
+
+				#main article nav a em {
+					font-size: 1em;
+					font-style: normal;
+				}
+
+				#main article nav a:link, #main article nav a:visited {
+					color: rgb(0, 0, 0);
+				}
+
+				#main article nav a:hover, #main article nav a:active {
+				}
+
+				#main article nav a.previous {
+					padding-left: 36px;
+				}
+
+					#main article nav a.previous span.after, #main article nav a.previous:after {
+						position: absolute;
+						left: 0;
+						bottom: 0.275em;
+						display: block;
+						padding: 20px 0 0 0;
+						width: 30px;
+						height: 0px;
+						content: " ";
+						background: url("../images/global/sprites.png") -400px -200px no-repeat;
+						overflow: hidden;
+					}
+
+					#main article nav a.previous:link, #main article nav a.previous:visited {
+						color: rgb(0, 0, 0);
+					}
+
+					#main article nav a.previous:hover, #main article nav a.previous:active {
+					}
+
+				#main article nav a.next {
+					padding-right: 36px;
+					background: rgb(0, 0, 0);
+					border-radius: 6px;
+					font-weight: 700;
+				}
+
+					#main article nav a.next span.after, #main article nav a.next:after {
+						position: absolute;
+						right: 0;
+						bottom: 0.275em;
+						display: block;
+						padding: 20px 0 0 0;
+						width: 30px;
+						height: 0px;
+						content: " ";
+						background: url("../images/global/sprites.png") -500px -200px no-repeat;
+						overflow: hidden;
+					}
+
+					#main article nav a.next:link, #main article nav a.next:visited {
+						color: rgb(255, 255, 255);
+					}
+
+					#main article nav a.next:hover, #main article nav a.next:active {
+						background: rgb(50, 50, 50);
+					}
+
+		#main article a {
+		}
+
+			#main article a:link, #main article a:visited {
+				text-decoration: none;
+				color: rgb(255,255,255);
+			}
+
+			#main article a:hover, #main article a:active {
+				color: rgb(0, 0, 0);
+			}
+
+		#main article p {
+		}
+
+			#main article p.more {
+				margin-bottom: .25em;
+				padding: 0 .5em;
+				font-family: 'Amatic SC', Helvetica, Arial, Verdana, sans-serif;
+				font-size: 2.1em;
+				font-weight: 700;
+				font-style: normal;
+				background: rgb(0, 0, 0);
+				border-radius: 6px;
+			}
+
+				#main article p.more a {
+					padding: 0 30px 0 4px;
+					font-size: 1.1em;
+					text-transform: uppercase;
+					background: url("../images/global/sprites.png") right -290px no-repeat;
+					overflow: hidden;
+				}
+
+				#main article p.more a:hover,
+				#main article p.more a:active {
+					color: rgb(255,255,255);
+					text-shadow: 0 0 10px rgb(0,0,0);
+				}
+
+				.ie7 #main article p.more a {
+					padding:  0 25px 0 0px;
+
+				}
+
+		#main article img {
+			max-width: 100%;
+		}
+
+			#main article > img {
+				margin: 0 5%;
+				max-width: 90%;
+			}
+
+				#main article.intro > img {
+					margin: 0 2%;
+					max-width: 64%;
+				}
+		
+		#main article ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+				/* Kauffman Properties Listing */
+				#main article ul.properties {
+					margin: 1em 4% 0 4%;
+					padding: 5em 0 0 0;
+					width: 92%;
+					background: rgb(240, 240, 240);
+					border-width: 3px;
+					border-style: solid;
+					border-radius: 10px;
+					border-color: transparent;
+					border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+					-moz-border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+					color: rgb(50, 50, 50);
+					overflow: hidden;
+				}
+		
+					#main article ul.properties li {
+						float: left;
+						padding: 2%; 
+						width: 15.9%;
+						min-height: 360px;
+						border-left: 1px solid rgb(220, 220, 220);
+					}
+		
+						.ie7 #main article ul.properties li {
+							width: 15.5%;
+						}
+			
+						#main article ul.properties li:first-child {
+							border-left: none;
+						}
+		
+						#main article ul.properties li p {
+							font-family: Arvo;
+
+						}
+				
+				/* buttons */
+				#main article ul.properties li p.more {
+					background: none;
+					font-family: 'Amatic SC',Helvetica,Arial,Verdana,sans-serif;
+					font-size: 1.4em;
+					font-weight: 700;
+					text-align: center;
+				}
+				
+					#main article ul.properties li p.more a {
+						display: block;
+						padding: 5px;
+						background: rgb(50, 50, 50);
+						border-radius: 5px;
+						text-decoration: none;
+					}
+
+						#main article ul.properties li p.more a:after {
+							display: none;
+						}
+		
+
+footer {
+	position: absolute;
+	left: 50%;
+	bottom: 42px;
+	width: 960px;
+	margin: 0 0 0 -480px;
+}
+
+	footer p.sketch {
+		position: absolute;
+		right: 0;
+		top: -1em;
+		width: 172px;
+		height: 136px;
+		overflow: hidden;
+	}
+
+		footer p.sketch a,
+		footer p.sketch a:link,
+		footer p.sketch a:visited {
+			display: block;
+			padding: 136px 0 0 0;
+			width: 172px;
+			height: 0;
+			background:  url("../images/global/sprites.png") -100px -400px no-repeat;
+			overflow: hidden;
+
+		}
+
+	footer ul {
+		padding: 0;
+		list-style: none;
+	}
+
+		footer ul li {
+			float: left;
+			padding: 0 6px 0 12px;
+			margin: 0 6px .5em;
+			border-width: 0 0 0 2px;
+			border-style: solid;
+			border-color: rgb(36,36,36);
+			font-family: 'Arvo';
+			font-size: 2em;
+			font-weight: 700;
+			text-transform: uppercase;
+			line-height: .9;
+			text-align: center;
+		}
+
+			footer ul li:first-child {
+				padding: 0 6px 0 0;
+				margin: 0 6px 0 0;
+				border-width: 0 0 0 0;
+			}
+
+				footer ul li + li + li {
+					padding: 0 3px 0 12px;
+					margin: 0 3px 0 0;			
+				}
+
+					footer ul li + li + li + li {	
+						padding: 0 3px 0 0;
+						border-width: 0 0 0 0;
+					}
+
+			footer ul li a,
+			footer ul li a:link,
+			footer ul li a:visited {
+				display: block;
+				color: rgb(6,73,125);
+				text-decoration: none;
+			}
+
+			footer ul li a:hover,
+			footer ul li a:active {
+				display: block;
+				color: rgb(144,154,19);
+				text-decoration: none;
+			}
+
+				footer ul li a.social {
+					padding: 22px 0 0 0;
+					width: 22px;
+					height: 0;
+					background: url("../images/global/sprites.png") -100px -200px no-repeat;
+					overflow: hidden;
+				}
+
+					footer ul li a.twitter {
+						background-position: -200px -200px;
+					}
+
+	footer p {
+		clear: left;
+		margin: 0 0 .25em;
+		font-family: Arvo;
+		font-size: 1.2em;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+		footer p a,
+		footer p a:link,
+		footer p a:visited {
+			color: rgb(6,73,125);
+			text-decoration: none;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==|== media queries ======================================================
+   PLACEHOLDER Media Queries for Responsive Design.
+   These override the primary ('mobile first') styles
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+  * { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
