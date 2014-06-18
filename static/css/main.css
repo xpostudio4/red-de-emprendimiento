@@ -215,7 +215,7 @@ html {
 body {
 	position: relative;
 	padding: 0 0 215px 0;
-	background: url("../images/global/bg-body.png") left 220px repeat-x;
+	background: url("../img/bg-body.png") left 220px repeat-x;
 }
 
 h1 {
@@ -255,7 +255,7 @@ header {
 		font-size: 2em;
 		font-weight: 700;
 		line-height: 2em;
-		background: url("../images/global/sprites.png") center -810px no-repeat;
+		background: url("../img/sprites.png") center -810px no-repeat;
 	}
 
 		.ie7 header h1 {
@@ -296,7 +296,7 @@ header {
 			padding: 50px 0 0 0;
 			width: 174px;
 			height: 0;
-			background:  url("../images/global/sprites.png") 0 -290px no-repeat;
+			background:  url("../img/sprites.png") 0 -290px no-repeat;
 			overflow: hidden;
 
 		}
@@ -313,12 +313,12 @@ header {
 			header p + p a:visited {
 				padding: 85px 0 0 0;
 				width: 200px;
-				background:  url("../images/global/sprites.png") -800px -100px no-repeat;
+				background:  url("../img/sprites.png") -800px -100px no-repeat;
 			}
 			
 			header p + p a:hover,
 			header p + p a:active {
-				background:  url("../images/global/sprites.png") -800px -387px no-repeat;
+				background:  url("../img/sprites.png") -800px -387px no-repeat;
 			}
 
 	header ul.social {
@@ -344,7 +344,7 @@ header {
 			padding: 36px 0 0 0;
 			width: 36px;
 			height: 0;
-			background:  url("../images/global/sprites.png") -866px -186px no-repeat;
+			background:  url("../img/sprites.png") -866px -186px no-repeat;
 			overflow: hidden;	
 		}
 
@@ -371,8 +371,8 @@ header {
 		border-width: 4px 0 4px;
 		border-style: solid;
 		border-color: rgb(0,0,0);
-		border-image: url("../images/global/br-nav.png") 1.5% repeat repeat;
-		-moz-border-image: url("../images/global/br-nav.png") 1.5% repeat repeat;
+		border-image: url("../img/br-nav.png") 1.5% repeat repeat;
+		-moz-border-image: url("../img/br-nav.png") 1.5% repeat repeat;
 		background: rgb(255,255,255);
 	}
 
@@ -420,8 +420,8 @@ header {
 					border-style: solid;
 					border-radius: 10px;
 					border-color: transparent;
-					border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
-					-moz-border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+					border-image: url("../img/br-section.png") 1.5% repeat repeat;
+					-moz-border-image: url("../img/br-section.png") 1.5% repeat repeat;
 
 				}
 
@@ -429,7 +429,7 @@ header {
 				header nav ul li a:link,
 				header nav ul li a:visited {
 					color: rgb(107,183,230); 
-					background:  url("../images/global/sprites.png") 45px -560px no-repeat;
+					background:  url("../img/sprites.png") 45px -560px no-repeat;
 				}
 
 					header nav ul li a:active,
@@ -437,13 +437,13 @@ header {
 					header nav ul li.active a:link,
 					header nav ul li.active a:visited {
 						color: rgb(255,255,255); 
-						background: rgb(107,183,230) url("../images/global/sprites.png") 45px -660px no-repeat;
+						background: rgb(107,183,230) url("../img/sprites.png") 45px -660px no-repeat;
 					}
 				
 				header nav ul li + li a:link,
 				header nav ul li + li a:visited {
 					color: rgb(232,151,25); 
-					background: url("../images/global/sprites.png") -180px -555px no-repeat;
+					background: url("../img/sprites.png") -180px -555px no-repeat;
 				}
 				
 					header nav ul li + li a:active,
@@ -451,13 +451,13 @@ header {
 					header nav ul li + li.active a:link,
 					header nav ul li + li.active a:visited {
 						color: rgb(255,255,255); 
-						background: rgb(232,151,25) url("../images/global/sprites.png") -180px -655px no-repeat;
+						background: rgb(232,151,25) url("../img/sprites.png") -180px -655px no-repeat;
 					}
 				
 				header nav ul li + li + li a:link,
 				header nav ul li + li + li a:visited {
 					color: rgb(181,18,27); 
-					background: url("../images/global/sprites.png") -360px -560px no-repeat;
+					background: url("../img/sprites.png") -360px -560px no-repeat;
 				}
 				
 					header nav ul li + li + li a:active,
@@ -465,13 +465,13 @@ header {
 					header nav ul li + li + li.active a:link,
 					header nav ul li + li + li.active a:visited {
 						color: rgb(255,255,255); 
-						background: rgb(181,18,27) url("../images/global/sprites.png") -360px -660px no-repeat;
+						background: rgb(181,18,27) url("../img/sprites.png") -360px -660px no-repeat;
 					}
 				
 				header nav ul li + li + li + li a:link,
 				header nav ul li + li + li + li a:visited {
 					color: rgb(213,186,55); 
-					background: url("../images/global/sprites.png") -555px -560px no-repeat;
+					background: url("../img/sprites.png") -555px -560px no-repeat;
 				}
 				
 					header nav ul li + li + li + li a:active,
@@ -479,13 +479,13 @@ header {
 					header nav ul li + li + li + li.active a:link,
 					header nav ul li + li + li + li.active a:visited {
 						color: rgb(255,255,255); 
-						background: rgb(213,186,55) url("../images/global/sprites.png") -555px -660px no-repeat;
+						background: rgb(213,186,55) url("../img/sprites.png") -555px -660px no-repeat;
 					}
 				
 				header nav ul li + li + li + li + li a:link,
 				header nav ul li + li + li + li + li a:visited {
 					color: rgb(146,184,92); 
-					background: url("../images/global/sprites.png") -750px -560px no-repeat;
+					background: url("../img/sprites.png") -750px -560px no-repeat;
 				}
 				
 					header nav ul li + li + li + li + li a:active,
@@ -493,7 +493,7 @@ header {
 					header nav ul li + li + li + li + li.active a:link,
 					header nav ul li + li + li + li + li.active a:visited {
 						color: rgb(255,255,255); 
-						background: rgb(146,184,92) url("../images/global/sprites.png") -750px -660px no-repeat;
+						background: rgb(146,184,92) url("../img/sprites.png") -750px -660px no-repeat;
 					}
 
 #pane {
@@ -604,8 +604,8 @@ header {
 			border-style: solid;
 			border-radius: 10px;
 			border-color: transparent;
-			border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
-			-moz-border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+			border-image: url("../img/br-section.png") 1.5% repeat repeat;
+			-moz-border-image: url("../img/br-section.png") 1.5% repeat repeat;
 		}
 
 			#main article > section p {
@@ -625,8 +625,8 @@ header {
 			border-style: solid;
 			border-radius: 5px;
 			border-color: transparent;
-			border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
-			-moz-border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+			border-image: url("../img/br-section.png") 1.5% repeat repeat;
+			-moz-border-image: url("../img/br-section.png") 1.5% repeat repeat;
 		}
 
 			.ie7 #main article > aside {
@@ -655,7 +655,7 @@ header {
 				line-height: 0.5em;
 				overflow: hidden;
 				cursor: pointer;
-				background: url("../images/global/sprites.png") no-repeat scroll 100px -199px transparent;
+				background: url("../img/sprites.png") no-repeat scroll 100px -199px transparent;
 			}
 
 			#main article.active > aside p.button {
@@ -734,7 +734,7 @@ header {
 		#main article h1 {
 			padding-top: 0;
 			padding-bottom: .5em;
-			background: url("../images/global/bg-rule.png") bottom left repeat-x;
+			background: url("../img/bg-rule.png") bottom left repeat-x;
 			text-align: left;
 		}
 
@@ -745,7 +745,7 @@ header {
 				padding: 0 1% 0.25em;
 				width: 88%;
 				max-width: 900px;
-				background: rgb(0, 0, 0) url("../images/global/bg-propertiesH1.png") bottom left no-repeat;
+				background: rgb(0, 0, 0) url("../img/bg-propertiesH1.png") bottom left no-repeat;
 				color: rgb(0, 0, 0);
 			}
 
@@ -826,7 +826,7 @@ header {
 						width: 30px;
 						height: 0px;
 						content: " ";
-						background: url("../images/global/sprites.png") -400px -200px no-repeat;
+						background: url("../img/sprites.png") -400px -200px no-repeat;
 						overflow: hidden;
 					}
 
@@ -853,7 +853,7 @@ header {
 						width: 30px;
 						height: 0px;
 						content: " ";
-						background: url("../images/global/sprites.png") -500px -200px no-repeat;
+						background: url("../img/sprites.png") -500px -200px no-repeat;
 						overflow: hidden;
 					}
 
@@ -895,7 +895,7 @@ header {
 					padding: 0 30px 0 4px;
 					font-size: 1.1em;
 					text-transform: uppercase;
-					background: url("../images/global/sprites.png") right -290px no-repeat;
+					background: url("../img/sprites.png") right -290px no-repeat;
 					overflow: hidden;
 				}
 
@@ -940,8 +940,8 @@ header {
 					border-style: solid;
 					border-radius: 10px;
 					border-color: transparent;
-					border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
-					-moz-border-image: url("../images/global/br-section.png") 1.5% repeat repeat;
+					border-image: url("../img/br-section.png") 1.5% repeat repeat;
+					-moz-border-image: url("../img/br-section.png") 1.5% repeat repeat;
 					color: rgb(50, 50, 50);
 					overflow: hidden;
 				}
@@ -1013,7 +1013,7 @@ footer {
 			padding: 136px 0 0 0;
 			width: 172px;
 			height: 0;
-			background:  url("../images/global/sprites.png") -100px -400px no-repeat;
+			background:  url("../img/sprites.png") -100px -400px no-repeat;
 			overflow: hidden;
 
 		}
@@ -1073,7 +1073,7 @@ footer {
 					padding: 22px 0 0 0;
 					width: 22px;
 					height: 0;
-					background: url("../images/global/sprites.png") -100px -200px no-repeat;
+					background: url("../img/sprites.png") -100px -200px no-repeat;
 					overflow: hidden;
 				}
 
