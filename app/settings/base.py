@@ -189,6 +189,7 @@ DJANGO_APPS = (
 
     # Admin panel and documentation:
     'django.contrib.admin',
+    'bootstrap3',
     # 'django.contrib.admindocs',
 )
 
