@@ -28,4 +28,3 @@ Magnifico! Quiero colaborar con el proyecto!
  * **Django** = 1.6
  * **south** pip install south
  * **django-debug-toolbar** pip install django-debug-toolbar 
- * **django-bootstrap3** pip install django-bootstrap3
