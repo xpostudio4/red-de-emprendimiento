@@ -1,168 +1,440 @@
 <!DOCTYPE html>
-<!-- saved from url=(0023)http://willitbeyou.com/ -->
-<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<!-- Kauffman Foundation  Universal Navigation Asynch Loader -->
+<html lang="en">
+<head>
 
-  <script src="{{ STATIC_URL }}js/ga.js"></script><script type="text/javascript">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Red de emprendimiento es un sitio que ayuda a los emprendedores a inspirarse con nuevas ideas, crear sus productos, conocer a otros emprendedores, obtener ayuda de mentores y reunir capital para apoyar sus proyectos">
+    <meta name="author" content="Ministerio Dominicano de Industria y Comercio">
 
-           (function(){
+    <title>Red de Emprendimiento</title>
 
-                var unav = document.createElement('script');
+    <!-- Bootstrap Core CSS -->
+    <link href="{{STATIC_URL}}css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="{{STATIC_URL}}css/freelancer.css" rel="stylesheet" type="text/css">
 
-                     unav.type = 'text/javascript';
+    <!-- Fonts -->
+    <link href="{{STATIC_URL}}font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-                     unav.async = true;
+    <!-- IE8 support for HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 
-                     unav.src = '//entrepreneurship.org/uni-nav/uninav.min.js';
+</head>
 
-                (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(unav);
+<body id="page-top" class="index">
 
-           })();
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Red de Emprendimiento</a>
+            </div>
 
-  </script><script type="text/javascript" async="" src="{{ STATIC_URL }}js/uninav.min.js"></script>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#portfolio">&#191;Que necesitas?</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">&iquest;Quienes somos?</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">&iexcl;Registrate!</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-<!-- Kauffman Foundation  Universal Navigation Asynch Loader -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="{{STATIC_URL}}img/profile.png" alt="">
+                    <div class="intro-text">
+                        <span class="name">&iexcl;Ponle un cohete a tu Proyecto!</span>
+                        <hr class="star-light">
+                        <span class="skills">&iquest;Seras el siguiente gran emprendedor del pa&iacute;s?</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-     <script type="text/javascript">
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>&#191;Que necesitas?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{STATIC_URL}}img/portfolio/idea.png" class="img-responsive" alt="" />
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{STATIC_URL}}img/portfolio/connect.png" class="img-responsive" alt="" />
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{STATIC_URL}}img/portfolio/make.png" class="img-responsive" alt="" />
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{STATIC_URL}}img/portfolio/mentor.png" class="img-responsive" alt="" />
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="{{STATIC_URL}}img/portfolio/money.png" class="img-responsive" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-           (function(){
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>&iquest;Que es red de emprendimiento?</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>
+                    Red de emprendimiento es un sitio que ayuda a los emprendedores a inspirarse con nuevas ideas, crear sus productos, conocer a otros emprendedores, obtener ayuda de mentores y reunir capital para apoyar sus proyectos.
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Si estas pensando en abrir tu empresa y estas bloqueado por que te falta algo (ideas, contactos, asesoria, dinero, etc) has llegado al sitio perfecto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                var unav = document.createElement('script');
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Registrate</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <form role="form">
+                        <div class="row">
+                            <div class="form-group col-xs-12 floating-label-form-group">
+                                <label for="email">Email</label>
+                                <input class="form-control" type="email" name="email" placeholder="ejemplo@gmail.com">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" class="btn btn-lg btn-success">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                     unav.type = 'text/javascript';
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Ubicaci&oacute;n</h3>
+                        <p>Av. 27 de Febrero No. 209
+                            <br/>Ensanche Naco
+                            <br/>Santo Domingo, República Dominicana
+                            <br>/Tel.: (809) 567-7192
+                        </p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>En las redes</h3>
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/MinisterioDeIndustriayComercio" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://plus.google.com/115362725223744249694" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="https://twitter.com/MIC_RD" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/company/ministerio-de-industria-y-comercio?trk=company_name" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Creditos</h3>
+                        <p>Creado con &hearts; en Rep&uacute;blica Dominicana por nuestros colaboradores en <a href="https://github.com/xpostudio4/red-de-emprendimiento">GitHub</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; 2014 - Ministerio de Industria y Comercio de la Rep&uacute;blica Dominicana
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-                     unav.async = true;
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
 
-                     unav.src = '//entrepreneurship.org/uni-nav/uninav.min.js';
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="{{STATIC_URL}}img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="{{STATIC_URL}}img/portfolio/cake.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="{{STATIC_URL}}img/portfolio/circus.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="{{STATIC_URL}}img/portfolio/game.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="{{STATIC_URL}}img/portfolio/safe.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Title</h2>
+                            <hr class="star-primary">
+                            <img src="{{STATIC_URL}}img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
+                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
+                            <ul class="list-inline item-details">
+                                <li>Client: <strong><a href="http://startbootstrap.com">Start Bootstrap</a></strong>
+                                </li>
+                                <li>Date: <strong><a href="http://startbootstrap.com">April 2014</a></strong>
+                                </li>
+                                <li>Service: <strong><a href="http://startbootstrap.com">Web Development</a></strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(unav);
+    <script src="{{STATIC_URL}}js/jquery-1.10.2.js"></script>
+    <script src="{{STATIC_URL}}js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="{{STATIC_URL}}js/classie.js"></script>
+    <script src="{{STATIC_URL}}js/cbpAnimatedHeader.js"></script>
+    <script src="{{STATIC_URL}}js/freelancer.js"></script>
 
-           })();
-
-     </script><script type="text/javascript" async="" src="{{ STATIC_URL }}js/uninav.min.js"></script>
-
-<!-- /Kauffman Foundation  Universal Navigation Asynch Loader -->
-
-	<title>Kauffman Foundation | Will It Be You?</title>
-	<meta name="description" content="Thinking about taking the entrepreneurial leap? There are people and programs that can provide encouragement and real-world support as you follow your dream.">
-	
-	<meta property="og:title" content="Kauffman Foundation | Will It Be You?">
-	<meta property="og:url" content="http://www.willitbeyou.com/">
-  <meta property="og:image" content="{{ STATIC_URL }}images/content/thumb-share.jpg">
-	<meta property="og:description" content="Thinking about taking the entrepreneurial leap? There are people and programs that can provide encouragement and real-world support as you follow your dream.">
-
-	<meta name="viewport" id="viewport" content="width=1024,initial-scale=.7, maximum-scale=.7">
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-
-  <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/main.css">
-  
-	<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-
-	<!-- All JavaScript at the bottom, except this Modernizr build incl. Respond.js
-		Respond is a polyfill for min/max-width media queries. Modernizr enables HTML5 elements & feature detects; 
-		for optimal performance, create your own custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="{{ STATIC_URL }}js/modernizr-2.0.6.min.js"></script>
-	
-
-  <style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><meta name="chromesniffer" id="chromesniffer_meta" content="{&quot;Google Analytics&quot;:-1,&quot;jQuery&quot;:&quot;1.7.1&quot;,&quot;Modernizr&quot;:&quot;2.0.6&quot;}"><script type="text/javascript" src="chrome-extension://homgcnaoacgigpkkljjjekpignblkeae/detector.js"></script><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/unav.css" media="screen"><link type="text/css" rel="stylesheet" href="{{ STATIC_URL }}css/unav.css" media="screen"></head>
-
-<body><div id="StayFocusd-infobar" style="display:none;">
-    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
-    <span id="StayFocusd-infobar-msg"></span>
-    <span id="StayFocusd-infobar-links">
-        <a id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a id="StayFocusd-infobar-hide">hide once</a>
-    </span>
-</div><!--[if IE 8]><div id="uninav" class="clearfix lt-ie9" style="height: 0px; overflow: hidden;"><![endif]--><!--[if gt IE 8]><!--><div id="uninav" class="clearfix" style="height: 40px"><!--<![endif]--><div id="uninavContent" class="clearfix"><div class="uninavWrapper"><h2 id="uninavHeader">Explore Kauffman Foundation's family of websites, social media experiences, blogs and more.</h2><ul id="uninavMenu" class="clearfix"><li class="first"><a href="http://www.kauffman.org/" target="_blank"><h3>Kauffman.org</h3><p>The Foundation's primary site.</p></a></li><li><a href="http://www.entrepreneurship.org/" target="_blank"><h3>Entrepreneurship.org</h3><p>Resources for people growing great ideas.</p></a></li><li><a href="http://www.kauffmanschool.org/" target="_blank"><h3>Ewing Marion Kauffman School</h3><p>A preparatory school serving Kansas City.</p></a></li><li><a href="http://www.fasttrac.org/" target="_blank"><h3>FastTrac</h3><p>Global entrepreneurship education program and community.</p></a></li><li><a href="http://www.istart.org/" target="_blank"><h3>iStart</h3><p>The platform for business plan competitions.</p></a></li><li><a href="http://www.kauffmanscholars.org/" target="_blank"><h3>Kauffman Scholars, Inc.</h3><p>College preparation and access for urban youth in Kansas City.</p></a></li><li><a href="http://www.gew.co/" target="_blank"><h3>Global Entrepreneurship Week</h3><p>Encouraging the aspirations of young people.</p></a></li><li><a href="http://www.willitbeyou.com/" target="_blank"><h3>Will It Be You</h3><p>A guide to Kauffman Foundation and partner resources, for aspiring entrepreneurs.</p></a></li></ul></div></div><div id="uninavTray"><div class="uninavWrapper grey"><a href="http://www.kauffman.org/" id="uninavToggler"><strong>EXPLORE KAUFFMAN ONLINE</strong></a></div></div></div>
-	<form name="aspnetForm" method="post" action="http://willitbeyou.com/default.aspx" id="aspnetForm">
-<div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTY3MDIzMjkyMmRkjPxu5j9bY8Ck0ovUO1Niu6gdaYQ=">
-</div>
-
-		<header>
-			<h1><a href="http://willitbeyou.com/?page=home" title="Will It Be You?"><em>An entrepreneur with an idea can change the world</em><strong>Will it be you?</strong></a></h1>
-			<p><a href="http://www.kauffman.org/" title="entrepreneurship" rel="external" target="_blank">Kauffman Foundation</a></p>
-			<p><a href="http://youtu.be/GcddGBoq2EU" rel="external" target="_blank">Watch Our Commercial</a></p>
-			<ul class="social">
-				<li><a class="facebook" href="http://www.facebook.com/#!/kauffmanfdn" rel="external" target="_blank">Kauffman on Facebook</a></li>
-				<li><a class="google" href="https://plus.google.com/s/kauffman%20foundation#114413260241007459834/posts" rel="external" target="_blank">Kauffman on Google+</a></li>
-				<li><a class="twitter" href="https://twitter.com/#!/KauffmanFDN" rel="external" target="_blank">Kauffman on Twitter</a></li>
-			</ul>
-			<nav>
-				<ul>
-					<li>
-						<a href="http://willitbeyou.com/?page=inspire" alt="Inspire">Inspire</a>
-					</li>
-					<li>
-						<a href="http://willitbeyou.com/?page=network" alt="Network">Network</a>
-					</li>
-					<li>
-						<a href="http://willitbeyou.com/?page=create" alt="Create">Create</a>
-					</li>
-					<li>
-						<a href="http://willitbeyou.com/?page=mentor" alt="Mentor">Mentor</a>
-					</li>
-					<li>
-						<a href="http://willitbeyou.com/?page=capital" alt="Capital">Capital</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-		<div id="pane" style="width: 1280px;">
-			<section id="main" role="main" style="width: 23040px;">
-				
-    {% block content %} {% endblock content%}	
-
-
-		<footer>
-			<p class="sketch"><a href="http://www.kauffman.org/sketchbook.aspx" rel="external" target="_blank">See more Sketchbooks - Kauffman Sketchbook</a></p>
-			<ul>
-				<li><a href="http://www.kauffman.org/Section.aspx?id=About_The_Foundation" rel="external" target="_blank">About Kauffman</a></li>
-				<li><a href="http://www.kauffman.org/StayConnected.aspx" rel="external" target="_blank">Stay Connected</a></li>
-				<!-- li><a class="social facebook" href="http://www.facebook.com/#!/kauffmanfdn" rel="external">Kauffman on Facebook</a></li -->
-				<!-- li><a class="social twitter" href="https://twitter.com/#!/KauffmanFDN" rel="external">Kauffman on Twitter</a></li -->
-			</ul>
-			<p>©2014 Ewing Marion Kauffman Foundation. All Rights Reserved.</p>
-			<p>Ewing Marion Kauffman Foundation 4801 Rockhill Road Kansas City, MO 64110 <a href="http://www.kauffman.org/LegalProvisions.aspx" rel="external" target="_blank">Privacy Policy</a></p>
-		</footer>
-
-
-		<!-- JavaScript at the bottom for fast page loading -->
-
-		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"><\/script>')</script>
-
-
-		<!-- scripts concatenated and minified via build script -->
-    <script src="{{ STATIC_URL }}js/plugins.js"></script>
-    <script src="{{ STATIC_URL }}js/main.js"></script>
-		<!-- end scripts -->
-
-
-		<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
-			mathiasbynens.be/notes/async-analytics-snippet -->
-		<script>
-			var _gaq = [['_setAccount', 'UA-2096912-19'], ['_trackPageview'], ['_trackPageLoadTime']];
-			(function (d, t) {
-				var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
-				g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
-				s.parentNode.insertBefore(g, s)
-			} (document, 'script'));
-		</script>
-    <script src="{{ STATIC_URL }}js/gatag.js"></script>
-
-		<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-			chromium.org/developers/how-tos/chrome-frame-getting-started -->
-		<!--[if lt IE 7 ]>
-			<script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-			<script defer>window.attachEvent('onload',function(){CFInstall.check({url:'http://www.google.com/chromeframe/?user=true',mode:'overlay'})})</script>
-		<![endif]-->
-	</form>
-
-
-
-</body></html>
+</body>
+</html>
