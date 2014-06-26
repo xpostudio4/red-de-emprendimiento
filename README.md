@@ -20,7 +20,7 @@ Magnifico! Quiero colaborar con el proyecto!
 
 ### Fork, work and Pull-request!
  
- Hemos decicido trabajar usando [Pull-Requests](https://help.github.com/articles/using-pull-requests), a la hora de trabajar debes hacer un fork del proyecto, completar los cambios que quieras agregar en tu repositorio y finalmente solicitar un pull-request para solicitra que validemos e integremos tu codigo en el repositorio original.
+ Hemos decicido trabajar usando [Pull-Requests](https://help.github.com/articles/using-pull-requests), a la hora de trabajar debes hacer un fork del proyecto, completar los cambios que quieras agregar en tu repositorio y finalmente solicitar un pull-request para solicitar que validemos e integremos tu codigo en el repositorio original.
 
 ### Requisitos
 
