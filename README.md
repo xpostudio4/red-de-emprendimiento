@@ -1,3 +1,4 @@
+https://travis-ci.org/wilsoncampusano/red-de-emprendimiento.svg?branch=user_model
 Bienvenido a la Red de Emprendimiento
 -------------------------------------
 
