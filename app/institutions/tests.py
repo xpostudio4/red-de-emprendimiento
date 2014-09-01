@@ -1,5 +1,5 @@
 from django.test import TestCase
-from institutions import User
+from institutions.models import UserProfile
 
 class UserAdministrationTestCase(TestCase):
 
@@ -8,14 +8,14 @@ class UserAdministrationTestCase(TestCase):
 	
 	def test_user_add_administrator_approval(self):
 
-		user = User()
+		user = UserProfile()
 		
 		self.assertEqual(user.approved, False)
 		self.user_administration_context.approve(user)		
 		self.assertEqual(u.approved, True)
 
 	def test_user_remove_administration_approval(self):
-		user = User()
+		user = UserProfile()
 
 		self.user_administration_context.approved(user)
 		self.assertEqual(user.approved, True)
