@@ -1,5 +1,5 @@
 from django.test import TestCase
-from models import UserProfile
+from .models import UserProfile
 
 class UserAdministrationTestCase(TestCase):
 
