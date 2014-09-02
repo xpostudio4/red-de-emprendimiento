@@ -1,4 +1,6 @@
 from django.test import TestCase
+from .context import UserAdministrationContext
+from .models import UserProfile
 
 class UserAdministrationTestCase(TestCase):
 
@@ -7,15 +9,15 @@ class UserAdministrationTestCase(TestCase):
 	
 	def test_administrator_add_approval_to_user(self):
 
-		user = User()
+		user = UserProfile()
 		
 		self.assertEqual(user.approved, False)
 		self.user_administration_context.approve(user)		
-		self.assertEqual(u.approved, True)
+		self.assertEqual(user.approved, True)
 
 	def test_administrator_remove_approval_to_user(self):
-		user = User()
+		user = UserProfile()
 
-		self.user_administration_context.approved(user)
+		self.user_administration_context.approve(user)
 		self.assertEqual(user.approved, True)
-		user_administration_context.unapprove(user)
+		self.user_administration_context.unapprove(user)

@@ -51,3 +51,6 @@ docs/_build/
 
 #Local folders
 staticfiles/
+
+#Default test db
+app/app/default.db
