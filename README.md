@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/wilsoncampusano/red-de-emprendimiento.svg?branch=user_approval_skeleton)](https://travis-ci.org/wilsoncampusano/red-de-emprendimiento)
 Bienvenido a la Red de Emprendimiento
 -------------------------------------
 

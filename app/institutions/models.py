@@ -3,8 +3,7 @@ import datetime
 
 from django.db import models
 from django.contrib.auth.models import (
-        BaseUserManager, AbstractBaseUser, PermissionMixin
-        )
+        BaseUserManager, AbstractBaseUser)
 #Third party libraries
 #from templated_email import send_templated_mail
 
@@ -60,6 +59,7 @@ class UserProfile(AbstractBaseUser):
     is_admin = models.BooleanField(default=False)
     approved = models.BooleanField(default=False)
     objects = AppUserManager()
+    approved = models.BooleanField(default = False)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['name', 'description', 'logo', 'phone','url']
