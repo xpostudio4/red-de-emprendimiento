@@ -3,7 +3,7 @@ import datetime
 
 from django.db import models
 from django.contrib.auth.models import (
-        BaseUserManager, AbstractBaseUser, PermissionMixin
+        BaseUserManager, AbstractBaseUser
         )
 #Third party libraries
 #from templated_email import send_templated_mail
@@ -49,7 +49,7 @@ class UserProfile(AbstractBaseUser):
             db_index=True
             )
     name = models.CharField(max_length=40, verbose_name="Nombre de la Institucion")
-    url = models.URLField(max_length=40, verbose_name="Pagina Web")
+    url = models.URLField(max_length=40, verbose_name="Pagina Web", blank=True, null=True)
     description = models.TextField(verbose_name="Descripcion")
     logo = models.ImageField(upload_to="profile_pics", blank=True)
     phone = models.CharField(max_length=10,null=True, blank=True)
