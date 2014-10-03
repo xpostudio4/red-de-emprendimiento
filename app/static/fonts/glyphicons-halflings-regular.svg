@@ -1,0 +1,930 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html class="   ">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <title>red-de-emprendimiento/static/fonts/glyphicons-halflings-regular.svg at 1fa1fce87bbb10c218c7adc3f49ce72d8b99a464 · sdreyesg/red-de-emprendimiento</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta property="fb:app_id" content="1401488693436528"/>
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="sdreyesg/red-de-emprendimiento" name="twitter:title" /><meta content="red-de-emprendimiento - Red de emprendimiento es un sitio que ayuda a los emprendedores a inspirarse con nuevas ideas, crear sus productos, conocer a otros emprendedores, obtener ayuda de mentores y r" name="twitter:description" /><meta content="https://avatars3.githubusercontent.com/u/740522?s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars3.githubusercontent.com/u/740522?s=400" property="og:image" /><meta content="sdreyesg/red-de-emprendimiento" property="og:title" /><meta content="https://github.com/sdreyesg/red-de-emprendimiento" property="og:url" /><meta content="red-de-emprendimiento - Red de emprendimiento es un sitio que ayuda a los emprendedores a inspirarse con nuevas ideas, crear sus productos, conocer a otros emprendedores, obtener ayuda de mentores y reunir capital para apoyar sus proyectos." property="og:description" />
+
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035">
+    <link rel="xhr-socket" href="/_sockets" />
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="B3355EE4:1163:2911CB4:53C1CF3E" name="octolytics-dimension-request_id" /><meta content="755375" name="octolytics-actor-id" /><meta content="xpostudio4" name="octolytics-actor-login" /><meta content="18ff6ee2f1b733eb69785e5c2cf722a14c03e9fb9c0d5c5740f25b8beb27f970" name="octolytics-actor-hash" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico" />
+
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="vDq6qwVRTnXWXonzOr6YkNPv4ybC3SRDjeplYeXnc9YOXxVWYsqiNLHORxz52qYYi0cYXHVSgYMlWvjExqdT3Q==" name="csrf-token" />
+
+    <link href="https://assets-cdn.github.com/assets/github-b9a1c847ef551948680288a22129b0083ad12de8.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://assets-cdn.github.com/assets/github2-5ccd26db68086342df5353a5a5727e96ad4ee163.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+
+    <meta http-equiv="x-pjax-version" content="abce031472507f3d0815b88fb2b03a35">
+
+      
+  <meta name="description" content="red-de-emprendimiento - Red de emprendimiento es un sitio que ayuda a los emprendedores a inspirarse con nuevas ideas, crear sus productos, conocer a otros emprendedores, obtener ayuda de mentores y reunir capital para apoyar sus proyectos." />
+
+
+  <meta content="740522" name="octolytics-dimension-user_id" /><meta content="sdreyesg" name="octolytics-dimension-user_login" /><meta content="21171170" name="octolytics-dimension-repository_id" /><meta content="sdreyesg/red-de-emprendimiento" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="true" name="octolytics-dimension-repository_is_fork" /><meta content="20900439" name="octolytics-dimension-repository_parent_id" /><meta content="xpostudio4/red-de-emprendimiento" name="octolytics-dimension-repository_parent_nwo" /><meta content="20900439" name="octolytics-dimension-repository_network_root_id" /><meta content="xpostudio4/red-de-emprendimiento" name="octolytics-dimension-repository_network_root_nwo" />
+
+  <link href="https://github.com/sdreyesg/red-de-emprendimiento/commits/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464.atom" rel="alternate" title="Recent Commits to red-de-emprendimiento:1fa1fce87bbb10c218c7adc3f49ce72d8b99a464" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_in  env-production macintosh vis-public fork page-blob">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/" aria-label="Homepage">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+
+    
+    <a href="/notifications" aria-label="You have unread notifications" class="notification-indicator tooltipped tooltipped-s" data-hotkey="g n">
+        <span class="mail-status unread"></span>
+</a>
+
+      <div class="command-bar js-command-bar  in-repository">
+          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<div class="commandbar">
+  <span class="message"></span>
+  <input type="text" data-hotkey="s, /" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    data-username="xpostudio4"
+    data-repo="sdreyesg/red-de-emprendimiento"
+  >
+  <div class="display hidden"></div>
+</div>
+
+    <input type="hidden" name="nwo" value="sdreyesg/red-de-emprendimiento" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target" role="button" aria-haspopup="true">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container" aria-hidden="true">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="help tooltipped tooltipped-s" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+        <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+            <li><a href="https://gist.github.com">Gist</a></li>
+            <li><a href="/blog">Blog</a></li>
+          <li><a href="https://help.github.com">Help</a></li>
+        </ul>
+      </div>
+
+    
+
+<ul id="user-links">
+  <li>
+    <a href="/xpostudio4" class="name">
+      <img alt="Leonardo " class=" js-avatar" data-user="755375" height="20" src="https://avatars0.githubusercontent.com/u/755375?s=140" width="20" /> xpostudio4
+    </a>
+  </li>
+
+  <li class="new-menu dropdown-toggle js-menu-container">
+    <a href="#" class="js-menu-target tooltipped tooltipped-s" aria-label="Create new...">
+      <span class="octicon octicon-plus"></span>
+      <span class="dropdown-arrow"></span>
+    </a>
+
+    <div class="new-menu-content js-menu-content">
+    </div>
+  </li>
+
+  <li>
+    <a href="/settings/profile" id="account_settings"
+      class="tooltipped tooltipped-s"
+      aria-label="Account settings ">
+      <span class="octicon octicon-tools"></span>
+    </a>
+  </li>
+  <li>
+    <form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="IuC7kqeaaupSL5Iv5yAqj/4BE06we2xp0sO9lhV3VfehTITKQdFn9wBk2d7bRKDLag4iH5JdkDQk+9voTtcolw==" /></div>
+      <button class="sign-out-button tooltipped tooltipped-s" aria-label="Sign out">
+        <span class="octicon octicon-sign-out"></span>
+      </button>
+</form>  </li>
+
+</ul>
+
+<div class="js-new-dropdown-contents hidden">
+  
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="/new"><span class="octicon octicon-repo"></span> New repository</a>
+  </li>
+  <li>
+    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+</ul>
+
+</div>
+
+
+    
+  </div>
+</div>
+
+      
+
+        
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="lEvVEuJHGk1E1F9nMVEyJf3koGZ8OXD81UBC1f2PWXKhx5uZN1tnSdALBKmmYDHwDwPCXGyAqWrDyzcDub5zKQ==" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="21171170" />
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="/sdreyesg/red-de-emprendimiento/watchers">
+        1
+      </a>
+      <a href="/sdreyesg/red-de-emprendimiento/subscription"
+        class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0" aria-haspopup="true">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye"></span>
+          Watch
+        </a>
+      </span>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notifications</span>
+            <span class="octicon octicon-x js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                <h4>Not watching</h4>
+                <span class="description">Be notified when participating or @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                <h4>Watching</h4>
+                <span class="description">Be notified of all conversations.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore" />
+                <h4>Ignoring</h4>
+                <span class="description">Never be notified.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+    
+
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <form accept-charset="UTF-8" action="/sdreyesg/red-de-emprendimiento/unstar" class="js-toggler-form starred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="8AfVdSTbsSeJ3oV/di4crYqdKqog2sXRsGrTCCGfWqS93hrouVat48+fIns3r98+Kuvc8aiQy4ZE2j+3SBODHQ==" /></div>
+      <button
+        class="minibutton with-count js-toggler-target star-button"
+        aria-label="Unstar this repository" title="Unstar sdreyesg/red-de-emprendimiento">
+        <span class="octicon octicon-star"></span>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/sdreyesg/red-de-emprendimiento/stargazers">
+          0
+        </a>
+</form>
+    <form accept-charset="UTF-8" action="/sdreyesg/red-de-emprendimiento/star" class="js-toggler-form unstarred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="rsQdEIkAFToc/jbEMFjpDI5NueXBww3c1MdOs9m0RI5Mn16VRRue5Nfo/3Hu0zCPov6CQmkFfpTjAPkHt1pt2Q==" /></div>
+      <button
+        class="minibutton with-count js-toggler-target star-button"
+        aria-label="Star this repository" title="Star sdreyesg/red-de-emprendimiento">
+        <span class="octicon octicon-star"></span>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/sdreyesg/red-de-emprendimiento/stargazers">
+          0
+        </a>
+</form>  </div>
+
+  </li>
+
+
+        <li>
+          <a href="/sdreyesg/red-de-emprendimiento/fork" class="minibutton with-count js-toggler-target fork-button lighter tooltipped-n" title="Fork your own copy of sdreyesg/red-de-emprendimiento to your account" aria-label="Fork your own copy of sdreyesg/red-de-emprendimiento to your account" rel="facebox nofollow">
+            <span class="octicon octicon-repo-forked"></span>
+            Fork
+          </a>
+          <a href="/sdreyesg/red-de-emprendimiento/network" class="social-count">8</a>
+        </li>
+
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo-forked"></span>
+          <span class="author"><a href="/sdreyesg" class="url fn" itemprop="url" rel="author"><span itemprop="title">sdreyesg</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/sdreyesg/red-de-emprendimiento" class="js-current-repository js-repo-home-link">red-de-emprendimiento</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+            <span class="fork-flag">
+              <span class="text">forked from <a href="/xpostudio4/red-de-emprendimiento">xpostudio4/red-de-emprendimiento</a></span>
+            </span>
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline  ">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped tooltipped-w" aria-label="Code">
+        <a href="/sdreyesg/red-de-emprendimiento" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /sdreyesg/red-de-emprendimiento">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+      <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+        <a href="/sdreyesg/red-de-emprendimiento/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g p" data-selected-links="repo_pulls /sdreyesg/red-de-emprendimiento/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>0</span>
+            <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped tooltipped-w" aria-label="Wiki">
+          <a href="/sdreyesg/red-de-emprendimiento/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-hotkey="g w" data-selected-links="repo_wiki /sdreyesg/red-de-emprendimiento/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped tooltipped-w" aria-label="Pulse">
+        <a href="/sdreyesg/red-de-emprendimiento/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /sdreyesg/red-de-emprendimiento/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Graphs">
+        <a href="/sdreyesg/red-de-emprendimiento/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /sdreyesg/red-de-emprendimiento/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped tooltipped-w" aria-label="Network">
+        <a href="/sdreyesg/red-de-emprendimiento/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /sdreyesg/red-de-emprendimiento/network">
+          <span class="octicon octicon-repo-forked"></span> <span class="full-word">Network</span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/sdreyesg/red-de-emprendimiento.git" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/sdreyesg/red-de-emprendimiento.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="ssh"
+  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="git@github.com:sdreyesg/red-de-emprendimiento.git" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="git@github.com:sdreyesg/red-de-emprendimiento.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/sdreyesg/red-de-emprendimiento" readonly="readonly">
+    <span class="url-box-clippy">
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/sdreyesg/red-de-emprendimiento" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+  <a href="http://mac.github.com" data-url="github-mac://openRepo/https://github.com/sdreyesg/red-de-emprendimiento" class="minibutton sidebar-button js-conduit-rewrite-url" title="Save sdreyesg/red-de-emprendimiento to your computer and use it in GitHub Desktop." aria-label="Save sdreyesg/red-de-emprendimiento to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+
+                <a href="/sdreyesg/red-de-emprendimiento/archive/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download sdreyesg/red-de-emprendimiento as a zip file"
+                   title="Download sdreyesg/red-de-emprendimiento as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+
+<a href="/sdreyesg/red-de-emprendimiento/blob/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464/static/fonts/glyphicons-halflings-regular.svg" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:5ce72c38a31156c7eff5eb61029e964f -->
+
+<p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
+
+<div class="file-navigation">
+  
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    data-master-branch="master"
+    data-ref=""
+    title=""
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>tree:</i>
+    <span class="js-select-button css-truncate-target">1fa1fce87b</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/sdreyesg/red-de-emprendimiento/blob/master/static/fonts/glyphicons-halflings-regular.svg"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+  <div class="button-group right">
+    <a href="/sdreyesg/red-de-emprendimiento/find/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464"
+          class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s"
+          data-pjax
+          data-hotkey="t"
+          aria-label="Quickly jump between files">
+      <span class="octicon octicon-list-unordered"></span>
+    </a>
+    <button class="js-zeroclipboard minibutton zeroclipboard-button"
+          data-clipboard-text="static/fonts/glyphicons-halflings-regular.svg"
+          aria-label="Copy to clipboard"
+          data-copied-hint="Copied!">
+      <span class="octicon octicon-clippy"></span>
+    </button>
+  </div>
+
+  <div class="breadcrumb">
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/sdreyesg/red-de-emprendimiento/tree/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464" data-branch="1fa1fce87bbb10c218c7adc3f49ce72d8b99a464" data-direction="back" data-pjax="true" itemscope="url" rel="nofollow"><span itemprop="title">red-de-emprendimiento</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/sdreyesg/red-de-emprendimiento/tree/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464/static" data-branch="1fa1fce87bbb10c218c7adc3f49ce72d8b99a464" data-direction="back" data-pjax="true" itemscope="url" rel="nofollow"><span itemprop="title">static</span></a></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/sdreyesg/red-de-emprendimiento/tree/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464/static/fonts" data-branch="1fa1fce87bbb10c218c7adc3f49ce72d8b99a464" data-direction="back" data-pjax="true" itemscope="url" rel="nofollow"><span itemprop="title">fonts</span></a></span><span class="separator"> / </span><strong class="final-path">glyphicons-halflings-regular.svg</strong>
+  </div>
+</div>
+
+
+  <div class="commit commit-loader file-history-tease js-deferred-content" data-url="/sdreyesg/red-de-emprendimiento/contributors/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464/static/fonts/glyphicons-halflings-regular.svg">
+    Fetching contributors…
+
+    <div class="participation">
+      <p class="loader-loading"><img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" /></p>
+      <p class="loader-error">Cannot retrieve contributors at this time</p>
+    </div>
+  </div>
+
+<div class="file-box">
+  <div class="file">
+    <div class="meta clearfix">
+      <div class="info file-name">
+        <span class="icon"><b class="octicon octicon-file-text"></b></span>
+        <span class="mode" title="File Mode">file</span>
+        <span class="meta-divider"></span>
+          <span>228 lines (228 sloc)</span>
+          <span class="meta-divider"></span>
+        <span>63.384 kb</span>
+      </div>
+      <div class="actions">
+        <div class="button-group">
+              <a class="minibutton disabled tooltipped tooltipped-w" href="#"
+                 aria-label="You must be on a branch to make or propose changes to this file">Edit</a>
+          <a href="/sdreyesg/red-de-emprendimiento/raw/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464/static/fonts/glyphicons-halflings-regular.svg" class="minibutton " id="raw-url">Raw</a>
+            <a href="/sdreyesg/red-de-emprendimiento/blame/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464/static/fonts/glyphicons-halflings-regular.svg" class="minibutton js-update-url-with-hash">Blame</a>
+          <a href="/sdreyesg/red-de-emprendimiento/commits/1fa1fce87bbb10c218c7adc3f49ce72d8b99a464/static/fonts/glyphicons-halflings-regular.svg" class="minibutton " rel="nofollow">History</a>
+        </div><!-- /.button-group -->
+          <a class="minibutton danger disabled empty-icon tooltipped tooltipped-w" href="#"
+             aria-label="You must be on a branch to make or propose changes to this file">
+          Delete
+        </a>
+      </div><!-- /.actions -->
+    </div>
+      
+  <div class="blob-wrapper data type-xml js-blob-data">
+       <table class="file-code file-diff tab-size-8">
+         <tr class="file-code-line">
+           <td class="blob-line-nums">
+             <span id="L1" rel="#L1">1</span>
+<span id="L2" rel="#L2">2</span>
+<span id="L3" rel="#L3">3</span>
+<span id="L4" rel="#L4">4</span>
+<span id="L5" rel="#L5">5</span>
+<span id="L6" rel="#L6">6</span>
+<span id="L7" rel="#L7">7</span>
+<span id="L8" rel="#L8">8</span>
+<span id="L9" rel="#L9">9</span>
+<span id="L10" rel="#L10">10</span>
+<span id="L11" rel="#L11">11</span>
+<span id="L12" rel="#L12">12</span>
+<span id="L13" rel="#L13">13</span>
+<span id="L14" rel="#L14">14</span>
+<span id="L15" rel="#L15">15</span>
+<span id="L16" rel="#L16">16</span>
+<span id="L17" rel="#L17">17</span>
+<span id="L18" rel="#L18">18</span>
+<span id="L19" rel="#L19">19</span>
+<span id="L20" rel="#L20">20</span>
+<span id="L21" rel="#L21">21</span>
+<span id="L22" rel="#L22">22</span>
+<span id="L23" rel="#L23">23</span>
+<span id="L24" rel="#L24">24</span>
+<span id="L25" rel="#L25">25</span>
+<span id="L26" rel="#L26">26</span>
+<span id="L27" rel="#L27">27</span>
+<span id="L28" rel="#L28">28</span>
+<span id="L29" rel="#L29">29</span>
+<span id="L30" rel="#L30">30</span>
+<span id="L31" rel="#L31">31</span>
+<span id="L32" rel="#L32">32</span>
+<span id="L33" rel="#L33">33</span>
+<span id="L34" rel="#L34">34</span>
+<span id="L35" rel="#L35">35</span>
+<span id="L36" rel="#L36">36</span>
+<span id="L37" rel="#L37">37</span>
+<span id="L38" rel="#L38">38</span>
+<span id="L39" rel="#L39">39</span>
+<span id="L40" rel="#L40">40</span>
+<span id="L41" rel="#L41">41</span>
+<span id="L42" rel="#L42">42</span>
+<span id="L43" rel="#L43">43</span>
+<span id="L44" rel="#L44">44</span>
+<span id="L45" rel="#L45">45</span>
+<span id="L46" rel="#L46">46</span>
+<span id="L47" rel="#L47">47</span>
+<span id="L48" rel="#L48">48</span>
+<span id="L49" rel="#L49">49</span>
+<span id="L50" rel="#L50">50</span>
+<span id="L51" rel="#L51">51</span>
+<span id="L52" rel="#L52">52</span>
+<span id="L53" rel="#L53">53</span>
+<span id="L54" rel="#L54">54</span>
+<span id="L55" rel="#L55">55</span>
+<span id="L56" rel="#L56">56</span>
+<span id="L57" rel="#L57">57</span>
+<span id="L58" rel="#L58">58</span>
+<span id="L59" rel="#L59">59</span>
+<span id="L60" rel="#L60">60</span>
+<span id="L61" rel="#L61">61</span>
+<span id="L62" rel="#L62">62</span>
+<span id="L63" rel="#L63">63</span>
+<span id="L64" rel="#L64">64</span>
+<span id="L65" rel="#L65">65</span>
+<span id="L66" rel="#L66">66</span>
+<span id="L67" rel="#L67">67</span>
+<span id="L68" rel="#L68">68</span>
+<span id="L69" rel="#L69">69</span>
+<span id="L70" rel="#L70">70</span>
+<span id="L71" rel="#L71">71</span>
+<span id="L72" rel="#L72">72</span>
+<span id="L73" rel="#L73">73</span>
+<span id="L74" rel="#L74">74</span>
+<span id="L75" rel="#L75">75</span>
+<span id="L76" rel="#L76">76</span>
+<span id="L77" rel="#L77">77</span>
+<span id="L78" rel="#L78">78</span>
+<span id="L79" rel="#L79">79</span>
+<span id="L80" rel="#L80">80</span>
+<span id="L81" rel="#L81">81</span>
+<span id="L82" rel="#L82">82</span>
+<span id="L83" rel="#L83">83</span>
+<span id="L84" rel="#L84">84</span>
+<span id="L85" rel="#L85">85</span>
+<span id="L86" rel="#L86">86</span>
+<span id="L87" rel="#L87">87</span>
+<span id="L88" rel="#L88">88</span>
+<span id="L89" rel="#L89">89</span>
+<span id="L90" rel="#L90">90</span>
+<span id="L91" rel="#L91">91</span>
+<span id="L92" rel="#L92">92</span>
+<span id="L93" rel="#L93">93</span>
+<span id="L94" rel="#L94">94</span>
+<span id="L95" rel="#L95">95</span>
+<span id="L96" rel="#L96">96</span>
+<span id="L97" rel="#L97">97</span>
+<span id="L98" rel="#L98">98</span>
+<span id="L99" rel="#L99">99</span>
+<span id="L100" rel="#L100">100</span>
+<span id="L101" rel="#L101">101</span>
+<span id="L102" rel="#L102">102</span>
+<span id="L103" rel="#L103">103</span>
+<span id="L104" rel="#L104">104</span>
+<span id="L105" rel="#L105">105</span>
+<span id="L106" rel="#L106">106</span>
+<span id="L107" rel="#L107">107</span>
+<span id="L108" rel="#L108">108</span>
+<span id="L109" rel="#L109">109</span>
+<span id="L110" rel="#L110">110</span>
+<span id="L111" rel="#L111">111</span>
+<span id="L112" rel="#L112">112</span>
+<span id="L113" rel="#L113">113</span>
+<span id="L114" rel="#L114">114</span>
+<span id="L115" rel="#L115">115</span>
+<span id="L116" rel="#L116">116</span>
+<span id="L117" rel="#L117">117</span>
+<span id="L118" rel="#L118">118</span>
+<span id="L119" rel="#L119">119</span>
+<span id="L120" rel="#L120">120</span>
+<span id="L121" rel="#L121">121</span>
+<span id="L122" rel="#L122">122</span>
+<span id="L123" rel="#L123">123</span>
+<span id="L124" rel="#L124">124</span>
+<span id="L125" rel="#L125">125</span>
+<span id="L126" rel="#L126">126</span>
+<span id="L127" rel="#L127">127</span>
+<span id="L128" rel="#L128">128</span>
+<span id="L129" rel="#L129">129</span>
+<span id="L130" rel="#L130">130</span>
+<span id="L131" rel="#L131">131</span>
+<span id="L132" rel="#L132">132</span>
+<span id="L133" rel="#L133">133</span>
+<span id="L134" rel="#L134">134</span>
+<span id="L135" rel="#L135">135</span>
+<span id="L136" rel="#L136">136</span>
+<span id="L137" rel="#L137">137</span>
+<span id="L138" rel="#L138">138</span>
+<span id="L139" rel="#L139">139</span>
+<span id="L140" rel="#L140">140</span>
+<span id="L141" rel="#L141">141</span>
+<span id="L142" rel="#L142">142</span>
+<span id="L143" rel="#L143">143</span>
+<span id="L144" rel="#L144">144</span>
+<span id="L145" rel="#L145">145</span>
+<span id="L146" rel="#L146">146</span>
+<span id="L147" rel="#L147">147</span>
+<span id="L148" rel="#L148">148</span>
+<span id="L149" rel="#L149">149</span>
+<span id="L150" rel="#L150">150</span>
+<span id="L151" rel="#L151">151</span>
+<span id="L152" rel="#L152">152</span>
+<span id="L153" rel="#L153">153</span>
+<span id="L154" rel="#L154">154</span>
+<span id="L155" rel="#L155">155</span>
+<span id="L156" rel="#L156">156</span>
+<span id="L157" rel="#L157">157</span>
+<span id="L158" rel="#L158">158</span>
+<span id="L159" rel="#L159">159</span>
+<span id="L160" rel="#L160">160</span>
+<span id="L161" rel="#L161">161</span>
+<span id="L162" rel="#L162">162</span>
+<span id="L163" rel="#L163">163</span>
+<span id="L164" rel="#L164">164</span>
+<span id="L165" rel="#L165">165</span>
+<span id="L166" rel="#L166">166</span>
+<span id="L167" rel="#L167">167</span>
+<span id="L168" rel="#L168">168</span>
+<span id="L169" rel="#L169">169</span>
+<span id="L170" rel="#L170">170</span>
+<span id="L171" rel="#L171">171</span>
+<span id="L172" rel="#L172">172</span>
+<span id="L173" rel="#L173">173</span>
+<span id="L174" rel="#L174">174</span>
+<span id="L175" rel="#L175">175</span>
+<span id="L176" rel="#L176">176</span>
+<span id="L177" rel="#L177">177</span>
+<span id="L178" rel="#L178">178</span>
+<span id="L179" rel="#L179">179</span>
+<span id="L180" rel="#L180">180</span>
+<span id="L181" rel="#L181">181</span>
+<span id="L182" rel="#L182">182</span>
+<span id="L183" rel="#L183">183</span>
+<span id="L184" rel="#L184">184</span>
+<span id="L185" rel="#L185">185</span>
+<span id="L186" rel="#L186">186</span>
+<span id="L187" rel="#L187">187</span>
+<span id="L188" rel="#L188">188</span>
+<span id="L189" rel="#L189">189</span>
+<span id="L190" rel="#L190">190</span>
+<span id="L191" rel="#L191">191</span>
+<span id="L192" rel="#L192">192</span>
+<span id="L193" rel="#L193">193</span>
+<span id="L194" rel="#L194">194</span>
+<span id="L195" rel="#L195">195</span>
+<span id="L196" rel="#L196">196</span>
+<span id="L197" rel="#L197">197</span>
+<span id="L198" rel="#L198">198</span>
+<span id="L199" rel="#L199">199</span>
+<span id="L200" rel="#L200">200</span>
+<span id="L201" rel="#L201">201</span>
+<span id="L202" rel="#L202">202</span>
+<span id="L203" rel="#L203">203</span>
+<span id="L204" rel="#L204">204</span>
+<span id="L205" rel="#L205">205</span>
+<span id="L206" rel="#L206">206</span>
+<span id="L207" rel="#L207">207</span>
+<span id="L208" rel="#L208">208</span>
+<span id="L209" rel="#L209">209</span>
+<span id="L210" rel="#L210">210</span>
+<span id="L211" rel="#L211">211</span>
+<span id="L212" rel="#L212">212</span>
+<span id="L213" rel="#L213">213</span>
+<span id="L214" rel="#L214">214</span>
+<span id="L215" rel="#L215">215</span>
+<span id="L216" rel="#L216">216</span>
+<span id="L217" rel="#L217">217</span>
+<span id="L218" rel="#L218">218</span>
+<span id="L219" rel="#L219">219</span>
+<span id="L220" rel="#L220">220</span>
+<span id="L221" rel="#L221">221</span>
+<span id="L222" rel="#L222">222</span>
+<span id="L223" rel="#L223">223</span>
+<span id="L224" rel="#L224">224</span>
+<span id="L225" rel="#L225">225</span>
+<span id="L226" rel="#L226">226</span>
+<span id="L227" rel="#L227">227</span>
+<span id="L228" rel="#L228">228</span>
+
+           </td>
+           <td class="blob-line-code"><div class="code-body highlight"><pre><div class='line' id='LC1'><span class="cp">&lt;?xml version=&quot;1.0&quot; standalone=&quot;no&quot;?&gt;</span></div><div class='line' id='LC2'><span class="cp">&lt;!DOCTYPE svg PUBLIC &quot;-//W3C//DTD SVG 1.1//EN&quot; &quot;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&quot; &gt;</span></div><div class='line' id='LC3'><span class="nt">&lt;svg</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span><span class="nt">&gt;</span></div><div class='line' id='LC4'><span class="nt">&lt;metadata&gt;&lt;/metadata&gt;</span></div><div class='line' id='LC5'><span class="nt">&lt;defs&gt;</span></div><div class='line' id='LC6'><span class="nt">&lt;font</span> <span class="na">id=</span><span class="s">&quot;glyphicons_halflingsregular&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;1200&quot;</span> <span class="nt">&gt;</span></div><div class='line' id='LC7'><span class="nt">&lt;font-face</span> <span class="na">units-per-em=</span><span class="s">&quot;1200&quot;</span> <span class="na">ascent=</span><span class="s">&quot;960&quot;</span> <span class="na">descent=</span><span class="s">&quot;-240&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC8'><span class="nt">&lt;missing-glyph</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;500&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC9'><span class="nt">&lt;glyph</span> <span class="nt">/&gt;</span></div><div class='line' id='LC10'><span class="nt">&lt;glyph</span> <span class="nt">/&gt;</span></div><div class='line' id='LC11'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot; &quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC12'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;*&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 500h-259l183 -183l-141 -141l-183 183v-259h-200v259l-183 -183l-141 141l183 183h-259v200h259l-183 183l141 141l183 -183v259h200v-259l183 183l141 -141l-183 -183h259v-200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC13'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;+&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 400h-400v-400h-300v400h-400v300h400v400h300v-400h400v-300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC14'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xa0;&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC15'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2000;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;652&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC16'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2001;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;1304&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC17'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2002;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;652&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC18'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2003;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;1304&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC19'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2004;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;434&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC20'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2005;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;326&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC21'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2006;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;217&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC22'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2007;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;217&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC23'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2008;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;163&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC24'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2009;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;260&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC25'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x200a;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;72&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC26'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x202f;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;260&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC27'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x205f;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;326&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC28'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x20ac;&quot;</span> <span class="na">d=</span><span class="s">&quot;M800 500h-300q9 -74 33 -132t52.5 -91t62 -54.5t59 -29t46.5 -7.5q29 0 66 13t75 37t63.5 67.5t25.5 96.5h174q-31 -172 -128 -278q-107 -117 -274 -117q-205 0 -324 158q-36 46 -69 131.5t-45 205.5h-217l100 100h113q0 47 5 100h-218l100 100h135q37 167 112 257 q117 141 297 141q242 0 354 -189q60 -103 66 -209h-181q0 55 -25.5 99t-63.5 68t-75 36.5t-67 12.5q-24 0 -52.5 -10t-62.5 -32t-65.5 -67t-50.5 -107h379l-100 -100h-300q-6 -46 -6 -100h406z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC29'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2212;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 700h-900v-300h900v300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC30'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2601;&quot;</span> <span class="na">d=</span><span class="s">&quot;M178 300h750q120 0 205 86t85 208q0 120 -85 206.5t-205 86.5q-46 0 -90 -14q-44 97 -134.5 156.5t-200.5 59.5q-152 0 -260 -107.5t-108 -260.5q0 -25 2 -37q-66 -14 -108.5 -67.5t-42.5 -122.5q0 -80 56.5 -137t135.5 -57z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC31'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x2709;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 1100h-1200l600 -603zM300 600l-300 -300v600zM1200 900v-600l-300 300zM800 500l400 -400h-1200l400 400l200 -200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC32'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x270f;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1101 889l99 92q13 13 13 32.5t-13 33.5l-153 153q-15 13 -33 13t-33 -13l-94 -97zM401 189l614 614l-214 214l-614 -614zM-13 -13l333 112l-223 223z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC33'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe000;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;500&quot;</span> <span class="na">d=</span><span class="s">&quot;M0 0z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC34'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe001;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 100h300v-100h-800v100h300v550l-500 550h1200l-500 -550v-550z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC35'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe002;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1000 934v-521q-64 16 -138 -7q-79 -26 -122.5 -83t-25.5 -111q17 -55 85.5 -75.5t147.5 4.5q70 23 111.5 63.5t41.5 95.5v881q0 10 -7 15.5t-17 2.5l-752 -193q-10 -3 -17 -12.5t-7 -19.5v-689q-64 17 -138 -7q-79 -25 -122.5 -82t-25.5 -112t86 -75.5t147 5.5 q65 21 109 69t44 90v606z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC36'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe003;&quot;</span> <span class="na">d=</span><span class="s">&quot;M913 432l300 -300q7 -8 7 -18t-7 -18l-109 -109q-8 -7 -18 -7t-18 7l-300 300q-119 -78 -261 -78q-200 0 -342 142t-142 342t142 342t342 142t342 -142t142 -342q0 -142 -78 -261zM176 693q0 -136 97 -233t234 -97t233.5 96.5t96.5 233.5t-96.5 233.5t-233.5 96.5 t-234 -97t-97 -233z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC37'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe005;&quot;</span> <span class="na">d=</span><span class="s">&quot;M649 949q48 69 109.5 105t121.5 38t118.5 -20.5t102.5 -64t71 -100.5t27 -123q0 -57 -33.5 -117.5t-94 -124.5t-126.5 -127.5t-150 -152.5t-146 -174q-62 85 -145.5 174t-149.5 152.5t-126.5 127.5t-94 124.5t-33.5 117.5q0 64 28 123t73 100.5t104.5 64t119 20.5 t120 -38.5t104.5 -104.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC38'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe006;&quot;</span> <span class="na">d=</span><span class="s">&quot;M791 522l145 -449l-384 275l-382 -275l146 447l-388 280h479l146 400h2l146 -400h472zM168 71l2 1z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC39'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe007;&quot;</span> <span class="na">d=</span><span class="s">&quot;M791 522l145 -449l-384 275l-382 -275l146 447l-388 280h479l146 400h2l146 -400h472zM747 331l-74 229l193 140h-235l-77 211l-78 -211h-239l196 -142l-73 -226l192 140zM168 71l2 1z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC40'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe008;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 143v-143h-1200v143l400 257v100q-37 0 -68.5 74.5t-31.5 125.5v200q0 124 88 212t212 88t212 -88t88 -212v-200q0 -51 -31.5 -125.5t-68.5 -74.5v-100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC41'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe009;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 1100v-1100h-1200v1100h1200zM200 1000h-100v-100h100v100zM900 1000h-600v-400h600v400zM1100 1000h-100v-100h100v100zM200 800h-100v-100h100v100zM1100 800h-100v-100h100v100zM200 600h-100v-100h100v100zM1100 600h-100v-100h100v100zM900 500h-600v-400h600 v400zM200 400h-100v-100h100v100zM1100 400h-100v-100h100v100zM200 200h-100v-100h100v100zM1100 200h-100v-100h100v100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC42'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe010;&quot;</span> <span class="na">d=</span><span class="s">&quot;M500 1050v-400q0 -21 -14.5 -35.5t-35.5 -14.5h-400q-21 0 -35.5 14.5t-14.5 35.5v400q0 21 14.5 35.5t35.5 14.5h400q21 0 35.5 -14.5t14.5 -35.5zM1100 1050v-400q0 -21 -14.5 -35.5t-35.5 -14.5h-400q-21 0 -35.5 14.5t-14.5 35.5v400q0 21 14.5 35.5t35.5 14.5h400 q21 0 35.5 -14.5t14.5 -35.5zM500 450v-400q0 -21 -14.5 -35.5t-35.5 -14.5h-400q-21 0 -35.5 14.5t-14.5 35.5v400q0 21 14.5 35.5t35.5 14.5h400q21 0 35.5 -14.5t14.5 -35.5zM1100 450v-400q0 -21 -14.5 -35.5t-35.5 -14.5h-400q-21 0 -35.5 14.5t-14.5 35.5v400 q0 21 14.5 35.5t35.5 14.5h400q21 0 35.5 -14.5t14.5 -35.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC43'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe011;&quot;</span> <span class="na">d=</span><span class="s">&quot;M300 1050v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5t14.5 -35.5zM700 1050v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200 q21 0 35.5 -14.5t14.5 -35.5zM1100 1050v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5t14.5 -35.5zM300 650v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200 q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5t14.5 -35.5zM700 650v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5t14.5 -35.5zM1100 650v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200 q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5t14.5 -35.5zM300 250v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5t14.5 -35.5zM700 250v-200 q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5t14.5 -35.5zM1100 250v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5 t14.5 -35.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC44'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe012;&quot;</span> <span class="na">d=</span><span class="s">&quot;M300 1050v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5t14.5 -35.5zM1200 1050v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-700q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h700 q21 0 35.5 -14.5t14.5 -35.5zM300 450v200q0 21 -14.5 35.5t-35.5 14.5h-200q-21 0 -35.5 -14.5t-14.5 -35.5v-200q0 -21 14.5 -35.5t35.5 -14.5h200q21 0 35.5 14.5t14.5 35.5zM1200 650v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-700q-21 0 -35.5 14.5t-14.5 35.5v200 q0 21 14.5 35.5t35.5 14.5h700q21 0 35.5 -14.5t14.5 -35.5zM300 250v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h200q21 0 35.5 -14.5t14.5 -35.5zM1200 250v-200q0 -21 -14.5 -35.5t-35.5 -14.5h-700 q-21 0 -35.5 14.5t-14.5 35.5v200q0 21 14.5 35.5t35.5 14.5h700q21 0 35.5 -14.5t14.5 -35.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC45'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe013;&quot;</span> <span class="na">d=</span><span class="s">&quot;M448 34l818 820l-212 212l-607 -607l-206 207l-212 -212z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC46'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe014;&quot;</span> <span class="na">d=</span><span class="s">&quot;M882 106l-282 282l-282 -282l-212 212l282 282l-282 282l212 212l282 -282l282 282l212 -212l-282 -282l282 -282z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC47'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe015;&quot;</span> <span class="na">d=</span><span class="s">&quot;M913 432l300 -300q7 -8 7 -18t-7 -18l-109 -109q-8 -7 -18 -7t-18 7l-300 300q-119 -78 -261 -78q-200 0 -342 142t-142 342t142 342t342 142t342 -142t142 -342q0 -142 -78 -261zM507 363q137 0 233.5 96.5t96.5 233.5t-96.5 233.5t-233.5 96.5t-234 -97t-97 -233 t97 -233t234 -97zM600 800h100v-200h-100v-100h-200v100h-100v200h100v100h200v-100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC48'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe016;&quot;</span> <span class="na">d=</span><span class="s">&quot;M913 432l300 -299q7 -7 7 -18t-7 -18l-109 -109q-8 -8 -18 -8t-18 8l-300 299q-120 -77 -261 -77q-200 0 -342 142t-142 342t142 342t342 142t342 -142t142 -342q0 -141 -78 -262zM176 694q0 -136 97 -233t234 -97t233.5 97t96.5 233t-96.5 233t-233.5 97t-234 -97 t-97 -233zM300 801v-200h400v200h-400z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC49'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe017;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 750v400q0 21 -14.5 35.5t-35.5 14.5h-100q-21 0 -35.5 -14.5t-14.5 -35.5v-400q0 -21 14.5 -35.5t35.5 -14.5h100q21 0 35.5 14.5t14.5 35.5zM800 975v166q167 -62 272 -210t105 -331q0 -118 -45.5 -224.5t-123 -184t-184 -123t-224.5 -45.5t-224.5 45.5t-184 123 t-123 184t-45.5 224.5q0 183 105 331t272 210v-166q-103 -55 -165 -155t-62 -220q0 -177 125 -302t302 -125t302 125t125 302q0 120 -62 220t-165 155z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC50'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe018;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 1h-200v1200h200v-1200zM900 1h-200v800h200v-800zM600 1h-200v500h200v-500zM300 301h-200v-300h200v300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC51'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe019;&quot;</span> <span class="na">d=</span><span class="s">&quot;M488 183l38 -151q40 -5 74 -5q27 0 74 5l38 151l6 2q46 13 93 39l5 3l134 -81q56 44 104 105l-80 134l3 5q24 44 39 93l1 6l152 38q5 40 5 74q0 28 -5 73l-152 38l-1 6q-16 51 -39 93l-3 5l80 134q-44 58 -104 105l-134 -81l-5 3q-45 25 -93 39l-6 1l-38 152q-40 5 -74 5 q-27 0 -74 -5l-38 -152l-5 -1q-50 -14 -94 -39l-5 -3l-133 81q-59 -47 -105 -105l80 -134l-3 -5q-25 -47 -38 -93l-2 -6l-151 -38q-6 -48 -6 -73q0 -33 6 -74l151 -38l2 -6q14 -49 38 -93l3 -5l-80 -134q45 -59 105 -105l133 81l5 -3q45 -26 94 -39zM600 815q89 0 152 -63 t63 -151q0 -89 -63 -152t-152 -63t-152 63t-63 152q0 88 63 151t152 63z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC52'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe020;&quot;</span> <span class="na">d=</span><span class="s">&quot;M900 1100h275q10 0 17.5 -7.5t7.5 -17.5v-50q0 -11 -7 -18t-18 -7h-1050q-11 0 -18 7t-7 18v50q0 10 7.5 17.5t17.5 7.5h275v100q0 41 29.5 70.5t70.5 29.5h300q41 0 70.5 -29.5t29.5 -70.5v-100zM800 1100v100h-300v-100h300zM200 900h900v-800q0 -41 -29.5 -71 t-70.5 -30h-700q-41 0 -70.5 30t-29.5 71v800zM300 100h100v700h-100v-700zM500 100h100v700h-100v-700zM700 100h100v700h-100v-700zM900 100h100v700h-100v-700z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC53'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe021;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1301 601h-200v-600h-300v400h-300v-400h-300v600h-200l656 644z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC54'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe022;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 700h400v-675q0 -11 -7 -18t-18 -7h-850q-11 0 -18 7t-7 18v1150q0 11 7 18t18 7h475v-500zM1000 800h-300v300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC55'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe023;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1196q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM600 1014q-171 0 -292.5 -121.5t-121.5 -292.5t121.5 -292.5t292.5 -121.5t292.5 121.5t121.5 292.5t-121.5 292.5t-292.5 121.5zM600 600h200 v-100h-300v400h100v-300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC56'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe024;&quot;</span> <span class="na">d=</span><span class="s">&quot;M721 400h-242l-40 -400h-539l431 1200h209l-21 -300h162l-20 300h208l431 -1200h-538zM712 500l-27 300h-170l-27 -300h224z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC57'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe025;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 400v-400h-1100v400h490l-290 300h200v500h300v-500h200l-290 -300h490zM988 300h-175v-100h175v100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC58'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe026;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1199q122 0 233 -47.5t191 -127.5t127.5 -191t47.5 -233t-47.5 -233t-127.5 -191t-191 -127.5t-233 -47.5t-233 47.5t-191 127.5t-127.5 191t-47.5 233t47.5 233t127.5 191t191 127.5t233 47.5zM600 1012q-170 0 -291 -121t-121 -291t121 -291t291 -121t291 121 t121 291t-121 291t-291 121zM700 600h150l-250 -300l-250 300h150v300h200v-300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC59'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe027;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1196q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM600 1014q-171 0 -292.5 -121.5t-121.5 -292.5t121.5 -292.5t292.5 -121.5t292.5 121.5t121.5 292.5t-121.5 292.5t-292.5 121.5zM850 600h-150 v-300h-200v300h-150l250 300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC60'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe028;&quot;</span> <span class="na">d=</span><span class="s">&quot;M0 500l200 700h800q199 -700 200 -700v-475q0 -11 -7 -18t-18 -7h-1150q-11 0 -18 7t-7 18v475zM903 1000h-606l-97 -500h200l50 -200h300l50 200h200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC61'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe029;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1196q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM600 1014q-171 0 -292.5 -121.5t-121.5 -292.5q0 -172 121.5 -293t292.5 -121t292.5 121t121.5 293q0 171 -121.5 292.5t-292.5 121.5zM797 598 l-297 -201v401z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC62'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe030;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1177 600h-150q0 -177 -125 -302t-302 -125t-302 125t-125 302t125 302t302 125q136 0 246 -81l-146 -146h400v400l-145 -145q-157 122 -355 122q-118 0 -224.5 -45.5t-184 -123t-123 -184t-45.5 -224.5t45.5 -224.5t123 -184t184 -123t224.5 -45.5t224.5 45.5t184 123 t123 184t45.5 224.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC63'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe031;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 800l147 147q-112 80 -247 80q-177 0 -302 -125t-125 -302h-150q0 118 45.5 224.5t123 184t184 123t224.5 45.5q198 0 355 -122l145 145v-400h-400zM500 400l-147 -147q112 -80 247 -80q177 0 302 125t125 302h150q0 -118 -45.5 -224.5t-123 -184t-184 -123 t-224.5 -45.5q-198 0 -355 122l-145 -145v400h400z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC64'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe032;&quot;</span> <span class="na">d=</span><span class="s">&quot;M100 1200v-1200h1100v1200h-1100zM1100 100h-900v900h900v-900zM400 800h-100v100h100v-100zM1000 800h-500v100h500v-100zM400 600h-100v100h100v-100zM1000 600h-500v100h500v-100zM400 400h-100v100h100v-100zM1000 400h-500v100h500v-100zM400 200h-100v100h100v-100 zM1000 300h-500v-100h500v100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC65'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe034;&quot;</span> <span class="na">d=</span><span class="s">&quot;M200 0h-100v1100h100v-1100zM1100 600v500q-40 -81 -101.5 -115.5t-127.5 -29.5t-138 25t-139.5 40t-125.5 25t-103 -29.5t-65 -115.5v-500q60 60 127.5 84t127.5 17.5t122 -23t119 -30t110 -11t103 42t91 120.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC66'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe035;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 275v300q0 116 -49.5 227t-131 192.5t-192.5 131t-227 49.5t-227 -49.5t-192.5 -131t-131 -192.5t-49.5 -227v-300q0 -11 7 -18t18 -7h50q11 0 18 7t7 18v300q0 127 70.5 231.5t184.5 161.5t245 57t245 -57t184.5 -161.5t70.5 -231.5v-300q0 -11 7 -18t18 -7h50 q11 0 18 7t7 18zM400 480v-460q0 -8 -6 -14t-14 -6h-160q-8 0 -14 6t-6 14v460q0 8 6 14t14 6h160q8 0 14 -6t6 -14zM1000 480v-460q0 -8 -6 -14t-14 -6h-160q-8 0 -14 6t-6 14v460q0 8 6 14t14 6h160q8 0 14 -6t6 -14z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC67'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe036;&quot;</span> <span class="na">d=</span><span class="s">&quot;M0 800v-400h300l300 -200v800l-300 -200h-300zM971 600l141 -141l-71 -71l-141 141l-141 -141l-71 71l141 141l-141 141l71 71l141 -141l141 141l71 -71z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC68'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe037;&quot;</span> <span class="na">d=</span><span class="s">&quot;M0 800v-400h300l300 -200v800l-300 -200h-300zM700 857l69 53q111 -135 111 -310q0 -169 -106 -302l-67 54q86 110 86 248q0 146 -93 257z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC69'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe038;&quot;</span> <span class="na">d=</span><span class="s">&quot;M974 186l6 8q142 178 142 405q0 230 -144 408l-6 8l-83 -64l7 -8q123 -151 123 -344q0 -189 -119 -339l-7 -8zM300 801l300 200v-800l-300 200h-300v400h300zM702 858l69 53q111 -135 111 -310q0 -170 -106 -303l-67 55q86 110 86 248q0 145 -93 257z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC70'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe039;&quot;</span> <span class="na">d=</span><span class="s">&quot;M100 700h400v100h100v100h-100v300h-500v-600h100v100zM1200 700v500h-600v-200h100v-300h200v-300h300v200h-200v100h200zM100 1100h300v-300h-300v300zM800 800v300h300v-300h-300zM200 900h100v100h-100v-100zM900 1000h100v-100h-100v100zM300 600h-100v-100h-200 v-500h500v500h-200v100zM900 200v-100h-200v100h-100v100h100v200h-200v100h300v-300h200v-100h-100zM400 400v-300h-300v300h300zM300 200h-100v100h100v-100zM1100 300h100v-100h-100v100zM600 100h100v-100h-100v100zM1200 100v-100h-300v100h300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC71'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe040;&quot;</span> <span class="na">d=</span><span class="s">&quot;M100 1200h-100v-1000h100v1000zM300 200h-100v1000h100v-1000zM700 200h-200v1000h200v-1000zM900 200h-100v1000h100v-1000zM1200 1200v-1000h-200v1000h200zM400 100v-100h-300v100h300zM500 91h100v-91h-100v91zM700 91h100v-91h-100v91zM1100 91v-91h-200v91h200z &quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC72'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe041;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 500l-500 -500l-699 700v475q0 10 7.5 17.5t17.5 7.5h474zM320 882q29 29 29 71t-29 71q-30 30 -71.5 30t-71.5 -30q-29 -29 -29 -71t29 -71q30 -30 71.5 -30t71.5 30z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC73'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe042;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1201 500l-500 -500l-699 700v475q0 11 7 18t18 7h474zM1501 500l-500 -500l-50 50l450 450l-700 700h100zM320 882q30 29 30 71t-30 71q-29 30 -71 30t-71 -30q-30 -29 -30 -71t30 -71q29 -30 71 -30t71 30z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC74'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe043;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 1200v-1000l-100 -100v1000h-750l-100 -100h750v-1000h-900v1025l175 175h925z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC75'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe045;&quot;</span> <span class="na">d=</span><span class="s">&quot;M947 829l-94 346q-2 11 -10 18t-18 7h-450q-10 0 -18 -7t-10 -18l-94 -346l40 -124h592zM1200 800v-700h-200v200h-800v-200h-200v700h200l100 -200h600l100 200h200zM881 176l38 -152q2 -10 -3.5 -17t-15.5 -7h-600q-10 0 -15.5 7t-3.5 17l38 152q2 10 11.5 17t19.5 7 h500q10 0 19.5 -7t11.5 -17z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC76'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe047;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 0v66q-34 1 -74 43q-18 19 -33 42t-21 37l-6 13l-385 998h-93l-399 -1006q-24 -48 -52 -75q-12 -12 -33 -25t-36 -20l-15 -7v-66h365v66q-41 0 -72 11t-49 38t1 71l92 234h391l82 -222q16 -45 -5.5 -88.5t-74.5 -43.5v-66h417zM416 521l178 457l46 -140l116 -317 h-340z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC77'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe048;&quot;</span> <span class="na">d=</span><span class="s">&quot;M100 1199h471q120 0 213 -88t93 -228q0 -55 -11.5 -101.5t-28 -74t-33.5 -47.5t-28 -28l-12 -7q8 -3 21.5 -9t48 -31.5t60.5 -58t47.5 -91.5t21.5 -129q0 -84 -59 -156.5t-142 -111t-162 -38.5h-500v89q41 7 70.5 32.5t29.5 65.5v827q0 28 -1 39.5t-5.5 26t-15.5 21 t-29 14t-49 14.5v70zM400 1079v-379h139q76 0 130 61.5t54 138.5q0 82 -84 130.5t-239 48.5zM400 200h161q89 0 153 48.5t64 132.5q0 90 -62.5 154.5t-156.5 64.5h-159v-400z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC78'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe049;&quot;</span> <span class="na">d=</span><span class="s">&quot;M877 1200l2 -57q-33 -8 -62 -25.5t-46 -37t-29.5 -38t-17.5 -30.5l-5 -12l-128 -825q-10 -52 14 -82t95 -36v-57h-500v57q77 7 134.5 40.5t65.5 80.5l173 849q10 56 -10 74t-91 37q-6 1 -10.5 2.5t-9.5 2.5v57h425z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC79'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe050;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1150 1200h150v-300h-50q0 29 -8 48.5t-18.5 30t-33.5 15t-39.5 5.5t-50.5 1h-200v-850l100 -50v-100h-400v100l100 50v850h-200q-34 0 -50.5 -1t-40 -5.5t-33.5 -15t-18.5 -30t-8.5 -48.5h-49v300h150h700zM100 1000v-800h75l-125 -167l-125 167h75v800h-75l125 167 l125 -167h-75z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC80'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe051;&quot;</span> <span class="na">d=</span><span class="s">&quot;M950 1201h150v-300h-50q0 29 -8 48.5t-18 30t-33.5 15t-40 5.5t-50.5 1h-200v-650l100 -50v-100h-400v100l100 50v650h-200q-34 0 -50.5 -1t-39.5 -5.5t-33.5 -15t-18.5 -30t-8 -48.5h-50v300h150h700zM200 101h800v75l167 -125l-167 -125v75h-800v-75l-167 125l167 125 v-75z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC81'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe052;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 950v100q0 21 -14.5 35.5t-35.5 14.5h-600q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h600q21 0 35.5 15t14.5 35zM1100 650v100q0 21 -14.5 35.5t-35.5 14.5h-1000q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h1000 q21 0 35.5 15t14.5 35zM900 350v100q0 21 -14.5 35.5t-35.5 14.5h-800q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h800q21 0 35.5 15t14.5 35zM1200 50v100q0 21 -14.5 35.5t-35.5 14.5h-1100q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35 t35.5 -15h1100q21 0 35.5 15t14.5 35z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC82'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe053;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1000 950v100q0 21 -14.5 35.5t-35.5 14.5h-700q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h700q21 0 35.5 15t14.5 35zM1200 650v100q0 21 -14.5 35.5t-35.5 14.5h-1100q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h1100 q21 0 35.5 15t14.5 35zM1000 350v100q0 21 -14.5 35.5t-35.5 14.5h-700q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h700q21 0 35.5 15t14.5 35zM1200 50v100q0 21 -14.5 35.5t-35.5 14.5h-1100q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35 t35.5 -15h1100q21 0 35.5 15t14.5 35z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC83'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe054;&quot;</span> <span class="na">d=</span><span class="s">&quot;M500 950v100q0 21 14.5 35.5t35.5 14.5h600q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-600q-21 0 -35.5 15t-14.5 35zM100 650v100q0 21 14.5 35.5t35.5 14.5h1000q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-1000q-21 0 -35.5 15 t-14.5 35zM300 350v100q0 21 14.5 35.5t35.5 14.5h800q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-800q-21 0 -35.5 15t-14.5 35zM0 50v100q0 21 14.5 35.5t35.5 14.5h1100q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-1100 q-21 0 -35.5 15t-14.5 35z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC84'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe055;&quot;</span> <span class="na">d=</span><span class="s">&quot;M0 950v100q0 21 14.5 35.5t35.5 14.5h1100q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-1100q-21 0 -35.5 15t-14.5 35zM0 650v100q0 21 14.5 35.5t35.5 14.5h1100q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-1100q-21 0 -35.5 15 t-14.5 35zM0 350v100q0 21 14.5 35.5t35.5 14.5h1100q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-1100q-21 0 -35.5 15t-14.5 35zM0 50v100q0 21 14.5 35.5t35.5 14.5h1100q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-1100 q-21 0 -35.5 15t-14.5 35z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC85'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe056;&quot;</span> <span class="na">d=</span><span class="s">&quot;M0 950v100q0 21 14.5 35.5t35.5 14.5h100q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-100q-21 0 -35.5 15t-14.5 35zM300 950v100q0 21 14.5 35.5t35.5 14.5h800q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-800q-21 0 -35.5 15 t-14.5 35zM0 650v100q0 21 14.5 35.5t35.5 14.5h100q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-100q-21 0 -35.5 15t-14.5 35zM300 650v100q0 21 14.5 35.5t35.5 14.5h800q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-800 q-21 0 -35.5 15t-14.5 35zM0 350v100q0 21 14.5 35.5t35.5 14.5h100q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-100q-21 0 -35.5 15t-14.5 35zM300 350v100q0 21 14.5 35.5t35.5 14.5h800q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15 h-800q-21 0 -35.5 15t-14.5 35zM0 50v100q0 21 14.5 35.5t35.5 14.5h100q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15h-100q-21 0 -35.5 15t-14.5 35zM300 50v100q0 21 14.5 35.5t35.5 14.5h800q21 0 35.5 -14.5t14.5 -35.5v-100q0 -20 -14.5 -35t-35.5 -15 h-800q-21 0 -35.5 15t-14.5 35z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC86'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe057;&quot;</span> <span class="na">d=</span><span class="s">&quot;M400 1100h-100v-1100h100v1100zM700 950v100q0 21 -15 35.5t-35 14.5h-100q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h100q20 0 35 15t15 35zM1100 650v100q0 21 -15 35.5t-35 14.5h-500q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15 h500q20 0 35 15t15 35zM100 425v75h-201v100h201v75l166 -125zM900 350v100q0 21 -15 35.5t-35 14.5h-300q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h300q20 0 35 15t15 35zM1200 50v100q0 21 -15 35.5t-35 14.5h-600q-21 0 -35.5 -14.5t-14.5 -35.5 v-100q0 -20 14.5 -35t35.5 -15h600q20 0 35 15t15 35z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC87'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe058;&quot;</span> <span class="na">d=</span><span class="s">&quot;M201 950v100q0 21 -15 35.5t-35 14.5h-100q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h100q20 0 35 15t15 35zM801 1100h100v-1100h-100v1100zM601 650v100q0 21 -15 35.5t-35 14.5h-500q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15 h500q20 0 35 15t15 35zM1101 425v75h200v100h-200v75l-167 -125zM401 350v100q0 21 -15 35.5t-35 14.5h-300q-21 0 -35.5 -14.5t-14.5 -35.5v-100q0 -20 14.5 -35t35.5 -15h300q20 0 35 15t15 35zM701 50v100q0 21 -15 35.5t-35 14.5h-600q-21 0 -35.5 -14.5t-14.5 -35.5 v-100q0 -20 14.5 -35t35.5 -15h600q20 0 35 15t15 35z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC88'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe059;&quot;</span> <span class="na">d=</span><span class="s">&quot;M900 925v-650q0 -31 -22 -53t-53 -22h-750q-31 0 -53 22t-22 53v650q0 31 22 53t53 22h750q31 0 53 -22t22 -53zM1200 300l-300 300l300 300v-600z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC89'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe060;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 1056v-1012q0 -18 -12.5 -31t-31.5 -13h-1112q-18 0 -31 13t-13 31v1012q0 18 13 31t31 13h1112q19 0 31.5 -13t12.5 -31zM1100 1000h-1000v-737l247 182l298 -131l-74 156l293 318l236 -288v500zM476 750q0 -56 -39 -95t-95 -39t-95 39t-39 95t39 95t95 39t95 -39 t39 -95z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC90'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe062;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1213q123 0 227 -63t164.5 -169.5t60.5 -229.5t-73 -272q-73 -114 -166.5 -237t-150.5 -189l-57 -66q-10 9 -27 26t-66.5 70.5t-96 109t-104 135.5t-100.5 155q-63 139 -63 262q0 124 60.5 231.5t165 172t226.5 64.5zM599 514q107 0 182.5 75.5t75.5 182.5t-75.5 182 t-182.5 75t-182 -75.5t-75 -181.5q0 -107 75.5 -182.5t181.5 -75.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC91'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe063;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1199q122 0 233 -47.5t191 -127.5t127.5 -191t47.5 -233t-47.5 -233t-127.5 -191t-191 -127.5t-233 -47.5t-233 47.5t-191 127.5t-127.5 191t-47.5 233t47.5 233t127.5 191t191 127.5t233 47.5zM600 173v854q-176 0 -301.5 -125t-125.5 -302t125.5 -302t301.5 -125z &quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC92'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe064;&quot;</span> <span class="na">d=</span><span class="s">&quot;M554 1295q21 -71 57.5 -142.5t76 -130.5t83 -118.5t82 -117t70 -116t50 -125.5t18.5 -136q0 -89 -39 -165.5t-102 -126.5t-140 -79.5t-156 -33.5q-114 6 -211.5 53t-161.5 138.5t-64 210.5q0 94 34 186t88.5 172.5t112 159t115 177t87.5 194.5zM455 296q-7 6 -18 17 t-34 48t-33 77q-15 73 -14 143.5t10 122.5l9 51q-92 -110 -119.5 -185t-12.5 -156q14 -82 59.5 -136t136.5 -80z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC93'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe065;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1108 902l113 113l-21 85l-92 28l-113 -113zM1100 625v-225q0 -165 -117.5 -282.5t-282.5 -117.5h-300q-165 0 -282.5 117.5t-117.5 282.5v300q0 165 117.5 282.5t282.5 117.5q366 -6 397 -14l-186 -186h-311q-41 0 -70.5 -29.5t-29.5 -70.5v-500q0 -41 29.5 -70.5 t70.5 -29.5h500q41 0 70.5 29.5t29.5 70.5v125zM436 341l161 50l412 412l-114 113l-405 -405z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC94'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe066;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 453v-53q0 -165 -117.5 -282.5t-282.5 -117.5h-300q-165 0 -282.5 117.5t-117.5 282.5v300q0 165 117.5 282.5t282.5 117.5h261l2 -80q-133 -32 -218 -120h-145q-41 0 -70.5 -29.5t-29.5 -70.5v-500q0 -41 29.5 -70.5t70.5 -29.5h500q41 0 70.5 29.5t29.5 70.5z M813 431l360 324l-359 318v-216q-7 0 -19 -1t-48 -8t-69.5 -18.5t-76.5 -37t-76.5 -59t-62 -88t-39.5 -121.5q30 38 81.5 64t103 35.5t99 14t77.5 3.5l29 -1v-209z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC95'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe067;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 569v-169q0 -165 -117.5 -282.5t-282.5 -117.5h-300q-165 0 -282.5 117.5t-117.5 282.5v300q0 165 117.5 282.5t282.5 117.5h300q60 0 127 -23l-178 -177h-349q-41 0 -70.5 -29.5t-29.5 -70.5v-500q0 -41 29.5 -70.5t70.5 -29.5h500q41 0 70.5 29.5t29.5 70.5v69z M625 348l566 567l-136 137l-430 -431l-147 147l-136 -136z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC96'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe068;&quot;</span> <span class="na">d=</span><span class="s">&quot;M900 303v198h-200v-200h195l-295 -300l-300 300h200v200h-200v-198l-300 300l300 296v-198h200v200h-200l300 300l295 -300h-195v-200h200v198l300 -296z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC97'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe069;&quot;</span> <span class="na">d=</span><span class="s">&quot;M900 0l-500 488v-438q0 -21 -14.5 -35.5t-35.5 -14.5h-100q-21 0 -35.5 14.5t-14.5 35.5v1000q0 21 14.5 35.5t35.5 14.5h100q21 0 35.5 -14.5t14.5 -35.5v-437l500 487v-1100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC98'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe070;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 0l-500 488v-488l-500 488v-438q0 -21 -14.5 -35.5t-35.5 -14.5h-100q-21 0 -35.5 14.5t-14.5 35.5v1000q0 21 14.5 35.5t35.5 14.5h100q21 0 35.5 -14.5t14.5 -35.5v-437l500 487v-487l500 487v-1100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC99'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe071;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 0l-500 488v-488l-564 550l564 550v-487l500 487v-1100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC100'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe072;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 550l-900 550v-1100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC101'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe073;&quot;</span> <span class="na">d=</span><span class="s">&quot;M500 150v800q0 21 -14.5 35.5t-35.5 14.5h-200q-21 0 -35.5 -14.5t-14.5 -35.5v-800q0 -21 14.5 -35.5t35.5 -14.5h200q21 0 35.5 14.5t14.5 35.5zM900 150v800q0 21 -14.5 35.5t-35.5 14.5h-200q-21 0 -35.5 -14.5t-14.5 -35.5v-800q0 -21 14.5 -35.5t35.5 -14.5h200 q21 0 35.5 14.5t14.5 35.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC102'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe074;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 150v800q0 21 -14.5 35.5t-35.5 14.5h-800q-21 0 -35.5 -14.5t-14.5 -35.5v-800q0 -20 14.5 -35t35.5 -15h800q21 0 35.5 15t14.5 35z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC103'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe075;&quot;</span> <span class="na">d=</span><span class="s">&quot;M500 0v488l-500 -488v1100l500 -487v487l564 -550z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC104'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe076;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1050 1100h100q21 0 35.5 -14.5t14.5 -35.5v-1000q0 -21 -14.5 -35.5t-35.5 -14.5h-100q-21 0 -35.5 14.5t-14.5 35.5v438l-500 -488v488l-500 -488v1100l500 -487v487l500 -487v437q0 21 14.5 35.5t35.5 14.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC105'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe077;&quot;</span> <span class="na">d=</span><span class="s">&quot;M850 1100h100q21 0 35.5 -14.5t14.5 -35.5v-1000q0 -21 -14.5 -35.5t-35.5 -14.5h-100q-21 0 -35.5 14.5t-14.5 35.5v438l-500 -488v1100l500 -487v437q0 21 14.5 35.5t35.5 14.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC106'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe078;&quot;</span> <span class="na">d=</span><span class="s">&quot;M650 1064l-550 -564h1100zM1200 350v-100q0 -21 -14.5 -35.5t-35.5 -14.5h-1000q-21 0 -35.5 14.5t-14.5 35.5v100q0 21 14.5 35.5t35.5 14.5h1000q21 0 35.5 -14.5t14.5 -35.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC107'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe079;&quot;</span> <span class="na">d=</span><span class="s">&quot;M777 7l240 240l-353 353l353 353l-240 240l-592 -594z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC108'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe080;&quot;</span> <span class="na">d=</span><span class="s">&quot;M513 -46l-241 240l353 353l-353 353l241 240l572 -571l21 -22l-1 -1v-1z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC109'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe081;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1197q162 0 299.5 -80t217.5 -217.5t80 -299.5t-80 -299.5t-217.5 -217.5t-299.5 -80t-299.5 80t-217.5 217.5t-80 299.5t80 299.5t217.5 217.5t299.5 80zM500 900v-200h-200v-200h200v-200h200v200h200v200h-200v200h-200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC110'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe082;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1197q162 0 299.5 -80t217.5 -217.5t80 -299.5t-80 -299.5t-217.5 -217.5t-299.5 -80t-299.5 80t-217.5 217.5t-80 299.5t80 299.5t217.5 217.5t299.5 80zM300 700v-200h600v200h-600z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC111'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe083;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1197q162 0 299.5 -80t217.5 -217.5t80 -299.5t-80 -299.5t-217.5 -217.5t-299.5 -80t-299.5 80t-217.5 217.5t-80 299.5t80 299.5t217.5 217.5t299.5 80zM247 741l141 -141l-142 -141l213 -213l141 142l141 -142l213 213l-142 141l142 141l-213 212l-141 -141 l-141 142z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC112'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe084;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1197q162 0 299.5 -80t217.5 -217.5t80 -299.5t-80 -299.5t-217.5 -217.5t-299.5 -80t-299.5 80t-217.5 217.5t-80 299.5t80 299.5t217.5 217.5t299.5 80zM546 623l-102 102l-174 -174l276 -277l411 411l-175 174z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC113'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe085;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1197q162 0 299.5 -80t217.5 -217.5t80 -299.5t-80 -299.5t-217.5 -217.5t-299.5 -80t-299.5 80t-217.5 217.5t-80 299.5t80 299.5t217.5 217.5t299.5 80zM500 500h200q5 3 14 8t31.5 25.5t39.5 45.5t31 69t14 94q0 51 -17.5 89t-42 58t-58.5 32t-58.5 15t-51.5 3 q-105 0 -172 -56t-67 -183h144q4 0 11.5 -1t11 -1t6.5 3t3 9t1 11t3.5 8.5t3.5 6t5.5 4t6.5 2.5t9 1.5t9 0.5h11.5h12.5q19 0 30 -10t11 -26q0 -22 -4 -28t-27 -22q-5 -1 -12.5 -3t-27 -13.5t-34 -27t-26.5 -46t-11 -68.5zM500 400v-100h200v100h-200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC114'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe086;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1197q162 0 299.5 -80t217.5 -217.5t80 -299.5t-80 -299.5t-217.5 -217.5t-299.5 -80t-299.5 80t-217.5 217.5t-80 299.5t80 299.5t217.5 217.5t299.5 80zM500 900v-100h200v100h-200zM400 700v-100h100v-200h-100v-100h400v100h-100v300h-300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC115'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe087;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 700v-200h-203q-25 -102 -116.5 -186t-180.5 -117v-197h-200v197q-140 27 -208 102.5t-98 200.5h-194v200h194q15 60 36 104.5t55.5 86t88 69t126.5 40.5v200h200v-200q54 -20 113 -60t112.5 -105.5t71.5 -134.5h203zM700 500v-206q149 48 201 206h-201v200h200 q-25 74 -76 127.5t-124 76.5v-204h-200v203q-75 -24 -130 -77.5t-79 -125.5h209v-200h-210q24 -73 79.5 -127.5t130.5 -78.5v206h200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC116'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe088;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1196q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM600 1014q-171 0 -292.5 -121.5t-121.5 -292.5t121.5 -292.5t292.5 -121.5t292.5 121.5t121.5 292.5t-121.5 292.5t-292.5 121.5zM844 735 l-135 -135l135 -135l-109 -109l-135 135l-135 -135l-109 109l135 135l-135 135l109 109l135 -135l135 135z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC117'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe089;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1196q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM600 1014q-171 0 -292.5 -121.5t-121.5 -292.5t121.5 -292.5t292.5 -121.5t292.5 121.5t121.5 292.5t-121.5 292.5t-292.5 121.5zM896 654 l-346 -345l-228 228l141 141l87 -87l204 205z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC118'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe090;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1196q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM248 385l568 567q-100 62 -216 62q-171 0 -292.5 -121.5t-121.5 -292.5q0 -115 62 -215zM955 809l-564 -564q97 -59 209 -59q171 0 292.5 121.5 t121.5 292.5q0 112 -59 209z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC119'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe091;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 400h-600v-301l-600 448l600 453v-300h600v-300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC120'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe092;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 400h-600v300h600v300l600 -453l-600 -448v301z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC121'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe093;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1098 600h-298v-600h-300v600h-296l450 600z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC122'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe094;&quot;</span> <span class="na">d=</span><span class="s">&quot;M998 600l-449 -600l-445 600h296v600h300v-600h298z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC123'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe095;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 199v301q-95 -2 -183 -20t-170 -52t-147 -92.5t-100 -135.5q6 132 41 238.5t103.5 193t184 138t271.5 59.5v271l600 -453z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC124'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe096;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 1200h-400l129 -129l-294 -294l142 -142l294 294l129 -129v400zM565 423l-294 -294l129 -129h-400v400l129 -129l294 294z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC125'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe097;&quot;</span> <span class="na">d=</span><span class="s">&quot;M871 730l129 -130h-400v400l129 -129l295 295l142 -141zM200 600h400v-400l-129 130l-295 -295l-142 141l295 295z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC126'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe101;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1177q118 0 224.5 -45.5t184 -123t123 -184t45.5 -224.5t-45.5 -224.5t-123 -184t-184 -123t-224.5 -45.5t-224.5 45.5t-184 123t-123 184t-45.5 224.5t45.5 224.5t123 184t184 123t224.5 45.5zM686 549l58 302q4 20 -8 34.5t-33 14.5h-207q-20 0 -32 -14.5t-8 -34.5 l58 -302q4 -20 21.5 -34.5t37.5 -14.5h54q20 0 37.5 14.5t21.5 34.5zM700 400h-200v-100h200v100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC127'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe102;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 900h-111v6t-1 15t-3 18l-34 172q-11 39 -41.5 63t-69.5 24q-32 0 -61 -17l-239 -144q-22 -13 -40 -35q-19 24 -40 36l-238 144q-33 18 -62 18q-39 0 -69.5 -23t-40.5 -61l-35 -177q-2 -8 -3 -18t-1 -15v-6h-111v-100h100v-200h400v300h200v-300h400v200h100v100z M731 900l202 197q5 -12 12 -32.5t23 -64t25 -72t7 -28.5h-269zM481 900h-281q-3 0 14 48t35 96l18 47zM100 0h400v400h-400v-400zM700 400h400v-400h-400v400z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC128'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe103;&quot;</span> <span class="na">d=</span><span class="s">&quot;M0 121l216 193q-9 53 -13 83t-5.5 94t9 113t38.5 114t74 124q47 60 99.5 102.5t103 68t127.5 48t145.5 37.5t184.5 43.5t220 58.5q0 -189 -22 -343t-59 -258t-89 -181.5t-108.5 -120t-122 -68t-125.5 -30t-121.5 -1.5t-107.5 12.5t-87.5 17t-56.5 7.5l-99 -55l-201 -202 v143zM692 611q70 38 118.5 69.5t102 79t99 111.5t86.5 148q22 50 24 60t-6 19q-7 5 -17 5t-26.5 -14.5t-33.5 -39.5q-35 -51 -113.5 -108.5t-139.5 -89.5l-61 -32q-369 -197 -458 -401q-48 -111 -28.5 -117.5t86.5 76.5q55 66 367 234z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC129'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe105;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1261 600l-26 -40q-6 -10 -20 -30t-49 -63.5t-74.5 -85.5t-97 -90t-116.5 -83.5t-132.5 -59t-145.5 -23.5t-145.5 23.5t-132.5 59t-116.5 83.5t-97 90t-74.5 85.5t-49 63.5t-20 30l-26 40l26 40q6 10 20 30t49 63.5t74.5 85.5t97 90t116.5 83.5t132.5 59t145.5 23.5 t145.5 -23.5t132.5 -59t116.5 -83.5t97 -90t74.5 -85.5t49 -63.5t20 -30zM600 240q64 0 123.5 20t100.5 45.5t85.5 71.5t66.5 75.5t58 81.5t47 66q-1 1 -28.5 37.5t-42 55t-43.5 53t-57.5 63.5t-58.5 54q49 -74 49 -163q0 -124 -88 -212t-212 -88t-212 88t-88 212 q0 85 46 158q-102 -87 -226 -258q7 -10 40.5 -58t56 -78.5t68 -77.5t87.5 -75t103 -49.5t125 -21.5zM484 762l-107 -106q49 -124 154 -191l105 105q-37 24 -75 72t-57 84z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC130'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe106;&quot;</span> <span class="na">d=</span><span class="s">&quot;M906 1200l-314 -1200h-148l37 143q-82 21 -165 71.5t-140 102t-109.5 112t-72 88.5t-29.5 43l-26 40l26 40q6 10 20 30t49 63.5t74.5 85.5t97 90t116.5 83.5t132.5 59t145.5 23.5q61 0 121 -17l37 142h148zM1261 600l-26 -40q-7 -12 -25.5 -38t-63.5 -79.5t-95.5 -102.5 t-124 -100t-146.5 -79l38 145q22 15 44.5 34t46 44t40.5 44t41 50.5t33.5 43.5t33 44t24.5 34q-97 127 -140 175l39 146q67 -54 131.5 -125.5t87.5 -103.5t36 -52zM513 264l37 141q-107 18 -178.5 101.5t-71.5 193.5q0 85 46 158q-102 -87 -226 -258q210 -282 393 -336z M484 762l-107 -106q49 -124 154 -191l47 47l23 87q-30 28 -59 69t-44 68z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC131'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe107;&quot;</span> <span class="na">d=</span><span class="s">&quot;M-47 0h1294q37 0 50.5 35.5t-7.5 67.5l-642 1056q-20 33 -48 36t-48 -29l-642 -1066q-21 -32 -7.5 -66t50.5 -34zM700 200v100h-200v-100h-345l445 723l445 -723h-345zM700 700h-200v-100l100 -300l100 300v100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC132'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe108;&quot;</span> <span class="na">d=</span><span class="s">&quot;M800 711l363 -325q15 -14 26 -38.5t11 -44.5v-41q0 -20 -12 -26.5t-29 5.5l-359 249v-263q100 -91 100 -113v-64q0 -21 -13 -29t-32 1l-94 78h-222l-94 -78q-19 -9 -32 -1t-13 29v64q0 22 100 113v263l-359 -249q-17 -12 -29 -5.5t-12 26.5v41q0 20 11 44.5t26 38.5 l363 325v339q0 62 44 106t106 44t106 -44t44 -106v-339z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC133'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe110;&quot;</span> <span class="na">d=</span><span class="s">&quot;M941 800l-600 -600h-341v200h259l600 600h241v198l300 -295l-300 -300v197h-159zM381 678l141 142l-181 180h-341v-200h259zM1100 598l300 -295l-300 -300v197h-241l-181 181l141 142l122 -123h159v198z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC134'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe111;&quot;</span> <span class="na">d=</span><span class="s">&quot;M100 1100h1000q41 0 70.5 -29.5t29.5 -70.5v-600q0 -41 -29.5 -70.5t-70.5 -29.5h-596l-304 -300v300h-100q-41 0 -70.5 29.5t-29.5 70.5v600q0 41 29.5 70.5t70.5 29.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC135'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe112;&quot;</span> <span class="na">d=</span><span class="s">&quot;M400 900h-300v300h300v-300zM1100 900h-300v300h300v-300zM1100 800v-200q0 -42 -3 -83t-15 -104t-31.5 -116t-58 -109.5t-89 -96.5t-129 -65.5t-174.5 -25.5t-174.5 25.5t-129 65.5t-89 96.5t-58 109.5t-31.5 116t-15 104t-3 83v200h300v-250q0 -113 6 -145 q17 -92 102 -117q39 -11 92 -11q37 0 66.5 5.5t50 15.5t36 24t24 31.5t14 37.5t7 42t2.5 45t0 47v25v250h300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC136'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe113;&quot;</span> <span class="na">d=</span><span class="s">&quot;M902 184l226 227l-578 579l-580 -579l227 -227l352 353z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC137'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe114;&quot;</span> <span class="na">d=</span><span class="s">&quot;M650 218l578 579l-226 227l-353 -353l-352 353l-227 -227z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC138'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe115;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1198 400v600h-796l215 -200h381v-400h-198l299 -283l299 283h-200zM-198 700l299 283l300 -283h-203v-400h385l215 -200h-800v600h-196z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC139'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe116;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1050 1200h94q20 0 35 -14.5t15 -35.5t-15 -35.5t-35 -14.5h-54l-201 -961q-2 -4 -6 -10.5t-19 -17.5t-33 -11h-31v-50q0 -20 -14.5 -35t-35.5 -15t-35.5 15t-14.5 35v50h-300v-50q0 -20 -14.5 -35t-35.5 -15t-35.5 15t-14.5 35v50h-50q-21 0 -35.5 15t-14.5 35 q0 21 14.5 35.5t35.5 14.5h535l48 200h-633q-32 0 -54.5 21t-27.5 43l-100 475q-5 24 10 42q14 19 39 19h896l38 162q5 17 18.5 27.5t30.5 10.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC140'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe117;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 1000v-100h-1200v100h200q0 41 29.5 70.5t70.5 29.5h300q41 0 70.5 -29.5t29.5 -70.5h500zM0 800h1200v-800h-1200v800z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC141'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe118;&quot;</span> <span class="na">d=</span><span class="s">&quot;M201 800l-200 -400v600h200q0 41 29.5 70.5t70.5 29.5h300q41 0 70.5 -29.5t29.5 -70.5h500v-200h-1000zM1501 700l-300 -700h-1200l300 700h1200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC142'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe119;&quot;</span> <span class="na">d=</span><span class="s">&quot;M302 300h198v600h-198l298 300l298 -300h-198v-600h198l-298 -300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC143'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe120;&quot;</span> <span class="na">d=</span><span class="s">&quot;M900 303v197h-600v-197l-300 297l300 298v-198h600v198l300 -298z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC144'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe121;&quot;</span> <span class="na">d=</span><span class="s">&quot;M31 400l172 739q5 22 23 41.5t38 19.5h672q19 0 37.5 -22.5t23.5 -45.5l172 -732h-1138zM100 300h1000q41 0 70.5 -29.5t29.5 -70.5v-100q0 -41 -29.5 -70.5t-70.5 -29.5h-1000q-41 0 -70.5 29.5t-29.5 70.5v100q0 41 29.5 70.5t70.5 29.5zM900 200h-100v-100h100v100z M1100 200h-100v-100h100v100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC145'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe122;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 200v850q0 21 14.5 35.5t35.5 14.5q20 0 35 -14.5t15 -35.5v-850q0 -20 -15 -35t-35 -15q-21 0 -35.5 15t-14.5 35zM325 800l675 250v-850l-675 200h-38l47 -276q2 -12 -3 -17.5t-11 -6t-21 -0.5h-8h-83q-20 0 -34.5 14t-18.5 35q-56 337 -56 351v250v5 q0 13 0.5 18.5t2.5 13t8 10.5t15 3h200zM-101 600v50q0 24 25 49t50 38l25 13v-250l-11 5.5t-24 14t-30 21.5t-24 27.5t-11 31.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC146'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe124;&quot;</span> <span class="na">d=</span><span class="s">&quot;M445 1180l-45 -233l-224 78l78 -225l-233 -44l179 -156l-179 -155l233 -45l-78 -224l224 78l45 -233l155 179l155 -179l45 233l224 -78l-78 224l234 45l-180 155l180 156l-234 44l78 225l-224 -78l-45 233l-155 -180z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC147'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe125;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 1200h-50q-27 0 -51 -20t-38 -48l-96 -198l-145 -196q-20 -26 -20 -63v-400q0 -75 100 -75h61q123 -100 139 -100h250q46 0 83 57l238 344q29 31 29 74v100q0 44 -30.5 84.5t-69.5 40.5h-328q28 118 28 125v150q0 44 -30.5 84.5t-69.5 40.5zM700 925l-50 -225h450 v-125l-250 -375h-214l-136 100h-100v375l150 212l100 213h50v-175zM0 800v-600h200v600h-200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC148'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe126;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 0h-50q-27 0 -51 20t-38 48l-96 198l-145 196q-20 26 -20 63v400q0 75 100 75h61q123 100 139 100h250q46 0 83 -57l238 -344q29 -31 29 -74v-100q0 -44 -30.5 -84.5t-69.5 -40.5h-328q28 -118 28 -125v-150q0 -44 -30.5 -84.5t-69.5 -40.5zM200 400h-200v600h200 v-600zM700 275l-50 225h450v125l-250 375h-214l-136 -100h-100v-375l150 -212l100 -213h50v175z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC149'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe127;&quot;</span> <span class="na">d=</span><span class="s">&quot;M364 873l362 230q14 6 25 6q17 0 29 -12l109 -112q14 -14 14 -34q0 -18 -11 -32l-85 -121h302q85 0 138.5 -38t53.5 -110t-54.5 -111t-138.5 -39h-107l-130 -339q-7 -22 -20.5 -41.5t-28.5 -19.5h-341q-7 0 -90 81t-83 94v525q0 17 14 35.5t28 28.5zM408 792v-503 l100 -89h293l131 339q6 21 19.5 41t28.5 20h203q16 0 25 15t9 36q0 20 -9 34.5t-25 14.5h-457h-6.5h-7.5t-6.5 0.5t-6 1t-5 1.5t-5.5 2.5t-4 4t-4 5.5q-5 12 -5 20q0 14 10 27l147 183l-86 83zM208 200h-200v600h200v-600z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC150'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe128;&quot;</span> <span class="na">d=</span><span class="s">&quot;M475 1104l365 -230q7 -4 16.5 -10.5t26 -26t16.5 -36.5v-526q0 -13 -85.5 -93.5t-93.5 -80.5h-342q-15 0 -28.5 20t-19.5 41l-131 339h-106q-84 0 -139 39t-55 111t54 110t139 37h302l-85 121q-11 16 -11 32q0 21 14 34l109 113q13 12 29 12q11 0 25 -6zM370 946 l145 -184q10 -11 10 -26q0 -11 -5 -20q-1 -3 -3.5 -5.5l-4 -4t-5 -2.5t-5.5 -1.5t-6.5 -1t-6.5 -0.5h-7.5h-6.5h-476v-100h222q15 0 28.5 -20.5t19.5 -40.5l131 -339h293l106 89v502l-342 237zM1199 201h-200v600h200v-600z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC151'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe129;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 473v342q0 15 -20 28.5t-41 19.5l-339 131v106q0 84 -39 139t-111 55t-110 -53.5t-38 -138.5v-302l-121 84q-15 12 -33.5 11.5t-32.5 -13.5l-112 -110q-22 -22 -6 -53l230 -363q4 -6 10.5 -15.5t26 -25t36.5 -15.5h525q13 0 94 83t81 90zM911 400h-503l-236 339 l83 86l183 -146q22 -18 47 -5q3 1 5.5 3.5l4 4t2.5 5t1.5 5.5t1 6.5t0.5 6v7.5v7v456q0 22 25 31t50 -0.5t25 -30.5v-202q0 -16 20 -29.5t41 -19.5l339 -130v-294zM1000 200v-200h-600v200h600z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC152'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe130;&quot;</span> <span class="na">d=</span><span class="s">&quot;M305 1104v200h600v-200h-600zM605 310l339 131q20 6 40.5 19.5t20.5 28.5v342q0 7 -81 90t-94 83h-525q-17 0 -35.5 -14t-28.5 -28l-10 -15l-230 -362q-15 -31 7 -53l112 -110q13 -13 32 -13.5t34 10.5l121 85l-1 -302q0 -84 38.5 -138t110.5 -54t111 55t39 139v106z M905 804v-294l-340 -130q-20 -6 -40 -20t-20 -29v-202q0 -22 -25 -31t-50 0t-25 31v456v14.5t-1.5 11.5t-5 12t-9.5 7q-24 13 -46 -5l-184 -146l-83 86l237 339h503z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC153'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe131;&quot;</span> <span class="na">d=</span><span class="s">&quot;M603 1195q162 0 299.5 -80t217.5 -218t80 -300t-80 -299.5t-217.5 -217.5t-299.5 -80t-300 80t-218 217.5t-80 299.5q0 122 47.5 232.5t127.5 190.5t190.5 127.5t232.5 47.5zM598 701h-298v-201h300l-2 -194l402 294l-402 298v-197z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC154'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe132;&quot;</span> <span class="na">d=</span><span class="s">&quot;M597 1195q122 0 232.5 -47.5t190.5 -127.5t127.5 -190.5t47.5 -232.5q0 -162 -80 -299.5t-218 -217.5t-300 -80t-299.5 80t-217.5 217.5t-80 299.5q0 122 47.5 232.5t127.5 190.5t190.5 127.5t231.5 47.5zM200 600l400 -294v194h302v201h-300v197z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC155'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe133;&quot;</span> <span class="na">d=</span><span class="s">&quot;M603 1195q121 0 231.5 -47.5t190.5 -127.5t127.5 -190.5t47.5 -232.5q0 -162 -80 -299.5t-217.5 -217.5t-299.5 -80t-300 80t-218 217.5t-80 299.5q0 122 47.5 232.5t127.5 190.5t190.5 127.5t232.5 47.5zM300 600h200v-300h200v300h200l-300 400z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC156'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe134;&quot;</span> <span class="na">d=</span><span class="s">&quot;M603 1195q121 0 231.5 -47.5t190.5 -127.5t127.5 -190.5t47.5 -232.5q0 -162 -80 -299.5t-217.5 -217.5t-299.5 -80t-300 80t-218 217.5t-80 299.5q0 122 47.5 232.5t127.5 190.5t190.5 127.5t232.5 47.5zM500 900v-300h-200l300 -400l300 400h-200v300h-200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC157'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe135;&quot;</span> <span class="na">d=</span><span class="s">&quot;M603 1195q121 0 231.5 -47.5t190.5 -127.5t127.5 -190.5t47.5 -232.5q0 -162 -80 -299.5t-217.5 -217.5t-299.5 -80t-300 80t-218 217.5t-80 299.5q0 122 47.5 232.5t127.5 190.5t190.5 127.5t232.5 47.5zM627 1101q-15 -12 -36.5 -21t-34.5 -12t-44 -8t-39 -6 q-15 -3 -45.5 0.5t-45.5 -2.5q-21 -7 -52 -26.5t-34 -34.5q-3 -11 6.5 -22.5t8.5 -18.5q-3 -34 -27.5 -90.5t-29.5 -79.5q-8 -33 5.5 -92.5t7.5 -87.5q0 -9 17 -44t16 -60q12 0 23 -5.5t23 -15t20 -13.5q24 -12 108 -42q22 -8 53 -31.5t59.5 -38.5t57.5 -11q8 -18 -15 -55 t-20 -57q42 -71 87 -80q0 -6 -3 -15.5t-3.5 -14.5t4.5 -17q102 -2 221 112q30 29 47 47t34.5 49t20.5 62q-14 9 -37 9.5t-36 7.5q-14 7 -49 15t-52 19q-9 0 -39.5 -0.5t-46.5 -1.5t-39 -6.5t-39 -16.5q-50 -35 -66 -12q-4 2 -3.5 25.5t0.5 25.5q-6 13 -26.5 17t-24.5 7 q2 22 -2 41t-16.5 28t-38.5 -20q-23 -25 -42 4q-19 28 -8 58q6 16 22 22q6 -1 26 -1.5t33.5 -4t19.5 -13.5q12 -19 32 -37.5t34 -27.5l14 -8q0 3 9.5 39.5t5.5 57.5q-4 23 14.5 44.5t22.5 31.5q5 14 10 35t8.5 31t15.5 22.5t34 21.5q-6 18 10 37q8 0 23.5 -1.5t24.5 -1.5 t20.5 4.5t20.5 15.5q-10 23 -30.5 42.5t-38 30t-49 26.5t-43.5 23q11 41 1 44q31 -13 58.5 -14.5t39.5 3.5l11 4q6 36 -17 53.5t-64 28.5t-56 23q-19 -3 -37 0zM613 994q0 -18 8 -42.5t16.5 -44t9.5 -23.5q-9 2 -31 5t-36 5t-32 8t-30 14q3 12 16 30t16 25q10 -10 18.5 -10 t14 6t14.5 14.5t16 12.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC158'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe137;&quot;</span> <span class="na">horiz-adv-x=</span><span class="s">&quot;1220&quot;</span> <span class="na">d=</span><span class="s">&quot;M100 1196h1000q41 0 70.5 -29.5t29.5 -70.5v-100q0 -41 -29.5 -70.5t-70.5 -29.5h-1000q-41 0 -70.5 29.5t-29.5 70.5v100q0 41 29.5 70.5t70.5 29.5zM1100 1096h-200v-100h200v100zM100 796h1000q41 0 70.5 -29.5t29.5 -70.5v-100q0 -41 -29.5 -70.5t-70.5 -29.5h-1000 q-41 0 -70.5 29.5t-29.5 70.5v100q0 41 29.5 70.5t70.5 29.5zM1100 696h-500v-100h500v100zM100 396h1000q41 0 70.5 -29.5t29.5 -70.5v-100q0 -41 -29.5 -70.5t-70.5 -29.5h-1000q-41 0 -70.5 29.5t-29.5 70.5v100q0 41 29.5 70.5t70.5 29.5zM1100 296h-300v-100h300v100z &quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC159'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe138;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 1200v-100h-1000v100h1000zM150 1000h900l-350 -500v-300l-200 -200v500z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC160'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe140;&quot;</span> <span class="na">d=</span><span class="s">&quot;M329 729l142 142l-200 200l129 129h-400v-400l129 129zM1200 1200v-400l-129 129l-200 -200l-142 142l200 200l-129 129h400zM271 129l129 -129h-400v400l129 -129l200 200l142 -142zM1071 271l129 129v-400h-400l129 129l-200 200l142 142z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC161'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe141;&quot;</span> <span class="na">d=</span><span class="s">&quot;M596 1192q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM596 1010q-171 0 -292.5 -121.5t-121.5 -292.5q0 -172 121.5 -293t292.5 -121t292.5 121t121.5 293q0 171 -121.5 292.5t-292.5 121.5zM455 905 q22 0 38 -16t16 -39t-16 -39t-38 -16q-23 0 -39 16.5t-16 38.5t16 38.5t39 16.5zM708 821l1 1q-9 14 -9 28q0 22 16 38.5t39 16.5q22 0 38 -16t16 -39t-16 -39t-38 -16q-14 0 -29 10l-55 -145q17 -22 17 -51q0 -36 -25.5 -61.5t-61.5 -25.5t-61.5 25.5t-25.5 61.5 q0 32 20.5 56.5t51.5 29.5zM855 709q23 0 38.5 -15.5t15.5 -38.5t-16 -39t-38 -16q-23 0 -39 16t-16 39q0 22 16 38t39 16zM345 709q23 0 39 -16t16 -38q0 -23 -16 -39t-39 -16q-22 0 -38 16t-16 39t15.5 38.5t38.5 15.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC162'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe143;&quot;</span> <span class="na">d=</span><span class="s">&quot;M649 54l-16 22q-90 125 -293 323q-71 70 -104.5 105.5t-77 89.5t-61 99t-17.5 91q0 131 98.5 229.5t230.5 98.5q143 0 241 -129q103 129 246 129q129 0 226 -98.5t97 -229.5q0 -46 -17.5 -91t-61 -99t-77 -89.5t-104.5 -105.5q-203 -198 -293 -323zM844 524l12 12 q64 62 97.5 97t64.5 79t31 72q0 71 -48 119t-105 48q-74 0 -132 -82l-118 -171l-114 174q-51 79 -123 79q-60 0 -109.5 -49t-49.5 -118q0 -27 30.5 -70t61.5 -75.5t95 -94.5l22 -22q93 -90 190 -201q82 92 195 203z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC163'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe144;&quot;</span> <span class="na">d=</span><span class="s">&quot;M476 406l19 -17l105 105l-212 212l389 389l247 -247l-95 -96l18 -18q46 -46 77 -99l29 29q35 35 62.5 88t27.5 96q0 93 -66 159l-141 141q-66 66 -159 66q-95 0 -159 -66l-283 -283q-66 -64 -66 -159q0 -93 66 -159zM123 193l141 -141q66 -66 159 -66q95 0 159 66 l283 283q66 66 66 159t-66 159l-141 141q-12 12 -19 17l-105 -105l212 -212l-389 -389l-247 248l95 95l-18 18q-46 45 -75 101l-55 -55q-66 -66 -66 -159q0 -94 66 -160z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC164'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe145;&quot;</span> <span class="na">d=</span><span class="s">&quot;M200 100v953q0 21 30 46t81 48t129 38t163 15t162 -15t127 -38t79 -48t29 -46v-953q0 -41 -29.5 -70.5t-70.5 -29.5h-600q-41 0 -70.5 29.5t-29.5 70.5zM900 1000h-600v-700h600v700zM600 46q43 0 73.5 30.5t30.5 73.5t-30.5 73.5t-73.5 30.5t-73.5 -30.5t-30.5 -73.5 t30.5 -73.5t73.5 -30.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC165'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe148;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 1029v-307l64 -14q34 -7 64 -16.5t70 -31.5t67.5 -52t47.5 -80.5t20 -112.5q0 -139 -89 -224t-244 -96v-77h-100v78q-152 17 -237 104q-40 40 -52.5 93.5t-15.5 139.5h139q5 -77 48.5 -126.5t117.5 -64.5v335l-27 7q-46 14 -79 26.5t-72 36t-62.5 52t-40 72.5 t-16.5 99q0 92 44 159.5t109 101t144 40.5v78h100v-79q38 -4 72.5 -13.5t75.5 -31.5t71 -53.5t51.5 -84t24.5 -118.5h-159q-8 72 -35 109.5t-101 50.5zM600 755v274q-61 -8 -97.5 -37.5t-36.5 -102.5q0 -29 8 -51t16.5 -34t29.5 -22.5t31 -13.5t38 -10q7 -2 11 -3zM700 548 v-311q170 18 170 151q0 64 -44 99.5t-126 60.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC166'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe149;&quot;</span> <span class="na">d=</span><span class="s">&quot;M866 300l50 -147q-41 -25 -80.5 -36.5t-59 -13t-61.5 -1.5q-23 0 -128 33t-155 29q-39 -4 -82 -17t-66 -25l-24 -11l-55 145l16.5 11t15.5 10t13.5 9.5t14.5 12t14.5 14t17.5 18.5q48 55 54 126.5t-30 142.5h-221v100h166q-24 49 -44 104q-10 26 -14.5 55.5t-3 72.5 t25 90t68.5 87q97 88 263 88q129 0 230 -89t101 -208h-153q0 52 -34 89.5t-74 51.5t-76 14q-37 0 -79 -14.5t-62 -35.5q-41 -44 -41 -101q0 -11 2.5 -24.5t5.5 -24t9.5 -26.5t10.5 -25t14 -27.5t14 -25.5t15.5 -27t13.5 -24h242v-100h-197q8 -50 -2.5 -115t-31.5 -94 q-41 -59 -99 -113q35 11 84 18t70 7q32 1 102 -16t104 -17q76 0 136 30z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC167'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe150;&quot;</span> <span class="na">d=</span><span class="s">&quot;M300 0l298 300h-198v900h-200v-900h-198zM900 1200l298 -300h-198v-900h-200v900h-198z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC168'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe151;&quot;</span> <span class="na">d=</span><span class="s">&quot;M400 300h198l-298 -300l-298 300h198v900h200v-900zM1000 1200v-500h-100v100h-100v-100h-100v500h300zM901 1100h-100v-200h100v200zM700 500h300v-200h-99v-100h-100v100h99v100h-200v100zM800 100h200v-100h-300v200h100v-100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC169'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe152;&quot;</span> <span class="na">d=</span><span class="s">&quot;M400 300h198l-298 -300l-298 300h198v900h200v-900zM1000 1200v-200h-99v-100h-100v100h99v100h-200v100h300zM800 800h200v-100h-300v200h100v-100zM700 500h300v-500h-100v100h-100v-100h-100v500zM801 200h100v200h-100v-200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC170'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe153;&quot;</span> <span class="na">d=</span><span class="s">&quot;M300 0l298 300h-198v900h-200v-900h-198zM900 1100h-100v100h200v-500h-100v400zM1100 500v-500h-100v100h-200v400h300zM1001 400h-100v-200h100v200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC171'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe154;&quot;</span> <span class="na">d=</span><span class="s">&quot;M300 0l298 300h-198v900h-200v-900h-198zM1100 1200v-500h-100v100h-200v400h300zM1001 1100h-100v-200h100v200zM900 400h-100v100h200v-500h-100v400z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC172'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe155;&quot;</span> <span class="na">d=</span><span class="s">&quot;M300 0l298 300h-198v900h-200v-900h-198zM900 1000h-200v200h200v-200zM1000 700h-300v200h300v-200zM1100 400h-400v200h400v-200zM1200 100h-500v200h500v-200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC173'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe156;&quot;</span> <span class="na">d=</span><span class="s">&quot;M300 0l298 300h-198v900h-200v-900h-198zM1200 1000h-500v200h500v-200zM1100 700h-400v200h400v-200zM1000 400h-300v200h300v-200zM900 100h-200v200h200v-200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC174'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe157;&quot;</span> <span class="na">d=</span><span class="s">&quot;M400 1100h300q162 0 281 -118.5t119 -281.5v-300q0 -165 -118.5 -282.5t-281.5 -117.5h-300q-165 0 -282.5 117.5t-117.5 282.5v300q0 165 117.5 282.5t282.5 117.5zM800 900h-500q-41 0 -70.5 -29.5t-29.5 -70.5v-500q0 -41 29.5 -70.5t70.5 -29.5h500q41 0 70.5 29.5 t29.5 70.5v500q0 41 -29.5 70.5t-70.5 29.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC175'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe158;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 0h-300q-163 0 -281.5 117.5t-118.5 282.5v300q0 163 119 281.5t281 118.5h300q165 0 282.5 -117.5t117.5 -282.5v-300q0 -165 -117.5 -282.5t-282.5 -117.5zM800 900h-500q-41 0 -70.5 -29.5t-29.5 -70.5v-500q0 -41 29.5 -70.5t70.5 -29.5h500q41 0 70.5 29.5 t29.5 70.5v500q0 41 -29.5 70.5t-70.5 29.5zM400 800v-500l333 250z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC176'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe159;&quot;</span> <span class="na">d=</span><span class="s">&quot;M0 400v300q0 163 117.5 281.5t282.5 118.5h300q163 0 281.5 -119t118.5 -281v-300q0 -165 -117.5 -282.5t-282.5 -117.5h-300q-165 0 -282.5 117.5t-117.5 282.5zM900 300v500q0 41 -29.5 70.5t-70.5 29.5h-500q-41 0 -70.5 -29.5t-29.5 -70.5v-500q0 -41 29.5 -70.5 t70.5 -29.5h500q41 0 70.5 29.5t29.5 70.5zM800 700h-500l250 -333z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC177'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe160;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 700v-300q0 -162 -118.5 -281t-281.5 -119h-300q-165 0 -282.5 118.5t-117.5 281.5v300q0 165 117.5 282.5t282.5 117.5h300q165 0 282.5 -117.5t117.5 -282.5zM900 300v500q0 41 -29.5 70.5t-70.5 29.5h-500q-41 0 -70.5 -29.5t-29.5 -70.5v-500q0 -41 29.5 -70.5 t70.5 -29.5h500q41 0 70.5 29.5t29.5 70.5zM550 733l-250 -333h500z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC178'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe161;&quot;</span> <span class="na">d=</span><span class="s">&quot;M500 1100h400q165 0 282.5 -117.5t117.5 -282.5v-300q0 -165 -117.5 -282.5t-282.5 -117.5h-400v200h500q41 0 70.5 29.5t29.5 70.5v500q0 41 -29.5 70.5t-70.5 29.5h-500v200zM700 550l-400 -350v200h-300v300h300v200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC179'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe162;&quot;</span> <span class="na">d=</span><span class="s">&quot;M403 2l9 -1q13 0 26 16l538 630q15 19 6 36q-8 18 -32 16h-300q1 4 78 219.5t79 227.5q2 17 -6 27l-8 8h-9q-16 0 -25 -15q-4 -5 -98.5 -111.5t-228 -257t-209.5 -238.5q-17 -19 -7 -40q10 -19 32 -19h302q-155 -438 -160 -458q-5 -21 4 -32z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC180'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe163;&quot;</span> <span class="na">d=</span><span class="s">&quot;M800 200h-500q-41 0 -70.5 29.5t-29.5 70.5v500q0 41 29.5 70.5t70.5 29.5h500v185q-14 4 -114 7.5t-193 5.5l-93 2q-165 0 -282.5 -117.5t-117.5 -282.5v-300q0 -165 117.5 -282.5t282.5 -117.5h300q47 0 100 15v185zM900 200v200h-300v300h300v200l400 -350z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC181'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe164;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 700l-149 149l-342 -353l-213 213l353 342l-149 149h500v-500zM1022 571l-122 -123v-148q0 -41 -29.5 -70.5t-70.5 -29.5h-500q-41 0 -70.5 29.5t-29.5 70.5v500q0 41 29.5 70.5t70.5 29.5h156l118 122l-74 78h-100q-165 0 -282.5 -117.5t-117.5 -282.5v-300 q0 -165 117.5 -282.5t282.5 -117.5h300q163 0 281.5 117.5t118.5 282.5v98z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC182'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe165;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1196q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM600 1014q-171 0 -292.5 -121.5t-121.5 -292.5t121.5 -292.5t292.5 -121.5t292.5 121.5t121.5 292.5t-121.5 292.5t-292.5 121.5zM600 794 q80 0 137 -57t57 -137t-57 -137t-137 -57t-137 57t-57 137t57 137t137 57z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC183'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe166;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 800v400h-300v-400h-300l445 -500l450 500h-295zM25 300h1048q11 0 19 -7.5t8 -17.5v-275h-1100v275q0 11 7 18t18 7zM1000 200h-100v-50h100v50z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC184'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe167;&quot;</span> <span class="na">d=</span><span class="s">&quot;M400 700v-300h300v300h295l-445 500l-450 -500h300zM25 300h1048q11 0 19 -7.5t8 -17.5v-275h-1100v275q0 11 7 18t18 7zM1000 200h-100v-50h100v50z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC185'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe168;&quot;</span> <span class="na">d=</span><span class="s">&quot;M405 400l596 596l-154 155l-442 -442l-150 151l-155 -155zM25 300h1048q11 0 19 -7.5t8 -17.5v-275h-1100v275q0 11 7 18t18 7zM1000 200h-100v-50h100v50z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC186'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe169;&quot;</span> <span class="na">d=</span><span class="s">&quot;M409 1103l-97 97l-212 -212l97 -98zM650 861l-149 149l-212 -212l149 -149l-238 -248h700v699zM25 300h1048q11 0 19 -7.5t8 -17.5v-275h-1100v275q0 11 7 18t18 7zM1000 200h-100v-50h100v50z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC187'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe170;&quot;</span> <span class="na">d=</span><span class="s">&quot;M539 950l-149 -149l212 -212l149 148l248 -237v700h-699zM297 709l-97 -97l212 -212l98 97zM25 300h1048q11 0 19 -7.5t8 -17.5v-275h-1100v275q0 11 7 18t18 7zM1000 200h-100v-50h100v50z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC188'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe171;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 1199v-1079l-475 272l-310 -393v416h-392zM1166 1148l-672 -712v-226z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC189'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe172;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 1000v-850q0 -21 -15 -35.5t-35 -14.5h-150v400h-700v-400h-150q-21 0 -35.5 14.5t-14.5 35.5v1000q0 20 14.5 35t35.5 15h250v-300h500v300h100zM700 1200h-100v-200h100v200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC190'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe173;&quot;</span> <span class="na">d=</span><span class="s">&quot;M578 500h-378v-400h-150q-21 0 -35.5 14.5t-14.5 35.5v1000q0 20 14.5 35t35.5 15h250v-300h500v300h100l200 -200v-218l-276 -275l-120 120zM700 1200h-100v-200h100v200zM1300 538l-475 -476l-244 244l123 123l120 -120l353 352z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC191'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe174;&quot;</span> <span class="na">d=</span><span class="s">&quot;M529 500h-329v-400h-150q-21 0 -35.5 14.5t-14.5 35.5v1000q0 20 14.5 35t35.5 15h250v-300h500v300h100l200 -200v-269l-103 -103l-170 170zM700 1200h-100v-200h100v200zM1167 6l-170 170l-170 -170l-127 127l170 170l-170 170l127 127l170 -170l170 170l127 -128 l-170 -169l170 -170z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC192'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe175;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 500h-500v-400h-150q-21 0 -35.5 14.5t-14.5 35.5v1000q0 20 14.5 35t35.5 15h250v-300h500v300h100l200 -200v-300h-400v-200zM700 1000h-100v200h100v-200zM1000 600h-200v-300h-200l300 -300l300 300h-200v300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC193'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe176;&quot;</span> <span class="na">d=</span><span class="s">&quot;M602 500h-402v-400h-150q-21 0 -35.5 14.5t-14.5 35.5v1000q0 20 14.5 35t35.5 15h250v-300h500v300h100l200 -200v-402l-200 200zM700 1000h-100v200h100v-200zM1000 300h200l-300 300l-300 -300h200v-300h200v300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC194'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe177;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 900v150q0 21 -14.5 35.5t-35.5 14.5h-1100q-21 0 -35.5 -14.5t-14.5 -35.5v-150h1200zM0 800v-550q0 -21 14.5 -35.5t35.5 -14.5h1100q21 0 35.5 14.5t14.5 35.5v550h-1200zM100 500h400v-200h-400v200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC195'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe178;&quot;</span> <span class="na">d=</span><span class="s">&quot;M500 1000h400v198l300 -298l-300 -298v198h-400v200zM100 800v200h100v-200h-100zM400 800h-100v200h100v-200zM700 300h-400v-198l-300 298l300 298v-198h400v-200zM800 500h100v-200h-100v200zM1000 500v-200h100v200h-100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC196'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe179;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 50v1106q0 31 -18 40.5t-44 -7.5l-276 -117q-25 -16 -43.5 -50.5t-18.5 -65.5v-359q0 -29 10.5 -55.5t25 -43t29 -28.5t25.5 -18l10 -5v-397q0 -21 14.5 -35.5t35.5 -14.5h200q21 0 35.5 14.5t14.5 35.5zM550 1200l50 -100v-400l-100 -203v-447q0 -21 -14.5 -35.5 t-35.5 -14.5h-200q-21 0 -35.5 14.5t-14.5 35.5v447l-100 203v400l50 100l50 -100v-300h100v300l50 100l50 -100v-300h100v300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC197'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe180;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 106v888q0 22 25 34.5t50 13.5l25 2v56h-400v-56q75 0 87.5 -6t12.5 -44v-394h-500v394q0 38 12.5 44t87.5 6v56h-400v-56q4 0 11 -0.5t24 -3t30 -7t24 -15t11 -24.5v-888q0 -22 -25 -34.5t-50 -13.5l-25 -2v-56h400v56q-75 0 -87.5 6t-12.5 44v394h500v-394 q0 -38 -12.5 -44t-87.5 -6v-56h400v56q-4 0 -11 0.5t-24 3t-30 7t-24 15t-11 24.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC198'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe181;&quot;</span> <span class="na">d=</span><span class="s">&quot;M675 1000l-100 100h-375l-100 -100h400l200 -200v-98l295 98h105v200h-425zM500 300v500q0 41 -29.5 70.5t-70.5 29.5h-300q-41 0 -70.5 -29.5t-29.5 -70.5v-500q0 -41 29.5 -70.5t70.5 -29.5h300q41 0 70.5 29.5t29.5 70.5zM100 800h300v-200h-300v200zM700 565l400 133 v-163l-400 -133v163zM100 500h300v-200h-300v200zM805 300l295 98v-298h-425l-100 -100h-375l-100 100h400l200 200h105z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC199'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe182;&quot;</span> <span class="na">d=</span><span class="s">&quot;M179 1169l-162 -162q-1 -11 -0.5 -32.5t16 -90t46.5 -140t104 -177.5t175 -208q103 -103 207.5 -176t180 -103.5t137 -47t92.5 -16.5l31 1l163 162q16 17 13 40.5t-22 37.5l-192 136q-19 14 -45 12t-42 -19l-119 -118q-143 103 -267 227q-126 126 -227 268l118 118 q17 17 20 41.5t-11 44.5l-139 194q-14 19 -36.5 22t-40.5 -14z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC200'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe183;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 712v200q-6 8 -19 20.5t-63 45t-112 57t-171 45t-235 20.5q-92 0 -175 -10.5t-141.5 -27t-108.5 -36.5t-81.5 -40t-53.5 -36.5t-31 -27.5l-9 -10v-200q0 -21 14.5 -33.5t34.5 -8.5l202 33q20 4 34.5 21t14.5 38v146q141 24 300 24t300 -24v-146q0 -21 14.5 -38 t34.5 -21l202 -33q20 -4 34.5 8.5t14.5 33.5zM800 650l365 -303q14 -14 24.5 -39.5t10.5 -45.5v-212q0 -21 -15 -35.5t-35 -14.5h-1100q-21 0 -35.5 14.5t-14.5 35.5v212q0 20 10.5 45.5t24.5 39.5l365 303v50q0 4 1 10.5t12 22.5t30 28.5t60 23t97 10.5t97 -10t60 -23.5 t30 -27.5t12 -24l1 -10v-50z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC201'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe184;&quot;</span> <span class="na">d=</span><span class="s">&quot;M175 200h950l-125 150v250l100 100v400h-100v-200h-100v200h-200v-200h-100v200h-200v-200h-100v200h-100v-400l100 -100v-250zM1200 100v-100h-1100v100h1100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC202'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe185;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1100h100q41 0 70.5 -29.5t29.5 -70.5v-1000h-300v1000q0 41 29.5 70.5t70.5 29.5zM1000 800h100q41 0 70.5 -29.5t29.5 -70.5v-700h-300v700q0 41 29.5 70.5t70.5 29.5zM400 0v400q0 41 -29.5 70.5t-70.5 29.5h-100q-41 0 -70.5 -29.5t-29.5 -70.5v-400h300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC203'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe186;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 800v-500q0 -124 -88 -212t-212 -88h-700q-124 0 -212 88t-88 212v500q0 124 88 212t212 88h700q124 0 212 -88t88 -212zM1000 900h-900v-700h900v700zM200 800v-300h200v-100h-200v-100h300v300h-200v100h200v100h-300zM800 800h-200v-500h200v100h100v300h-100 v100zM800 700v-300h-100v300h100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC204'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe187;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 800v-500q0 -124 -88 -212t-212 -88h-700q-124 0 -212 88t-88 212v500q0 124 88 212t212 88h700q124 0 212 -88t88 -212zM1000 900h-900v-700h900v700zM400 600h-100v200h-100v-500h100v200h100v-200h100v500h-100v-200zM800 800h-200v-500h200v100h100v300h-100 v100zM800 700v-300h-100v300h100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC205'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe188;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 800v-500q0 -124 -88 -212t-212 -88h-700q-124 0 -212 88t-88 212v500q0 124 88 212t212 88h700q124 0 212 -88t88 -212zM1000 900h-900v-700h900v700zM200 800v-500h300v100h-200v300h200v100h-300zM600 800v-500h300v100h-200v300h200v100h-300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC206'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe189;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 800v-500q0 -124 -88 -212t-212 -88h-700q-124 0 -212 88t-88 212v500q0 124 88 212t212 88h700q124 0 212 -88t88 -212zM1000 900h-900v-700h900v700zM500 700l-300 -150l300 -150v300zM600 400l300 150l-300 150v-300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC207'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe190;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 800v-500q0 -124 -88 -212t-212 -88h-700q-124 0 -212 88t-88 212v500q0 124 88 212t212 88h700q124 0 212 -88t88 -212zM1000 900h-900v-700h900v700zM900 800v-500h-700v500h700zM300 400h130q41 0 68 42t27 107t-28.5 108t-66.5 43h-130v-300zM800 700h-130 q-38 0 -66.5 -43t-28.5 -108t27 -107t68 -42h130v300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC208'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe191;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 800v-500q0 -124 -88 -212t-212 -88h-700q-124 0 -212 88t-88 212v500q0 124 88 212t212 88h700q124 0 212 -88t88 -212zM1000 900h-900v-700h900v700zM200 800v-300h200v-100h-200v-100h300v300h-200v100h200v100h-300zM800 300h100v500h-200v-100h100v-400z M601 300h100v100h-100v-100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC209'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe192;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 800v-500q0 -124 -88 -212t-212 -88h-700q-124 0 -212 88t-88 212v500q0 124 88 212t212 88h700q124 0 212 -88t88 -212zM1000 900h-900v-700h900v700zM300 700v100h-100v-500h300v400h-200zM800 300h100v500h-200v-100h100v-400zM401 400h-100v200h100v-200z M601 300h100v100h-100v-100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC210'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe193;&quot;</span> <span class="na">d=</span><span class="s">&quot;M200 1100h700q124 0 212 -88t88 -212v-500q0 -124 -88 -212t-212 -88h-700q-124 0 -212 88t-88 212v500q0 124 88 212t212 88zM1000 900h-900v-700h900v700zM400 700h-200v100h300v-300h-99v-100h-100v100h99v200zM800 700h-100v100h200v-500h-100v400zM201 400h100v-100 h-100v100zM701 300h-100v100h100v-100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC211'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe194;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 1196q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM600 1014q-171 0 -292.5 -121.5t-121.5 -292.5t121.5 -292.5t292.5 -121.5t292.5 121.5t121.5 292.5t-121.5 292.5t-292.5 121.5zM800 700h-300 v-200h300v-100h-300l-100 100v200l100 100h300v-100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC212'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe195;&quot;</span> <span class="na">d=</span><span class="s">&quot;M596 1196q162 0 299 -80t217 -217t80 -299t-80 -299t-217 -217t-299 -80t-299 80t-217 217t-80 299t80 299t217 217t299 80zM596 1014q-171 0 -292.5 -121.5t-121.5 -292.5t121.5 -292.5t292.5 -121.5t292.5 121.5t121.5 292.5t-121.5 292.5t-292.5 121.5zM800 700v-100 h-100v100h-200v-100h200v-100h-200v-100h-100v400h300zM800 400h-100v100h100v-100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC213'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe197;&quot;</span> <span class="na">d=</span><span class="s">&quot;M800 300h128q120 0 205 86t85 208q0 120 -85 206.5t-205 86.5q-46 0 -90 -14q-44 97 -134.5 156.5t-200.5 59.5q-152 0 -260 -107.5t-108 -260.5q0 -25 2 -37q-66 -14 -108.5 -67.5t-42.5 -122.5q0 -80 56.5 -137t135.5 -57h222v300h400v-300zM700 200h200l-300 -300 l-300 300h200v300h200v-300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC214'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe198;&quot;</span> <span class="na">d=</span><span class="s">&quot;M600 714l403 -403q94 26 154.5 104t60.5 178q0 121 -85 207.5t-205 86.5q-46 0 -90 -14q-44 97 -134.5 156.5t-200.5 59.5q-152 0 -260 -107.5t-108 -260.5q0 -25 2 -37q-66 -14 -108.5 -67.5t-42.5 -122.5q0 -80 56.5 -137t135.5 -57h8zM700 -100h-200v300h-200l300 300 l300 -300h-200v-300z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC215'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe199;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 200h400l-270 300h170l-270 300h170l-300 333l-300 -333h170l-270 -300h170l-270 -300h400v-155l-75 -45h350l-75 45v155z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC216'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#xe200;&quot;</span> <span class="na">d=</span><span class="s">&quot;M700 45v306q46 -30 100 -30q74 0 126.5 52.5t52.5 126.5q0 24 -9 55q50 32 79.5 83t29.5 112q0 90 -61.5 155.5t-150.5 71.5q-26 89 -99.5 145.5t-167.5 56.5q-116 0 -197.5 -81.5t-81.5 -197.5q0 -4 1 -12t1 -11q-14 2 -23 2q-74 0 -126.5 -52.5t-52.5 -126.5 q0 -53 28.5 -97t75.5 -65q-4 -16 -4 -38q0 -74 52.5 -126.5t126.5 -52.5q56 0 100 30v-306l-75 -45h350z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC217'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f4bc;&quot;</span> <span class="na">d=</span><span class="s">&quot;M800 1000h300q41 0 70.5 -29.5t29.5 -70.5v-400h-500v100h-200v-100h-500v400q0 41 29.5 70.5t70.5 29.5h300v100q0 41 29.5 70.5t70.5 29.5h200q41 0 70.5 -29.5t29.5 -70.5v-100zM500 1000h200v100h-200v-100zM1200 400v-200q0 -41 -29.5 -70.5t-70.5 -29.5h-1000 q-41 0 -70.5 29.5t-29.5 70.5v200h1200z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC218'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f4c5;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1100 900v150q0 21 -14.5 35.5t-35.5 14.5h-150v100h-100v-100h-500v100h-100v-100h-150q-21 0 -35.5 -14.5t-14.5 -35.5v-150h1100zM0 800v-750q0 -20 14.5 -35t35.5 -15h1000q21 0 35.5 15t14.5 35v750h-1100zM100 600h100v-100h-100v100zM300 600h100v-100h-100v100z M500 600h100v-100h-100v100zM700 600h100v-100h-100v100zM900 600h100v-100h-100v100zM100 400h100v-100h-100v100zM300 400h100v-100h-100v100zM500 400h100v-100h-100v100zM700 400h100v-100h-100v100zM900 400h100v-100h-100v100zM100 200h100v-100h-100v100zM300 200 h100v-100h-100v100zM500 200h100v-100h-100v100zM700 200h100v-100h-100v100zM900 200h100v-100h-100v100z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC219'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f4cc;&quot;</span> <span class="na">d=</span><span class="s">&quot;M902 1185l283 -282q15 -15 15 -36t-15 -35q-14 -15 -35 -15t-35 15l-36 35l-279 -267v-300l-212 210l-208 -207l-380 -303l303 380l207 208l-210 212h300l267 279l-35 36q-15 14 -15 35t15 35q14 15 35 15t35 -15z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC220'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f4ce;&quot;</span> <span class="na">d=</span><span class="s">&quot;M518 119l69 -60l517 511q67 67 95 157t11 183q-16 87 -67 154t-130 103q-69 33 -152 33q-107 0 -197 -55q-40 -24 -111 -95l-512 -512q-68 -68 -81 -163t35 -173q35 -57 94 -89t129 -32q63 0 119 28q33 16 65 40.5t52.5 45.5t59.5 64q40 44 57 61l394 394q35 35 47 84 t-3 96q-27 87 -117 104q-20 2 -29 2q-46 0 -79.5 -17t-67.5 -51l-388 -396l-7 -7l69 -67l377 373q20 22 39 38q23 23 50 23q38 0 53 -36q16 -39 -20 -75l-547 -547q-52 -52 -125 -52q-55 0 -100 33t-54 96q-5 35 2.5 66t31.5 63t42 50t56 54q24 21 44 41l348 348 q52 52 82.5 79.5t84 54t107.5 26.5q25 0 48 -4q95 -17 154 -94.5t51 -175.5q-7 -101 -98 -192l-252 -249l-253 -256z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC221'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f4f7;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1200 200v600q0 41 -29.5 70.5t-70.5 29.5h-150q-4 8 -11.5 21.5t-33 48t-53 61t-69 48t-83.5 21.5h-200q-41 0 -82 -20.5t-70 -50t-52 -59t-34 -50.5l-12 -20h-150q-41 0 -70.5 -29.5t-29.5 -70.5v-600q0 -41 29.5 -70.5t70.5 -29.5h1000q41 0 70.5 29.5t29.5 70.5z M1000 700h-100v100h100v-100zM844 500q0 -100 -72 -172t-172 -72t-172 72t-72 172t72 172t172 72t172 -72t72 -172zM706 500q0 44 -31 75t-75 31t-75 -31t-31 -75t31 -75t75 -31t75 31t31 75z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC222'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f512;&quot;</span> <span class="na">d=</span><span class="s">&quot;M900 800h100q41 0 70.5 -29.5t29.5 -70.5v-600q0 -41 -29.5 -70.5t-70.5 -29.5h-900q-41 0 -70.5 29.5t-29.5 70.5v600q0 41 29.5 70.5t70.5 29.5h100v200q0 82 59 141t141 59h300q82 0 141 -59t59 -141v-200zM400 800h300v150q0 21 -14.5 35.5t-35.5 14.5h-200 q-21 0 -35.5 -14.5t-14.5 -35.5v-150z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC223'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f514;&quot;</span> <span class="na">d=</span><span class="s">&quot;M1062 400h17q20 0 33.5 -14.5t13.5 -35.5q0 -20 -13 -40t-31 -27q-22 -9 -63 -23t-167.5 -37t-251.5 -23t-245.5 20.5t-178.5 41.5l-58 20q-18 7 -31 27.5t-13 40.5q0 21 13.5 35.5t33.5 14.5h17l118 173l63 327q15 77 76 140t144 83l-18 32q-6 19 3 32t29 13h94 q20 0 29 -10.5t3 -29.5l-18 -37q83 -19 144 -82.5t76 -140.5l63 -327zM600 104q-54 0 -103 6q12 -49 40 -79.5t63 -30.5t63 30.5t39 79.5q-48 -6 -102 -6z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC224'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f516;&quot;</span> <span class="na">d=</span><span class="s">&quot;M200 0l450 444l450 -443v1150q0 20 -14.5 35t-35.5 15h-800q-21 0 -35.5 -15t-14.5 -35v-1151z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC225'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f525;&quot;</span> <span class="na">d=</span><span class="s">&quot;M400 755q2 -12 8 -41.5t8 -43t6 -39.5t3.5 -39.5t-1 -33.5t-6 -31.5t-13.5 -24t-21 -20.5t-31 -12q-38 -10 -67 13t-40.5 61.5t-15 81.5t10.5 75q-52 -46 -83.5 -101t-39 -107t-7.5 -85t5 -63q9 -56 44 -119.5t105 -108.5q31 -21 64 -16t62 23.5t57 49.5t48 61.5t35 60.5 q32 66 39 184.5t-13 157.5q79 -80 122 -164t26 -184q-5 -33 -20.5 -69.5t-37.5 -80.5q-10 -19 -14.5 -29t-12 -26t-9 -23.5t-3 -19t2.5 -15.5t11 -9.5t19.5 -5t30.5 2.5t42 8q57 20 91 34t87.5 44.5t87 64t65.5 88.5t47 122q38 172 -44.5 341.5t-246.5 278.5q22 -44 43 -129 q39 -159 -32 -154q-15 2 -33 9q-79 33 -120.5 100t-44 175.5t48.5 257.5q-13 -8 -34 -23.5t-72.5 -66.5t-88.5 -105.5t-60 -138t-8 -166.5z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC226'><span class="nt">&lt;glyph</span> <span class="na">unicode=</span><span class="s">&quot;&amp;#x1f527;&quot;</span> <span class="na">d=</span><span class="s">&quot;M948 778l251 126q13 -175 -151 -267q-123 -70 -253 -23l-596 -596q-15 -16 -36.5 -16t-36.5 16l-111 110q-15 15 -15 36.5t15 37.5l600 599q-33 101 6 201.5t135 154.5q164 92 306 -9l-259 -138z&quot;</span> <span class="nt">/&gt;</span></div><div class='line' id='LC227'><span class="nt">&lt;/font&gt;</span></div><div class='line' id='LC228'><span class="nt">&lt;/defs&gt;&lt;/svg&gt;</span> </div></pre></div></td>
+         </tr>
+       </table>
+  </div>
+
+  </div>
+</div>
+
+<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
+<div id="jump-to-line" style="display:none">
+  <form accept-charset="UTF-8" class="js-jump-to-line-form">
+    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
+    <button type="submit" class="button">Go</button>
+  </form>
+</div>
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.08494s from github-fe140-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-df9e4beac80276ed3dfa56be0d97b536d0f5ee12.js" type="text/javascript"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-e042955433f655a83eaa9c9f4a1161cfd856573f.js" type="text/javascript"></script>
+      
+      
+        <script async src="https://www.google-analytics.com/analytics.js"></script>
+  </body>
+</html>
+

@@ -20,7 +20,10 @@ SITE_NAME = basename(DJANGO_ROOT)
 path.append(DJANGO_ROOT)
 ########## END PATH CONFIGURATION
 
+########## CUSTOM USER CONFIGURATION
 
+AUTH_USER_MODEL = 'institutions.UserProfile'
+########## END CUSTOM USER CONFIGURATION
 ########## DEBUG CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
 DEBUG = False
@@ -33,7 +36,8 @@ TEMPLATE_DEBUG = DEBUG
 ########## MANAGER CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = (
-    ('Your Name', 'your_email@example.com'),
+    ('Leonardo Jimenez', 'ljimenez@stancedata.com'),
+    ('Vivian Guillen', 'vguillen@stancedata.com'),
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
@@ -194,6 +198,7 @@ DJANGO_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
+        'institutions',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
