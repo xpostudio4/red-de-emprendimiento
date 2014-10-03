@@ -1,1 +1,97 @@
 /*! project specific CSS goes here. */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lato', sans-serif;
+}
+
+p, a {
+  font-family: 'Open Sans', sans-serif; 
+}
+
+/*Menu/////////////////////////////////*/
+
+.sidebar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: auto;
+	color: #fff;
+	border-right: 1px solid #eee;
+	padding: 0px;
+}
+
+.logo {
+	background-color: #3498db;
+	top: 0px;
+	padding: 20px;
+	
+}
+
+.logo h2 {
+	position: absolute;
+	top: 100px;
+}
+
+.column {
+	background-color: #3DB654;
+	top: 180px;
+}
+
+.column a {
+	color: #fff;
+	display: block;
+	height: 50px;
+	text-decoration: none;
+}
+
+.menu-link {
+	padding: 10px 0px;
+	text-align: right;
+	font-size: 20px;
+	border-bottom: 1px solid #319243;
+	height: 50px;
+}
+
+.border-top {
+	border-top: 1px solid #319243;
+}
+
+.no-padding {
+	padding: 0px;
+}
+
+.menu-hover:hover {
+	background-color: #319243;
+}
+
+
+/*Main/////////////////////////////////*/
+
+.main {
+	left: 250px;
+}
+
+@media (max-width: 760px) {
+	.main {
+		left: 0px;
+	}
+}
+
+
+/*Companies/////////////////////////////////*/
+
+.company {
+	border: 1px solid #d1d1d1;
+	padding: 5%;
+	text-align: center;
+}
+.company p {
+	padding: 10px 0px;
+}
+
+.company img {
+	width: 100%;
+}
