@@ -10,39 +10,29 @@ from captcha.fields import CaptchaField
 #Project apps import
 from .models import UserProfile
 
-class UserProfileCreationForm(forms.ModelForm):
+class CustomUserCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
     fields, plus a repeated password."""
-    form_fields = [
-                'password1',
-                'password2',
-                'email',
-                'name',
-                'description',
-                'logo',
-                'phone',
-                'is_phone_visible',
-                'address',
-                'is_address_visible',
-               ]
 
     password1 = forms.CharField(label='Password',
          widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password confirmation',
         widget=forms.PasswordInput)
-    captcha = CaptchaField()
+    username = forms.CharField(required=False, max_length=30)
+    full_name = forms.CharField(max_length=30,
+        widget=forms.TextInput(attrs={"placeholder":'Full Name'}))
+    email = forms.CharField(max_length=30,
+        widget=forms.TextInput(attrs={"placeholder":'Email'}))
 
     class Meta:
         model = UserProfile
-        fields = ('email',
-                  'name',
-                  'description',
-                  'logo',
-                  'phone',
-                  'is_phone_visible',
-                  'address',
-                  'is_address_visible',
-                )
+        fields = ('email', 'full_name')
+
+    def clean_password(self):
+        # Regardless of what the user provides, return the initial value.
+        # This is done here, rather than on the field, because the
+        # field does not have access to the initial value
+        return self.initial["password"]
 
     def clean_password2(self):
             # Check that the two password entries match
@@ -53,14 +43,15 @@ class UserProfileCreationForm(forms.ModelForm):
         return password2
 
     def __init__(self, *args, **kwargs):
-        super(UserProfileCreationForm, self).__init__(*args, **kwargs)
+        super(CustomUserCreationForm, self).__init__(*args, **kwargs)
         #change the html class of all the elements of the form to get bootstrap 3 styling
         for field in self.form_fields:
             self.fields[field].widget.attrs.update({'class':'form-control'})
+        self.fields.keyOrder = [ 'email', 'full_name', 'password1', 'password2']
 
     def save(self, commit=True):
                 # Save the provided password in hashed format
-        user = super(UserProfileCreationForm, self).save(commit=False)
+        user = super(CustomUserCreationForm, self).save(commit=False)
         user.set_password(self.cleaned_data["password1"])
         if commit:
             user.save()
