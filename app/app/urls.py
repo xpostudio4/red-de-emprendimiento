@@ -13,7 +13,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^inspira/', 'app.views.inspire'),
     # url(r'^app/', include('app.foo.urls')),
-
+    url(r'^accounts/', include('institutions.urls')),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
