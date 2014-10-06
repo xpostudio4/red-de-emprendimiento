@@ -67,6 +67,14 @@ p, a {
 	background-color: #319243;
 }
 
+.menu-blue {
+	background-color: #3498db;
+}
+
+.menu-blue:hover {
+	background-color: #2980b9;
+}
+
 
 /*Main/////////////////////////////////*/
 
