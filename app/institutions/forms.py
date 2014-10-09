@@ -69,7 +69,7 @@ class UserProfileChangeForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('full_name', 'email')
-        
+
     def clean_password(self):
         # Regardless of what the user provides, return the initial value.
         # This is done here, rather than on the field, because the
@@ -78,10 +78,14 @@ class UserProfileChangeForm(forms.ModelForm):
 
 
 class  UserProfileLoginForm(AuthenticationForm):
+
+
     """A Form for user login."""
     form_fields = ["username", "password"]
 
-    username = forms.CharField(max_length=254, label="Correo Electronico")
+    username = forms.CharField(max_length=254, label="Correo Electronico", widget=forms.TextInput(attrs={"placeholder":'Usuario'}))
+    # CHANGE TO CONTRASENA ##################
+    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'placeholder': 'Contrasena'}))
 
     def __init__(self, *args, **kwargs):
         super(AuthenticationForm, self).__init__(*args, **kwargs)

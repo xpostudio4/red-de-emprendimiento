@@ -8,11 +8,11 @@
 				<div class="col-sm-4 col-sm-offset-4">
 
 					<div class="inner-box text-center">
-						<h1>Iniciar Sesión</h1>
+						<h1>Registrate</h1>
 						  <form action="." method="post">
 			                  {% csrf_token %}
 			   				  <br>
-			                  {{ form.username }}
+			                  {{ form.full_name }}
 			                  <br>
 			                  {{ form.password }}
 			             </form>
