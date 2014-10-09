@@ -118,6 +118,39 @@ p, a {
 	margin-top: 17px;
 }
 
+/*Dashboard /////////////////////////////////*/
+
+.profile {
+	border: 1px solid #d1d1d1;
+	text-align: center;
+	padding: 5%;
+	margin-top: 10px;
+}
+
+.profile img {
+	width: 150px;
+	height: auto;
+	border: 1px solid #d1d1d1;
+	margin-bottom: 10px;
+}
+
+.profile-forms {
+	margin-top: 10px;
+}
+
+.profile-forms .tab-content {
+	border: 1px solid #d1d1d1;
+	border-top: transparent;
+	padding: 2% 1%;
+}
+
+.nav-tabs > li.passive > a {
+  color: #555;
+  cursor: default;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
 
 
 
