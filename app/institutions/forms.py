@@ -15,12 +15,12 @@ class CustomUserCreationForm(forms.ModelForm):
     fields, plus a repeated password."""
 
     password1 = forms.CharField(label='Password',
-         widget=forms.PasswordInput)
+         widget=forms.PasswordInput(attrs={'placeholder':'Contrasena'}))
     password2 = forms.CharField(label='Password confirmation',
-        widget=forms.PasswordInput)
+        widget=forms.PasswordInput(attrs={'placeholder':'Confirmar Contrasena'}))
     username = forms.CharField(required=False, max_length=30)
     full_name = forms.CharField(max_length=30,
-        widget=forms.TextInput(attrs={"placeholder":'Full Name'}))
+        widget=forms.TextInput(attrs={"placeholder":'Nombre Completo'}))
     email = forms.CharField(max_length=30,
         widget=forms.TextInput(attrs={"placeholder":'Email'}))
 
@@ -45,7 +45,7 @@ class CustomUserCreationForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
         #change the html class of all the elements of the form to get bootstrap 3 styling
-        for field in self.form_fields:
+        for field in self.fields:
             self.fields[field].widget.attrs.update({'class':'form-control'})
         self.fields.keyOrder = [ 'email', 'full_name', 'password1', 'password2']
 
