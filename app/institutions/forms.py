@@ -68,7 +68,8 @@ class UserProfileChangeForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-
+        fields = ('full_name', 'email')
+        
     def clean_password(self):
         # Regardless of what the user provides, return the initial value.
         # This is done here, rather than on the field, because the
