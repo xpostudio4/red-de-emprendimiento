@@ -27,13 +27,13 @@ class AppUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, name, password):
+    def create_superuser(self, full_name, password, email):
         """
             Creates and saves a Superuser with the given email, first_name, last_name
             and password.
         """
-        user = self.create_user(email,
-                name=name,
+        user = self.create_user(email=email,
+                full_name=full_name,
                 password=password
                 )
         user.is_admin = True
