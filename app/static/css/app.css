@@ -67,6 +67,14 @@ p, a {
 	background-color: #319243;
 }
 
+.menu-blue {
+	background-color: #3498db;
+}
+
+.menu-blue:hover {
+	background-color: #2980b9;
+}
+
 
 /*Main/////////////////////////////////*/
 
@@ -95,3 +103,61 @@ p, a {
 .company img {
 	width: 100%;
 }
+
+/*Login & Signin /////////////////////////////////*/
+
+.inner-box {
+	margin: 50% 0%;
+}
+
+.inner-box button {
+	margin-top: 10px;
+}
+
+.inner-box p {
+	margin-top: 17px;
+}
+
+/*Dashboard /////////////////////////////////*/
+
+.profile {
+	border: 1px solid #d1d1d1;
+	text-align: center;
+	padding: 5%;
+	margin-top: 10px;
+}
+
+.profile img {
+	width: 150px;
+	height: auto;
+	border: 1px solid #d1d1d1;
+	margin-bottom: 10px;
+}
+
+.profile-forms {
+	margin-top: 10px;
+}
+
+.profile-forms .tab-content {
+	border: 1px solid #d1d1d1;
+	border-top: transparent;
+	padding: 2% 1%;
+}
+
+.nav-tabs > li.passive > a {
+  color: #555;
+  cursor: default;
+  border: 1px solid #ddd;
+  border-bottom-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+

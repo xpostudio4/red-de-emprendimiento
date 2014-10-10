@@ -1,0 +1,57 @@
+{% extends 'base.html' %}				
+
+{% block content %}
+
+	<div class="container">
+		<div class="col-sm-4">
+			<div class="profile">
+				<img src="https://openminds.swissre.com/static//images/profile-default.png">
+				<form>
+					<label>Nombre</label>
+					<p>Stance Data</p>
+				</form>
+			</div>
+		</div>
+		<div class="col-sm-8">
+			<div class="profile-forms">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+				  <li class="active passive"><a href="#company" role="tab" data-toggle="tab">Compañia</a></li>
+				  <li class="passive"><a href="#user" role="tab" data-toggle="tab">Usuario</a></li>
+
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+				  <div class="tab-pane active" id="company">
+				  	<div class="row">
+				  		<form class="form-horizontal">
+				  			<div class="col-sm-12">
+						  		<div class="form-group">
+					                <label class="col-sm-2 control-label">Dirección</label> 
+					                <div class="col-sm-10">
+					                  <input class="form-control">
+					                </div>
+					            </div>
+					         </div><!-- col-sm-12 -->
+					         <div class="col-sm-6">
+						  		<div class="form-group">
+					                <label class="col-sm-4 control-label">Provincia</label> 
+					                <div class="col-sm-8">
+					                  <select class="form-control"></select>
+					                </div>
+					            </div>
+					         </div><!-- col-sm-12 -->
+						  </form>
+				  	</div><!-- row -->
+				  </div><!-- #company -->
+
+				  <div class="tab-pane" id="user">
+				  	
+				  </div>
+				</div><!-- tab-content -->
+			</div><!-- profile-forms -->
+		</div><!-- col-sm-8 -->
+	</div><!-- container -->
+
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}				
+
+{% block content %}
+
+	<div class="col-sm-9 main">
+		<div class="container">
+			<div class="col-sm-12">
+				<div class="col-sm-4 col-sm-offset-4">
+
+					<div class="inner-box ">
+						<h1 class="text-center">Iniciar Sesión</h1>
+						  <form action="." method="post">
+			                  {% csrf_token %}
+			   				  <br>
+			   				  <div class="input-group">
+								  <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
+								  {{ form.username }}
+							  </div>
+							  <br>
+			   				  <div class="input-group">
+								  <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+								  {{ form.password }}
+							  </div>
+
+							  <div class="col-sm-10 no-padding">
+							  	<p><a href="/signup/">¿No tienes cuenta? Registrate aqui</a></p>
+							  </div>
+							  <div class="col-sm-2 no-padding">
+							  	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
+							  </div>
+			             </form>
+			        </div>
+			              
+					
+				</div><!-- col-sm-4 -->
+			</div><!-- col-sm-12 -->
+		</div><!-- /container -->
+	</div><!-- col-sm-9 -->
+
+	
+{% endblock content %}

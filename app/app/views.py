@@ -8,8 +8,7 @@ def home(request):
 def inspire(request):
     return render(request, 'site/inspira.html')
 
-@login_required
+# @login_required
 def dashboard(request):
     return render(request, 'site/dashboard.html')
-
 
