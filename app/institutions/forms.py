@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 #core Django Imports
 from django import forms
 from django.contrib.auth.models import Group
@@ -15,9 +17,9 @@ class CustomUserCreationForm(forms.ModelForm):
     fields, plus a repeated password."""
 
     password1 = forms.CharField(label='Password',
-         widget=forms.PasswordInput(attrs={'placeholder':'Contrasena'}))
+         widget=forms.PasswordInput(attrs={'placeholder':'Contraseña'}))
     password2 = forms.CharField(label='Password confirmation',
-        widget=forms.PasswordInput(attrs={'placeholder':'Confirmar Contrasena'}))
+        widget=forms.PasswordInput(attrs={'placeholder':'Confirmar Contraseña'}))
     username = forms.CharField(required=False, max_length=30)
     full_name = forms.CharField(max_length=30,
         widget=forms.TextInput(attrs={"placeholder":'Nombre Completo'}))
@@ -85,7 +87,7 @@ class  UserProfileLoginForm(AuthenticationForm):
 
     username = forms.CharField(max_length=254, label="Correo Electronico", widget=forms.TextInput(attrs={"placeholder":'Usuario'}))
     # CHANGE TO CONTRASENA ##################
-    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'placeholder': 'Contrasena'}))
+    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña'}))
 
     def __init__(self, *args, **kwargs):
         super(AuthenticationForm, self).__init__(*args, **kwargs)
