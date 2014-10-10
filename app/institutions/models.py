@@ -48,7 +48,7 @@ class UserProfile(AbstractBaseUser):
             unique=True,
             db_index=True
             )
-    full_name = models.CharField(max_length=40, verbose_name="Nombre Compania")
+    full_name = models.CharField(max_length=40, verbose_name="Nombre Completo")
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     objects = AppUserManager()
@@ -116,7 +116,9 @@ class Organization(models.Model):
     is_phone_visible = models.BooleanField(default=False,verbose_name="Desea que el telefono se vea en sus anuncios")
     address = models.TextField(null=True, blank=True, verbose_name="Direccion")
     is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
+    province = models.CharField(max_length=100, null=True, blank=True)
     approved = models.BooleanField(default=False)
+
 
     def __unicode__(self):
         return self.name
@@ -132,4 +134,19 @@ class Event(models.Model):
     from_date = models.DateField()
     to_date = models.DateField()
     organization = models.ForeignKey(Organization)
+
+    def __unicode__(self):
+        return self.name
+
+class MailingList(models.Model):
+    """
+    This form contains all the people being subscribed
+    to our mailing list. All fields are mandatory.
+    """
+    full_name = models.CharField(max_length=80)
+    email = models.EmailField()
+    province = models.CharField(max_length=24)
+
+    def __unicode__(self):
+        return self.full_name
 

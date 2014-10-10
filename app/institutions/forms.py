@@ -10,7 +10,7 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField, AuthenticationF
 from captcha.fields import CaptchaField
 
 #Project apps import
-from .models import UserProfile
+from .models import UserProfile, Organization, Event
 
 class CustomUserCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
@@ -92,5 +92,49 @@ class  UserProfileLoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super(AuthenticationForm, self).__init__(*args, **kwargs)
         #change the html class of all the elements of the form to get bootstrap 3 styling
-        for field in self.form_fields:
+        for field in self.fields:
             self.fields[field].widget.attrs.update({'class':'form-control'})
+
+class OrganizationForm(forms.ModelForm):
+
+    class Meta:
+        model = Organization
+        fields = (
+                'name',
+                'url',
+                'description',
+                'logo',
+                'phone',
+                'is_phone_visible',
+                'address',
+                'is_phone_visible',
+                'province',
+                )
+
+class EventForm(forms.ModelForm):
+
+    class Meta:
+        model = Event
+        fields = (
+                'name',
+                'description',
+                'from_date',
+                'to_date',
+                )
+
+    def __init__(self, *args, **kwargs):
+        super(EventForm, self).__init__(*args, **kwargs)
+        #change the html class of all the elements of the form to get bootstrap 3 styling
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class':'form-control'})
+
+class MailingListForm(forms.ModelForm):
+
+    class Meta:
+        Model = MailingList
+        fields = (
+                'full_name',
+                'email',
+                'province',
+                )
+                )
