@@ -135,20 +135,24 @@ p, a {
 
 .profile {
 	border: 1px solid #d1d1d1;
-	text-align: center;
 	padding: 5%;
 	margin-top: 10px;
+}
+
+.profile-img {
+	text-align: center;
 }
 
 .profile img {
 	width: 150px;
 	height: auto;
 	border: 1px solid #d1d1d1;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .profile-forms {
 	margin-top: 10px;
+
 }
 
 .profile-forms .tab-content {
@@ -164,7 +168,23 @@ p, a {
   border-bottom-color: transparent;
 }
 
+.events-table {
+	margin-top: 30px;
+}
 
+.events-table table {
+	margin: 20px 0px;
+}
+
+
+.searchio {
+	margin-bottom: 20px;
+}
+
+.events-table thead {
+	background-color: #428bca;
+	color: #fff;
+}
 
 
 

@@ -114,7 +114,7 @@ class Organization(models.Model):
     logo = models.ImageField(upload_to="profile_pics", blank=True)
     phone = models.CharField(max_length=10,null=True, blank=True)
     is_phone_visible = models.BooleanField(default=False,verbose_name="Desea que el telefono se vea en sus anuncios")
-    address = models.TextField(null=True, blank=True, verbose_name="Direccion")
+    address = models.CharField(max_length=100, null=True, blank=True, verbose_name="Direccion")
     is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
     province = models.CharField(max_length=100, null=True, blank=True)
     approved = models.BooleanField(default=False)
