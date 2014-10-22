@@ -32,7 +32,7 @@ class AppUserManager(BaseUserManager):
             Creates and saves a Superuser with the given email, first_name, last_name
             and password.
         """
-        user = self.create_user(email,
+        user = self.create_user(email=email,
                 name=name,
                 password=password
                 )
