@@ -12,13 +12,13 @@ $(document).ready (function () {
     	format: "yyyy-mm-dd",
 	});
 
-	$(function() {
-	  var loc = window.location.href; // returns the full URL
-	  if(/dashboard/.test(loc)) {
-	    $('#navbar').removeClass('visible-xs');
-	    $('#left-sidebar').remove();
-	  }
-	});
+	// $(function() {
+	//   var loc = window.location.href; // returns the full URL
+	//   if(/dashboard/.test(loc)) {
+	//     $('#navbar').removeClass('visible-xs');
+	//     $('#left-sidebar').remove();
+	//   }
+	// });
 
 	$('#events-table').bootstrapTable();
 
