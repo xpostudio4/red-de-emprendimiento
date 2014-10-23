@@ -2,6 +2,16 @@
 
 $(document).ready (function () {
 
+	$('#id_from_date').datepicker({
+    	weekStart: 1,
+    	format: "yyyy-mm-dd",
+	});
+
+	$('#id_to_date').datepicker({
+    	weekStart: 1,
+    	format: "yyyy-mm-dd",
+	});
+
 	$(function() {
 	  var loc = window.location.href; // returns the full URL
 	  if(/dashboard/.test(loc)) {
@@ -9,6 +19,10 @@ $(document).ready (function () {
 	    $('#left-sidebar').remove();
 	  }
 	});
+
+	$('#events-table').bootstrapTable();
+
+
 	
 });
 

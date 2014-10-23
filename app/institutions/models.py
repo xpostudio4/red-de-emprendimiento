@@ -6,6 +6,7 @@ from django.contrib.auth.models import (
         BaseUserManager, AbstractBaseUser
         )
 #Third party libraries
+from taggit.managers import TaggableManager
 #from templated_email import send_templated_mail
 
 class AppUserManager(BaseUserManager):
@@ -27,13 +28,13 @@ class AppUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, name, password):
+    def create_superuser(self, full_name, password, email):
         """
             Creates and saves a Superuser with the given email, first_name, last_name
             and password.
         """
         user = self.create_user(email=email,
-                name=name,
+                full_name=full_name,
                 password=password
                 )
         user.is_admin = True
@@ -114,11 +115,11 @@ class Organization(models.Model):
     logo = models.ImageField(upload_to="profile_pics", blank=True)
     phone = models.CharField(max_length=10,null=True, blank=True)
     is_phone_visible = models.BooleanField(default=False,verbose_name="Desea que el telefono se vea en sus anuncios")
-    address = models.TextField(null=True, blank=True, verbose_name="Direccion")
+    address = models.CharField(max_length=100, null=True, blank=True, verbose_name="Direccion")
     is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
     province = models.CharField(max_length=100, null=True, blank=True)
     approved = models.BooleanField(default=False)
-
+    categories = TaggableManager()
 
     def __unicode__(self):
         return self.name

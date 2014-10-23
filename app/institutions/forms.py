@@ -10,7 +10,7 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField, AuthenticationF
 from captcha.fields import CaptchaField
 
 #Project apps import
-from .models import UserProfile, Organization, Event
+from .models import UserProfile, Organization, Event, MailingList
 
 class CustomUserCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
@@ -85,9 +85,10 @@ class  UserProfileLoginForm(AuthenticationForm):
     """A Form for user login."""
     form_fields = ["username", "password"]
 
-    username = forms.CharField(max_length=254, label="Correo Electronico", widget=forms.TextInput(attrs={"placeholder":'Usuario'}))
-    # CHANGE TO CONTRASENA ##################
-    password = forms.CharField(label='Password', widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña'}))
+    username = forms.CharField(max_length=254, label="Correo Electronico", 
+        widget=forms.TextInput(attrs={"placeholder":'Usuario'}))
+    password = forms.CharField(label='Password', 
+        widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña'}))
 
     def __init__(self, *args, **kwargs):
         super(AuthenticationForm, self).__init__(*args, **kwargs)
@@ -97,8 +98,11 @@ class  UserProfileLoginForm(AuthenticationForm):
 
 class OrganizationForm(forms.ModelForm):
 
+    description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
+
     class Meta:
         model = Organization
+
         fields = (
                 'name',
                 'url',
@@ -109,9 +113,27 @@ class OrganizationForm(forms.ModelForm):
                 'address',
                 'is_phone_visible',
                 'province',
+                'categories',
                 )
 
+
+    def __init__(self, *args, **kwargs):
+        super(OrganizationForm, self).__init__(*args, **kwargs)
+        #change the html class of all the elements of the form to get bootstrap 3 styling
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class':'form-control'})
+
 class EventForm(forms.ModelForm):
+
+    description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
+    from_date = forms.CharField(widget=forms.TextInput(attrs={
+            'class':'date',
+            })
+        )
+    to_date = forms.CharField(widget=forms.TextInput(attrs={
+            'class':'date',
+            })
+        )
 
     class Meta:
         model = Event
@@ -137,4 +159,4 @@ class MailingListForm(forms.ModelForm):
                 'email',
                 'province',
                 )
-                )
+                

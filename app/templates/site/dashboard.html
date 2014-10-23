@@ -1,57 +1,219 @@
-{% extends 'base.html' %}				
+{% extends 'base.html' %}	
+
+{% load staticfiles %}
+
+{% block extra_css %}
+	<link href="{% static 'table/bootstrap-table.css' %}" rel="stylesheet">
+    <link href="{% static 'datepicker/datepicker3.css' %}" rel="stylesheet">
+{% endblock extra_css %}			
+
+
+{% block extra_js %}
+    <script src="{% static 'table/bootstrap-table.js' %}"></script>
+    <script src="{% static 'table/locale/bootstrap-table-es-AR.js' %}"></script>
+    <script src="{% static 'datepicker/bootstrap-datepicker.js' %}"></script>
+{% endblock extra_js %}
+
 
 {% block content %}
 
 	<div class="container">
-		<div class="col-sm-4">
-			<div class="profile">
-				<img src="https://openminds.swissre.com/static//images/profile-default.png">
-				<form>
-					<label>Nombre</label>
-					<p>Stance Data</p>
-				</form>
+		<div class="row">
+
+			<div class="col-sm-4">
+				<div class="profile text-center">
+
+					<figure class="effect-oscar">
+						<img src="https://openminds.swissre.com/static//images/profile-default.png" alt="img08"/>
+						<figcaption>
+							<p>Cambia tu foto</p>
+							<a href="#">View more</a>
+						</figcaption>			
+					</figure>
+
+				</div>
 			</div>
-		</div>
-		<div class="col-sm-8">
-			<div class="profile-forms">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs" role="tablist">
-				  <li class="active passive"><a href="#company" role="tab" data-toggle="tab">Compañia</a></li>
-				  <li class="passive"><a href="#user" role="tab" data-toggle="tab">Usuario</a></li>
 
-				</ul>
+			<div class="col-sm-8">
+				<div class="profile-forms">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+					  <li class="active passive"><a href="#event" role="tab" data-toggle="tab">Evento</a></li>
+					  <li class="passive"><a href="#company" role="tab" data-toggle="tab">Organización</a></li>
+					  <li class="passive"><a href="#user" role="tab" data-toggle="tab">Usuario</a></li>
 
-				<!-- Tab panes -->
-				<div class="tab-content">
-				  <div class="tab-pane active" id="company">
-				  	<div class="row">
-				  		<form class="form-horizontal">
-				  			<div class="col-sm-12">
-						  		<div class="form-group">
-					                <label class="col-sm-2 control-label">Dirección</label> 
-					                <div class="col-sm-10">
-					                  <input class="form-control">
-					                </div>
-					            </div>
-					         </div><!-- col-sm-12 -->
-					         <div class="col-sm-6">
-						  		<div class="form-group">
-					                <label class="col-sm-4 control-label">Provincia</label> 
-					                <div class="col-sm-8">
-					                  <select class="form-control"></select>
-					                </div>
-					            </div>
-					         </div><!-- col-sm-12 -->
-						  </form>
-				  	</div><!-- row -->
-				  </div><!-- #company -->
+					</ul>
 
-				  <div class="tab-pane" id="user">
-				  	
-				  </div>
-				</div><!-- tab-content -->
-			</div><!-- profile-forms -->
-		</div><!-- col-sm-8 -->
+					<!-- Tab panes -->
+					<div class="tab-content">
+
+					  <div class="tab-pane active" id="event">
+					  	<div class="row">
+					  		<div class="col-sm-12">
+					  			<form class="form-horizontal" action="." method="post">
+					  				{% csrf_token %}
+					  				<div class="col-sm-12">
+					  					<div class="form-group">
+					  						<label class="col-sm-2 control-label">Titulo</label> 
+							                <div class="col-sm-10">
+							                   {{event_form.name}}
+							                </div>
+					  					</div>
+					  					<div class="form-group">
+					  						<label class="col-sm-2 control-label">Descripcion</label> 
+							                <div class="col-sm-10">
+							                   {{event_form.description}}
+							                </div>
+					  					</div>
+					  				</div>
+					  				<div class="col-sm-6">
+					  					<div class="form-group">
+						  					<label class="col-sm-4 control-label">Inicia</label> 
+							                <div class="col-sm-8">
+								                <div class="input-group">
+				  									{{event_form.from_date}}
+				  									<div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+				  								</div>
+							                </div>
+						                </div>
+					  				</div>
+					  				<div class="col-sm-6">
+					  					<div class="form-group">
+						  					<label class="col-sm-4 control-label">Inicia</label> 
+							                <div class="col-sm-8">
+								                <div class="input-group">
+				  									{{event_form.to_date}}
+				  									<div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+				  								</div>
+							                </div>
+						                </div>
+					  				</div>
+									<div class="col-sm-12">
+							        	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
+							        </div>
+
+					  			</form>
+					  		</div>
+					  	</div>
+					  </div>
+
+					  <div class="tab-pane" id="company">
+					  	<div class="row">
+					  		<div class="col-sm-12">
+					  			<form class="form-horizontal" action="." method="post">
+					  			{% csrf_token %}
+					  				<div class="col-sm-6">
+								  		<div class="form-group">
+							                <label class="col-sm-4 control-label">Nombre</label>
+							                <div class="col-sm-8">
+							                   {{organization_form.name}}
+							                </div>
+							            </div>
+							        </div><!-- col-sm-6 -->
+							        <div class="col-sm-6">
+								  		<div class="form-group">
+							                <label class="col-sm-4 control-label">Web</label>
+							                <div class="col-sm-8">
+							                   {{organization_form.url}}
+							                </div>
+							            </div>
+							        </div><!-- col-sm-6 -->
+						
+							        <div class="col-sm-6">
+								  		<div class="form-group">
+							                <label class="col-sm-4 control-label">Provincia</label>
+							                <div class="col-sm-8">
+							                  {{organization_form.province}}
+							                </div>
+							            </div>
+							        </div><!-- col-sm-6 -->
+							        <div class="col-sm-6">
+								  		<div class="form-group">
+							                <label class="col-sm-4 control-label">Teléfono</label>
+							                <div class="col-sm-8">
+							                  {{organization_form.phone}}
+							                </div>
+							            </div>
+							        </div><!-- col-sm-6 -->
+							       	<div class="col-sm-12">
+						
+								  		<div class="form-group">
+							                <label class="col-sm-2 control-label">Dirección</label>
+							                <div class="col-sm-10">
+							                  {{organization_form.address}}
+							                </div>
+							            </div>
+
+							            <div class="form-group">
+							                <label class="col-sm-2 control-label">Descripción</label>
+							                <div class="col-sm-10">
+							                  {{organization_form.description}}
+							                </div>
+							            </div>
+
+                          <div class="form-group">
+							                <label class="col-sm-2 control-label">Categorias</label>
+							                <div class="col-sm-10">
+							                  {{organization_form.categories}}
+							                </div>
+							            </div>
+
+							        </div><!-- col-sm-12 -->
+							        <div class="col-sm-12">
+							        	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
+							        </div>
+							 	</form>
+					  		</div>
+					  		
+					  	</div><!-- row -->
+
+
+					  </div><!-- #company -->
+					  <div class="tab-pane" id="user">
+					  	
+					  </div>
+					
+					</div><!-- tab-content -->
+				</div><!-- profile-forms -->
+			</div><!-- col-sm-8 -->
+		</div><!-- row -->
+		
+
+		<div class="row">
+	  		<div class="col-sm-12">
+	  			<div class="events-table">
+		  			<table class="table" id="events-table" data-toggle="table" data-sort-name="starts" data-sort-order="desc" data-search="true" data-pagination="true" data-click-to-select="true">
+		  				<thead>
+			  				<tr>
+			  					<th data-field="state" data-checkbox="true"></th>
+			  					<th data-field="title" data-sortable="true">Título</th>
+			  					<th data-field="description">Descripción</th>
+			  					<th data-field="starts" data-sortable="true">Inicia</th>
+			  					<th data-field="ends" data-sortable="true">Termina</th>
+			  				</tr>
+		  				</thead>
+		  				<tbody>
+		  					<tr>
+		  						<td></td>
+		  						<td>Atartup Weekend Education</td>
+		  						<td>Is a event promoting entrepenurship in the education sector</td>
+		  						<td>17/10/2014</td>
+		  						<td>19/10/2014</td>
+		  					</tr>
+		  					<tr>
+		  						<td></td>
+		  						<td>Startup Weekend Education</td>
+		  						<td>Is a event promoting entrepenurship in the education sector</td>
+		  						<td>18/10/2014</td>
+		  						<td>19/10/2014</td>
+		  					</tr>
+		  				</tbody>
+		  			</table>
+	  			</div>
+	  		</div>	
+	  	</div>
+
 	</div><!-- container -->
 
 {% endblock content %}
+
