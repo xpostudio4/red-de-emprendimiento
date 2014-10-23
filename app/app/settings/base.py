@@ -30,6 +30,7 @@ DEBUG = False
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
 TEMPLATE_DEBUG = DEBUG
+LOGIN_URL = '/accounts/signin'
 ########## END DEBUG CONFIGURATION
 
 

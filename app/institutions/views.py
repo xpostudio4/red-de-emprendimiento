@@ -18,7 +18,7 @@ def signin(request):
             user = authenticate(email=request.POST['username'], password=request.POST['password'])
             if user is not None and user.is_active:
                     django_login(request, user)
-                    return redirect('/')
+                    return redirect('/dashboard')
     else:
        form = UserProfileLoginForm()
     return render_to_response('accounts/signin.html',
