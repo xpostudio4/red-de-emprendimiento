@@ -17,6 +17,7 @@
 
 {% block content %}
 
+	<div class="col-sm-9 main">
 	<div class="container">
 		<div class="row">
 
@@ -170,7 +171,32 @@
 
 					  </div><!-- #company -->
 					  <div class="tab-pane" id="user">
-					  	
+					  	<div class="row">
+					  		<div class="col-sm-12">
+					  			<form class="form-horizontal" action="." method="post">
+					  			{% csrf_token %}
+					  				<div class="col-sm-6">
+								  		<div class="form-group">
+							                <label class="col-sm-4 control-label">Nombre</label> 
+							                <div class="col-sm-8">
+							                   {{user_form.full_name}}
+							                </div>
+							            </div>
+							        </div><!-- col-sm-6 -->
+							        <div class="col-sm-6">
+								  		<div class="form-group">
+							                <label class="col-sm-4 control-label">Email</label> 
+							                <div class="col-sm-8">
+							                   {{user_form.email}}
+							                </div>
+							            </div>
+							        </div><!-- col-sm-6 -->
+							        <div class="col-sm-12">
+							        	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
+							        </div>
+							    </form>
+							</div>
+						</div>
 					  </div>
 					
 					</div><!-- tab-content -->
@@ -214,6 +240,7 @@
 	  	</div>
 
 	</div><!-- container -->
+	</div>
 
 {% endblock content %}
 

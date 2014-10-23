@@ -78,6 +78,12 @@ class UserProfileChangeForm(forms.ModelForm):
         # field does not have access to the initial value
         return self.initial["password"]
 
+    def __init__(self, *args, **kwargs):
+        super(UserProfileChangeForm, self).__init__(*args, **kwargs)
+        #change the html class of all the elements of the form to get bootstrap 3 styling
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class':'form-control'})
+
 
 class  UserProfileLoginForm(AuthenticationForm):
 

@@ -2,7 +2,7 @@ from django import forms
 from django.http import HttpResponse, HttpResponseServerError
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from institutions.forms import OrganizationForm, EventForm, UserProfile
+from institutions.forms import OrganizationForm, EventForm,UserProfileChangeForm
 
 def home(request):
     return render(request, 'site/index.html')
