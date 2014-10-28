@@ -100,7 +100,6 @@ class  UserProfileLoginForm(AuthenticationForm):
             self.fields[field].widget.attrs.update({'class':'form-control'})
 
 class OrganizationForm(forms.ModelForm):
-
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
 
     class Meta:

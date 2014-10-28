@@ -14,8 +14,21 @@ def inspire(request):
 @login_required
 def dashboard(request):
     user = UserProfile(id=request.user.id)
-    organization_form = OrganizationForm(instance=request.user.organization)
-    event_form = EventForm()
+    #Load the forms with data or the instance of the file if POST
+    if request.method == 'POST':
+        organization_form = OrganizationForm(request.POST, instance=request.user.organization)
+        event_form = EventForm(request.POST)
+        user_form = UserProfileChangeForm(request.POST, instance=user)
+
+        if organization_form.is_valid():
+            organization_form.save()
+
+    else:
+        user_form = UserProfileChangeForm(instance=user)
+        organization_form = OrganizationForm(instance=request.user.organization)
+        event_form = EventForm()
+    #process the forms if valid
+    #Otherwise return the errors
     return render(request, 'site/dashboard.html',
             {'organization_form': organization_form, 'event_form': event_form})
 
