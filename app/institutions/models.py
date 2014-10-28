@@ -90,10 +90,10 @@ class UserProfile(AbstractBaseUser):
     def save(self, *args, **kwargs):
         if not self.id:
             #Create Organization for the user
-            organization = Organization(
+            organization = Organization.objects.create(
                     name=str(self.full_name)+ "'s Organization"
                     )
-            self.organization  = organization
+           self.organization  = organization
             #send_templated_mail(
             #    template_name='user_creation',
             #    from_email='info@mypimes.com',
