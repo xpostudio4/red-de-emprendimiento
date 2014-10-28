@@ -16,7 +16,14 @@
 
 
 {% block content %}
-
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#id_categories").tagit({
+    	availableTags: ["Cultura", "Aprendizaje", "financiamiento", "escalamiento"],
+    	autocomplete: {delay: 0, minLength: 2},
+		});
+    });
+</script>
 	<div class="col-sm-9 main">
 	<div class="container">
 		<div class="row">

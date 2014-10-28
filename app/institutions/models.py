@@ -93,7 +93,7 @@ class UserProfile(AbstractBaseUser):
             organization = Organization.objects.create(
                     name=str(self.full_name)+ "'s Organization"
                     )
-           self.organization  = organization
+            self.organization  = organization
             #send_templated_mail(
             #    template_name='user_creation',
             #    from_email='info@mypimes.com',
