@@ -30,12 +30,14 @@ def dashboard(request):
         user_form = UserProfileChangeForm(instance=user)
         organization_form = OrganizationForm(instance=request.user.organization)
         event_form = EventForm()
+
     #process the forms if valid
     #Otherwise return the errors
     return render(request, 'site/dashboard.html',
             {
                 'organization_form': organization_form,
                 'event_form': event_form,
+                'user_form': user_form,
                 'events': events,
                 })
 

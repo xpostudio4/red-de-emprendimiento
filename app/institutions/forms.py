@@ -100,8 +100,18 @@ class  UserProfileLoginForm(AuthenticationForm):
             self.fields[field].widget.attrs.update({'class':'form-control'})
 
 class OrganizationForm(forms.ModelForm):
-    description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
 
+    CATEGORIES = (
+            ("Cultura", "Cultura"),
+            ("Aprendizaje", "Aprendizaje"),
+            ("Financiamiento", "Financiamiento"),
+            ("Escalamiento", "Escalamiento"),
+            )
+
+
+    description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
+    categories = forms.MultipleChoiceField(choices=CATEGORIES)
+    
     class Meta:
         model = Organization
 
@@ -123,7 +133,8 @@ class OrganizationForm(forms.ModelForm):
         super(OrganizationForm, self).__init__(*args, **kwargs)
         #change the html class of all the elements of the form to get bootstrap 3 styling
         for field in self.fields:
-            self.fields[field].widget.attrs.update({'class':'form-control'})
+            if field != 'categories':
+                self.fields[field].widget.attrs.update({'class':'form-control'})
 
 class EventForm(forms.ModelForm):
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
