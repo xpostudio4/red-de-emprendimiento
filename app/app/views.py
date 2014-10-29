@@ -57,7 +57,7 @@ def event_creation(request,organization_id):
                 'from': str(event.from_date),
                 'to': str(event.to_date)
                 }
-        return HttpResponse(json.dumps(result))
+        return HttpResponse(json.dumps(result), content_type='application/json')
     return HttpResponse(json.dumps(form.errors))
 
 @login_required
