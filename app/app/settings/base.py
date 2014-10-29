@@ -189,6 +189,7 @@ DJANGO_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+
     # Useful template tags:
     # 'django.contrib.humanize',
 
@@ -250,6 +251,7 @@ WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 ########## SOUTH CONFIGURATION
 # See: http://south.readthedocs.org/en/latest/installation.html#configuring-your-django-installation
 INSTALLED_APPS += (
+        'selectize',
     # Database migration helpers:
 )
 # Don't need to use South when setting up a test database.

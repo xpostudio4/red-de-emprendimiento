@@ -5,6 +5,8 @@
 {% block extra_css %}
 	<link href="{% static 'table/bootstrap-table.css' %}" rel="stylesheet">
     <link href="{% static 'datepicker/datepicker3.css' %}" rel="stylesheet">
+    <link href="{% static 'css/sweet-alert.css' %}" rel="stylesheet">
+    <link href="{% static 'selectize/css/selectize.default.css' %}" rel="stylesheet">
 {% endblock extra_css %}			
 
 
@@ -12,29 +14,24 @@
     <script src="{% static 'table/bootstrap-table.js' %}"></script>
     <script src="{% static 'table/locale/bootstrap-table-es-AR.js' %}"></script>
     <script src="{% static 'datepicker/bootstrap-datepicker.js' %}"></script>
+    <script src="{% static 'js/sweet-alert.js' %}"></script>
+    
+
 {% endblock extra_js %}
 
 
 {% block content %}
-<script type="text/javascript">
-    $(document).ready(function(){
-        $("#id_categories").tagit({
-    	availableTags: ["Cultura", "Aprendizaje", "financiamiento", "escalamiento"],
-    	autocomplete: {delay: 0, minLength: 2},
-		});
-    });
-</script>
+
 	<div class="col-sm-9 main">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-sm-4">
 				<div class="profile text-center">
 
 					<figure class="effect-oscar">
-						<img src="https://openminds.swissre.com/static//images/profile-default.png" alt="img08"/>
+						<img src="{% static 'img/stock.jpg' %}" alt="img08"/>
 						<figcaption>
-							<p>Cambia tu foto</p>
+							<p>Cambiar foto organización</p>
 							<a href="#">View more</a>
 						</figcaption>			
 					</figure>
@@ -87,7 +84,7 @@
 					  				</div>
 					  				<div class="col-sm-6">
 					  					<div class="form-group">
-						  					<label class="col-sm-4 control-label">Inicia</label> 
+						  					<label class="col-sm-4 control-label">Termina</label> 
 							                <div class="col-sm-8">
 								                <div class="input-group">
 				  									{{event_form.to_date}}
@@ -111,7 +108,7 @@
 					  			<form class="form-horizontal" action="." method="post">
 					  			{% csrf_token %}
 					  				<div class="col-sm-6">
-                        {{ organization_form.errors }}
+                        		{{ organization_form.errors }}
 								  		<div class="form-group">
 							                <label class="col-sm-4 control-label">Nombre</label>
 							                <div class="col-sm-8">
@@ -160,7 +157,7 @@
 							                </div>
 							            </div>
 
-                          <div class="form-group">
+                          				<div class="form-group">
 							                <label class="col-sm-2 control-label">Categorias</label>
 							                <div class="col-sm-10">
 							                  {{organization_form.categories}}
@@ -278,28 +275,42 @@
     delete_event.click(
         function(event){
         //eliminate the default function
+        var id = $(this).data("event-id");
         event.preventDefault();
         //get the data from the link when clicked; data = ["type_deletion","id","company_name"]*company comes by default
-        var r = confirm("Estas seguro que quieres borrar este evento?");
-        if( r == true){
-            //pass the data to the ajax function to call the server
-            var id = $(this).data("event-id");
-            $.ajax({
-                url: "/event_deletion/" + id +"/",
-                success:
-                    function(result){
-                        $("#event-"+id).remove();
+			  swal({
+			  title: "Estas seguro?",
+			  text: "Estas a punto de borrar este evento",
+			  type: "warning",
+			  showCancelButton: true,
+			  confirmButtonClass: "btn-danger",
+			  confirmButtonText: "Si, borrar",
+			  cancelButtonText: "No, cancelar",
+			  closeOnConfirm: false,
+			  closeOnCancel: false
+			},
+			function(isConfirm) {
+			  if (isConfirm) {
+			  	
+	            $.ajax({
+	                url: "/event_deletion/" + id +"/",
+	                success:
+	                    function(result){
+	                        $("#event-"+id).remove();
+	                        swal("Borrado", "Este evento ha sido borrado", "success");
 
-                    },
-                error:
-                    function(){
-                        alert("We are experiencing problems wit error, please try again later");
-                    }
+	                    },
+	                error:
+	                    function(){
+	                        alert("We are experiencing problems wit error, please try again later");
+	                    }
+	            });
+			    
+			  } else {
+			    swal("Cancelado", "Your imaginary file is safe :)", "error");
+			  }
+			});
             });
-
-    }else{
-        return false;
-    }});
   </script>
 {% endblock content %}
 

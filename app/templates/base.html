@@ -15,6 +15,8 @@
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -24,10 +26,9 @@
 
     <!-- Use this to quickly test CSS changes in a template,
         then move to app.css -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="{% static 'js/tag-it.js' %}" type="text/javascript" charset="utf-8"></script>
-    {% block extra_css %}
+
+   </script>
+        {% block extra_css %}
 
     {% endblock extra_css %}
   </head>
@@ -172,7 +173,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- place project specific Javascript in this file -->
+
+    
+
+    
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'selectize/js/standalone/selectize.js' %}"></script>
      <script src="{% static 'js/app.js' %}"></script>
     
 
