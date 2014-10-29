@@ -61,7 +61,6 @@ def event_creation(request,organization_id):
     return HttpResponse(json.dumps(form.errors))
 
 @login_required
-@require_POST
 def event_deletion(request, event_id):
     #verify the user organization belongs 
     #deletes the item with the ID provided

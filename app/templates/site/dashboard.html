@@ -229,8 +229,8 @@
 		  				<tbody>
                {% if events %}
                    {% for event in events %}
-		      					<tr>
-		  	    					<td></td>
+		      					<tr id="event-{{ event.id }}">
+                      <td><a class="delete_event" data-event-id="{{ event.id }}"><i class="fa fa-times"></i></a></td>
                       <td>{{ event.name }}</td>
                       <td>{{ event.description }}</td>
                       <td>{{ event.from_date }}</td>
@@ -272,6 +272,34 @@
                       }
               });
       });
+
+    var delete_event = $('.delete_event');
+
+    delete_event.click(
+        function(event){
+        //eliminate the default function
+        event.preventDefault();
+        //get the data from the link when clicked; data = ["type_deletion","id","company_name"]*company comes by default
+        var r = confirm("Estas seguro que quieres borrar este evento?");
+        if( r == true){
+            //pass the data to the ajax function to call the server
+            var id = $(this).data("event-id");
+            $.ajax({
+                url: "/event_deletion/" + id +"/",
+                success:
+                    function(result){
+                        $("#event-"+id).remove();
+
+                    },
+                error:
+                    function(){
+                        alert("We are experiencing problems wit error, please try again later");
+                    }
+            });
+
+    }else{
+        return false;
+    }});
   </script>
 {% endblock content %}
 
