@@ -58,7 +58,7 @@
 					  <div class="tab-pane active" id="event">
 					  	<div class="row">
 					  		<div class="col-sm-12">
-					  			<form class="form-horizontal" action="." method="post">
+					  			<form class="form-horizontal" action="." method="post" id="event_form">
 					  				{% csrf_token %}
 					  				<div class="col-sm-12">
 					  					<div class="form-group">
@@ -97,7 +97,7 @@
 						                </div>
 					  				</div>
 									<div class="col-sm-12">
-							        	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
+							        	<button type="submit" class="btn btn-primary pull-right" id="submit_event">Enviar</button>
 							        </div>
 
 					  			</form>
@@ -227,20 +227,21 @@
 			  				</tr>
 		  				</thead>
 		  				<tbody>
-		  					<tr>
-		  						<td></td>
-		  						<td>Atartup Weekend Education</td>
-		  						<td>Is a event promoting entrepenurship in the education sector</td>
-		  						<td>17/10/2014</td>
-		  						<td>19/10/2014</td>
-		  					</tr>
-		  					<tr>
-		  						<td></td>
-		  						<td>Startup Weekend Education</td>
-		  						<td>Is a event promoting entrepenurship in the education sector</td>
-		  						<td>18/10/2014</td>
-		  						<td>19/10/2014</td>
-		  					</tr>
+               {% if events %}
+                   {% for event in events %}
+		      					<tr>
+		  	    					<td></td>
+                      <td>{{ event.name }}</td>
+                      <td>{{ event.description }}</td>
+                      <td>{{ event.from_date }}</td>
+                      <td>{{ event.to_date }}</td>
+		  				    	</tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                      <td colspan="5" style="text-align: center;">No has creado ningun evento aun</td>
+                    </tr>
+                {% endif %}
 		  				</tbody>
 		  			</table>
 	  			</div>
@@ -249,6 +250,28 @@
 
 	</div><!-- container -->
 	</div>
+  <script tpe="text/javascript">
+    var link = $('#submit_event');
 
+    link.click(
+          function(event){
+              //eliminate the default function
+              event.preventDefault();
+              $.ajax({
+                url: '/event_creation/{{ request.user.organization.id }}/',
+                  data:  $('#event_form').serialize(),
+                  type: "POST",
+                  success:
+                      function(result){
+                        $('#event_form').trigger('reset');
+                      },
+                  error:
+                      function(xhr){
+                          $('#alert-red').removeClass('hidden');
+                          $('#alert-green').addClass('hidden');
+                      }
+              });
+      });
+  </script>
 {% endblock content %}
 

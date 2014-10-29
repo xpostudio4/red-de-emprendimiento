@@ -134,10 +134,16 @@ class Event(models.Model):
     created = models.DateField()
     from_date = models.DateField()
     to_date = models.DateField()
-    organization = models.ForeignKey(Organization)
+    organization = models.ForeignKey(Organization, null=True, blank=True)
 
     def __unicode__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        '''On save, fill created field'''
+        if not self.id:
+            self.created = datetime.date.today()
+        super(Event, self).save(*args, **kwargs)
 
 class MailingList(models.Model):
     """

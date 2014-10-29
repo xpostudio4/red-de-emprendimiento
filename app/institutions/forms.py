@@ -126,7 +126,6 @@ class OrganizationForm(forms.ModelForm):
             self.fields[field].widget.attrs.update({'class':'form-control'})
 
 class EventForm(forms.ModelForm):
-
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
     from_date = forms.CharField(widget=forms.TextInput(attrs={
             'class':'date',
