@@ -30,6 +30,7 @@ DEBUG = False
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
 TEMPLATE_DEBUG = DEBUG
+LOGIN_URL = '/accounts/signin'
 ########## END DEBUG CONFIGURATION
 
 
@@ -194,6 +195,7 @@ DJANGO_APPS = (
     # Admin panel and documentation:
     'django.contrib.admin',
     # 'django.contrib.admindocs',
+    'taggit',
 )
 
 # Apps specific for this project go here.
@@ -249,8 +251,11 @@ WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 # See: http://south.readthedocs.org/en/latest/installation.html#configuring-your-django-installation
 INSTALLED_APPS += (
     # Database migration helpers:
-    'south',
 )
 # Don't need to use South when setting up a test database.
 SOUTH_TESTS_MIGRATE = False
+
+SOUTH_MIGRATION_MODULES = {
+        'taggit': 'taggit.south_migrations',
+        }
 ########## END SOUTH CONFIGURATION

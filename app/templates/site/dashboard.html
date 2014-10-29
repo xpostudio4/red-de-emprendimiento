@@ -16,7 +16,14 @@
 
 
 {% block content %}
-
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#id_categories").tagit({
+    	availableTags: ["Cultura", "Aprendizaje", "financiamiento", "escalamiento"],
+    	autocomplete: {delay: 0, minLength: 2},
+		});
+    });
+</script>
 	<div class="col-sm-9 main">
 	<div class="container">
 		<div class="row">
@@ -51,7 +58,7 @@
 					  <div class="tab-pane active" id="event">
 					  	<div class="row">
 					  		<div class="col-sm-12">
-					  			<form class="form-horizontal" action="." method="post">
+					  			<form class="form-horizontal" action="." method="post" id="event_form">
 					  				{% csrf_token %}
 					  				<div class="col-sm-12">
 					  					<div class="form-group">
@@ -90,7 +97,7 @@
 						                </div>
 					  				</div>
 									<div class="col-sm-12">
-							        	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
+							        	<button type="submit" class="btn btn-primary pull-right" id="submit_event">Enviar</button>
 							        </div>
 
 					  			</form>
@@ -104,8 +111,9 @@
 					  			<form class="form-horizontal" action="." method="post">
 					  			{% csrf_token %}
 					  				<div class="col-sm-6">
+                        {{ organization_form.errors }}
 								  		<div class="form-group">
-							                <label class="col-sm-4 control-label">Nombre</label> 
+							                <label class="col-sm-4 control-label">Nombre</label>
 							                <div class="col-sm-8">
 							                   {{organization_form.name}}
 							                </div>
@@ -113,16 +121,16 @@
 							        </div><!-- col-sm-6 -->
 							        <div class="col-sm-6">
 								  		<div class="form-group">
-							                <label class="col-sm-4 control-label">Web</label> 
+							                <label class="col-sm-4 control-label">Web</label>
 							                <div class="col-sm-8">
 							                   {{organization_form.url}}
 							                </div>
 							            </div>
 							        </div><!-- col-sm-6 -->
-						  	
+						
 							        <div class="col-sm-6">
 								  		<div class="form-group">
-							                <label class="col-sm-4 control-label">Provincia</label> 
+							                <label class="col-sm-4 control-label">Provincia</label>
 							                <div class="col-sm-8">
 							                  {{organization_form.province}}
 							                </div>
@@ -130,25 +138,32 @@
 							        </div><!-- col-sm-6 -->
 							        <div class="col-sm-6">
 								  		<div class="form-group">
-							                <label class="col-sm-4 control-label">Teléfono</label> 
+							                <label class="col-sm-4 control-label">Teléfono</label>
 							                <div class="col-sm-8">
 							                  {{organization_form.phone}}
 							                </div>
 							            </div>
 							        </div><!-- col-sm-6 -->
 							       	<div class="col-sm-12">
-						  				
+						
 								  		<div class="form-group">
-							                <label class="col-sm-2 control-label">Dirección</label> 
+							                <label class="col-sm-2 control-label">Dirección</label>
 							                <div class="col-sm-10">
 							                  {{organization_form.address}}
 							                </div>
 							            </div>
 
 							            <div class="form-group">
-							                <label class="col-sm-2 control-label">Descripción</label> 
+							                <label class="col-sm-2 control-label">Descripción</label>
 							                <div class="col-sm-10">
 							                  {{organization_form.description}}
+							                </div>
+							            </div>
+
+                          <div class="form-group">
+							                <label class="col-sm-2 control-label">Categorias</label>
+							                <div class="col-sm-10">
+							                  {{organization_form.categories}}
 							                </div>
 							            </div>
 
@@ -158,7 +173,7 @@
 							        </div>
 							 	</form>
 					  		</div>
-					  		
+						
 					  	</div><!-- row -->
 
 
@@ -212,20 +227,21 @@
 			  				</tr>
 		  				</thead>
 		  				<tbody>
-		  					<tr>
-		  						<td></td>
-		  						<td>Atartup Weekend Education</td>
-		  						<td>Is a event promoting entrepenurship in the education sector</td>
-		  						<td>17/10/2014</td>
-		  						<td>19/10/2014</td>
-		  					</tr>
-		  					<tr>
-		  						<td></td>
-		  						<td>Startup Weekend Education</td>
-		  						<td>Is a event promoting entrepenurship in the education sector</td>
-		  						<td>18/10/2014</td>
-		  						<td>19/10/2014</td>
-		  					</tr>
+               {% if events %}
+                   {% for event in events %}
+		      					<tr id="event-{{ event.id }}">
+                      <td><a class="delete_event" data-event-id="{{ event.id }}"><i class="fa fa-times"></i></a></td>
+                      <td>{{ event.name }}</td>
+                      <td>{{ event.description }}</td>
+                      <td>{{ event.from_date }}</td>
+                      <td>{{ event.to_date }}</td>
+		  				    	</tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                      <td colspan="5" style="text-align: center;">No has creado ningun evento aun</td>
+                    </tr>
+                {% endif %}
 		  				</tbody>
 		  			</table>
 	  			</div>
@@ -234,6 +250,56 @@
 
 	</div><!-- container -->
 	</div>
+  <script tpe="text/javascript">
+    var link = $('#submit_event');
 
+    link.click(
+          function(event){
+              //eliminate the default function
+              event.preventDefault();
+              $.ajax({
+                url: '/event_creation/{{ request.user.organization.id }}/',
+                  data:  $('#event_form').serialize(),
+                  type: "POST",
+                  success:
+                      function(result){
+                        $('#event_form').trigger('reset');
+                      },
+                  error:
+                      function(xhr){
+                          $('#alert-red').removeClass('hidden');
+                          $('#alert-green').addClass('hidden');
+                      }
+              });
+      });
+
+    var delete_event = $('.delete_event');
+
+    delete_event.click(
+        function(event){
+        //eliminate the default function
+        event.preventDefault();
+        //get the data from the link when clicked; data = ["type_deletion","id","company_name"]*company comes by default
+        var r = confirm("Estas seguro que quieres borrar este evento?");
+        if( r == true){
+            //pass the data to the ajax function to call the server
+            var id = $(this).data("event-id");
+            $.ajax({
+                url: "/event_deletion/" + id +"/",
+                success:
+                    function(result){
+                        $("#event-"+id).remove();
+
+                    },
+                error:
+                    function(){
+                        alert("We are experiencing problems wit error, please try again later");
+                    }
+            });
+
+    }else{
+        return false;
+    }});
+  </script>
 {% endblock content %}
 

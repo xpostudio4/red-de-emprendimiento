@@ -12,15 +12,13 @@ def signin(request):
     """
     Log in view
     """
+    form = UserProfileLoginForm(data=request.POST or None)
     if request.method == 'POST':
-        form = UserProfileLoginForm(request.POST)
         if form.is_valid():
             user = authenticate(email=request.POST['username'], password=request.POST['password'])
             if user is not None and user.is_active:
                     django_login(request, user)
-                    return redirect('/')
-    else:
-       form = UserProfileLoginForm()
+                    return redirect('/dashboard')
     return render_to_response('accounts/signin.html',
             {'form': form, 'form_errors': form.errors,},
            context_instance=RequestContext(request))

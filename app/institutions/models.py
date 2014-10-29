@@ -6,6 +6,7 @@ from django.contrib.auth.models import (
         BaseUserManager, AbstractBaseUser
         )
 #Third party libraries
+from taggit.managers import TaggableManager
 #from templated_email import send_templated_mail
 
 class AppUserManager(BaseUserManager):
@@ -40,6 +41,25 @@ class AppUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
+class Organization(models.Model):
+    """
+    This class represents the institution profile, it must be approved by one of the members
+    of the organization, every organization must be approved before being published.
+    """
+    name = models.CharField(max_length=40, verbose_name="Nombre de la Institucion")
+    url = models.URLField(max_length=40, verbose_name="Pagina Web", blank=True, null=True)
+    description = models.TextField(verbose_name="Descripcion", blank=True, null=True)
+    logo = models.ImageField(upload_to="profile_pics",null=True, blank=True)
+    phone = models.CharField(max_length=10,null=True, blank=True)
+    is_phone_visible = models.BooleanField(default=False,verbose_name="Desea que el telefono se vea en sus anuncios")
+    address = models.CharField(max_length=100, null=True, blank=True, verbose_name="Direccion")
+    is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
+    province = models.CharField(max_length=100, null=True, blank=True)
+    approved = models.BooleanField(default=False)
+    categories = TaggableManager()
+
+    def __unicode__(self):
+        return self.name
 
 class UserProfile(AbstractBaseUser):
     email = models.EmailField(
@@ -52,6 +72,7 @@ class UserProfile(AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     objects = AppUserManager()
+    organization = models.ForeignKey(Organization)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['full_name']
@@ -69,7 +90,7 @@ class UserProfile(AbstractBaseUser):
     def save(self, *args, **kwargs):
         if not self.id:
             #Create Organization for the user
-            organization = Organization(
+            organization = Organization.objects.create(
                     name=str(self.full_name)+ "'s Organization"
                     )
             self.organization  = organization
@@ -103,26 +124,6 @@ class UserProfile(AbstractBaseUser):
         return self.is_admin
 
 
-class Organization(models.Model):
-    """
-    This class represents the institution profile, it must be approved by one of the members
-    of the organization, every organization must be approved before being published.
-    """
-    name = models.CharField(max_length=40, verbose_name="Nombre de la Institucion")
-    url = models.URLField(max_length=40, verbose_name="Pagina Web", blank=True, null=True)
-    description = models.TextField(verbose_name="Descripcion", blank=True, null=True)
-    logo = models.ImageField(upload_to="profile_pics", blank=True)
-    phone = models.CharField(max_length=10,null=True, blank=True)
-    is_phone_visible = models.BooleanField(default=False,verbose_name="Desea que el telefono se vea en sus anuncios")
-    address = models.CharField(max_length=100, null=True, blank=True, verbose_name="Direccion")
-    is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
-    province = models.CharField(max_length=100, null=True, blank=True)
-    approved = models.BooleanField(default=False)
-
-
-    def __unicode__(self):
-        return self.name
-
 class Event(models.Model):
     """
     The purpose of this class is to manage the dates of all the events of the
@@ -133,10 +134,16 @@ class Event(models.Model):
     created = models.DateField()
     from_date = models.DateField()
     to_date = models.DateField()
-    organization = models.ForeignKey(Organization)
+    organization = models.ForeignKey(Organization, null=True, blank=True)
 
     def __unicode__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        '''On save, fill created field'''
+        if not self.id:
+            self.created = datetime.date.today()
+        super(Event, self).save(*args, **kwargs)
 
 class MailingList(models.Model):
     """

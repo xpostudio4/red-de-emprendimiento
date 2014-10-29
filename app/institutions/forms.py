@@ -86,24 +86,20 @@ class UserProfileChangeForm(forms.ModelForm):
 
 
 class  UserProfileLoginForm(AuthenticationForm):
-
-
     """A Form for user login."""
     form_fields = ["username", "password"]
-
-    username = forms.CharField(max_length=254, label="Correo Electronico", 
+    username = forms.CharField(max_length=254, label="Correo Electronico",
         widget=forms.TextInput(attrs={"placeholder":'Usuario'}))
-    password = forms.CharField(label='Password', 
+    password = forms.CharField(label='Password',
         widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña'}))
 
     def __init__(self, *args, **kwargs):
-        super(AuthenticationForm, self).__init__(*args, **kwargs)
+        super(UserProfileLoginForm, self).__init__(*args, **kwargs)
         #change the html class of all the elements of the form to get bootstrap 3 styling
         for field in self.fields:
             self.fields[field].widget.attrs.update({'class':'form-control'})
 
 class OrganizationForm(forms.ModelForm):
-
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
 
     class Meta:
@@ -119,6 +115,7 @@ class OrganizationForm(forms.ModelForm):
                 'address',
                 'is_phone_visible',
                 'province',
+                'categories',
                 )
 
 
@@ -129,7 +126,6 @@ class OrganizationForm(forms.ModelForm):
             self.fields[field].widget.attrs.update({'class':'form-control'})
 
 class EventForm(forms.ModelForm):
-
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
     from_date = forms.CharField(widget=forms.TextInput(attrs={
             'class':'date',

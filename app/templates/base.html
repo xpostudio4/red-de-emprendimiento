@@ -24,6 +24,9 @@
 
     <!-- Use this to quickly test CSS changes in a template,
         then move to app.css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{% static 'js/tag-it.js' %}" type="text/javascript" charset="utf-8"></script>
     {% block extra_css %}
 
     {% endblock extra_css %}
@@ -169,8 +172,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- place project specific Javascript in this file -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
      <script src="{% static 'js/app.js' %}"></script>
     
