@@ -216,7 +216,7 @@
 		  			<table class="table" id="events-table" data-toggle="table" data-sort-name="starts" data-sort-order="desc" data-search="true" data-pagination="true" data-click-to-select="true">
 		  				<thead>
 			  				<tr>
-			  					<th data-field="state" data-checkbox="true"></th>
+			  					<th data-field="state" data-checkbox="false"></th>
 			  					<th data-field="title" data-sortable="true">Título</th>
 			  					<th data-field="description">Descripción</th>
 			  					<th data-field="starts" data-sortable="true">Inicia</th>
@@ -226,13 +226,13 @@
 		  				<tbody>
                {% if events %}
                    {% for event in events %}
-		      					<tr id="event-{{ event.id }}">
-                      <td><a class="delete_event" data-event-id="{{ event.id }}"><i class="fa fa-times"></i></a></td>
-                      <td>{{ event.name }}</td>
-                      <td>{{ event.description }}</td>
-                      <td>{{ event.from_date }}</td>
-                      <td>{{ event.to_date }}</td>
-		  				    	</tr>
+		      			<tr id="event-{{ event.id }}">
+	                      <td><a class="delete_event" data-event-id="{{ event.id }}"><i class="fa fa-times"></i></a></td>
+	                      <td>{{ event.name }}</td>
+	                      <td>{{ event.description }}</td>
+	                      <td>{{ event.from_date }}</td>
+	                      <td>{{ event.to_date }}</td>
+		  				</tr>
                     {% endfor %}
                 {% else %}
                     <tr>
@@ -279,7 +279,7 @@
         event.preventDefault();
         //get the data from the link when clicked; data = ["type_deletion","id","company_name"]*company comes by default
 			  swal({
-			  title: "Estas seguro?",
+			  title: "¿Estas seguro?",
 			  text: "Estas a punto de borrar este evento",
 			  type: "warning",
 			  showCancelButton: true,
@@ -307,7 +307,7 @@
 	            });
 			    
 			  } else {
-			    swal("Cancelado", "Your imaginary file is safe :)", "error");
+			    swal("Cancelado", "", "error");
 			  }
 			});
             });
