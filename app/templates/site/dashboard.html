@@ -213,7 +213,7 @@
 		<div class="row">
 	  		<div class="col-sm-12">
 	  			<div class="events-table">
-		  			<table class="table" id="events-table" data-toggle="table" data-sort-name="starts" data-sort-order="desc" data-search="true" data-pagination="true" data-click-to-select="true">
+		  			<table class="table" >
 		  				<thead>
 			  				<tr>
 			  					<th data-field="state" data-checkbox="false"></th>
@@ -247,7 +247,7 @@
 
 	</div><!-- container -->
 	</div>
-  <script tpe="text/javascript">
+  <script type="text/javascript">
     var link = $('#submit_event');
 
     link.click(
@@ -274,6 +274,7 @@
 
     delete_event.click(
         function(event){
+        	
         //eliminate the default function
         var id = $(this).data("event-id");
         event.preventDefault();
@@ -309,7 +310,7 @@
 			  } else {
 			    swal("Cancelado", "", "error");
 			  }
-			});
+			// });
             });
   </script>
 {% endblock content %}
