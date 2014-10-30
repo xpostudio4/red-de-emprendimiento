@@ -72,11 +72,6 @@ class UserProfileChangeForm(forms.ModelForm):
         model = UserProfile
         fields = ('full_name', 'email')
 
-    def clean_password(self):
-        # Regardless of what the user provides, return the initial value.
-        # This is done here, rather than on the field, because the
-        # field does not have access to the initial value
-        return self.initial["password"]
 
     def __init__(self, *args, **kwargs):
         super(UserProfileChangeForm, self).__init__(*args, **kwargs)
@@ -111,7 +106,7 @@ class OrganizationForm(forms.ModelForm):
 
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
     categories = forms.MultipleChoiceField(choices=CATEGORIES)
-    
+
     class Meta:
         model = Organization
 
@@ -119,7 +114,6 @@ class OrganizationForm(forms.ModelForm):
                 'name',
                 'url',
                 'description',
-                'logo',
                 'phone',
                 'is_phone_visible',
                 'address',

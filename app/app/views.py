@@ -15,22 +15,26 @@ def inspire(request):
 
 @login_required
 def dashboard(request):
-    user = UserProfile(id=request.user.id)
+    user_form = UserProfileChangeForm(request.POST or None, instance=request.user)
     events = Event.objects.filter(organization=request.user.organization)
     #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
         organization_form = OrganizationForm(request.POST, instance=request.user.organization)
         event_form = EventForm(request.POST)
-        user_form = UserProfileChangeForm(request.POST, instance=user)
+
 
         if organization_form.is_valid():
             organization_form.save()
 
+        if user_form.is_valid():
+            user_form.save()
+        else:
+            print user_form.errors
+
     else:
-        user_form = UserProfileChangeForm(instance=user)
         organization_form = OrganizationForm(instance=request.user.organization)
         event_form = EventForm()
-
+        user_form = UserProfileChangeForm(instance=request.user)
     #process the forms if valid
     #Otherwise return the errors
     return render(request, 'site/dashboard.html',
@@ -59,7 +63,7 @@ def event_creation(request,organization_id):
                 'from': str(event.from_date),
                 'to': str(event.to_date)
                 }
-        return HttpResponse(json.dumps(result))
+        return HttpResponse(json.dumps(result), content_type='application/json')
     return HttpResponse(json.dumps(form.errors))
 
 @login_required
