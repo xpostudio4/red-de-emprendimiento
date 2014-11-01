@@ -20,6 +20,7 @@ urlpatterns = patterns('',
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^event_creation/(?P<organization_id>\d+)/$', 'app.views.event_creation'),
     url(r'^event_deletion/(?P<event_id>\d+)/$', 'app.views.event_deletion'),
+    url(r'^user_validation/$', 'app.views.user_validation'),
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:

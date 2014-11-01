@@ -1,6 +1,6 @@
 import json
 from django import forms
-from django.http import HttpResponse, HttpResponseServerError
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseServerError
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_POST
@@ -22,15 +22,8 @@ def dashboard(request):
         organization_form = OrganizationForm(request.POST, instance=request.user.organization)
         event_form = EventForm(request.POST)
 
-
         if organization_form.is_valid():
             organization_form.save()
-
-        if user_form.is_valid():
-            user_form.save()
-        else:
-            print user_form.errors
-
     else:
         organization_form = OrganizationForm(instance=request.user.organization)
         event_form = EventForm()
@@ -38,6 +31,24 @@ def dashboard(request):
     #process the forms if valid
     #Otherwise return the errors
     return render(request, 'site/dashboard.html',
+            {
+                'organization_form': organization_form,
+                'event_form': event_form,
+                'user_form': user_form,
+                'events': events,
+                })
+@login_required
+@require_POST
+def user_validation(request):
+    user_form = UserProfileChangeForm(request.POST, instance=request.user)
+    if user_form.is_valid():
+        user_form.save()
+        return HttpResponseRedirect('/dashboard/')
+    else:
+        organization_form = OrganizationForm(instance=request.user.organization)
+        event_form = EventForm()
+        events = Event.objects.filter(organization=request.user.organization)
+        return render(request, 'site/dashboard.html',
             {
                 'organization_form': organization_form,
                 'event_form': event_form,
