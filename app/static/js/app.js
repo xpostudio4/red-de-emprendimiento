@@ -20,10 +20,9 @@ $(document).ready (function () {
 	//   }
 	// });
 
-	$('#events-table').bootstrapTable();
 
-	$('#id_categories').selectize({ 
-   		placeholder: 'Select risk' 
+	$('#id_categories').selectize({
+   		placeholder: 'Selecciona una categoria'
    	});
 	
 });
