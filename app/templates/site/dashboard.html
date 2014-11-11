@@ -3,7 +3,6 @@
 {% load staticfiles %}
 
 {% block extra_css %}
-	<link href="{% static 'table/bootstrap-table.css' %}" rel="stylesheet">
     <link href="{% static 'datepicker/datepicker3.css' %}" rel="stylesheet">
     <link href="{% static 'css/sweet-alert.css' %}" rel="stylesheet">
     <link href="{% static 'selectize/css/selectize.default.css' %}" rel="stylesheet">
@@ -11,8 +10,6 @@
 
 
 {% block extra_js %}
-    <script src="{% static 'table/bootstrap-table.js' %}"></script>
-    <script src="{% static 'table/locale/bootstrap-table-es-AR.js' %}"></script>
     <script src="{% static 'datepicker/bootstrap-datepicker.js' %}"></script>
     <script src="{% static 'js/sweet-alert.js' %}"></script>
     
@@ -58,6 +55,7 @@
 					  			<form class="form-horizontal" action="." method="post" id="event_form">
 					  				{% csrf_token %}
 					  				<div class="col-sm-12">
+					  				{{ event_form.errors }}
 					  					<div class="form-group">
 					  						<label class="col-sm-2 control-label">Titulo</label> 
 							                <div class="col-sm-10">
@@ -94,7 +92,7 @@
 						                </div>
 					  				</div>
 									<div class="col-sm-12">
-							        	<button type="submit" class="btn btn-primary pull-right" id="submit_event">Enviar</button>
+							        	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
 							        </div>
 
 					  			</form>
@@ -181,6 +179,7 @@
 					  			<form class="form-horizontal" action="." method="post">
 					  			{% csrf_token %}
 					  				<div class="col-sm-6">
+					  				{{ user_form.errors }}
 								  		<div class="form-group">
 							                <label class="col-sm-4 control-label">Nombre</label> 
 							                <div class="col-sm-8">
@@ -310,7 +309,7 @@
 			  } else {
 			    swal("Cancelado", "", "error");
 			  }
-			// });
+			});
             });
   </script>
 {% endblock content %}

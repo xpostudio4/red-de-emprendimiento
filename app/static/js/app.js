@@ -20,8 +20,6 @@ $(document).ready (function () {
 	//   }
 	// });
 
-	$('#events-table').bootstrapTable();
-
 	$('#id_categories').selectize({ 
    	});
 	
