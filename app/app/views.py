@@ -1,8 +1,10 @@
 import json
 from django import forms
-from django.http import HttpResponse, HttpResponseServerError
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseServerError
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.utils.dateformat import DateFormat
+from django.utils.formats import get_format
 from django.views.decorators.http import require_POST
 from institutions.forms import OrganizationForm, EventForm,UserProfileChangeForm
 from institutions.models import Event, Organization, UserProfile
@@ -19,18 +21,38 @@ def dashboard(request):
     events = Event.objects.filter(organization=request.user.organization)
     event_form = EventForm(request.POST or None)
     organization_form = OrganizationForm(request.POST or None, instance=request.user.organization)
-    #Load the forms with data or the instance of the file if POST
+        #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
-        if organization_form.is_valid():
-            organization_form.save()
-        if user_form.is_valid():
-            user_form.save()
-        else:
-            print user_form.errors
+            organization_form = OrganizationForm(request.POST, instance=request.user.organization)
+            event_form = EventForm(request.POST)
 
+            if organization_form.is_valid():
+                organization_form.save()
+    else:
+        organization_form = OrganizationForm(instance=request.user.organization)
+        event_form = EventForm()
+        user_form = UserProfileChangeForm(instance=request.user)
     #process the forms if valid
     #Otherwise return the errors
     return render(request, 'site/dashboard.html',
+            {
+                'organization_form': organization_form,
+                'event_form': event_form,
+                'user_form': user_form,
+                'events': events,
+                })
+@login_required
+@require_POST
+def user_validation(request):
+    user_form = UserProfileChangeForm(request.POST, instance=request.user)
+    if user_form.is_valid():
+        user_form.save()
+        return HttpResponseRedirect('/dashboard/')
+    else:
+        organization_form = OrganizationForm(instance=request.user.organization)
+        event_form = EventForm()
+        events = Event.objects.filter(organization=request.user.organization)
+        return render(request, 'site/dashboard.html',
             {
                 'organization_form': organization_form,
                 'event_form': event_form,
@@ -49,12 +71,16 @@ def event_creation(request,organization_id):
         event = form.save(commit=False)
         event.organization = organization
         event.save()
+        #Get the date formats
+        from_date = DateFormat(event.from_date)
+        to_date = DateFormat(event.to_date)
         #return the Json of the data
         result = {
+                'id' : event.id,
                 'name': event.name,
                 'description': event.description,
-                'from': str(event.from_date),
-                'to': str(event.to_date)
+                'from': str(from_date.format(get_format('DATE_FORMAT'))),
+                'to': str(to_date.format(get_format('DATE_FORMAT')))
                 }
         return HttpResponse(json.dumps(result), content_type='application/json')
     return HttpResponse(json.dumps(form.errors))

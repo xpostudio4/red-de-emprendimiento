@@ -71,7 +71,7 @@ class UserProfileChangeForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('full_name', 'email')
-
+        widgets = {'user_form': forms.HiddenInput()}
 
     def __init__(self, *args, **kwargs):
         super(UserProfileChangeForm, self).__init__(*args, **kwargs)

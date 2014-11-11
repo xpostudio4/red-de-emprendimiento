@@ -5,4 +5,4 @@ django-model-utils==1.5.0
 django-simple-captcha==0.4.2
 logutils==0.3.3
 South==0.8.2
-django-taggit==0.12.2
+django-selectize==1.2

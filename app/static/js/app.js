@@ -20,7 +20,8 @@ $(document).ready (function () {
 	//   }
 	// });
 
-	$('#id_categories').selectize({ 
+	$('#id_categories').selectize({
+   		placeholder: 'Selecciona una categoria'
    	});
 	
 });

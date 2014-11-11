@@ -12,7 +12,6 @@
 {% block extra_js %}
     <script src="{% static 'datepicker/bootstrap-datepicker.js' %}"></script>
     <script src="{% static 'js/sweet-alert.js' %}"></script>
-    
 
 {% endblock extra_js %}
 
@@ -94,7 +93,6 @@
 									<div class="col-sm-12">
 							        	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
 							        </div>
-
 					  			</form>
 					  		</div>
 					  	</div>
@@ -122,7 +120,6 @@
 							                </div>
 							            </div>
 							        </div><!-- col-sm-6 -->
-						
 							        <div class="col-sm-6">
 								  		<div class="form-group">
 							                <label class="col-sm-4 control-label">Provincia</label>
@@ -154,29 +151,24 @@
 							                  {{organization_form.description}}
 							                </div>
 							            </div>
-
                           				<div class="form-group">
 							                <label class="col-sm-2 control-label">Categorias</label>
 							                <div class="col-sm-10">
 							                  {{organization_form.categories}}
 							                </div>
 							            </div>
-
 							        </div><!-- col-sm-12 -->
 							        <div class="col-sm-12">
 							        	<button type="submit" class="btn btn-primary pull-right">Enviar</button>
 							        </div>
 							 	</form>
 					  		</div>
-						
 					  	</div><!-- row -->
-
-
 					  </div><!-- #company -->
 					  <div class="tab-pane" id="user">
 					  	<div class="row">
 					  		<div class="col-sm-12">
-					  			<form class="form-horizontal" action="." method="post">
+					  			<form class="form-horizontal" action="/user_validation/" method="post">
 					  			{% csrf_token %}
 					  				<div class="col-sm-6">
 					  				{{ user_form.errors }}
@@ -202,24 +194,24 @@
 							</div>
 						</div>
 					  </div>
-					
 					</div><!-- tab-content -->
 				</div><!-- profile-forms -->
 			</div><!-- col-sm-8 -->
 		</div><!-- row -->
 		
-
 		<div class="row">
 	  		<div class="col-sm-12">
 	  			<div class="events-table">
-		  			<table class="table" >
+
+		  			<table class="table" id="events-table">
+
 		  				<thead>
 			  				<tr>
-			  					<th data-field="state" data-checkbox="false"></th>
-			  					<th data-field="title" data-sortable="true">Título</th>
-			  					<th data-field="description">Descripción</th>
-			  					<th data-field="starts" data-sortable="true">Inicia</th>
-			  					<th data-field="ends" data-sortable="true">Termina</th>
+			  					<th></th>
+			  					<th>Título</th>
+			  					<th>Descripción</th>
+			  					<th>Inicia</th>
+			  					<th>Termina</th>
 			  				</tr>
 		  				</thead>
 		  				<tbody>
@@ -243,7 +235,6 @@
 	  			</div>
 	  		</div>	
 	  	</div>
-
 	</div><!-- container -->
 	</div>
   <script type="text/javascript">
@@ -260,6 +251,8 @@
                   success:
                       function(result){
                         $('#event_form').trigger('reset');
+                        $('#events-table tbody').append(
+                        '<tr id="event-'+ result.id + '"><td><a class="delete_event" data-event-id="'+ result.id + '"><i class="fa fa-times"></i></a></td><td>'+ result.name + '</td><td>' + result.description + '</td><td>'+ result.from + '</td><td>' + result.to + '</td></tr>');
                       },
                   error:
                       function(xhr){
@@ -270,7 +263,6 @@
       });
 
     var delete_event = $('.delete_event');
-
     delete_event.click(
         function(event){
         	
@@ -290,22 +282,19 @@
 			  closeOnCancel: false
 			},
 			function(isConfirm) {
-			  if (isConfirm) {
-			  	
+			  if (isConfirm) {	
 	            $.ajax({
 	                url: "/event_deletion/" + id +"/",
 	                success:
 	                    function(result){
 	                        $("#event-"+id).remove();
 	                        swal("Borrado", "Este evento ha sido borrado", "success");
-
 	                    },
 	                error:
 	                    function(){
 	                        alert("We are experiencing problems wit error, please try again later");
 	                    }
 	            });
-			    
 			  } else {
 			    swal("Cancelado", "", "error");
 			  }
