@@ -12,6 +12,9 @@ from institutions.models import Event, Organization, UserProfile
 def home(request):
     return render(request, 'site/index.html')
 
+def landing_page(request):
+    return render(request, 'home.html')
+
 def inspire(request):
     return render(request, 'site/inspira.html')
 
