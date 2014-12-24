@@ -9,10 +9,20 @@ from django.views.decorators.http import require_POST
 from institutions.forms import OrganizationForm, EventForm,UserProfileChangeForm
 from institutions.models import Event, Organization, UserProfile
 
-def home(request):
+def index(request):
+    """
+    The Index is where most of the action in the page will happen,
+    the entrepreneurs should access this page and see all the opportunities
+    available for them here.
+    """
     return render(request, 'site/index.html')
 
-def landing_page(request):
+def home(request):
+    """
+    The home shows the different options that the user can have, if the user
+    is an entrepreneur they can choose all the options available in index.
+    If the user belong to the support industry he can choose otherwise.
+    """
     return render(request, 'home.html')
 
 def inspire(request):

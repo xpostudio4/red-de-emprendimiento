@@ -8,9 +8,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^home', 'app.views.home'),
-    url(r'^$', 'app.views.landing_page'),
-
+    url(r'^$', 'app.views.home'),
+    url(r'^index/', 'app.views.index'),
     # Examples:
     url(r'^inspira/', 'app.views.inspire'),
     # url(r'^app/', include('app.foo.urls')),
