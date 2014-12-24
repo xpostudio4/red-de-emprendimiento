@@ -8,7 +8,7 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField, AuthenticationF
 
 #Third party apps
 from captcha.fields import CaptchaField
-
+from taggit.forms import *
 #Project apps import
 from .models import UserProfile, Organization, Event, MailingList
 
@@ -105,7 +105,7 @@ class OrganizationForm(forms.ModelForm):
 
 
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
-    categories = forms.MultipleChoiceField(choices=CATEGORIES, required=False)
+    categories = TagField()
 
     class Meta:
         model = Organization
