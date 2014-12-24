@@ -12,6 +12,9 @@ from institutions.models import Event, Organization, UserProfile
 def home(request):
     return render(request, 'site/index.html')
 
+def landing_page(request):
+    return render(request, 'home.html')
+
 def inspire(request):
     return render(request, 'site/inspira.html')
 
@@ -19,13 +22,15 @@ def inspire(request):
 def dashboard(request):
     user_form = UserProfileChangeForm(request.POST or None, instance=request.user)
     events = Event.objects.filter(organization=request.user.organization)
-    #Load the forms with data or the instance of the file if POST
+    event_form = EventForm(request.POST or None)
+    organization_form = OrganizationForm(request.POST or None, instance=request.user.organization)
+        #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
-        organization_form = OrganizationForm(request.POST, instance=request.user.organization)
-        event_form = EventForm(request.POST)
+            organization_form = OrganizationForm(request.POST, instance=request.user.organization)
+            event_form = EventForm(request.POST)
 
-        if organization_form.is_valid():
-            organization_form.save()
+            if organization_form.is_valid():
+                organization_form.save()
     else:
         organization_form = OrganizationForm(instance=request.user.organization)
         event_form = EventForm()

@@ -105,6 +105,7 @@ class OrganizationForm(forms.ModelForm):
 
 
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
+    categories = forms.MultipleChoiceField(choices=CATEGORIES, required=False)
 
     class Meta:
         model = Organization
