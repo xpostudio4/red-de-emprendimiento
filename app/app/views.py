@@ -26,7 +26,15 @@ def home(request):
     return render(request, 'home.html')
 
 def inspire(request):
-    return render(request, 'site/inspira.html')
+    """
+    The purpose of this page is to display all the organizations that have
+    'inspire' tag in their tag list.
+    """
+    organizations = Organization.objects.filter(
+            categories__name__in=["inspire"]
+            )
+    return render(request, 'site/inspira.html',
+            {'organizations' : organizations})
 
 @login_required
 def dashboard(request):
