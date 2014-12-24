@@ -105,7 +105,6 @@ class OrganizationForm(forms.ModelForm):
 
 
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
-    categories = forms.MultipleChoiceField(choices=CATEGORIES)
 
     class Meta:
         model = Organization
@@ -122,13 +121,21 @@ class OrganizationForm(forms.ModelForm):
                 'categories',
                 )
 
-
     def __init__(self, *args, **kwargs):
         super(OrganizationForm, self).__init__(*args, **kwargs)
         #change the html class of all the elements of the form to get bootstrap 3 styling
         for field in self.fields:
             if field != 'categories':
                 self.fields[field].widget.attrs.update({'class':'form-control'})
+
+class OrganizationPictureForm(forms.ModelForm):
+    picture = forms.ImageField()
+
+    class Meta:
+        model = Organization
+        fields = (
+                'logo',
+                )
 
 class EventForm(forms.ModelForm):
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
@@ -165,4 +172,4 @@ class MailingListForm(forms.ModelForm):
                 'email',
                 'province',
                 )
-                
+
