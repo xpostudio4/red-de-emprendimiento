@@ -46,14 +46,20 @@ class Organization(models.Model):
     This class represents the institution profile, it must be approved by one of the members
     of the organization, every organization must be approved before being published.
     """
-    name = models.CharField(max_length=40, verbose_name="Nombre de la Institucion")
-    url = models.URLField(max_length=40, verbose_name="Pagina Web", blank=True, null=True)
-    description = models.TextField(verbose_name="Descripcion", blank=True, null=True)
+    name = models.CharField(max_length=40,
+            verbose_name="Nombre de la Institucion")
+    url = models.URLField(max_length=40, verbose_name="Pagina Web",
+            null=True,  blank=True)
+    description = models.TextField(verbose_name="Descripcion",
+            null=True, blank=True)
     logo = models.ImageField(upload_to="profile_pics",null=True, blank=True)
     phone = models.CharField(max_length=10,null=True, blank=True)
-    is_phone_visible = models.BooleanField(default=False,verbose_name="Desea que el telefono se vea en sus anuncios")
-    address = models.CharField(max_length=100, null=True, blank=True, verbose_name="Direccion")
-    is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
+    is_phone_visible = models.BooleanField(default=False,
+            verbose_name="Desea que el telefono se vea en sus anuncios")
+    address = models.CharField(max_length=100, null=True, blank=True,
+            verbose_name="Direccion")
+    is_address_visible = models.BooleanField(default=False,
+            verbose_name="Desea que su direccion se vea en los anuncios")
     province = models.CharField(max_length=100, null=True, blank=True)
     approved = models.BooleanField(default=False)
     categories = TaggableManager(blank=True)

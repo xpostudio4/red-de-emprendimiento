@@ -45,10 +45,13 @@ def dashboard(request):
         #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
             organization_form = OrganizationForm(request.POST, instance=request.user.organization)
-
             if organization_form.is_valid():
-                organization_form.save()
-                organization_form.save_m2m()
+                cat = organization_form.cleaned_data['categories']
+                organization = organization_form.save()
+                organization.categories.add(*cat)
+
+            else:
+                print organization_form.errors
     else:
         organization_form = OrganizationForm(instance=request.user.organization)
         user_form = UserProfileChangeForm(instance=request.user)

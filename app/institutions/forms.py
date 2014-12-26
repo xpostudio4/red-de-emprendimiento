@@ -104,8 +104,9 @@ class OrganizationForm(forms.ModelForm):
             )
 
 
-    description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
-    categories = TagField()
+    description = forms.CharField(label="Descripción", required=False,
+            widget=forms.Textarea(attrs={'rows':'2'}))
+    categories = TagField(required=False)
 
     class Meta:
         model = Organization
