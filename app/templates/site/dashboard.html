@@ -1,11 +1,12 @@
 {% extends 'base.html' %}	
 
 {% load staticfiles %}
+{% load selectize_tags %}
 
 {% block extra_css %}
     <link href="{% static 'datepicker/datepicker3.css' %}" rel="stylesheet">
     <link href="{% static 'css/sweet-alert.css' %}" rel="stylesheet">
-    <link href="{% static 'selectize/css/selectize.default.css' %}" rel="stylesheet">
+    {% selectize_tags_media 'css' %}
 {% endblock extra_css %}			
 
 
@@ -154,7 +155,7 @@
                           				<div class="form-group">
 							                <label class="col-sm-2 control-label">Categorias</label>
 							                <div class="col-sm-10">
-							                  {{organization_form.categories}}
+							                  {{organization_form.tags}}
 							                </div>
 							            </div>
 							        </div><!-- col-sm-12 -->
@@ -237,7 +238,19 @@
 	  	</div>
 	</div><!-- container -->
 </div>
+  {% selectize_tags_media 'js' 'jquery' %}
   <script type="text/javascript">
+    $('#id_tags').selectize(
+          {
+          valueField: 'tag',
+          labelField: 'tag',
+          searchField: ['tag'],
+          options: [
+            {tag: 'cultura'}, {tag: 'aprendizaje'},
+            {tag: 'financiamiento'}, {tag: 'escalamiento'},
+          ],
+          }
+      );
     var link = $('#submit_event');
 
     link.click(

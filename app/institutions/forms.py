@@ -106,7 +106,7 @@ class OrganizationForm(forms.ModelForm):
 
     description = forms.CharField(label="Descripción", required=False,
             widget=forms.Textarea(attrs={'rows':'2'}))
-    categories = TagField(required=False)
+    tags = TagField(required=False)
 
     class Meta:
         model = Organization
@@ -120,14 +120,14 @@ class OrganizationForm(forms.ModelForm):
                 'address',
                 'is_phone_visible',
                 'province',
-                'categories',
+                'tags',
                 )
 
     def __init__(self, *args, **kwargs):
         super(OrganizationForm, self).__init__(*args, **kwargs)
         #change the html class of all the elements of the form to get bootstrap 3 styling
         for field in self.fields:
-            if field != 'categories':
+            if field != 'tags':
                 self.fields[field].widget.attrs.update({'class':'form-control'})
 
 class OrganizationPictureForm(forms.ModelForm):

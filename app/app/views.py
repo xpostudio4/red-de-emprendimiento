@@ -31,7 +31,7 @@ def inspire(request):
     'inspire' tag in their tag list.
     """
     organizations = Organization.objects.filter(
-            categories__name__in=["inspire"]
+            tags__name__in=["inspire"]
             )
     return render(request, 'site/inspira.html',
             {'organizations' : organizations})
@@ -39,17 +39,16 @@ def inspire(request):
 @login_required
 def dashboard(request):
     user_form = UserProfileChangeForm(request.POST or None, instance=request.user)
+    organization = Organization.objects.get(id=request.user.organization.id)
     events = Event.objects.filter(organization=request.user.organization)
     event_form = EventForm()
-    organization_form = OrganizationForm(request.POST or None, instance=request.user.organization)
+    organization_form = OrganizationForm(request.POST or None, instance=organization)
         #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
             organization_form = OrganizationForm(request.POST, instance=request.user.organization)
             if organization_form.is_valid():
-                cat = organization_form.cleaned_data['categories']
+                print organization_form.cleaned_data['tags']
                 organization = organization_form.save()
-                organization.categories.add(*cat)
-
             else:
                 print organization_form.errors
     else:

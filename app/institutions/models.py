@@ -62,7 +62,7 @@ class Organization(models.Model):
             verbose_name="Desea que su direccion se vea en los anuncios")
     province = models.CharField(max_length=100, null=True, blank=True)
     approved = models.BooleanField(default=False)
-    categories = TaggableManager(blank=True)
+    tags = TaggableManager(blank=True)
 
     def __unicode__(self):
         return self.name

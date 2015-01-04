@@ -196,7 +196,6 @@ DJANGO_APPS = (
     # Admin panel and documentation:
     'django.contrib.admin',
     # 'django.contrib.admindocs',
-    'taggit',
 )
 
 # Apps specific for this project go here.
@@ -251,6 +250,7 @@ WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 ########## SOUTH CONFIGURATION
 # See: http://south.readthedocs.org/en/latest/installation.html#configuring-your-django-installation
 INSTALLED_APPS += (
+        'taggit',
         'selectize',
     # Database migration helpers:
 )
