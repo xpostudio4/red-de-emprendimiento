@@ -242,6 +242,7 @@
   <script type="text/javascript">
     $('#id_tags').selectize(
           {
+          maxItems: 4,
           valueField: 'tag',
           labelField: 'tag',
           searchField: ['tag'],
@@ -278,7 +279,6 @@
     var delete_event = $('.delete_event');
     delete_event.click(
         function(event){
-        	
         //eliminate the default function
         var id = $(this).data("event-id");
         event.preventDefault();

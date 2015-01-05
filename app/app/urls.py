@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^index/', 'app.views.index'),
     # Examples:
     url(r'^inspira/', 'app.views.inspire'),
+    url(r'^financia/', 'app.views.finance'),
     # url(r'^app/', include('app.foo.urls')),
     url(r'^accounts/', include('institutions.urls')),
     url(r'^signin/$', 'institutions.views.signin'),

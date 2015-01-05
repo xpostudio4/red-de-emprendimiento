@@ -25,6 +25,17 @@ def home(request):
     """
     return render(request, 'home.html')
 
+def finance(request):
+    """
+    The purpose of this page is to display all the organizations that have
+    'inspire' tag in their tag list.
+    """
+    organizations = Organization.objects.filter(
+            tags__slug="financiamiento"
+            )
+    return render(request, 'site/financia.html',
+            {'organizations' : organizations})
+
 def inspire(request):
     """
     The purpose of this page is to display all the organizations that have
@@ -47,15 +58,12 @@ def dashboard(request):
     if request.method == 'POST':
             organization_form = OrganizationForm(request.POST, instance=request.user.organization)
             if organization_form.is_valid():
-                print organization_form.cleaned_data['tags']
                 organization = organization_form.save()
-            else:
-                print organization_form.errors
     else:
         organization_form = OrganizationForm(instance=request.user.organization)
         user_form = UserProfileChangeForm(instance=request.user)
-    #process the forms if valid
-    #Otherwise return the errors
+        print organization_form
+
     return render(request, 'site/dashboard.html',
             {
                 'organization_form': organization_form,
@@ -63,6 +71,7 @@ def dashboard(request):
                 'user_form': user_form,
                 'events': events,
                 })
+
 @login_required
 @require_POST
 def user_validation(request):
