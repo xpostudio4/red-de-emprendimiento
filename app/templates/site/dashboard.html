@@ -240,8 +240,11 @@
 </div>
   {% selectize_tags_media 'js' 'jquery' %}
   <script type="text/javascript">
+$(document).ready(function(){
     $('#id_tags').selectize(
           {
+          delimiter: ',',
+          persist: false,
           maxItems: 4,
           valueField: 'tag',
           labelField: 'tag',
@@ -252,6 +255,7 @@
           ],
           }
       );
+});
     var link = $('#submit_event');
 
     link.click(
