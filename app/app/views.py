@@ -17,25 +17,6 @@ def index(request):
     """
     return render(request, 'site/index.html')
 
-def home(request):
-    """
-    The home shows the different options that the user can have, if the user
-    is an entrepreneur they can choose all the options available in index.
-    If the user belong to the support industry he can choose otherwise.
-    """
-    return render(request, 'home.html')
-
-def finance(request):
-    """
-    The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
-    """
-    organizations = Organization.objects.filter(
-            tags__slug="financiamiento"
-            )
-    return render(request, 'site/financia.html',
-            {'organizations' : organizations})
-
 def inspire(request):
     """
     The purpose of this page is to display all the organizations that have
@@ -46,6 +27,10 @@ def inspire(request):
             )
     return render(request, 'site/inspira.html',
             {'organizations' : organizations})
+
+def profile(request):
+
+    return render(request, 'site/perfil.html')
 
 @login_required
 def dashboard(request):

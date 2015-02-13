@@ -1,29 +1,79 @@
-{% extends 'base.html' %}				
+{% extends "base.html" %}
+
+{% load staticfiles %}
 
 {% block content %}
 
-	<div class="col-sm-9 main">
-		<div class="container">
-			<div class="col-sm-12">
-				<h1>Inspira</h1>
-				<p>Thinking about taking the entrepreneurial leap? There are people and programs that can provide encouragement and real-world support as you follow your dream. Learn about resources available to offer the inspiration and practical skills you need.</p>
-        {% for organization in organizations %}
-            <div class="col-sm-4">
-		    			<div class="company">
-                {% if organization.logo %}
-                <img src="{{ organization.logo.url }}" width="{{ organization.logo.width }}" height="{{ organization.logo.height }}">
-                {% else %}
-                 {{ organization.name }}
-                {% endif %}
-                <p>{{ organization.description  }}</p>
-                <a href="{{ organization.url }}" class="btn btn-danger btn-lg btn-block">Visita</a>
-				    	</div>
-				    </div><!-- col-sm-4 -->
-        {% endfor %}
+<div id="cover">
 
+    <div class="container call-to-action ">
 
-			</div>
-		</div>
-	</div>
-	
+    <div class="row hidden-xs hidden-sm slideDownX">
+      <div class="col-sm-3">
+        <a href="/"><img src="{{ STATIC_URL }}/img/logo.png" class="big-logo"></a>
+      </div>
+      <div class="col-sm-9">
+        <ul class="nav nav-pills pull-right big-pills">
+          <li role="presentation"><a href="#" class="custom-pills">Inicio</a></li>
+          <li role="presentation"><a href="#" class="custom-pills">Sobre</a></li>
+          <li role="presentation"><a href="#" class="custom-pills btn btn-default">Iniciar Sesión</a></li>
+        </ul>
+      </div>
+    </div>
+        
+      <div class="row text-center">
+        <div class="col-sm-12 slideDownX">
+          <p class="big-tagline">&Uacute;nete a la comunidad <b>emprendedora</b></p>
+          <p class="small-tagline">Ent&eacute;rate de las <b>&uacute;ltimas noticias</b> de emprendimiento</p>
+        </div>
+        <div class="col-sm-12 slideUpX">
+          <div class="col-sm-3 col-md-3 col-sm-offset-2 col-md-offset-3 text-center">
+            <a class="btn btn-primary btn-action" data-toggle="modal" data-target="#register" id="register-btn">Inscr&iacute;bete</a>
+          </div>
+          <div class="col-sm-3 col-md-3 col-sm-offset-1 col-md-offset-0 text-center">
+            <a class="btn btn-success btn-action" id="scroll">Aprende m&aacute;s</a>
+          </div>
+        </div>
+      </div><!-- /row -->
+
+    </div><!-- /container -->
+  </div><!-- /cover -->
+
+  <div class="categories" id="categories-scroll">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+      </div><!-- /col-sm-12 -->
+    </div><!-- /row -->
+    <div class="row text-center">
+      <div class="col-sm-3 category category-right">
+        <i class="fa fa-lightbulb-o"></i>
+        <p class="category-title">Inspira</p>
+        <p class="category-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, turpis non egestas faucibus, tellus arcu aliquet dolor, sit amet egestas turpis mauris sed dolor.</p>
+        <a href="/inspira" class="btn btn-success btn-lg">Ver instituciones</a>
+      </div><!-- /col-sm-03 -->
+      <div class="col-sm-3 category category-up">
+        <i class="fa fa-cogs"></i>
+        <p class="category-title">Crea</p>
+        <p class="category-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, turpis non egestas faucibus, tellus arcu aliquet dolor, sit amet egestas turpis mauris sed dolor.</p>
+        <a href="" class="btn btn-success btn-lg">Ver instituciones</a>
+      </div><!-- /col-sm-03 -->
+      <div class="col-sm-3 category category-up">
+        <i class="fa fa-arrow-up"></i>
+        <p class="category-title">Guia</p>
+        <p class="category-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, turpis non egestas faucibus, tellus arcu aliquet dolor, sit amet egestas turpis mauris sed dolor.</p>
+        <a href="" class="btn btn-success btn-lg">Ver instituciones</a>
+      </div><!-- /col-sm-03 -->
+      <div class="col-sm-3 category category-left">
+        <i class="fa fa-money"></i>
+        <p class="category-title">Capital</p>
+        <p class="category-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, turpis non egestas faucibus, tellus arcu aliquet dolor, sit amet egestas turpis mauris sed dolor.</p>
+        <a href="" class="btn btn-success btn-lg">Ver instituciones</a>
+      </div><!-- /col-sm-03 -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+</div><!-- /categories -->
+
 {% endblock content %}
+
