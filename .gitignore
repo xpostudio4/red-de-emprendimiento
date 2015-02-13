@@ -9,9 +9,6 @@ __pycache__/
 *.sqlite3
 *.db
 
-#personalized file to upload
-fabfile.py
-
 # Distribution / packaging
 .Python
 env/
