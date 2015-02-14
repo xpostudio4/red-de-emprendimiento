@@ -1,41 +1,95 @@
-{% extends 'base.html' %}	
 
-{% load staticfiles %}			
+{% extends "base.html" %}
+
+{% load staticfiles %}
 
 {% block content %}
 
-	<div class="col-sm-9 main">
-		<div class="container">
-			<div class="col-sm-12">
-				<h1>Inspira</h1>
-				<p>Thinking about taking the entrepreneurial leap? There are people and programs that can provide encouragement and real-world support as you follow your dream. Learn about resources available to offer the inspiration and practical skills you need.</p>
+<div class="companies">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="text-center">Instituciones que Inspiran</h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="company text-center">
+          <img src="{{ STATIC_URL }}/img/companies/inspire/inspire.jpg" class="img-circle company-clear">
+          <h2>Inspire</h2>
+          <p>Inspire busca ser el referente en Latinoamérica de transformación, a través del desarrollo de las capacidades individuales y organizacionales.</p>
+          <a href="/perfil" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="company text-center">
+          <img src="{{ STATIC_URL }}/img/companies/inspire/unphu.jpg" class="img-circle company-clear">
+          <h2>UNPHU Emprende</h2>
+          <p>Centro de apoyo a la iniciativa emprendedora, innovación y creación de empresas, al servicio de la comunidad universitaria y de la comunidad en general.</p>
+          <a href="" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="company text-center">
+          <img src="{{ STATIC_URL }}/img/companies/inspire/brain.jpg" class="img-circle company-clear">
+          <h2>Instituto Brain</h2>
+          <p>Instituto Brain es una empresa de formación y consultoría en las áreas de emprendimiento, innovación y gestión estratégica. </p>
+          <a href="" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+        </div>
+      </div>
+      
+    </div><!-- /row -->
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="company text-center">
+          <img src="{{ STATIC_URL }}/img/companies/inspire/unibe.jpg" class="img-circle company-clear">
+          <h2>UNIBE</h2>
+          <p>El CIDE es un centro de UNIBE, busca fortalecer el vínculo universidad-empresa y fomentar el pensamiento y acción emprendedora.</p>
+          <a href="" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="company text-center">
+          <img src="{{ STATIC_URL }}/img/companies/inspire/proindustria.jpg" class="img-circle company-clear">
+          <h2>PROINDUSTRIA</h2>
+          <p>PROINDUSTRIA ofrece consultorías especializadas, para plasmar los pasos que integran el procedimiento para llevar a cabo el proceso de incubación y aceleración de empresas.</p>
+          <a href="" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="company text-center">
+          <img src="{{ STATIC_URL }}/img/companies/inspire/eo.jpg" class="img-circle company-clear">
+          <h2>Entrepreneur Organization</h2>
+          <p>Entrepreneur Organization es una organización mundial sin fines con mas de 10,000 miembros. En RD contamos con 50 miembros y seguimos creciendo anualmente.</p>
+          <a href="" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+        </div>
+      </div>
+    </div><!-- /row -->
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="company text-center">
+          <img src="{{ STATIC_URL }}/img/companies/inspire/uce.jpg" class="img-circle company-clear">
+          <h2>Universidad Central del Este (UCE)</h2>
+          <p>Un centro de Emprendimiento, que fomenta la cultura emprendedora y brinda soporte desde la creación de ideas hasta la puesta en marcha de la misma.</p>
+          <a href="" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="company text-center">
+          <img src="img/companies/inspire/trabajo.jpg" class="img-circle company-clear">
+          <h2>Ministerio de Trabajo</h2>
+          <p>Es un programa diseñado y dirigido a formar jóvenes con actitudes emprendedoras, para elaborar sus propias iniciativas de negocio.</p>
+          <a href="" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="company text-center">
+          <img src="{{ STATIC_URL }}/img/companies/inspire/intec.jpg" class="img-circle company-clear">
+          <h2>Centro de Emprendimiento e Innovación del Intec</h2>
+          <p>Centro encargado de apoyar a emprendedores para la creación de productos y servicios innovadores que agreguen valor a la sociedad y economía. </p>
+          <a href="" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+        </div>
+      </div>
+    </div>
+  </div><!-- /container -->
+</div><!-- /companies -->
 
-				<div class="col-sm-4">
-					<div class="company">
-						<img src="{% static 'img/companies/1.png' %}">
-						<p>Engages Kansas City entrepreneurs through a weekly educational program in which regional startups present their companies to a diverse audience of mentors, advisors, and entrepreneurs.</p>
-						<a href="" class="btn btn-danger btn-lg btn-block">Visita</a>
-					</div>
-				</div><!-- col-sm-4 -->
-
-				<div class="col-sm-4">
-					<div class="company">
-						<img src="{% static 'img/companies/2.png' %}">
-						<p>One of the most comprehensive sources of information, tools, and resources available to help entrepreneurs operate a business venture, create wealth, and employ people.</p>
-						<a href="" class="btn btn-danger btn-lg btn-block">Visita</a>
-					</div>
-				</div><!-- col-sm-4 -->
-
-				<div class="col-sm-4">
-					<div class="company">
-						<img src="{% static 'img/companies/3.png' %}">
-						<p>An annual weeklong series of celebrations involving millions of people in more than 100 countries, designed to inspire entrepreneurship and innovation.</p>
-						<a href="" class="btn btn-danger btn-lg btn-block">Visita</a>
-					</div>
-				</div><!-- col-sm-4 -->
-
-			</div><!-- col-sm-12 -->
-		</div><!-- container -->
-	</div><!-- col-sm-9 -->
-	
 {% endblock content %}
