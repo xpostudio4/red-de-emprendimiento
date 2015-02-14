@@ -65,11 +65,17 @@ DATABASES = {
 
 ########## CACHE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#caches
-CACHES = {}
+CACHES = {
+            'default': {
+                        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+                                'LOCATION': '/var/tmp/django_cache',
+                                    }
+            }
 ########## END CACHE CONFIGURATION
 
 
 ########## SECRET CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
-SECRET_KEY = get_env_setting('SECRET_KEY')
+SECRET_KEY = "kal$%lbfxfq7^4f61f6ss8af8*%53+yw*36i#5xm!(40&!zbcyfcx*s34&dg"
+#SECRET_KEY = get_env_setting('SECRET_KEY')
 ########## END SECRET CONFIGURATION

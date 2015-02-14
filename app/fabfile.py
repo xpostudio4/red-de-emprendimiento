@@ -42,8 +42,8 @@ def install_git():
     print("installing updates for the system...")
     run("sudo apt-get update")
     print("installing last version of git...")
-    run("sudo apt-get install git")
     run('git config --global user.name "Leonardo Jimenez"')
+    run("sudo apt-get install git")
     run('git config --global user.email ljimenez@stancedata.com')
     run('git commit --amend --reset-author')
 
@@ -53,15 +53,16 @@ def create_repository():
     related post hooks.
     """
     hook_text = """#!/bin/sh
-GIT_WORK_TREE=~/app/ git checkout -f master
-GIT_WORK_TREE=~/app/ git reset --hard
+GIT_WORK_TREE=/home/django/app/ git checkout -f master
+GIT_WORK_TREE=/home/django/app git reset --hard
 """
-    run("mkdir ~/app")
+    run("mkdir /home/django/app")
     run("mkdir app_repo.git")
     with cd("app_repo.git"):
         run("git init --bare")
     with cd("~/app_repo.git/hooks"):
         run("touch post-receive")
+        run("chmod +x post-receive")
         append('post-receive', hook_text)
 
 def set_local_repo():
@@ -69,4 +70,46 @@ def set_local_repo():
     This functions creates the remote for the digital remote locally.
     """
     local("git remote add digital  root@" + env.hosts[0] + ":~/app_repo.git")
+
+def install_nginx():
+    """
+    This function verifies if nginx is present, if not it install it.
+    """
+    is_installed = run('nginx -v')
+    if is_installed.return_code == 0:
+        print("nginx installed already")
+    #here should be present and else
+
+def install_gunicorn():
+    """
+    This function verifies if gunicorn is present, if not it install it.
+    """
+    is_installed = run('gunicorn -v')
+    if is_installed.return_code == 0:
+        print("nginx installed already")
+    #here should be present and else
+
+def config_nginx():
+    """
+    This function configure nginx for using our app, also makes a copy of the file
+    to avoid spoiling it.
+    """
+    with cd("/etc/nginx/sites-enabled/"):
+        run("cp django django-copy")
+        run("sed -i '19s/.*/        alias ~\/home\/django\/app\/media;/' django")
+
+        run("sed -i '24s/.*/        alias ~\/home\/django\/app\/static;/' django")
+def config_gunicorn():
+    """
+    This function configure gunicorn for using our app, also makes a copy of the file
+    to avoid spoiling it.
+    """
+    with cd("/etc/init/"):
+        run("cp gunicorn.conf gunicorn.conf-copy")
+        run("sed -i '11s/.*/chdir \/home\/django\/app/' gunicorn.conf")
+        run("sed -i '14s/.*/    --name=app \\\\ /' gunicorn.conf")
+        run("sed -i '15s/.*/    --pythonpath=app \\\\/ /' gunicorn.conf")
+        run("sed -i '18s/.*/    app.wsgi:application/' gunicorn.conf")
+
+
 
