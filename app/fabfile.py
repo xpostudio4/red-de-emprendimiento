@@ -103,6 +103,9 @@ def config_gunicorn():
     """
     This function configure gunicorn for using our app, also makes a copy of the file
     to avoid spoiling it.
+
+    The path for the logs are vim /var/log/nginx/error.log (nginx) and
+    vim /var/log/upstart/gunicorn.log (gunicorn)
     """
     with cd("/etc/init/"):
         run("cp gunicorn.conf gunicorn.conf-copy")
