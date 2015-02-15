@@ -105,8 +105,8 @@ def config_gunicorn():
     to avoid spoiling it.
 
     The path for the logs are vim /var/log/nginx/error.log (nginx) and
-    vim /var/log/upstart/gunicorn.log (gunicorn)
     """
+    vim /var/log/upstart/gunicorn.log (gunicorn)
     with cd("/etc/init/"):
         run("cp gunicorn.conf gunicorn.conf-copy")
         run("sed -i '11s/.*/chdir \/home\/django\/app/' gunicorn.conf")
@@ -114,5 +114,8 @@ def config_gunicorn():
         run("sed -i '15s/.*/    --pythonpath=app \\\\/ /' gunicorn.conf")
         run("sed -i '18s/.*/    app.wsgi:application/' gunicorn.conf")
 
-
+def install_supervisor():
+    run("apt-get install supervisor")
+    run("vim /var/log/upstart/gunicorn.log")
+    # luego se crea el file de configuracion de nginx and gunicorn
 
