@@ -1,0 +1,274 @@
+
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="calendar">
+  <div class="container">
+   <div class="calendar-header">
+       <div class="row">
+     
+         <div class="col-sm-3">
+            <h1>Calendario</h1>
+          </div>
+          <div class="col-sm-4">
+           <h3 class="month"><i class="fa fa-arrow-left"></i> Junio <i class="fa fa-arrow-right"></i> </h3>
+          </div>
+          <div class="col-sm-5">
+            <a href="" class="btn btn-primary">Agregar Evento</a>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="calendar-box">
+          <table class="table  table-bordered">
+            <tr>
+              <th>Lunes</th>
+              <th>Martes</th>
+              <th>Miercoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+              <th>Sabado</th>
+              <th>Domingo</th>
+            </tr>
+            <tr>
+              <td class="day">
+                <div>
+                  <p class="day-number">1</p>
+                </div>
+                <div class="activity">
+                  <p class="bg-success">Curso de Emprendedurismo</p>
+                </div>
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">2</p>
+                </div>
+                <div class="activity">
+                  <p class="bg-info">Taller de Inversion</p>
+                </div>
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">3</p>
+                </div>
+                <div class="activity">
+                  <p class="bg-warning">Almuerzo de Empresarios</p>
+                </div>
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">4</p>
+                </div>
+                <div class="activity">
+                  <p class="bg-danger">Charla de Manejo de Finanzas</p>
+                </div>
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">5</p>
+                </div>
+                <div class="activity">
+                  <p class="bg-success">Curso de Emprendedurismo</p>
+                </div>
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">6</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">7</p>
+                </div>
+                
+              </td>
+            </tr>
+            <tr>
+              <td class="day">
+                <div>
+                  <p class="day-number">8</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">9</p>
+                </div>
+              
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">10</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">11</p>
+                </div>
+               
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">12</p>
+                </div>
+               
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">13</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">14</p>
+                </div>
+                
+              </td>
+            </tr>
+            <tr>
+              <td class="day">
+                <div>
+                  <p class="day-number">15</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">16</p>
+                </div>
+              
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">17</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">18</p>
+                </div>
+               
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">19</p>
+                </div>
+               
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">20</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">21</p>
+                </div>
+                
+              </td>
+            </tr>
+            <tr>
+              <td class="day">
+                <div>
+                  <p class="day-number">22</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">23</p>
+                </div>
+              
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">24</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">25</p>
+                </div>
+               
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">26</p>
+                </div>
+               
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">27</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">28</p>
+                </div>
+                
+              </td>
+            </tr>
+            <tr>
+              <td class="day">
+                <div>
+                  <p class="day-number">29</p>
+                </div>
+                
+              </td>
+              <td class="day">
+                <div>
+                  <p class="day-number">30</p>
+                </div>
+              
+              </td>
+              <td class="day day-dark">
+                <div>
+                  <p class="day-number">1</p>
+                </div>
+                
+              </td>
+              <td class="day day-dark">
+                <div>
+                  <p class="day-number">2</p>
+                </div>
+               
+              </td>
+              <td class="day day-dark">
+                <div>
+                  <p class="day-number">3</p>
+                </div>
+               
+              </td>
+              <td class="day day-dark">
+                <div>
+                  <p class="day-number">4</p>
+                </div>
+                
+              </td>
+              <td class="day day-dark">
+                <div>
+                  <p class="day-number">5</p>
+                </div>
+                
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div><!-- /container -->
+</div><!-- /companies -->
+
+{% endblock content %}

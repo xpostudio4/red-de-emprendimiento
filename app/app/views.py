@@ -32,6 +32,9 @@ def profile(request):
 
     return render(request, 'site/perfil.html')
 
+def calendar(request):
+    return render(request, 'site/calendar.html')
+
 @login_required
 def dashboard(request):
     user_form = UserProfileChangeForm(request.POST or None, instance=request.user)

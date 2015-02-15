@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^inspira/', 'app.views.inspire'),
     url(r'^perfil/', 'app.views.profile'),
+    url(r'^calendar/', 'app.views.calendar'),
     # url(r'^app/', include('app.foo.urls')),
     url(r'^accounts/', include('institutions.urls')),
     url(r'^signin/$', 'institutions.views.signin'),

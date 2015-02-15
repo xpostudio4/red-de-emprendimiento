@@ -236,6 +236,59 @@ body {
 }
 
 /*******************************
+           Calendar
+*******************************/
+
+.calendar {
+	padding: 20px;
+}
+
+.calendar h1 {
+	margin: 10px 0px;
+}
+
+.calendar th {
+	background-color: #F3F3F3;
+}
+
+.calendar .btn-primary {
+	margin-top: 20px;
+}
+
+.calendar-header {
+	margin-bottom: 10px;
+}
+
+.month i {
+	margin: 0px 30px;
+	color: #D12033;
+}
+
+.day {
+	padding: 0px !important;
+	background-color: #F9F9F9;
+	width: 150px !important;
+	height: 120px;
+	min-height: 100px
+}
+
+.day-dark {
+	background-color: #fff;
+}
+
+.day-number {
+	padding: 5px 10px;
+	margin: 0px;
+}
+
+.activity p {
+	padding: 5px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+
+/*******************************
            Footer
 *******************************/
 
