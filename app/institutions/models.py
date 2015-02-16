@@ -1,13 +1,11 @@
-#Stdlib Imports
 import datetime
+#Stdlib Imports
 
 from django.db import models
-from django.contrib.auth.models import (
-        BaseUserManager, AbstractBaseUser
-        )
-#Third party libraries
-from taggit.managers import TaggableManager
+from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
+from django.templatetags.static import static
 #from templated_email import send_templated_mail
+
 
 class AppUserManager(BaseUserManager):
 
@@ -19,11 +17,10 @@ class AppUserManager(BaseUserManager):
         if not email:
             raise ValueError('Todo usuario debe tener un email')
 
-        user = self.model(
-                email = AppUserManager.normalize_email(email),
-                full_name = full_name,
-                )
+        user = self.model(email = AppUserManager.normalize_email(email),
+                          full_name = full_name,
 
+                )
         user.set_password(password)
         user.save(using=self._db)
         return user
@@ -34,12 +31,13 @@ class AppUserManager(BaseUserManager):
             and password.
         """
         user = self.create_user(email=email,
-                full_name=full_name,
-                password=password
-                )
+                                full_name=full_name,
+                                password=password
+                               )
         user.is_admin = True
         user.save(using=self._db)
         return user
+
 
 class Organization(models.Model):
     """
@@ -47,34 +45,57 @@ class Organization(models.Model):
     of the organization, every organization must be approved before being published.
     """
     name = models.CharField(max_length=40,
-            verbose_name="Nombre de la Institucion")
-    url = models.URLField(max_length=40, verbose_name="Pagina Web",
-            null=True,  blank=True)
+                            verbose_name="Nombre de la Institucion"
+                           )
+    url = models.URLField(max_length=40,
+                          verbose_name="Pagina Web",
+                          null=True,
+                          blank=True
+                         )
     description = models.TextField(verbose_name="Descripcion",
-            null=True, blank=True)
-    logo = models.ImageField(upload_to="profile_pics",null=True, blank=True)
-    phone = models.CharField(max_length=10,null=True, blank=True)
-    is_phone_visible = models.BooleanField(default=False,
-            verbose_name="Desea que el telefono se vea en sus anuncios")
-    address = models.CharField(max_length=100, null=True, blank=True,
-            verbose_name="Direccion")
-    is_address_visible = models.BooleanField(default=False,
-            verbose_name="Desea que su direccion se vea en los anuncios")
+                                   null=True,
+                                   blank=True
+                                  )
+    logo = models.ImageField(upload_to="profile_pics",
+                             null=True,
+                             blank=True
+                            )
+    phone = models.CharField(max_length=10,
+                             null=True,
+                             blank=True
+                            )
+    is_phone_visible = models.BooleanField(default=False, verbose_name="Desea que el telefono se vea en sus anuncios"
+    address = models.CharField(max_length=100,
+                               null=True,
+                               blank=True,
+                               verbose_name="Direccion"
+                              )
+    is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
     province = models.CharField(max_length=100, null=True, blank=True)
-    approved = models.BooleanField(default=False)
-    tags = TaggableManager(blank=True)
+    approved = models.BooleanField(required=False, default=False)
+    inspire = models.BooleanField(required=False)
+    create = models.BooleanField(required=False)
+    guide = models.BooleanField(required=False)
+    finance = models.BooleanField(required=False)
+    network = models.BooleanField(required=False)
 
-    def __unicode__(self):
-        return self.name
+    def get_picture_url(self):
+        try:
+            return self.logo.url
+        except:
+            return static('/img/default.jpg')
+
 
 class UserProfile(AbstractBaseUser):
-    email = models.EmailField(
-            verbose_name="Correo Electronico",
-            max_length=255,
-            unique=True,
-            db_index=True
-            )
-    full_name = models.CharField(max_length=40, verbose_name="Nombre Completo")
+    """"User profile class representing the institutions"""
+    email = models.EmailField(verbose_name="Correo Electronico",
+                              max_length=255,
+                              unique=True,
+                              db_index=True
+                             )
+    full_name = models.CharField(max_length=40,
+                                 verbose_name="Nombre Completo"
+                                )
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     objects = AppUserManager()
@@ -84,7 +105,8 @@ class UserProfile(AbstractBaseUser):
     REQUIRED_FIELDS = ['full_name']
 
     def get_full_name(self):
-        return self.name
+        """return the full name"""
+        return self.full_name
 
     def get_short_name(self):
         #The user is identified by their email address
@@ -96,10 +118,8 @@ class UserProfile(AbstractBaseUser):
     def save(self, *args, **kwargs):
         if not self.id:
             #Create Organization for the user
-            organization = Organization.objects.create(
-                    name=str(self.full_name)+ "'s Organization"
-                    )
-            self.organization  = organization
+            organization = Organization.objects.create(name=str(self.full_name)+ "'s Organization")
+            self.organization = organization
             #send_templated_mail(
             #    template_name='user_creation',
             #    from_email='info@mypimes.com',
@@ -112,9 +132,8 @@ class UserProfile(AbstractBaseUser):
             #    )
         super(UserProfile, self).save(*args, **kwargs)
 
-
     def has_perm(self, perm, obj=None):
-        "Does the user have a specific permission?"
+        """Does the user have a specific permission?"""
         # Simplest possible answer: Yes, always
         return True
 
@@ -140,6 +159,7 @@ class Event(models.Model):
     created = models.DateField()
     from_date = models.DateField()
     to_date = models.DateField()
+    url = models.URLField()
     organization = models.ForeignKey(Organization, null=True, blank=True)
 
     def __unicode__(self):
@@ -150,6 +170,7 @@ class Event(models.Model):
         if not self.id:
             self.created = datetime.date.today()
         super(Event, self).save(*args, **kwargs)
+
 
 class MailingList(models.Model):
     """
