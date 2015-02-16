@@ -2,10 +2,7 @@
 import datetime
 
 from django.db import models
-from django.contrib.auth.models import (
-        BaseUserManager, AbstractBaseUser
-        )
-#Third party libraries
+from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
 from taggit.managers import TaggableManager
 #from templated_email import send_templated_mail
 
