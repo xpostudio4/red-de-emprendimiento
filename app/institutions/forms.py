@@ -1,5 +1,5 @@
-# -*- encoding: utf-8 -*-
 
+# -*- encoding: utf-8 -*-
 #core Django Imports
 from django import forms
 from django.contrib.auth.models import Group
@@ -96,36 +96,31 @@ class  UserProfileLoginForm(AuthenticationForm):
 
 class OrganizationForm(forms.ModelForm):
 
-    CATEGORIES = (
-            ("Cultura", "Cultura"),
-            ("Aprendizaje", "Aprendizaje"),
-            ("Financiamiento", "Financiamiento"),
-            ("Escalamiento", "Escalamiento"),
-            )
-
-
     description = forms.CharField(label="Descripción", required=False,
             widget=forms.Textarea(attrs={'rows':'2'}))
-    tags = TagField(required=False)
 
     class Meta:
+        """declaration of the inherited class"""
         model = Organization
-
-        fields = (
-                'name',
-                'url',
-                'description',
-                'phone',
-                'is_phone_visible',
-                'address',
-                'is_phone_visible',
-                'province',
-                'tags',
-                )
+        fields = ('name',
+                  'description',
+                  'phone',
+                  'url',
+                  'is_phone_visible',
+                  'address',
+                  'is_phone_visible',
+                  'province',
+                  'inspire',
+                  'create',
+                  'guide',
+                  'finance',
+                  'network',
+                 )
 
     def __init__(self, *args, **kwargs):
         super(OrganizationForm, self).__init__(*args, **kwargs)
-        #change the html class of all the elements of the form to get bootstrap 3 styling
+        #change the html class of all the elements
+        #of the form to get bootstrap 3 styling
         for field in self.fields:
             if field != 'tags':
                 self.fields[field].widget.attrs.update({'class':'form-control'})
