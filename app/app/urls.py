@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^$', 'app.views.index'),
     # Examples:
     url(r'^inspira/', 'app.views.inspire'),
-    url(r'^perfil/', 'app.views.profile'),
+    url(r'^profile/', 'app.views.profile'),
     url(r'^calendar/', 'app.views.calendar'),
     # url(r'^app/', include('app.foo.urls')),
     url(r'^accounts/', include('institutions.urls')),

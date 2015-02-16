@@ -104,6 +104,15 @@ body {
 	color: #fff !important;
 }
 
+.login-link {
+	color: #777;
+	padding: 0px 10px; 
+}
+
+#navbar-collapse .dropdown .login-link {
+
+}
+
 /*******************************
            Call to action
 *******************************/
@@ -233,6 +242,14 @@ body {
 .profile-box .table > tbody > tr > td, 
 .profile-box .table > tfoot > tr > td {
 	border: 0px;
+}
+
+.btn-event {
+	margin-top: 25px;
+}
+
+.btn-profile {
+	color: #fff !important;
 }
 
 /*******************************
