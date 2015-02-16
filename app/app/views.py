@@ -30,7 +30,7 @@ def inspire(request):
 
 def profile(request):
 
-    return render(request, 'site/perfil.html')
+    return render(request, 'site/profile.html')
 
 def calendar(request):
     return render(request, 'site/calendar.html')

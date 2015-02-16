@@ -4,7 +4,7 @@ $(document).ready(function() {
 
 	$(function() {
 		if ($('#cover').length > 0) {
-			$('#navbar').addClass('hidden-md, hidden-lg');
+			$('#navbar').addClass('hidden-md hidden-lg');
 		}
 	});
 	
