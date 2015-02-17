@@ -11,7 +11,7 @@ from django.forms.extras import widgets
 from captcha.fields import CaptchaField
 from taggit.forms import *
 #Project apps import
-from .models import UserProfile, Organization, Event, MailingList
+from .models import UserProfile, Category, Event, MailingList, Organization
 
 class CustomUserCreationForm(forms.ModelForm):
     """A form for creating new users. Includes all the required
@@ -101,8 +101,8 @@ class OrganizationForm(forms.ModelForm):
     description = forms.CharField(label="Descripción", required=False,
                                   widget=forms.Textarea(attrs={'rows':'2'})
                                  )
+    categories = forms.ModelMultipleChoiceField(queryset=Category.objects.all())
 
-   
     class Meta:
         """declaration of the inherited class"""
         model = Organization
@@ -120,8 +120,8 @@ class OrganizationForm(forms.ModelForm):
         #change the html class of all the elements
         #of the form to get bootstrap 3 styling
         for field in self.fields:
-            if field != 'tags':
-                self.fields[field].widget.attrs.update({'class':'form-control'})
+            self.fields[field].widget.attrs.update({'class':'form-control'})
+
 
 class OrganizationPictureForm(forms.ModelForm):
     picture = forms.ImageField()
@@ -133,6 +133,7 @@ class OrganizationPictureForm(forms.ModelForm):
                 )
 
 class EventForm(forms.ModelForm):
+    """Form to handle event forms"""
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
     from_date = forms.CharField(widget=forms.TextInput(attrs={
             'class':'date',
@@ -144,13 +145,13 @@ class EventForm(forms.ModelForm):
         )
 
     class Meta:
+        """Model inheritance settings"""
         model = Event
-        fields = (
-                'name',
-                'description',
-                'from_date',
-                'to_date',
-                )
+        fields = ('name',
+                  'description',
+                  'from_date',
+                  'to_date',
+                 )
 
     def __init__(self, *args, **kwargs):
         super(EventForm, self).__init__(*args, **kwargs)
