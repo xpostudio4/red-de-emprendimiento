@@ -39,6 +39,10 @@ class AppUserManager(BaseUserManager):
         return user
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=40)
+
+
 class Organization(models.Model):
     """
     This class represents the institution profile, it must be approved by one of the members
@@ -73,11 +77,7 @@ class Organization(models.Model):
     is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
     province = models.CharField(max_length=100, null=True, blank=True)
     approved = models.BooleanField(required=False, default=False)
-    inspire = models.BooleanField(required=False)
-    create = models.BooleanField(required=False)
-    guide = models.BooleanField(required=False)
-    finance = models.BooleanField(required=False)
-    network = models.BooleanField(required=False)
+    categories = models.ManyToManyField(Category)
 
     def get_picture_url(self):
         try:
@@ -90,8 +90,8 @@ class UserProfile(AbstractBaseUser):
     """"User profile class representing the institutions"""
     email = models.EmailField(verbose_name="Correo Electronico",
                               max_length=255,
-                              unique=True,
                               db_index=True
+                              unique=True,
                              )
     full_name = models.CharField(max_length=40,
                                  verbose_name="Nombre Completo"

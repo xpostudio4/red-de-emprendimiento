@@ -4,7 +4,8 @@ $(document).ready(function() {
 
 	$(function() {
 		if ($('#cover').length > 0) {
-			$('#navbar').addClass('hidden-md, hidden-lg');
+			$('#navbar').addClass('hidden-md hidden-lg');
+      console.log($('#navbar'));
 		}
 	});
 	
@@ -44,8 +45,8 @@ $(document).ready(function() {
 	// controls category slideRightMine animation
 
 	$(window).scroll(function() {
-		$('.category-right').each(function(){
 		var imagePos = $(this).offset().top;
+		$('.category-right').each(function(){
 
 		var topOfWindow = $(window).scrollTop();
 			if (imagePos < topOfWindow+800) {
