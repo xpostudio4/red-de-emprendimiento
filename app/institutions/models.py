@@ -42,11 +42,11 @@ class AppUserManager(BaseUserManager):
 class Category(models.Model):
     name = models.CharField(max_length=40)
 
-
 class Organization(models.Model):
     """
-    This class represents the institution profile, it must be approved by one of the members
-    of the organization, every organization must be approved before being published.
+    This class represents the institution profile, it must be approved by
+    one of the members of the organization, every organization must be
+    approved before being published.
     """
     name = models.CharField(max_length=40,
                             verbose_name="Nombre de la Institucion"
@@ -68,16 +68,15 @@ class Organization(models.Model):
                              null=True,
                              blank=True
                             )
-    is_phone_visible = models.BooleanField(default=False, verbose_name="Desea que el telefono se vea en sus anuncios"
     address = models.CharField(max_length=100,
                                null=True,
                                blank=True,
                                verbose_name="Direccion"
                               )
-    is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
     province = models.CharField(max_length=100, null=True, blank=True)
     approved = models.BooleanField(required=False, default=False)
     categories = models.ManyToManyField(Category)
+
 
     def get_picture_url(self):
         try:
