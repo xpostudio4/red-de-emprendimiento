@@ -8,11 +8,73 @@
   <div class="container">
      <div class="row">
        <div class="col-sm-12">
-          <h1>perfil</h1>
+          <h1>Dashboard</h1>
         </div><!-- /col-sm-12 -->
+        <div class="col-sm-12">
+          
+        </div>
     </div><!-- /row -->
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 ">
+        <div class="dashboard-tabs">
+          <div role="tabpanel" >
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a>
+              </li>            
+              <li role="presentation">
+                <a href="#eventos" aria-controls="events" role="tab" data-toggle="tab">Eventos</a>
+              </li>
+              <li role="presentation">
+                <a href="#change-password" aria-controls="change-password" role="tab" data-toggle="tab">Cambiar contrase&ntilde;a</a>
+              </li>
+            </ul>
+
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="perfil">
+              <div class="change-profile">
+                <div class="col-sm-4">
+
+                  <form action="/accounts/picture/" method="POST" enctype="multipart/form-data" id="id_picture_form">
+                  {% csrf_token %}
+   
+                    <div id="id_user_pic">
+         
+                        {% if organization.logo %}
+                            <img src="{{ organization.logo.url }}" >
+                        {% else %}
+                            <img src="{{ STATIC_URL }}img/companies/default.jpg">
+                        {% endif %}
+ 
+ 
+                        <div id="camera">
+                          <i class="fa fa-camera"></i>
+                        </div>
+                    </div>
+ 
+                  <div id="picture-hidden">
+                    {{ organization_picture_form.picture }}
+                  </div>
+ 
+                 </form>
+                </div><!-- /col -->
+
+                <div class="col-sm-8">
+                  
+                </div>
+
+              </div><!-- /change-profile -->
+            </div><!-- /tab-panel -->
+            <div role="tabpanel" class="tab-panel" id="events">
+              
+            </div><!-- /tab-panel -->
+            <div role="tabpanel" class="tab-panel" id="change-password">
+              
+            </div><!-- /tab-panel -->
+          </div><!-- /tab-content -->
+
+        </div><!-- /tabpanel -->
+      </div><!-- /dashboard-tabs -->
         
     </div><!-- /col-sm-12 -->
   </div><!-- /row -->

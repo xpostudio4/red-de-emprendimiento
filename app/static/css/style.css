@@ -95,22 +95,28 @@ body {
 	border-left: 1px solid #ddd;
 }
 
-.navbar-nav li:hover {
+.navbar-nav li:hover,
+.navbar li:focus {
 	background-color: #d12033;
 	border-color: #d12033;
+	color: #fff !important;
 }
 
 .navbar-nav li a:hover {
 	color: #fff !important;
+	background-color: #d12033;
 }
 
 .login-link {
 	color: #777;
-	padding: 0px 10px; 
+	padding: 10px 10px; 
 }
 
-#navbar-collapse .dropdown .login-link {
-
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+	background-color: #d12033;
+	color: #fff;
 }
 
 /*******************************
@@ -260,6 +266,72 @@ body {
 .btn-profile {
 	color: #fff !important;
 }
+
+/*******************************
+    Dashboard Edit Profile
+*******************************/
+
+
+.dashboard-tabs .nav-tabs>li>a, 
+.dashboard-tabs .nav-tabs>li>a:hover, 
+.dashboard-tabs .nav-tabs>li>a:focus {
+	border: 1px solid #ddd;
+ 
+}
+ 
+.dashboard-tabs .nav-tabs>li.active>a, 
+.dashboard-tabs .nav-tabs>li.active>a:hover, 
+.dashboard-tabs .nav-tabs>li.active>a:focus {
+	border-bottom-color: transparent;
+}
+
+.dashboard-tabs .tab-content {
+	border: 1px solid #e7e7e7;
+	border-top: transparent;
+	background-color: #fff;
+}
+
+.change-profile {
+	padding: 30px 0px;
+}
+
+#id_user_pic {
+	width: 300px;
+	margin-bottom: 20px;
+	position: relative;
+	height: 150px;
+	border: 1px solid #ddd;
+	overflow: hidden; 
+}
+ 
+@media (max-width: 992px) {
+	#id_user_pic {
+		width: 120px;
+		height: auto;
+		overflow: visible; 
+	}
+}
+ 
+#id_user_pic img {
+	height: 100%;
+}
+ 
+#id_user_pic #camera {
+	position: absolute;
+    left: 10%;
+    top: 110px;
+}
+ 
+#id_user_pic i {
+	font-size: 20px;
+	color: #B7B7B7;
+}
+
+#picture-hidden {
+	visibility: hidden;
+}
+
+
 
 /*******************************
            Calendar

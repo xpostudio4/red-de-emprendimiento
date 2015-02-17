@@ -76,4 +76,21 @@ $(document).ready(function() {
 		$(this).removeClass("pulse");
 	});
 
+
+	// Activates change profile picture
+
+	$('#id_picture').change(
+	    function(){
+	         $(this).closest('form').trigger('submit');
+	    });
+ 
+   var picture = $("#id_user_pic");
+ 
+   $(picture).click(function(e){
+      e.preventDefault();
+      $('#id_picture').trigger('click');
+   });
+
+
+
 });

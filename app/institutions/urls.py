@@ -5,6 +5,7 @@ urlpatterns = patterns('',
         url(r'^signin/$', 'institutions.views.signin'),
         url(r'^logout/$', logout, {'next_page': '/'}, name='logout'),
         url(r'^signup/$', 'institutions.views.signup', name='signup'),
+        url(r'^picture/$', 'app.views.picture_update'),
         )
 
 

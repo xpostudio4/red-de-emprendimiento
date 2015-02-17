@@ -24,7 +24,6 @@
 
 	<nav class="navbar navbar-default" id="navbar">
 	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
 	        <span class="sr-only">Toggle navigation</span>
@@ -35,28 +34,33 @@
 	       <a href="/" class="navbar-brand no-padding-logo"><img src="{{ STATIC_URL }}/img/logo.png" class="mobile-logo"></a>
 	    </div>
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="navbar-collapse">
 	      <ul class="nav navbar-nav navbar-right text-center">
 	          <li role="presentation"><a href="/inspira">Inspira</a></li>
 	          <li role="presentation"><a href="#">Crea</a></li>
 	          <li role="presentation"><a href="#">Guia</a></li>
+	          <li role="presentation"><a href="#">Conecta</a></li>
 	          <li role="presentation"><a href="#">Capital</a></li>
-	          <li role="presentation"><a href="#">Iniciar Sesi&oacute;n</a></li>
+
+	         {% if user.is_authenticated %}
             <li role="presentation">
-              <div class="dropdown">
                 <a class="dropdown-toggle login-link" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                  Hola, UNIBE
+                  Hola, {{ user.full_name }}
                   <span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Perfil</a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cambiar contrase&ntilde;a</a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Eventos</a></li>
-                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Cerrar sesi&oacute;n</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/accounts/logout/">Cerrar sesi&oacute;n</a></li>
                 </ul>
-              </div>
             </li>
+
+            {% else %}
+
+            <li role="presentation"><a href="#">Iniciar Sesi&oacute;n</a></li>
+
+            {% endif %}
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
