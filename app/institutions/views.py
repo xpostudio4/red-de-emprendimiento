@@ -2,7 +2,7 @@ from django.contrib.auth import login as django_login, authenticate, logout as d
 from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.views.decorators.http import require_POST
-from .forms import UserProfileLoginForm, CustomUserCreationForm
+from .forms import UserProfileLoginForm, CustomUserCreationForm, OrganizationForm
 from .models import UserProfile
 # Create your views here.
 
@@ -26,13 +26,17 @@ def signup(request):
     """
     User registration view.
     """
-    form = CustomUserCreationForm(request.POST or None)
+    user_form = CustomUserCreationForm(request.POST or None)
+    organization_form = OrganizationForm(request.POST or None)
     if request.method == 'POST':
-        if form.is_valid():
-            form.save()
+        if user_form.is_valid() and organization_form.is_valid():
+            organization = organization_form.save()
+            user = user_form.save(commit=False) 
+            user.organization = organization
+            user.save()
             return HttpResponseRedirect('/')
-    return render(request,
+    return render(request, 
                   'accounts/signup.html',
-                  {'form': form}
+                  {'user_form': user_form, 'organization_form': organization_form},
                  )
 

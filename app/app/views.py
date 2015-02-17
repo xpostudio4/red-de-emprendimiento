@@ -22,9 +22,7 @@ def inspire(request):
     The purpose of this page is to display all the organizations that have
     'inspire' tag in their tag list.
     """
-    organizations = Organization.objects.filter(
-            tags__name__in=["inspire"]
-            )
+    organizations = Organization.objects.all()
     return render(request, 'site/inspira.html',
             {'organizations' : organizations})
 

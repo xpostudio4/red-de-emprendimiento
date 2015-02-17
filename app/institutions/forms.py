@@ -5,6 +5,7 @@ from django import forms
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField, AuthenticationForm
+from django.forms.extras import widgets
 
 #Third party apps
 from captcha.fields import CaptchaField
@@ -101,6 +102,7 @@ class OrganizationForm(forms.ModelForm):
                                   widget=forms.Textarea(attrs={'rows':'2'})
                                  )
 
+   
     class Meta:
         """declaration of the inherited class"""
         model = Organization
@@ -108,9 +110,7 @@ class OrganizationForm(forms.ModelForm):
                   'description',
                   'phone',
                   'url',
-                  'is_phone_visible',
                   'address',
-                  'is_phone_visible',
                   'province',
                   'categories',
                  )
