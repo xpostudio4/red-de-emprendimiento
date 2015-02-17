@@ -41,6 +41,9 @@ class Category(models.Model):
     """All the categories for the services offered by the organizations."""
     name = models.CharField(max_length=40)
 
+    def __unicode__(self):
+        return self.name
+
 
 class Organization(models.Model):
     """

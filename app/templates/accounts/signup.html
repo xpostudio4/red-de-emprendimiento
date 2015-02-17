@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% load staticfiles %}
-
+{% block extra_css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}/css/chosen.css">
+{% endblock extra_css %}
 {% block content %}
 
 <div class="container">
@@ -9,6 +11,7 @@
     <div class="col-sm-4 col-sm-offset-4 user-register-form">
     <h2>Registro de Instituci&oacute;n</h2>
       <form action="." method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
         <div class="form-group">
           <h4>Nombre de Contacto</h4>
           {{ user_form.full_name }}
@@ -27,7 +30,7 @@
         </div>
         <div class="form-group">
           <h4>Categor&iacute;a</h4>
-          {{ organization_form.inspire }}
+          {{ organization_form.categories }}
         </div>
         <div class="form-group">
          <button class="btn btn-success pull-right" type="submit">Registrarse</button>
@@ -36,6 +39,14 @@
     </div>
   </div>
 </div>
-
 {% endblock content %}
 
+{% block extra_js %}
+	<script type="text/javascript" src="{{ STATIC_URL }}js/chosen.jquery.js"></script>
+  <script>
+  {# Here goes the code for using the categories as a selectpicker#}
+  $(document).ready(function(){
+    $('#id_categories').chosen({});
+  });
+  </script>
+{% endblock extra_js %}

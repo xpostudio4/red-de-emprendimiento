@@ -1,0 +1,1 @@
+[{"fields": {"name": "Inspira"}, "model": "institutions.category", "pk": 1}, {"fields": {"name": "Crea"}, "model": "institutions.category", "pk": 2}, {"fields": {"name": "Capital"}, "model": "institutions.category", "pk": 3}, {"fields": {"name": "Conecta"}, "model": "institutions.category", "pk": 4}, {"fields": {"name": "Guia"}, "model": "institutions.category", "pk": 5}]
