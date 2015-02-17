@@ -74,7 +74,7 @@ class Organization(models.Model):
                                verbose_name="Direccion"
                               )
     province = models.CharField(max_length=100, null=True, blank=True)
-    approved = models.BooleanField(required=False, default=False)
+    approved = models.BooleanField(default=False)
     categories = models.ManyToManyField(Category)
 
     def get_picture_url(self):
@@ -88,7 +88,7 @@ class UserProfile(AbstractBaseUser):
     """"User profile class representing the institutions"""
     email = models.EmailField(verbose_name="Correo Electronico",
                               max_length=255,
-                              db_index=True
+                              db_index=True,
                               unique=True,
                              )
     full_name = models.CharField(max_length=40,

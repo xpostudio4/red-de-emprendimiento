@@ -110,9 +110,7 @@ class OrganizationForm(forms.ModelForm):
                   'description',
                   'phone',
                   'url',
-                  'is_phone_visible',
                   'address',
-                  'is_phone_visible',
                   'province',
                   'categories',
                  )
