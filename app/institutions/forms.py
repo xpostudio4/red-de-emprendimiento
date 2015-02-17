@@ -33,8 +33,8 @@ class CustomUserCreationForm(forms.ModelForm):
 
     def clean_password(self):
         # Regardless of what the user provides, return the initial value.
-        # This is done here, rather than on the field, because the
         # field does not have access to the initial value
+        # This is done here, rather than on the field, because the
         return self.initial["password"]
 
     def clean_password2(self):
@@ -47,11 +47,12 @@ class CustomUserCreationForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
-        #change the html class of all the elements of the form to get bootstrap 3 styling
+        #change the html class of all the elements
         for field in self.fields:
+        #of the form to get bootstrap 3 styling
             self.fields[field].widget.attrs.update({'class':'form-control'})
-        self.fields.keyOrder = [ 'email', 'full_name', 'password1', 'password2']
 
+        self.fields.keyOrder = ['email', 'full_name', 'password1', 'password2']
     def save(self, commit=True):
                 # Save the provided password in hashed format
         user = super(CustomUserCreationForm, self).save(commit=False)
@@ -98,7 +99,8 @@ class  UserProfileLoginForm(AuthenticationForm):
 class OrganizationForm(forms.ModelForm):
 
     description = forms.CharField(label="Descripción", required=False,
-            widget=forms.Textarea(attrs={'rows':'2'}))
+                                  widget=forms.Textarea(attrs={'rows':'2'})
+                                 )
 
    
     class Meta:
@@ -112,11 +114,7 @@ class OrganizationForm(forms.ModelForm):
                   'address',
                   'is_phone_visible',
                   'province',
-                  'inspire',
-                  'create',
-                  'guide',
-                  'finance',
-                  'network',
+                  'categories',
                  )
 
     def __init__(self, *args, **kwargs):
