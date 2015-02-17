@@ -64,7 +64,7 @@ class Organization(models.Model):
                              null=True,
                              blank=True
                             )
-    is_phone_visible = models.BooleanField(default=False, verbose_name="Desea que el telefono se vea en sus anuncios"
+    is_phone_visible = models.BooleanField(default=False, verbose_name="Desea que el telefono se vea en sus anuncios")
     address = models.CharField(max_length=100,
                                null=True,
                                blank=True,
@@ -72,12 +72,12 @@ class Organization(models.Model):
                               )
     is_address_visible = models.BooleanField(default=False, verbose_name="Desea que su direccion se vea en los anuncios")
     province = models.CharField(max_length=100, null=True, blank=True)
-    approved = models.BooleanField(required=False, default=False)
-    inspire = models.BooleanField(required=False)
-    create = models.BooleanField(required=False)
-    guide = models.BooleanField(required=False)
-    finance = models.BooleanField(required=False)
-    network = models.BooleanField(required=False)
+    approved = models.BooleanField(default=False)
+    inspire = models.NullBooleanField()
+    create = models.NullBooleanField()
+    guide = models.NullBooleanField()
+    finance = models.NullBooleanField()
+    network = models.NullBooleanField()
 
     def get_picture_url(self):
         try:
