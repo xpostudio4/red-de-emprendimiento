@@ -8,7 +8,7 @@ from django.templatetags.static import static
 
 
 class AppUserManager(BaseUserManager):
-
+    """Custom Manager for the Custom user Model"""
     def create_user(self, email, full_name, password=None):
         """
         Creates and saves a User with the given email, first_name, last_name
@@ -16,19 +16,17 @@ class AppUserManager(BaseUserManager):
         """
         if not email:
             raise ValueError('Todo usuario debe tener un email')
-
-        user = self.model(email = AppUserManager.normalize_email(email),
-                          full_name = full_name,
-
-                )
+        user = self.model(email=AppUserManager.normalize_email(email),
+                          full_name=full_name,
+                         )
         user.set_password(password)
         user.save(using=self._db)
         return user
 
     def create_superuser(self, full_name, password, email):
         """
-            Creates and saves a Superuser with the given email, first_name, last_name
-            and password.
+        Creates and saves a Superuser with the given email, first_name,
+        last_name and password.
         """
         user = self.create_user(email=email,
                                 full_name=full_name,
@@ -40,7 +38,9 @@ class AppUserManager(BaseUserManager):
 
 
 class Category(models.Model):
+    """All the categories for the services offered by the organizations."""
     name = models.CharField(max_length=40)
+
 
 class Organization(models.Model):
     """
@@ -79,9 +79,13 @@ class Organization(models.Model):
 
 
     def get_picture_url(self):
-        try:
+        """
+        If the organization has a pictures displays it
+        Otherwise it display a general picture
+        """
+        if self.logo:
             return self.logo.url
-        except:
+        else:
             return static('/img/default.jpg')
 
 
@@ -89,7 +93,7 @@ class UserProfile(AbstractBaseUser):
     """"User profile class representing the institutions"""
     email = models.EmailField(verbose_name="Correo Electronico",
                               max_length=255,
-                              db_index=True
+                              db_index=True,
                               unique=True,
                              )
     full_name = models.CharField(max_length=40,
@@ -115,10 +119,7 @@ class UserProfile(AbstractBaseUser):
         return self.email
 
     def save(self, *args, **kwargs):
-        if not self.id:
             #Create Organization for the user
-            organization = Organization.objects.create(name=str(self.full_name)+ "'s Organization")
-            self.organization = organization
             #send_templated_mail(
             #    template_name='user_creation',
             #    from_email='info@mypimes.com',
