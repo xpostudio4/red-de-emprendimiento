@@ -173,12 +173,15 @@ class Event(models.Model):
     national web of entrepreneurship.
     """
     name = models.CharField(max_length=80)
+    slug = models.SlugField(default='', editable=False, unique=True)
     description = models.TextField()
     created = models.DateField()
     from_date = models.DateField()
     to_date = models.DateField()
     url = models.URLField()
     organization = models.ForeignKey(Organization, null=True, blank=True)
+    cost = models.CharField(max_length=18, null=True, blank=True)
+    categories = models.ManyToManyField(Category)
 
     def __unicode__(self):
         return self.name
@@ -187,6 +190,7 @@ class Event(models.Model):
         '''On save, fill created field'''
         if not self.id:
             self.created = datetime.date.today()
+        unique_slugify(self, self.name)
         super(Event, self).save(*args, **kwargs)
 
 

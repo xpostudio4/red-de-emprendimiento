@@ -17,10 +17,11 @@
           <img src="{{ organization.get_picture_url }}">
           <h2>{{ organization.name }}</h2>
           <p>{{ organization.description }}</p>
-          {% if organization.url %}
           <a href="/profile/{{ organization.slug }}/" class="btn btn-lg btn-success">Ver m&aacute;s</a>
-          {% endif %}
         </div>
       </div>
       {% endfor %}
+    </div>
+   </div>
+  </div>
 {% endblock content %}
