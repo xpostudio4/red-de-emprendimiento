@@ -285,7 +285,7 @@ body {
 	border-bottom-color: transparent;
 }
 
-.dashboard-tabs .tab-content {
+.dashboard-tabs .tab-pane {
 	border: 1px solid #e7e7e7;
 	border-top: transparent;
 	background-color: #fff;
@@ -293,6 +293,7 @@ body {
 
 .change-profile {
 	padding: 30px 0px;
+	padding-left: 20px;
 }
 
 #id_user_pic {
