@@ -1,5 +1,5 @@
-from .form import UserProfileLoginForm
 
+from .forms import UserProfileLoginForm
 
 class LoginFormMiddleware(object):
     """
@@ -12,5 +12,3 @@ class LoginFormMiddleware(object):
         if request.method == 'GET':
             login_form = UserProfileLoginForm()
             request.login_form = login_form
-        else:
-            pass

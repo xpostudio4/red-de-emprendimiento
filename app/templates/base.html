@@ -80,13 +80,12 @@
         <form>
         	<div class="form-group">
         		 <label>Email</label>
-        		 {{ login_form.username }}
+        		 {{ request.login_form.username }}
         	</div>
         	<div class="form-group">
         		 <label>Contrase&ntilde;a</label>
-        		 {{ login_form.password }}
+        		 {{ request.login_form.password }}
         	</div>
-        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>

@@ -79,9 +79,9 @@ class Organization(models.Model):
                                verbose_name="Direccion"
                               )
     province = models.CharField(max_length=100, null=True, blank=True)
-    approved = models.BooleanField(default=False)
     categories = models.ManyToManyField(Category)
-    is_active= models.BooleanField(default=False)
+    approved = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=False)
 
     def get_picture_url(self):
         """
