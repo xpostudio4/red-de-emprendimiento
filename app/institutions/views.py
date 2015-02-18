@@ -34,6 +34,7 @@ def signup(request):
             user = user_form.save(commit=False) 
             user.organization = organization
             user.save()
+
             return HttpResponseRedirect('/')
     return render(request, 
                   'accounts/signup.html',
