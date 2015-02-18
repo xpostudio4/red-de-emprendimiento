@@ -33,6 +33,7 @@
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="perfil">
               <div class="change-profile">
+              <div class="row">
                 <div class="col-sm-4">
 
                   <form action="/accounts/picture/" method="POST" enctype="multipart/form-data" id="id_picture_form">
@@ -60,9 +61,51 @@
                 </div><!-- /col -->
 
                 <div class="col-sm-8">
-                  
-                </div>
-
+                  <form class="form-horizontal">
+                    <div class="col-sm-5">
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">Nombre</label>
+                        <div class="col-sm-9">
+                          {{ organization_form.name }}
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">Tel&eacute;fono</label>
+                        <div class="col-sm-9">
+                          {{ organization_form.phone }}
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">Website</label>
+                        <div class="col-sm-9">
+                          {{ organization_form.url }}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-7">
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">Direcci&oacute;n</label>
+                        <div class="col-sm-9">
+                          {{ organization_form.address }}
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">Provincia</label>
+                        <div class="col-sm-9">
+                          {{ organization_form.province }}
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-sm-3 control-label">Categor&iacute;as</label>
+                        <div class="col-sm-9">
+                          {{ organization_form.categories }}
+                        </div>
+                      </div>
+                    </div><!-- /col-sm -->
+                  </form>
+                </div><!-- /col-sm -->
+              </div><!-- /row -->
+                
               </div><!-- /change-profile -->
             </div><!-- /tab-panel -->
             <div role="tabpanel" class="tab-panel" id="events">
