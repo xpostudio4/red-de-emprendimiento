@@ -5,6 +5,7 @@ from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
 from django.templatetags.static import static
 #from templated_email import send_templated_mail
+from .functions import unique_slugify
 
 
 class AppUserManager(BaseUserManager):
@@ -54,6 +55,7 @@ class Organization(models.Model):
     name = models.CharField(max_length=40,
                             verbose_name="Nombre de la Institucion"
                            )
+    slug = models.SlugField(default='', editable=False, unique=True)
     url = models.URLField(max_length=40,
                           verbose_name="Pagina Web",
                           null=True,
@@ -89,6 +91,10 @@ class Organization(models.Model):
             return self.logo.url
         else:
             return static('/img/default.jpg')
+
+    def save(self, *args, **kwargs):
+        unique_slugify(self, self.name)
+        super(Organization, self).save(*args, **kwargs)
 
 
 class UserProfile(AbstractBaseUser):

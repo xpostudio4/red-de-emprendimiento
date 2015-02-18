@@ -11,6 +11,18 @@
       <div class="col-sm-12">
         <h1 class="text-center">Instituciones que Inspiran</h1>
       </div>
+      {% for organization in organizations %}
+      <div class="cot-sm-4">
+        <div class="company text-center">
+          <img src="{{ organization.get_picture_url }}">
+          <h2>{{ organization.name }}</h2>
+          <p>{{ organization.description }}</p>
+          {% if organization.url %}
+          <a href="{{ organization.url }}" class="btn btn-lg btn-success">Ver m&aacute;s</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
       <div class="col-sm-4">
         <div class="company text-center">
           <img src="{{ STATIC_URL }}/img/companies/inspire/inspire.jpg">
