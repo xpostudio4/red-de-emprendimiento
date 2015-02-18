@@ -152,7 +152,9 @@ def inspire(request):
 def profile(request, slug):
     """"Organization profile is displayed here"""
     organization = get_object_or_404(Organization, slug=slug, is_active=True)
-    return render(request, 'site/profile.html', {'organization': organization})
+    profile = UserProfile.objects.get(organization=organization)
+    return render(request, 'site/profile.html', {'organization': organization,
+                                                 'profile': profile})
 
 
 @login_required
