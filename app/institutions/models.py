@@ -81,6 +81,7 @@ class Organization(models.Model):
     province = models.CharField(max_length=100, null=True, blank=True)
     approved = models.BooleanField(default=False)
     categories = models.ManyToManyField(Category)
+    is_active= models.BooleanField(default=False)
 
     def get_picture_url(self):
         """
@@ -96,6 +97,9 @@ class Organization(models.Model):
         unique_slugify(self, self.name)
         super(Organization, self).save(*args, **kwargs)
 
+    def __unicode__(self):
+        return self.name
+
 
 class UserProfile(AbstractBaseUser):
     """"User profile class representing the institutions"""
@@ -110,7 +114,7 @@ class UserProfile(AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     objects = AppUserManager()
-    organization = models.ForeignKey(Organization)
+    organization = models.ForeignKey(Organization, blank=True, null=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['full_name']
@@ -127,9 +131,15 @@ class UserProfile(AbstractBaseUser):
         return self.email
 
     def save(self, *args, **kwargs):
-            #Create Organization for the user
+        if not self.id:
+            if not Organization.objects.all():
+                print "not self"
+                org = Organization(name="admin's Organization")
+                org.save()
+                #Create Organization for the user
+                #template_name='user_creation',
+                self.organization = org
             #send_templated_mail(
-            #    template_name='user_creation',
             #    from_email='info@mypimes.com',
             #    recipient_list = [self.email],
             #    context={

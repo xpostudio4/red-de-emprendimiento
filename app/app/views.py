@@ -19,7 +19,8 @@ def capital(request):
     The purpose of this page is to display all the organizations that have
     'inspire' tag in their tag list.
     """
-    organizations = Organization.objects.filter(categories__name="Capital")
+    organizations = Organization.objects.filter(categories__name="Capital",
+                                                is_active=True)
     return render(request, 'site/list.html',
                   {'organizations' : organizations})
 
@@ -29,7 +30,8 @@ def connect(request):
     The purpose of this page is to display all the organizations that have
     'inspire' tag in their tag list.
     """
-    organizations = Organization.objects.filter(categories__name="Conecta")
+    organizations = Organization.objects.filter(categories__name="Conecta",
+                                                is_active=True)
     return render(request, 'site/list.html',
                   {'organizations' : organizations})
 
@@ -39,7 +41,8 @@ def create(request):
     The purpose of this page is to display all the organizations that have
     'inspire' tag in their tag list.
     """
-    organizations = Organization.objects.filter(categories__name="Crea")
+    organizations = Organization.objects.filter(categories__name="Crea",
+                                                is_active=True)
     return render(request, 'site/list.html',
                   {'organizations' : organizations})
 
@@ -120,7 +123,8 @@ def guide(request):
     The purpose of this page is to display all the organizations that have
     'inspire' tag in their tag list.
     """
-    organizations = Organization.objects.filter(categories__name="Guia")
+    organizations = Organization.objects.filter(categories__name="Guia",
+                                                is_active=True)
     return render(request, 'site/list.html',
                   {'organizations' : organizations})
 
@@ -139,14 +143,15 @@ def inspire(request):
     The purpose of this page is to display all the organizations that have
     'inspire' tag in their tag list.
     """
-    organizations = Organization.objects.filter(categories__name="Inspira")
+    organizations = Organization.objects.filter(categories__name="Inspira",
+                                                is_active=True)
     return render(request, 'site/list.html',
                   {'organizations' : organizations})
 
 
 def profile(request, slug):
     """"Organization profile is displayed here"""
-    organization = get_object_or_404(Organization, slug=slug)
+    organization = get_object_or_404(Organization, slug=slug, is_active=True)
     return render(request, 'site/profile.html', {'organization': organization})
 
 
