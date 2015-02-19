@@ -5,6 +5,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{{ STATIC_URL }}/css/chosen.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}/datepicker/datepicker3.css">
 {% endblock extra_css %}
 
 {% block content %}
@@ -122,42 +123,92 @@
             <div role="tabpanel" class="tab-pane" id="events">
               <div class="row">
                 <div class="col-sm-12">
-                  <form class="form-horizontal">
+                  <form class="form-horizontal" action="/accounts/create_event/" method="POST">
                     <div class="row">
-                      <div class="col-sm-7">
+                      <div class="col-sm-6">
+                        <div class="col-sm-12">
+                          <div class="form-group">
+                            <label class="control-label col-sm-2">T&iacute;tulo</label>
+                            <div class="col-sm-10">
+                              {{ event_form.name }}
+                            </div><!-- /col-sm -->
+                          </div><!-- /form-group -->
+                        </div><!-- /col-sm -->
+                        
+                        <div class="col-sm-12">
+                          <div class="form-group">
+                            <label class="control-label col-sm-2">Categor&iacute;as</label>
+                            <div class="col-sm-10">
+                                {{ event_form.categories }}
+                            </div><!-- /col-sm -->
+                          </div><!-- /form-group -->
+                        </div><!-- /col-sm -->
+
+                        <div class="col-sm-6">
+
                         <div class="form-group">
-                          <label class="control-label col-sm-1">T&iacute;tulo</label>
-                          <div class="col-sm-11">
-                            {{ event_form.name }}
-                          </div><!-- /col-sm -->
+                            <label class="control-label col-sm-4">Inicio</label>
+                            <div class="col-sm-8">
+                                {{ event_form.from_date }}
+                            </div><!-- /col-sm -->
                         </div><!-- /form-group -->
-                      </div><!-- /col-sm -->
-                      
-                      <div class="col-sm-5">
-                        <div class="form-group">
-                          <label class="control-label col-sm-1">Categoria</label>
-                          <div class="col-sm-11">
-                  
-                          </div><!-- /col-sm -->
-                        </div><!-- /form-group -->
-                      </div><!-- /col-sm -->
-                    </div><!-- /row -->
-                    <div class="row">
-                      <div class="col-sm-3">
-                        <label>Inicio</label>
-                        {{ event_form.from_date }}
-                        <br>
-                        <label>Termino</label>
-                        {{ event_form.to_date }}
+
                       </div>
-                      <div class="col-sm-9">
+
+                      <div class="col-sm-6">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">T&eacute;rmino</label>
+                            <div class="col-sm-9">
+                                {{ event_form.to_date }}
+                            </div><!-- /col-sm -->
+                        </div><!-- /form-group -->
+
+                      </div>
+
+                      <div class="col-sm-6">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Costo</label>
+                            <div class="col-sm-8">
+                                {{ event_form.cost }}
+                            </div><!-- /col-sm -->
+                        </div><!-- /form-group -->
+
+                      </div>
+
+                      <div class="col-sm-6">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">Web</label>
+                            <div class="col-sm-9">
+                                {{ event_form.url }}
+                            </div><!-- /col-sm -->
+                        </div><!-- /form-group -->
+
+                      </div>
+
+
+                    </div><!-- /col-sm -->
+                    <div class="col-sm-6">
                       <label>Descripci&oacute;n</label>
-                        {{ event_form.description }}
-                      </div>
+                          {{ event_form.description }}
                     </div>
-                  
-                  </form>
-                </div><!-- /col-sm -->
+
+                    <div class="col-sm-12">
+                      <button class="btn btn-primary pull-right" type="submit">Enviar</button>
+                    </div>
+
+                    </div><!-- /row -->
+
+                    
+                    </form>
+
+                    </div><!-- /col-sm -->
+               
+                </div><!-- /row-->
+
+                <div class="row">
 
               <div class="col-sm-12">
                 {% if organization.events %}
@@ -188,6 +239,8 @@
                   </div>
                   {% endif %}
                 </div>
+
+                </div>
               </div>
             </div><!-- /tab-panel -->
             <div role="tabpanel" class="tab-panel" id="change-password">
@@ -205,11 +258,25 @@
 {% endblock content %}
 
 {% block extra_js %}
-  <script type="text/javascript" src="{{ STATIC_URL }}js/chosen.jquery.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}/js/chosen.jquery.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}/datepicker/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}/datepicker/bootstrap-datepicker.es.js"></script>
   <script>
   {# Here goes the code for using the categories as a selectpicker#}
   $(document).ready(function(){
-    $('#id_categories').chosen({});
+    $('.event-category, .organization-category').chosen(
+      {
+        width:'100%',
+      }
+    );
   });
+  </script>
+
+  <script type="text/javascript">
+  $('#id_from_date, #id_to_date').datepicker({
+      format: "dd/mm/yy",
+      language: "es",
+      todayHighlight: true
+    });
   </script>
 {% endblock extra_js %}

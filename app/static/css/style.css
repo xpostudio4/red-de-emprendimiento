@@ -362,6 +362,10 @@ body {
 	margin-bottom: 30px;
 }
 
+.datepicker.dropdown-menu {
+	width: 300px;
+}
+
 /*******************************
            Calendar
 *******************************/

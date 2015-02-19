@@ -119,7 +119,10 @@ class OrganizationForm(forms.ModelForm):
         #change the html class of all the elements
         #of the form to get bootstrap 3 styling
         for field in self.fields:
-            self.fields[field].widget.attrs.update({'class':'form-control'})
+            if field != 'categories':
+                self.fields[field].widget.attrs.update({'class':'form-control'})
+            else:
+                self.fields[field].widget.attrs.update({'class':'organization-category'})
 
 
 class OrganizationPictureForm(forms.ModelForm):
@@ -133,7 +136,7 @@ class OrganizationPictureForm(forms.ModelForm):
 
 class EventForm(forms.ModelForm):
     """Form to handle event forms"""
-    description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'4'}))
+    description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'5'}))
     from_date = forms.CharField(widget=forms.TextInput(attrs={
             'class':'date',
             })
@@ -160,7 +163,10 @@ class EventForm(forms.ModelForm):
         super(EventForm, self).__init__(*args, **kwargs)
         #change the html class of all the elements of the form to get bootstrap 3 styling
         for field in self.fields:
-            self.fields[field].widget.attrs.update({'class':'form-control'})
+            if field != 'categories':
+                self.fields[field].widget.attrs.update({'class':'form-control'})
+            else:
+                self.fields[field].widget.attrs.update({'class':'event-category'})
 
 class MailingListForm(forms.ModelForm):
 
