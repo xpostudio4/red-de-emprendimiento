@@ -4,13 +4,28 @@ from django.contrib.auth.forms import SetPasswordForm
 from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.views.decorators.http import require_POST
-from .forms import UserProfileLoginForm, CustomUserCreationForm, OrganizationForm
-# Create your views here.
+from .forms import (UserProfileLoginForm, CustomUserCreationForm,
+                    OrganizationForm, EventForm)
+
+
+@require_POST
+@login_required
+def create_event(request):
+    """This view creates a new event from a registered organization,
+    it returns Json"""
+    form = EventForm(request.POST or None)
+    if form.is_valid():
+        event = form.save(commit=False)
+        event.organization = request.user.organization
+        event.save()
+        return JsonResponse({'is_created': True, 'values': event})
+    return JsonResponse({'is_created': False, 'reasons': str(form.errors)})
 
 
 @require_POST
 @login_required
 def password_change(request):
+    """This view process the password change of the user, returns Json"""
     password_form = SetPasswordForm(request.user, request.POST or None)
     #if form is valid
     if password_form.is_valid():
