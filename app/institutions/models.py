@@ -8,6 +8,17 @@ from django.templatetags.static import static
 from .functions import unique_slugify
 
 
+provinces = ['Distrito Nacional', 'Altagracia', 'Azua', 'Bahoruco', 'Barahona',
+    'Dajabon', 'Duarte', 'El Seybo', 'Elias Pi\xc3\xb1a', 'Espaillat', 'Hato Mayor',
+    'Independencia', 'La Romana', 'La Vega', 'Maria Trinidad Sanchez',
+    'Monse\xc3\xb1or Nouel', 'Montecristi', 'Monte Plata', 'Pedernales', 'Peravia',
+    'Puerto Plata', 'Hermanas Mirabal', 'Samana', 'San Cristobal', 'San Juan',
+    'San Pedro de Macoris', 'Sanchez Ramirez', 'Santiago de los Caballeros',
+    'Santiago Rodriguez', 'Valverde', 'San Jose de Ocoa', 'Santo Domingo']
+
+PROVINCES = tuple([(province, province) for province in provinces])
+
+
 class AppUserManager(BaseUserManager):
     """Custom Manager for the Custom user Model"""
     def create_user(self, email, full_name, password=None):
@@ -78,7 +89,11 @@ class Organization(models.Model):
                                blank=True,
                                verbose_name="Direccion"
                               )
-    province = models.CharField(max_length=100, null=True, blank=True)
+    province = models.CharField(max_length=100,
+                                choices=PROVINCES,
+                                null=True,
+                                blank=True
+                               )
     categories = models.ManyToManyField(Category)
     approved = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
