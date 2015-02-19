@@ -193,8 +193,8 @@ class Event(models.Model):
     created = models.DateField()
     from_date = models.DateField()
     to_date = models.DateField()
-    url = models.URLField()
     organization = models.ForeignKey(Organization, null=True, blank=True)
+    url = models.URLField(null=True, blank=True)
     cost = models.CharField(max_length=18, null=True, blank=True)
     categories = models.ManyToManyField(Category)
 
