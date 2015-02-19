@@ -1,13 +1,31 @@
 from django.contrib.auth import login as django_login, authenticate, logout as django_logout
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import SetPasswordForm
 from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.views.decorators.http import require_POST
 from .forms import UserProfileLoginForm, CustomUserCreationForm, OrganizationForm
-from .models import UserProfile
 # Create your views here.
+
+
+@require_POST
+@login_required
+def password_change(request):
+    password_form = SetPasswordForm(request.user, request.POST or None)
+    #if form is valid
+    if password_form.is_valid():
+        #process the form by saving
+        password_form.save()
+        return JsonResponse({'is_changed': True})
+    else:
+        #else return the error as ajax
+        print password_form.errors
+        return JsonResponse({'is_changed': False,
+                             'reasons': str(password_form.errors)})
 
 @require_POST
 def signin(request):
+
     """
     Log in view
     """
@@ -22,6 +40,7 @@ def signin(request):
     return JsonResponse({'is_loggedin': False,
                          'reason': "La contrase&ntilde;a es incorrecta"})
 
+
 def signup(request):
     """
     User registration view.
@@ -31,13 +50,14 @@ def signup(request):
     if request.method == 'POST':
         if user_form.is_valid() and organization_form.is_valid():
             organization = organization_form.save()
-            user = user_form.save(commit=False) 
             user.organization = organization
+            user = user_form.save(commit=False)
             user.save()
 
             return HttpResponseRedirect('/')
-    return render(request, 
+    return render(request,
                   'accounts/signup.html',
-                  {'user_form': user_form, 'organization_form': organization_form},
+                  {'user_form': user_form,
+                   'organization_form': organization_form},
                  )
 

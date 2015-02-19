@@ -67,7 +67,6 @@ class UserProfileChangeForm(forms.ModelForm):
     the user, but replaces the password field with admin's
     password hash display field.
     """
-
     password = ReadOnlyPasswordHashField()
 
     class Meta:
@@ -148,10 +147,14 @@ class EventForm(forms.ModelForm):
         """Model inheritance settings"""
         model = Event
         fields = ('name',
+                  'categories',
+                  'cost',
                   'description',
                   'from_date',
                   'to_date',
+                  'url',
                  )
+
 
     def __init__(self, *args, **kwargs):
         super(EventForm, self).__init__(*args, **kwargs)
