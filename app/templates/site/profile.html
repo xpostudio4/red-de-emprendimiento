@@ -13,9 +13,11 @@
       <div class="col-sm-4">
         <div class="profile-box text-center slideRightX">
           <h1>Perfil Institucional</h1>
-          <img src="{{ organization.get_picture_url }}" class="img-circle company-clear">
-          <h2>{{ organization.name }}</h2>
+          <img src="{{ organization.get_picture_url }}">
+          <h3>{{ organization.name }}</h3>
+          {% if organization.description %}
           <p>{{ organization.description }}</p>
+          {% endif %}
           <div class="profile-links">
             <table class="table">
               <tr>
@@ -24,7 +26,7 @@
               </tr>
               <tr>
                 <th>Teléfono</th>
-                <td>{{ profile.phone }}</td>
+                <td>{{ organization.phone }}</td>
               </tr>
               <tr>
                 <th>Email</th>
@@ -32,10 +34,16 @@
               </tr>
               <tr>
                 <th>Website</th>
-                <td><a href="{{ organization.url }}" target="_blank">{{ organization.url }}</a></td>
+                <td>
+                  {% if organization.url  %}
+                  <a href="{{ organization.url }}" target="_blank">{{ organization.url }}</a>
+                  {% endif %}
+                </td>
               </tr>
             </table>
-            <a href="" class="btn btn-primary btn-profile btn-block">Editar perfil</a>
+            {% if profile == request.user %}
+            <a href="/dashboard/" class="btn btn-primary btn-profile btn-block">Editar perfil</a>
+            {% endif %}
           </div><!-- /profile-links -->
         </div><!-- /profile-box -->
       </div><!-- /col-sm-8 -->
@@ -44,7 +52,9 @@
         <h1>Eventos</h1>
       </div>
       <div class="col-sm-8">
-        <a href="" class="btn btn-primary btn-event">A&ntilde;adir evento</a>
+        {% if profile == request.user %}
+            <a href="" class="btn btn-primary btn-event">A&ntilde;adir evento</a>
+         {% endif %}
       </div>
         <div class="col-sm-12">
           <table class="table">

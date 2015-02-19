@@ -134,7 +134,7 @@ class OrganizationPictureForm(forms.ModelForm):
 
 class EventForm(forms.ModelForm):
     """Form to handle event forms"""
-    description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'2'}))
+    description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'4'}))
     from_date = forms.CharField(widget=forms.TextInput(attrs={
             'class':'date',
             })

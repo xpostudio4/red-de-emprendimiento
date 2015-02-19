@@ -91,7 +91,7 @@ class Organization(models.Model):
         if self.logo:
             return self.logo.url
         else:
-            return static('/img/default.jpg')
+            return '/static/img/companies/default.jpg'
 
     def save(self, *args, **kwargs):
         unique_slugify(self, self.name)

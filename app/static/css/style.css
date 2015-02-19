@@ -73,12 +73,16 @@ body {
 
 .custom-pills {
 	font-size: 18px;
-	color: #333;
+	color: #333 ;
 }
 
 .custom-pills:hover {
 	background-color: transparent !important;
 	color: #2d348c;
+}
+
+#index-dropdown {
+	color: #2d348c !important;
 }
 
 .navbar {
@@ -291,6 +295,10 @@ body {
 	background-color: #fff;
 }
 
+.dashboard-tabs {
+	margin-bottom: 30px;
+}
+
 .change-profile {
 	padding: 30px 0px;
 	padding-left: 20px;
@@ -301,7 +309,6 @@ body {
 	margin-bottom: 20px;
 	position: relative;
 	height: 150px;
-	border: 1px solid #ddd;
 	overflow: hidden; 
 }
  
@@ -332,7 +339,28 @@ body {
 	visibility: hidden;
 }
 
+#id_description {
+	margin-bottom: 20px;
+}
 
+/*******************************
+    Dashboard Events
+*******************************/
+
+#events {
+	padding: 30px;
+}
+
+.events-empty {
+	border: 2px dotted #999;
+	color: #999;
+	font-size: 20px;
+	padding: 30px;
+}
+
+#events form {
+	margin-bottom: 30px;
+}
 
 /*******************************
            Calendar
@@ -415,3 +443,5 @@ body {
 .credits p {
 	margin: 0px;
 }
+
+
