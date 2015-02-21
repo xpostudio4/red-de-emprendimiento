@@ -8,8 +8,6 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField, AuthenticationF
 from django.forms.extras import widgets
 
 #Third party apps
-from captcha.fields import CaptchaField
-from taggit.forms import *
 #Project apps import
 from .models import UserProfile, Category, Event, MailingList, Organization
 
