@@ -1,17 +1,12 @@
 language: python
 python:
-  - "2.7"
-  - "3.4"
-
-#command to install dependencies
-install: "pip install -r requirements.txt"
-#command to run tests
+- '2.7'
+- '3.4'
+install: pip install -r requirements.txt
 script: python app/manage.py test
-
 notifications:
   email:
   - ljimenez@stancedata.com
   - vguillen@stancedata.com
   slack:
-    rooms:
-      - secure: "WU5fe+rvbzHE3nmmKGlTp6YkNoQOUTNtBUB82hd/94nvFz/q0hT6Zs+N2e4yKLBw9tkslNcSwYRJHzwlx96sugacbsVKFtb5/rVY5x3xca19vSehy6UUgd8s+fH05GGlr1YJgzMJ5Z5GYJFEfZ1FdcWv2qhSwGdHpEEbzGxGL9k="
+    secure: bQ1lRegudu5sq1895jws19AOd7cRmYCBukFXY39d75aqBuxtBtGw/5xhZmCHgUtNSg9UgMvUHC/HUChQjchXAmZezejL848t2NzTfr08a+PFGAQTRyy8ei9Y1OegNYUE9h2vzxR59RfSEjO5MXmSSbeQfTP/TrpJGpcVrItLam0=
