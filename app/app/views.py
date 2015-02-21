@@ -131,7 +131,7 @@ def guide(request):
 
 def index(request):
     """
-    The Index is where most of the action in the page will happen,
+    The index is where most of the action in the page will happen,
     the entrepreneurs should access this page and see all the opportunities
     available for them here.
     """
