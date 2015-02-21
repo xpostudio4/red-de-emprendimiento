@@ -12,4 +12,6 @@ notifications:
   email:
   - ljimenez@stancedata.com
   - vguillen@stancedata.com
-  secure: "qKn3Wfm3w7e1IkWQ5MW2nCNett4krVVdpzuhrcQhkeCSxvSouJrqbDsGBPEtZrDlIPZgUVUfDvNUVDJX7QTCJQYJ7pg81J8EsIxGAApUHcuFElP70Z71Wy5hM7+B17IptqP5KMznrfXpzq0fQHXJKlPgh6Y25yNtYrUdIL7cr5c="
+  slack:
+    rooms:
+      - secure: "WU5fe+rvbzHE3nmmKGlTp6YkNoQOUTNtBUB82hd/94nvFz/q0hT6Zs+N2e4yKLBw9tkslNcSwYRJHzwlx96sugacbsVKFtb5/rVY5x3xca19vSehy6UUgd8s+fH05GGlr1YJgzMJ5Z5GYJFEfZ1FdcWv2qhSwGdHpEEbzGxGL9k="
