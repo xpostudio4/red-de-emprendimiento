@@ -148,9 +148,8 @@ class UserProfile(AbstractBaseUser):
     def save(self, *args, **kwargs):
         if not self.id:
             if not Organization.objects.all():
-                print "not self"
-                org = Organization(name="admin's Organization")
                 org.save()
+                org = Organization(name="admin's Organization")
                 #Create Organization for the user
                 #template_name='user_creation',
                 self.organization = org
