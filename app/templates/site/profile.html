@@ -53,33 +53,38 @@
       </div>
       <div class="col-sm-8">
         {% if profile == request.user %}
-            <a href="" class="btn btn-primary btn-event">A&ntilde;adir evento</a>
+            <a href="/dashboard/" class="btn btn-primary btn-event">Crear evento</a>
          {% endif %}
       </div>
         <div class="col-sm-12">
-          <table class="table">
-            <tr>
-              <th>ID</th>
-              <th>Categoría</th>
-              <th>Título</th>
-              <th>Fecha</th>
-              <th>Precio</th>
-            </tr>
-            <tr>
-              <td>1834</td>
-              <td>Taller</td>
-              <td>Creatividad y oportunidad de negocios</td>
-              <td>18 Marzo 2015</td>
-              <td>Gratis</td>
-            </tr>
-            <tr>
-              <td>1313</td>
-              <td>Curso</td>
-              <td>Actitud emprendedora y plan de vida</td>
-              <td>9 de Abril 2015</td>
-              <td>RD$200</td>
-            </tr>
-          </table>
+           {% if events %}
+              <table class="table">
+                <tr>
+                  <th>Título</th>
+                  <th>Categorías</th>
+                  <th>Inicia</th>
+                  <th>Termina</th>
+                  <th>Costo</th>
+                </tr>
+
+                {% for event in events %}
+                <tr>
+                  <td>{{ event.name }}</td>
+                  <td>
+                    {% for category in event.categories.all %}
+                      {{ category.name }}
+                    {% endfor %}
+                  </td>
+                  <td>{{ event.from_date }}</td>
+                  <td>{{ event.to_date }}</td>
+                  <td>{{ event.cost }}</td>
+                </tr>
+                <tr>
+                  <td colspan="5">{{ event.description }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+          {% endif %}
         </div>
       </div>
     </div>

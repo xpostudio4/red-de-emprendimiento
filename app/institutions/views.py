@@ -1,3 +1,4 @@
+import json
 from django.contrib.auth import login as django_login, authenticate, logout as django_logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import SetPasswordForm
@@ -18,7 +19,8 @@ def create_event(request):
         event = form.save(commit=False)
         event.organization = request.user.organization
         event.save()
-        return JsonResponse({'is_created': True, 'values': event})
+        form.save_m2m()
+        return JsonResponse({'is_created': True})
     return JsonResponse({'is_created': False, 'reasons': str(form.errors)})
 
 

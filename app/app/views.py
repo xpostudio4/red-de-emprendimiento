@@ -53,8 +53,9 @@ def dashboard(request):
     user_form = UserProfileChangeForm(request.POST or None,
                                       instance=request.user
                                      )
+    user = UserProfile.objects.get(id=request.user.id)
     organization = Organization.objects.get(id=request.user.organization.id)
-    events = Event.objects.filter(organization=request.user.organization)
+    events = Event.objects.filter(organization=user.organization).order_by('-from_date')
     event_form = EventForm()
     organization_form = OrganizationForm(request.POST or None,
                                          instance=organization
@@ -82,40 +83,6 @@ def dashboard(request):
                    'events': events,
                   }
                  )
-
-
-@login_required
-@require_POST
-def event_creation(request,organization_id):
-    #fill the form
-    organization = Organization.objects.get(id=organization_id)
-    form = EventForm(request.POST)
-    #process and save
-    if form.is_valid():
-        event = form.save(commit=False)
-        event.organization = organization
-        event.save()
-        #Get the date formats
-        from_date = DateFormat(event.from_date)
-        to_date = DateFormat(event.to_date)
-        #return the Json of the data
-        result = {
-                'id' : event.id,
-                'name': event.name,
-                'description': event.description,
-                'from': str(from_date.format(get_format('DATE_FORMAT'))),
-                'to': str(to_date.format(get_format('DATE_FORMAT')))
-                }
-        return HttpResponse(json.dumps(result), content_type='application/json')
-    return HttpResponse(json.dumps(form.errors))
-
-
-@login_required
-def event_deletion(request, event_id):
-    #verify the user organization belongs 
-    #deletes the item with the ID provided
-    Event.objects.get(id=event_id, organization=request.user.organization).delete()
-    return HttpResponse("The item has been deleted")
 
 
 def guide(request):
@@ -153,8 +120,10 @@ def profile(request, slug):
     """"Organization profile is displayed here"""
     organization = get_object_or_404(Organization, slug=slug, is_active=True)
     profile = UserProfile.objects.get(organization=organization)
+    events = Event.objects.filter(organization=organization).order_by('-from_date')
     return render(request, 'site/profile.html', {'organization': organization,
-                                                 'profile': profile})
+                                                 'profile': profile, 
+                                                 'events':events})
 
 
 @login_required

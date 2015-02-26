@@ -92,5 +92,10 @@ $(document).ready(function() {
    });
 
 
+   $( "#event-form-btn" ).click(function() {
+	  $( "#event-form" ).slideToggle( "slow", "linear" );
+	});
+
+
 
 });

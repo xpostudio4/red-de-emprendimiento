@@ -271,6 +271,10 @@ body {
 	color: #fff !important;
 }
 
+.profile-box img {
+	width: 300px;
+}
+
 /*******************************
     Dashboard Edit Profile
 *******************************/
@@ -343,6 +347,7 @@ body {
 	margin-bottom: 20px;
 }
 
+
 /*******************************
     Dashboard Events
 *******************************/
@@ -360,10 +365,19 @@ body {
 
 #events form {
 	margin-bottom: 30px;
+	margin-top: 20px;
 }
 
 .datepicker.dropdown-menu {
 	width: 300px;
+}
+
+#event-form {
+	display: none;
+}
+
+#event-form-btn {
+	margin-bottom: 20px;
 }
 
 /*******************************

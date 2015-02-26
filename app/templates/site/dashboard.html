@@ -24,19 +24,19 @@
         <div class="dashboard-tabs">
           <div role="tabpanel" >
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active">
-                <a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a>
-              </li>            
-              <li role="presentation">
+              <li role="presentation"  class="active">
                 <a href="#events" aria-controls="events" role="tab" data-toggle="tab">Eventos</a>
               </li>
+              <li role="presentation">
+                <a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a>
+              </li>            
               <li role="presentation">
                 <a href="#change-password" aria-controls="change-password" role="tab" data-toggle="tab">Cambiar contrase&ntilde;a</a>
               </li>
             </ul>
 
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="perfil">
+            <div role="tabpanel" class="tab-pane" id="perfil">
               <div class="change-profile">
               <div class="row">
                 <div class="col-sm-4">
@@ -120,10 +120,13 @@
                 
               </div><!-- /change-profile -->
             </div><!-- /tab-panel -->
-            <div role="tabpanel" class="tab-pane" id="events">
+            <div role="tabpanel" class="tab-pane active" id="events">
               <div class="row">
                 <div class="col-sm-12">
-                  <form class="form-horizontal" action="/accounts/create_event/" method="POST">
+                  <a class="btn btn-primary" id="event-form-btn">Crear Evento</a>
+                  <div id="event-form">
+                    <form class="form-horizontal" action="/accounts/create_event/" method="POST">
+                      {% csrf_token %}
                     <div class="row">
                       <div class="col-sm-6">
                         <div class="col-sm-12">
@@ -147,7 +150,7 @@
                         <div class="col-sm-6">
 
                         <div class="form-group">
-                            <label class="control-label col-sm-4">Inicio</label>
+                            <label class="control-label col-sm-4">Inicia</label>
                             <div class="col-sm-8">
                                 {{ event_form.from_date }}
                             </div><!-- /col-sm -->
@@ -158,7 +161,7 @@
                       <div class="col-sm-6">
 
                         <div class="form-group">
-                            <label class="control-label col-sm-3">T&eacute;rmino</label>
+                            <label class="control-label col-sm-3">Termina</label>
                             <div class="col-sm-9">
                                 {{ event_form.to_date }}
                             </div><!-- /col-sm -->
@@ -203,34 +206,43 @@
 
                     
                     </form>
+                  </div>
+                  
 
-                    </div><!-- /col-sm -->
+                  </div><!-- /col-sm -->
                
                 </div><!-- /row-->
 
                 <div class="row">
 
               <div class="col-sm-12">
-                {% if organization.events %}
+                {% if events %}
                   <table class="table">
                     <tr>
-                      <th>Categoría</th>
-                      <th>Título</th>
-                      <th>Fecha</th>
-                      <th>Precio</th>
+                      <th></th>
+                      <th>T&iacute;tulo</th>
+                      <th>Categor&iacute;as</th>
+                      <th>Inicia</th>
+                      <th>Termina</th>
+                      <th>Costo</th>
+                      <th>Descripci&oacute;n</th>
                     </tr>
+
+                    {% for event in events %}
                     <tr>
-                      <td>Taller</td>
-                      <td>Creatividad y oportunidad de negocios</td>
-                      <td>18 Marzo 2015</td>
-                      <td>Gratis</td>
+                      <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true" data-id="{{ event.id }}">&times;</span></button></td>
+                      <td>{{ event.name }}</td>
+                      <td>
+                        {% for category in event.categories.all %}
+                          {{ category.name }}
+                        {% endfor %}
+                      </td>
+                      <td>{{ event.from_date }}</td>
+                      <td>{{ event.to_date }}</td>
+                      <td>{{ event.cost }}</td>
+                      <td>{{ event.description|truncatechars:25 }}</td>
                     </tr>
-                    <tr>
-                      <td>Curso</td>
-                      <td>Actitud emprendedora y plan de vida</td>
-                      <td>9 de Abril 2015</td>
-                      <td>RD$200</td>
-                    </tr>
+                    {% endfor %}
                   </table>
                   {% else %}
                   <div class="events-empty text-center">
@@ -274,7 +286,7 @@
 
   <script type="text/javascript">
   $('#id_from_date, #id_to_date').datepicker({
-      format: "dd/mm/yy",
+      format: "yyyy-mm-dd",
       language: "es",
       todayHighlight: true
     });
