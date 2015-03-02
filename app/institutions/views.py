@@ -18,7 +18,7 @@ def create_event(request):
         event = form.save(commit=False)
         event.organization = request.user.organization
         event.save()
-        return JsonResponse({'is_created': True, 'values': event})
+        return HttpResponseRedirect('/profile/dashboard/')
     return JsonResponse({'is_created': False, 'reasons': str(form.errors)})
 
 
@@ -40,7 +40,6 @@ def password_change(request):
 
 @require_POST
 def signin(request):
-
     """
     Log in view
     """
