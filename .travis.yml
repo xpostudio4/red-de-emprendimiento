@@ -1,0 +1,12 @@
+language: python
+python:
+- '2.7'
+- '3.4'
+install: pip install -r requirements.txt
+script: python app/manage.py test
+notifications:
+  email:
+  - ljimenez@stancedata.com
+  - vguillen@stancedata.com
+  slack:
+    secure: bQ1lRegudu5sq1895jws19AOd7cRmYCBukFXY39d75aqBuxtBtGw/5xhZmCHgUtNSg9UgMvUHC/HUChQjchXAmZezejL848t2NzTfr08a+PFGAQTRyy8ei9Y1OegNYUE9h2vzxR59RfSEjO5MXmSSbeQfTP/TrpJGpcVrItLam0=

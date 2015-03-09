@@ -5,8 +5,8 @@ from django.contrib.auth.decorators import login_required
 from django.utils.dateformat import DateFormat
 from django.utils.formats import get_format
 from django.views.decorators.http import require_POST
-from institutions.forms import OrganizationForm, EventForm,UserProfileChangeForm, OrganizationPictureForm
 from institutions.models import Event, Organization, UserProfile
+from institutions.forms import OrganizationForm, EventForm, UserProfileChangeForm, OrganizationPictureForm
 
 
 def calendar(request):
@@ -85,6 +85,42 @@ def dashboard(request):
                  )
 
 
+@login_required
+@require_POST
+def event_creation(request, organization_id):
+    """Process the creation of events"""
+    #fill the form
+    organization = Organization.objects.get(id=organization_id)
+    form = EventForm(request.POST)
+    #process and save
+    if form.is_valid():
+        event = form.save(commit=False)
+        event.organization = organization
+        event.save()
+        #Get the date formats
+        from_date = DateFormat(event.from_date)
+        to_date = DateFormat(event.to_date)
+        #return the Json of the data
+        result = {
+                'id' : event.id,
+                'name': event.name,
+                'description': event.description,
+                'from': str(from_date.format(get_format('DATE_FORMAT'))),
+                'to': str(to_date.format(get_format('DATE_FORMAT')))
+                }
+        return HttpResponse(json.dumps(result), content_type='application/json')
+    return HttpResponse(json.dumps(form.errors))
+
+
+@login_required
+def event_deletion(request, event_id):
+    """Deletes the event through an Ajax request"""
+    #verify the user organization belongs
+    #deletes the item with the ID provided
+    Event.objects.get(id=event_id, organization=request.user.organization).delete()
+    return HttpResponse("The item has been deleted")
+
+
 def guide(request):
     """
     The purpose of this page is to display all the organizations that have
@@ -98,7 +134,7 @@ def guide(request):
 
 def index(request):
     """
-    The Index is where most of the action in the page will happen,
+    The index is where most of the action in the page will happen,
     the entrepreneurs should access this page and see all the opportunities
     available for them here.
     """

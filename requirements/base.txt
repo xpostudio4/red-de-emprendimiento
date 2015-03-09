@@ -2,7 +2,8 @@ bpython==0.12
 Django==1.6.2
 django-braces==1.2.2
 django-model-utils==1.5.0
-django-simple-captcha==0.4.2
 logutils==0.3.3
 South==0.8.2
-django-selectize==1.2
+Pillow==2.7.0
+coverage=3.6
+selenium==2.44.0
