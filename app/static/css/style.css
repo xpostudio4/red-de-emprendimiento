@@ -95,20 +95,21 @@ body {
 }
 
 .navbar-nav li {
-	padding: 12px 0px;
 	border-left: 1px solid #ddd;
 }
 
-.navbar-nav li:hover,
-.navbar li:focus {
-	background-color: #d12033;
-	border-color: #d12033;
-	color: #fff !important;
+.navbar-nav li a {
+	padding: 30px 15px;
+}
+
+.navbar-nav .dropdown-menu li a {
+	padding: 15px 30px;
 }
 
 .navbar-nav li a:hover {
+	background-color: #d12033 !important;
+	border-color: #d12033;
 	color: #fff !important;
-	background-color: #d12033;
 }
 
 .login-link {
@@ -121,6 +122,10 @@ body {
 .navbar-default .navbar-nav > .open > a:focus {
 	background-color: #d12033;
 	color: #fff;
+}
+
+.navbar-default .navbar-nav > li:hover {
+	color: #fff !important;  
 }
 
 /*******************************
@@ -234,6 +239,10 @@ body {
 
 .company {
 	margin: 20px;
+}
+
+.company img {
+	width: 300px;
 }
 
 .company .btn-success:hover {
@@ -378,6 +387,14 @@ body {
 
 #event-form-btn {
 	margin-bottom: 20px;
+}
+
+.description-row td {
+	border-top: none !important;
+}
+
+.description-row {
+	display: none;
 }
 
 /*******************************

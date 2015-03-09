@@ -225,23 +225,27 @@
                       <th>Inicia</th>
                       <th>Termina</th>
                       <th>Costo</th>
-                      <th>Descripci&oacute;n</th>
                     </tr>
 
                     {% for event in events %}
-                    <tr>
-                      <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true" data-id="{{ event.id }}">&times;</span></button></td>
-                      <td>{{ event.name }}</td>
-                      <td>
-                        {% for category in event.categories.all %}
-                          {{ category.name }}
-                        {% endfor %}
-                      </td>
-                      <td>{{ event.from_date }}</td>
-                      <td>{{ event.to_date }}</td>
-                      <td>{{ event.cost }}</td>
-                      <td>{{ event.description|truncatechars:25 }}</td>
-                    </tr>
+                    <div class="event-row">
+                      <tr>
+                        <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true" data-id="{{ event.id }}">&times;</span></button></td>
+                        <td><a class="show-description">{{ event.name }}</a></td>
+                        <td>
+                          {% for category in event.categories.all %}
+                            {{ category.name }}
+                          {% endfor %}
+                        </td>
+                        <td>{{ event.from_date }}</td>
+                        <td>{{ event.to_date }}</td>
+                        <td>{{ event.cost }}</td>
+                      </tr>
+                      <tr class="description-row">
+                        <td></td>
+                        <td colspan="5">{{ event.description }}</td>
+                      </tr>
+                    </div>
                     {% endfor %}
                   </table>
                   {% else %}
