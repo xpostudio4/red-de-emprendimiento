@@ -65,6 +65,7 @@ def dashboard(request):
                    'event_form': event_form,
                    'user_form': user_form,
                    'events': events,
+                   'password_form': password_form,
                   }
                  )
 
