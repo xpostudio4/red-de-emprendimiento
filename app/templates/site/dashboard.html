@@ -24,94 +24,14 @@
                 <a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a>
               </li>
               <li role="presentation">
-                <a href="#change-password" aria-controls="change-password" role="tab" data-toggle="tab">Cambiar contrase&ntilde;a</a>
+                <a href="#change-password" aria-controls="change-password" role="tab" data-toggle="tab">Cambiar Contrase&ntilde;a</a>
+              </li>
+              <li role="presentation">
+                <a href="#approval" aria-controls="approval" role="tab" data-toggle="tab">Nuevas Organizaciones</a>
               </li>
             </ul>
 
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane" id="perfil">
-              <div class="change-profile">
-              <div class="row">
-                <div class="col-sm-4">
-
-                  <form action="/accounts/picture/" method="POST" enctype="multipart/form-data" id="id_picture_form">
-                  {% csrf_token %}
-   
-                    <div id="id_user_pic" class="center-block">
-         
-                        {% if organization.logo %}
-                            <img src="{{ organization.logo.url }}" >
-                        {% else %}
-                            <img src="{{ STATIC_URL }}img/companies/default.jpg">
-                        {% endif %}
- 
- 
-                        <div id="camera">
-                          <i class="fa fa-camera"></i>
-                        </div>
-                    </div>
- 
-                  <div id="picture-hidden">
-                    {{ organization_picture_form.picture }}
-                  </div>
- 
-                 </form>
-                </div><!-- /col -->
-
-                <div class="col-sm-8">
-                  <form class="form-horizontal" action="." method="POST">
-                  {% csrf_token %}
-                    <div class="col-sm-5">
-                      <div class="form-group">
-                        <label class="col-sm-3 control-label">Nombre</label>
-                        <div class="col-sm-9">
-                          {{ organization_form.name }}
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-3 control-label">Tel&eacute;fono</label>
-                        <div class="col-sm-9">
-                          {{ organization_form.phone }}
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-3 control-label">Web</label>
-                        <div class="col-sm-9">
-                          {{ organization_form.url }}
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-7">
-                      <div class="form-group">
-                        <label class="col-sm-3 control-label">Direcci&oacute;n</label>
-                        <div class="col-sm-9">
-                          {{ organization_form.address }}
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-3 control-label">Provincia</label>
-                        <div class="col-sm-9">
-                          {{ organization_form.province }}
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="col-sm-3 control-label">Categor&iacute;as</label>
-                        <div class="col-sm-9">
-                          {{ organization_form.categories }}
-                        </div>
-                      </div>
-                    </div><!-- /col-sm -->
-                    <div class="col-sm-12">
-                      <label class=" control-label">Descripci&oacute;n</label>
-                      {{ organization_form.description }}
-                       <button class="btn btn-success pull-right" type="submit">Actualizar</button>
-                    </div>
-
-                  </form>
-                </div><!-- /col-sm -->
-              </div><!-- /row -->
-              </div><!-- /change-profile -->
-            </div><!-- /tab-panel -->
             <div role="tabpanel" class="tab-pane active" id="events">
               <div class="row">
                 <div class="col-sm-12">
@@ -198,64 +118,249 @@
 
                     
                     </form>
-                  </div>
-                  
+                  </div><!-- /event-form -->
+                </div><!-- /col-sm -->
+              </div><!-- /row-->
 
-                  </div><!-- /col-sm -->
-               
-                </div><!-- /row-->
-
-                <div class="row">
-
-              <div class="col-sm-12">
-                {% if events %}
-                  <table class="table">
-                    <tr>
-                      <th></th>
-                      <th>T&iacute;tulo</th>
-                      <th>Categor&iacute;as</th>
-                      <th>Inicia</th>
-                      <th>Termina</th>
-                      <th>Costo</th>
-                      <th>Descripción</th>
-                    </tr>
-
-                    {% for event in events %}
-                    <div class="event-row">
-                      <tr id="event-{{ event.id }}">
-                        <td><button type="button" data-id="{{ event.id }}" class="close delete-event" aria-label="close"><span aria-hidden="true">&times;</span></button></td>
-                        <td><a>{{ event.name }}</a></td>
-                        <td>
-                          <span class="category-tag">{% for category in event.categories.all %}
-                            {{ category.name }}
-                          {% endfor %}</span>
-                        </td>
-                        <td>{{ event.from_date }}</td>
-                        <td>{{ event.to_date }}</td>
-                        <td>{{ event.cost }}</td>
-                        <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
+              <div class="row">
+                <div class="col-sm-12">
+                  {% if events %}
+                    <table class="table">
+                      <tr>
+                        <th></th>
+                        <th>T&iacute;tulo</th>
+                        <th>Categor&iacute;as</th>
+                        <th>Inicia</th>
+                        <th>Termina</th>
+                        <th>Costo</th>
+                        <th>Descripción</th>
                       </tr>
-                      <tr id="description-{{ event.id }}" class="description-row">
-                        <td></td>
-                        <td colspan="5">{{ event.description }}</td>
-                      </tr>
+
+                      {% for event in events %}
+                      <div class="event-row">
+                        <tr id="event-{{ event.id }}">
+                          <td><button type="button" data-id="{{ event.id }}" class="close delete-event" aria-label="close"><span aria-hidden="true">&times;</span></button></td>
+                          <td><a>{{ event.name }}</a></td>
+                          <td>
+                            <span class="category-tag">{% for category in event.categories.all %}
+                              {{ category.name }}
+                            {% endfor %}</span>
+                          </td>
+                          <td>{{ event.from_date }}</td>
+                          <td>{{ event.to_date }}</td>
+                          <td>{{ event.cost }}</td>
+                          <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
+                        </tr>
+                        <tr id="description-{{ event.id }}" class="description-row">
+                          <td></td>
+                          <td colspan="5">{{ event.description }}</td>
+                        </tr>
+                      </div>
+                      {% endfor %}
+                    </table>
+                    {% else %}
+                    <div class="empty text-center">
+                      <p>No hay eventos</p>
+                      <a href="" class="btn btn-primary">Crear evento</a>
                     </div>
-                    {% endfor %}
-                  </table>
-                  {% else %}
-                  <div class="events-empty text-center">
-                    <p>No hay eventos</p>
-                    <a href="" class="btn btn-primary">Crear evento</a>
-                  </div>
-                  {% endif %}
-                </div>
+                    {% endif %}
+                  </div><!-- /col-sm-12 -->
+              </div><!-- /row -->
+            
+            </div><!-- /tab-panel -->
 
-                </div>
+            <div role="tabpanel" class="tab-pane" id="perfil">
+                <div class="change-profile">
+                  <div class="row">
+                    <div class="col-sm-4">
+
+                      <form action="/accounts/picture/" method="POST" enctype="multipart/form-data" id="id_picture_form">
+                      {% csrf_token %}
+       
+                        <div id="id_user_pic" class="center-block">
+             
+                            {% if organization.logo %}
+                                <img src="{{ organization.logo.url }}" >
+                            {% else %}
+                                <img src="{{ STATIC_URL }}img/companies/default.jpg">
+                            {% endif %}
+
+
+                            <div id="camera">
+                              <i class="fa fa-camera"></i>
+                            </div>
+                        </div>
+
+                      <div id="picture-hidden">
+                        {{ organization_picture_form.picture }}
+                      </div>
+
+                     </form>
+                    </div><!-- /col -->
+
+                    <div class="col-sm-8">
+                      <form class="form-horizontal" action="." method="POST">
+                      {% csrf_token %}
+                        <div class="col-sm-5">
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Nombre</label>
+                            <div class="col-sm-9">
+                              {{ organization_form.name }}
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Tel&eacute;fono</label>
+                            <div class="col-sm-9">
+                              {{ organization_form.phone }}
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Web</label>
+                            <div class="col-sm-9">
+                              {{ organization_form.url }}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-7">
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Direcci&oacute;n</label>
+                            <div class="col-sm-9">
+                              {{ organization_form.address }}
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Provincia</label>
+                            <div class="col-sm-9">
+                              {{ organization_form.province }}
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Categor&iacute;as</label>
+                            <div class="col-sm-9">
+                              {{ organization_form.categories }}
+                            </div>
+                          </div>
+                        </div><!-- /col-sm -->
+                        <div class="col-sm-12">
+                          <label class=" control-label">Descripci&oacute;n</label>
+                          {{ organization_form.description }}
+                           <button class="btn btn-success pull-right" type="submit">Actualizar</button>
+                        </div>
+
+                      </form>
+                    </div><!-- /col-sm -->
+                  </div><!-- /row -->
+                </div><!-- /change-profile -->
+            </div><!-- /tab-panel -->
+            <div role="tabpanel" class="tab-pane" id="approval">
+
+              {% if new_org in new_orgs %}
+              <div class="new-org">
+                <div class="row">
+                  <div class="col-sm-4">
+
+                    {% if new_org.logo %}
+                        <img src="{{ organization.logo.url }}" >
+                    {% else %}
+                        <img src="{{ STATIC_URL }}img/companies/default.jpg">
+                    {% endif %}
+            
+                  </div> 
+                  <div class="col-sm-8">
+
+                    <div class="row">
+                      <div class="new-org-field">
+                        <div class="col-sm-2">
+                           <label>Nombre</label>
+                        </div>
+                        <div class="col-sm-10">
+                          {{ new_org.name }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="new-org-field">
+                        <div class="col-sm-2">
+                           <label>Direcci&oacute;n</label>
+                        </div>
+                        <div class="col-sm-10">
+                          {{ new_org.address }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="new-org-field">
+                        <div class="col-sm-2">
+                           <label>Tel&eacute;fono</label>
+                        </div>
+                        <div class="col-sm-4">
+                          {{ new_org.phone }}
+                        </div>
+                      </div>
+                      <div class="new-org-field">
+                        <div class="col-sm-2">
+                           <label>Provincia</label>
+                        </div>
+                        <div class="col-sm-4">
+                          {{ new_org.province }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="new-org-field">
+                        <div class="col-sm-2">
+                           <label>Web</label>
+                        </div>
+                        <div class="col-sm-4">
+                          {{ new_org.url }}
+                        </div>
+                      </div>
+                      <div class="new-org-field">
+                        <div class="col-sm-2">
+                           <label>Categor&iacute;as</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <span class="category-tag">
+                              {% for category in new_org.categories.all %}
+                                {{ category.name }}
+                              {% endfor %}
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="col-sm-12">
+                    <div class="new-org-field">
+                        <div class="col-sm-2">
+                           <label>Descripci&oacute;n</label>
+                        </div>
+                        <div class="col-sm-10">
+                          {{ new_org.description }}
+                        </div>
+                      </div>
+
+                      <button class="btn btn-primary pull-right">Aprobar</button>
+                  </div>
+
+                      
+                </div><!-- /row -->
+              </div><!-- /new-org -->
+              {% else %}
+              <div class="empty">
+                <p class="text-center">No hay organizaciones por aprobar</p>
               </div>
+              {% endif %}
             </div><!-- /tab-panel -->
+
             <div role="tabpanel" class="tab-panel" id="change-password">
-              
+
             </div><!-- /tab-panel -->
+
           </div><!-- /tab-content -->
 
         </div><!-- /tabpanel -->

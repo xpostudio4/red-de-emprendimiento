@@ -365,7 +365,7 @@ body {
 	padding: 30px;
 }
 
-.events-empty {
+.empty {
 	border: 2px dotted #999;
 	color: #999;
 	font-size: 20px;
@@ -402,6 +402,27 @@ body {
 	color: #fff;
 	padding: 5px 10px;
 	border-radius: 3px
+}
+
+/*******************************
+    Dashboard Approval
+*******************************/
+
+#approval {
+	padding: 30px;
+}
+
+.new-org {
+	border: 1px solid #ddd;
+	padding: 15px;
+}
+
+.new-org img {
+	width: 300px
+}
+
+.new-org-field {
+	margin: 10px 0px;
 }
 
 /*******************************
