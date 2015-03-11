@@ -65,6 +65,7 @@
                   <th>Inicia</th>
                   <th>Termina</th>
                   <th>Costo</th>
+                  <th>Descripción</th>
                 </tr>
 
                 {% for event in events %}
@@ -78,8 +79,9 @@
                   <td>{{ event.from_date }}</td>
                   <td>{{ event.to_date }}</td>
                   <td>{{ event.cost }}</td>
+                  <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
                 </tr>
-                <tr>
+                <tr class="description-row">
                   <td colspan="5">{{ event.description }}</td>
                 </tr>
                 {% endfor %}

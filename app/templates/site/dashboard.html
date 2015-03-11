@@ -225,13 +225,14 @@
                       <th>Inicia</th>
                       <th>Termina</th>
                       <th>Costo</th>
+                      <th>Descripción</th>
                     </tr>
 
                     {% for event in events %}
                     <div class="event-row">
                       <tr>
                         <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true" data-id="{{ event.id }}">&times;</span></button></td>
-                        <td><a class="show-description">{{ event.name }}</a></td>
+                        <td>{{ event.name }}</td>
                         <td>
                           {% for category in event.categories.all %}
                             {{ category.name }}
@@ -240,6 +241,7 @@
                         <td>{{ event.from_date }}</td>
                         <td>{{ event.to_date }}</td>
                         <td>{{ event.cost }}</td>
+                        <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
                       </tr>
                       <tr class="description-row">
                         <td></td>
