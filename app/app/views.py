@@ -1,3 +1,4 @@
+import datetime
 import json
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
@@ -7,11 +8,13 @@ from django.utils.formats import get_format
 from django.views.decorators.http import require_POST
 from institutions.models import Event, Organization, UserProfile
 from institutions.forms import OrganizationForm, EventForm, UserProfileChangeForm, OrganizationPictureForm
-
+from .functions import paginated_list
 
 def calendar(request):
     """General calendar view, here should be shown all the events"""
-    return render(request, 'site/calendar.html')
+    events = paginated_list(request, Event, 20, '-from_date',
+                            from_date__gt=datetime.date.today)
+    return render(request, 'site/calendar.html', {'events': events})
 
 
 def capital(request):
