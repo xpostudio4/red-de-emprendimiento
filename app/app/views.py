@@ -13,7 +13,8 @@ from .functions import paginated_list
 def calendar(request):
     """General calendar view, here should be shown all the events"""
     events = paginated_list(request, Event, 20, 'from_date',
-                            from_date__gte=datetime.date.today)
+                            from_date__gte=datetime.date.today,
+                            organization__is_active=True)
     return render(request, 'site/calendar.html', {'events': events})
 
 
