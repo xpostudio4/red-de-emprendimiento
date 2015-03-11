@@ -1,8 +1,8 @@
 import datetime
 import json
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.decorators import login_required
 from django.utils.dateformat import DateFormat
 from django.utils.formats import get_format
 from django.views.decorators.http import require_POST
@@ -12,7 +12,7 @@ from .functions import paginated_list
 
 def calendar(request):
     """General calendar view, here should be shown all the events"""
-    events = paginated_list(request, Event, 20, '-from_date',
+    events = paginated_list(request, Event, 20, 'from_date',
                             from_date__gte=datetime.date.today)
     return render(request, 'site/calendar.html', {'events': events})
 
@@ -56,6 +56,7 @@ def dashboard(request):
     user_form = UserProfileChangeForm(request.POST or None,
                                       instance=request.user
                                      )
+    password_form = SetPasswordForm()
     user = UserProfile.objects.get(id=request.user.id)
     organization = Organization.objects.get(id=request.user.organization.id)
     events = Event.objects.filter(organization=user.organization).order_by('-from_date')
@@ -152,16 +153,6 @@ def inspire(request):
                                                 is_active=True)
     return render(request, 'site/list.html',
                   {'organizations' : organizations})
-
-
-def profile(request, slug):
-    """"Organization profile is displayed here"""
-    organization = get_object_or_404(Organization, slug=slug, is_active=True)
-    profile = UserProfile.objects.get(organization=organization)
-    events = Event.objects.filter(organization=organization).order_by('-from_date')
-    return render(request, 'site/profile.html', {'organization': organization,
-                                                 'profile': profile, 
-                                                 'events':events})
 
 
 @login_required
