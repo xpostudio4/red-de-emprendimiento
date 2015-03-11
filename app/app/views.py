@@ -37,7 +37,7 @@ def dashboard(request):
     user_form = UserProfileChangeForm(request.POST or None,
                                       instance=request.user
                                      )
-    password_form = SetPasswordForm()
+    password_form = SetPasswordForm(user=request.user)
     user = UserProfile.objects.get(id=request.user.id)
     organization = Organization.objects.get(id=request.user.organization.id)
     events = Event.objects.filter(organization=user.organization).order_by('-from_date')
