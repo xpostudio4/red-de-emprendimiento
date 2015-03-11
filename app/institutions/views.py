@@ -21,6 +21,14 @@ def create_event(request):
         return HttpResponseRedirect('/profile/dashboard/')
     return JsonResponse({'is_created': False, 'reasons': str(form.errors)})
 
+@require_POST
+@login_required
+def delete_event(request, event_id):
+    """
+    This view deletes the event after receiving a POST request.
+    """
+    pass
+
 
 @require_POST
 @login_required
