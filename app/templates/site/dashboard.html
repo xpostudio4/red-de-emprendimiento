@@ -3,6 +3,11 @@
 
 {% load staticfiles %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}/css/chosen.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}/datepicker/datepicker3.css">
+{% endblock extra_css %}
+
 {% block content %}
 
   <div class="container">
@@ -18,11 +23,11 @@
         <div class="dashboard-tabs">
           <div role="tabpanel" >
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active">
-                <a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a>
+              <li role="presentation"  class="active">
+                <a href="#events" aria-controls="events" role="tab" data-toggle="tab">Eventos</a>
               </li>
               <li role="presentation">
-                <a href="#eventos" aria-controls="events" role="tab" data-toggle="tab">Eventos</a>
+                <a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a>
               </li>
               <li role="presentation">
                 <a href="#change-password" aria-controls="change-password" role="tab" data-toggle="tab">Cambiar contrase&ntilde;a</a>
@@ -30,7 +35,7 @@
             </ul>
 
           <div class="tab-content">
-            <div role="tabpanel" class="tab-pane active" id="perfil">
+            <div role="tabpanel" class="tab-pane" id="perfil">
               <div class="change-profile">
               <div class="row">
                 <div class="col-sm-4">
@@ -38,7 +43,7 @@
                   <form action="/accounts/picture/" method="POST" enctype="multipart/form-data" id="id_picture_form">
                   {% csrf_token %}
    
-                    <div id="id_user_pic">
+                    <div id="id_user_pic" class="center-block">
          
                         {% if organization.logo %}
                             <img src="{{ organization.logo.url }}" >
@@ -60,7 +65,8 @@
                 </div><!-- /col -->
 
                 <div class="col-sm-8">
-                  <form class="form-horizontal">
+                  <form class="form-horizontal" action="." method="POST">
+                  {% csrf_token %}
                     <div class="col-sm-5">
                       <div class="form-group">
                         <label class="col-sm-3 control-label">Nombre</label>
@@ -75,7 +81,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-sm-3 control-label">Website</label>
+                        <label class="col-sm-3 control-label">Web</label>
                         <div class="col-sm-9">
                           {{ organization_form.url }}
                         </div>
@@ -102,16 +108,155 @@
                       </div>
                     </div><!-- /col-sm -->
                     <div class="col-sm-12">
+                      <label class=" control-label">Descripci&oacute;n</label>
                       {{ organization_form.description }}
+                       <button class="btn btn-success pull-right" type="submit">Actualizar</button>
                     </div>
+
                   </form>
                 </div><!-- /col-sm -->
               </div><!-- /row -->
                 
               </div><!-- /change-profile -->
             </div><!-- /tab-panel -->
-            <div role="tabpanel" class="tab-panel" id="events">
-              
+            <div role="tabpanel" class="tab-pane active" id="events">
+              <div class="row">
+                <div class="col-sm-12">
+                  <a class="btn btn-primary" id="event-form-btn">Crear Evento</a>
+                  <div id="event-form">
+                    <form class="form-horizontal" action="/accounts/create_event/" method="POST">
+                      {% csrf_token %}
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="col-sm-12">
+                          <div class="form-group">
+                            <label class="control-label col-sm-2">T&iacute;tulo</label>
+                            <div class="col-sm-10">
+                              {{ event_form.name }}
+                            </div><!-- /col-sm -->
+                          </div><!-- /form-group -->
+                        </div><!-- /col-sm -->
+                        
+                        <div class="col-sm-12">
+                          <div class="form-group">
+                            <label class="control-label col-sm-2">Categor&iacute;as</label>
+                            <div class="col-sm-10">
+                                {{ event_form.categories }}
+                            </div><!-- /col-sm -->
+                          </div><!-- /form-group -->
+                        </div><!-- /col-sm -->
+
+                        <div class="col-sm-6">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Inicia</label>
+                            <div class="col-sm-8">
+                                {{ event_form.from_date }}
+                            </div><!-- /col-sm -->
+                        </div><!-- /form-group -->
+
+                      </div>
+
+                      <div class="col-sm-6">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">Termina</label>
+                            <div class="col-sm-9">
+                                {{ event_form.to_date }}
+                            </div><!-- /col-sm -->
+                        </div><!-- /form-group -->
+
+                      </div>
+
+                      <div class="col-sm-6">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-4">Costo</label>
+                            <div class="col-sm-8">
+                                {{ event_form.cost }}
+                            </div><!-- /col-sm -->
+                        </div><!-- /form-group -->
+
+                      </div>
+
+                      <div class="col-sm-6">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3">Web</label>
+                            <div class="col-sm-9">
+                                {{ event_form.url }}
+                            </div><!-- /col-sm -->
+                        </div><!-- /form-group -->
+
+                      </div>
+
+
+                    </div><!-- /col-sm -->
+                    <div class="col-sm-6">
+                      <label>Descripci&oacute;n</label>
+                          {{ event_form.description }}
+                    </div>
+
+                    <div class="col-sm-12">
+                      <button class="btn btn-primary pull-right" type="submit">Enviar</button>
+                    </div>
+
+                    </div><!-- /row -->
+
+                    
+                    </form>
+                  </div>
+                  
+
+                  </div><!-- /col-sm -->
+               
+                </div><!-- /row-->
+
+                <div class="row">
+
+              <div class="col-sm-12">
+                {% if events %}
+                  <table class="table">
+                    <tr>
+                      <th></th>
+                      <th>T&iacute;tulo</th>
+                      <th>Categor&iacute;as</th>
+                      <th>Inicia</th>
+                      <th>Termina</th>
+                      <th>Costo</th>
+                    </tr>
+
+                    {% for event in events %}
+                    <div class="event-row">
+                      <tr>
+                        <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true" data-id="{{ event.id }}">&times;</span></button></td>
+                        <td><a class="show-description">{{ event.name }}</a></td>
+                        <td>
+                          {% for category in event.categories.all %}
+                            {{ category.name }}
+                          {% endfor %}
+                        </td>
+                        <td>{{ event.from_date }}</td>
+                        <td>{{ event.to_date }}</td>
+                        <td>{{ event.cost }}</td>
+                      </tr>
+                      <tr class="description-row">
+                        <td></td>
+                        <td colspan="5">{{ event.description }}</td>
+                      </tr>
+                    </div>
+                    {% endfor %}
+                  </table>
+                  {% else %}
+                  <div class="events-empty text-center">
+                    <p>No hay eventos</p>
+                    <a href="" class="btn btn-primary">Crear evento</a>
+                  </div>
+                  {% endif %}
+                </div>
+
+                </div>
+              </div>
             </div><!-- /tab-panel -->
             <div role="tabpanel" class="tab-panel" id="change-password">
               
@@ -126,3 +271,27 @@
 </div><!-- /container -->
 
 {% endblock content %}
+
+{% block extra_js %}
+  <script type="text/javascript" src="{{ STATIC_URL }}/js/chosen.jquery.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}/datepicker/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}/datepicker/bootstrap-datepicker.es.js"></script>
+  <script>
+  {# Here goes the code for using the categories as a selectpicker#}
+  $(document).ready(function(){
+    $('.event-category, .organization-category').chosen(
+      {
+        width:'100%',
+      }
+    );
+  });
+  </script>
+
+  <script type="text/javascript">
+  $('#id_from_date, #id_to_date').datepicker({
+      format: "yyyy-mm-dd",
+      language: "es",
+      todayHighlight: true
+    });
+  </script>
+{% endblock extra_js %}

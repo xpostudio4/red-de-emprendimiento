@@ -11,11 +11,13 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <div class="profile-box text-center slideRightX">
+        <div class="profile-box text-center">
           <h1>Perfil Institucional</h1>
-          <img src="{{ organization.get_picture_url }}" class="img-circle company-clear">
-          <h2>{{ organization.name }}</h2>
+          <img src="{{ organization.get_picture_url }}">
+          <h3>{{ organization.name }}</h3>
+          {% if organization.description %}
           <p>{{ organization.description }}</p>
+          {% endif %}
           <div class="profile-links">
             <table class="table">
               <tr>
@@ -24,7 +26,7 @@
               </tr>
               <tr>
                 <th>Teléfono</th>
-                <td>{{ profile.phone }}</td>
+                <td>{{ organization.phone }}</td>
               </tr>
               <tr>
                 <th>Email</th>
@@ -32,44 +34,57 @@
               </tr>
               <tr>
                 <th>Website</th>
-                <td><a href="{{ organization.url }}" target="_blank">{{ organization.url }}</a></td>
+                <td>
+                  {% if organization.url  %}
+                  <a href="{{ organization.url }}" target="_blank">{{ organization.url }}</a>
+                  {% endif %}
+                </td>
               </tr>
             </table>
-            <a href="" class="btn btn-primary btn-profile btn-block">Editar perfil</a>
+            {% if profile == request.user %}
+            <a href="/dashboard/" class="btn btn-primary btn-profile btn-block">Editar perfil</a>
+            {% endif %}
           </div><!-- /profile-links -->
         </div><!-- /profile-box -->
       </div><!-- /col-sm-8 -->
-      <div class="col-sm-8 slideLeftX">
+      <div class="col-sm-8">
       <div class="col-sm-4">
         <h1>Eventos</h1>
       </div>
       <div class="col-sm-8">
-        <a href="" class="btn btn-primary btn-event">A&ntilde;adir evento</a>
+        {% if profile == request.user %}
+            <a href="/dashboard/" class="btn btn-primary btn-event">Crear evento</a>
+         {% endif %}
       </div>
         <div class="col-sm-12">
-          <table class="table">
-            <tr>
-              <th>ID</th>
-              <th>Categoría</th>
-              <th>Título</th>
-              <th>Fecha</th>
-              <th>Precio</th>
-            </tr>
-            <tr>
-              <td>1834</td>
-              <td>Taller</td>
-              <td>Creatividad y oportunidad de negocios</td>
-              <td>18 Marzo 2015</td>
-              <td>Gratis</td>
-            </tr>
-            <tr>
-              <td>1313</td>
-              <td>Curso</td>
-              <td>Actitud emprendedora y plan de vida</td>
-              <td>9 de Abril 2015</td>
-              <td>RD$200</td>
-            </tr>
-          </table>
+           {% if events %}
+              <table class="table">
+                <tr>
+                  <th>Título</th>
+                  <th>Categorías</th>
+                  <th>Inicia</th>
+                  <th>Termina</th>
+                  <th>Costo</th>
+                </tr>
+
+                {% for event in events %}
+                <tr>
+                  <td>{{ event.name }}</td>
+                  <td>
+                    {% for category in event.categories.all %}
+                      {{ category.name }}
+                    {% endfor %}
+                  </td>
+                  <td>{{ event.from_date }}</td>
+                  <td>{{ event.to_date }}</td>
+                  <td>{{ event.cost }}</td>
+                </tr>
+                <tr>
+                  <td colspan="5">{{ event.description }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+          {% endif %}
         </div>
       </div>
     </div>

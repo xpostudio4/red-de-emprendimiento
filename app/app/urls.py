@@ -23,8 +23,6 @@ urlpatterns = patterns('',
     url(r'^signup/$', 'institutions.views.signup'),
     url(r'^dashboard/$', 'app.views.dashboard'),
     # Uncomment the admin/doc line below to enable admin documentation:
-    url(r'^event_creation/(?P<organization_id>\d+)/$', 'app.views.event_creation'),
-    url(r'^event_deletion/(?P<event_id>\d+)/$', 'app.views.event_deletion'),
     url(r'^user_validation/$', 'app.views.user_validation'),
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
@@ -41,3 +39,9 @@ urlpatterns = patterns('',
 #    urlpatterns += patterns('',
 #                            url(r'^__debug__/', include(debug_toolbar.urls)),
 #                            )
+
+if settings.DEBUG:
+    # static files (images, css, javascript, etc.)
+    urlpatterns += patterns('',
+        (r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+        'document_root': settings.MEDIA_ROOT})) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

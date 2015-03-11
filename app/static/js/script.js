@@ -91,6 +91,19 @@ $(document).ready(function() {
       $('#id_picture').trigger('click');
    });
 
+   // controls dashboard create event button
+
+
+   $( "#event-form-btn" ).click(function() {
+	  $( "#event-form" ).slideToggle( "slow", "linear" );
+	});
+
+	// controls dashboard show event description
+
+
+   $( ".show-description" ).click(function() {
+	  $( this ).parents('tr').next().slideToggle();
+	});
 
 
 });

@@ -16,9 +16,19 @@
         <ul class="nav nav-pills pull-right big-pills">
           <li role="presentation"><a href="#" class="custom-pills">Sobre</a></li>
            <li role="presentation"><a href="#" class="custom-pills">Eventos</a></li>
-           {% if user.is_authenticated %}
-           <li role="presentation"><a href="/dashboard/"
-           class="custom-pills">Panel de Control</a></li>
+           {% if request.user.is_authenticated %}
+            <li role="presentation">
+                <a class="dropdown-toggle custom-pills login-link " type="button" id="index-dropdown" data-toggle="dropdown" aria-expanded="true">
+                  Hola, {{ user.full_name }}
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Eventos</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard/">Perfil</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="dashboard/">Cambiar contrase&ntilde;a</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="/accounts/logout/">Cerrar sesi&oacute;n</a></li>
+                </ul>
+            </li>
            {% else %}
           <li role="presentation"><a href="#" class="custom-pills btn btn-default" data-toggle="modal" data-target="#signin-modal">Iniciar Sesión</a></li>
           {% endif %}

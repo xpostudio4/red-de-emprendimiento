@@ -53,8 +53,9 @@ def dashboard(request):
     user_form = UserProfileChangeForm(request.POST or None,
                                       instance=request.user
                                      )
+    user = UserProfile.objects.get(id=request.user.id)
     organization = Organization.objects.get(id=request.user.organization.id)
-    events = Event.objects.filter(organization=request.user.organization)
+    events = Event.objects.filter(organization=user.organization).order_by('-from_date')
     event_form = EventForm()
     organization_form = OrganizationForm(request.POST or None,
                                          instance=organization
@@ -155,8 +156,10 @@ def profile(request, slug):
     """"Organization profile is displayed here"""
     organization = get_object_or_404(Organization, slug=slug, is_active=True)
     profile = UserProfile.objects.get(organization=organization)
+    events = Event.objects.filter(organization=organization).order_by('-from_date')
     return render(request, 'site/profile.html', {'organization': organization,
-                                                 'profile': profile})
+                                                 'profile': profile, 
+                                                 'events':events})
 
 
 @login_required

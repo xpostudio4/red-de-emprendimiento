@@ -73,12 +73,16 @@ body {
 
 .custom-pills {
 	font-size: 18px;
-	color: #333;
+	color: #333 ;
 }
 
 .custom-pills:hover {
 	background-color: transparent !important;
 	color: #2d348c;
+}
+
+#index-dropdown {
+	color: #2d348c !important;
 }
 
 .navbar {
@@ -91,20 +95,21 @@ body {
 }
 
 .navbar-nav li {
-	padding: 12px 0px;
 	border-left: 1px solid #ddd;
 }
 
-.navbar-nav li:hover,
-.navbar li:focus {
-	background-color: #d12033;
-	border-color: #d12033;
-	color: #fff !important;
+.navbar-nav li a {
+	padding: 30px 15px;
+}
+
+.navbar-nav .dropdown-menu li a {
+	padding: 15px 30px;
 }
 
 .navbar-nav li a:hover {
+	background-color: #d12033 !important;
+	border-color: #d12033;
 	color: #fff !important;
-	background-color: #d12033;
 }
 
 .login-link {
@@ -117,6 +122,10 @@ body {
 .navbar-default .navbar-nav > .open > a:focus {
 	background-color: #d12033;
 	color: #fff;
+}
+
+.navbar-default .navbar-nav > li:hover {
+	color: #fff !important;  
 }
 
 /*******************************
@@ -232,6 +241,10 @@ body {
 	margin: 20px;
 }
 
+.company img {
+	width: 300px;
+}
+
 .company .btn-success:hover {
 	background-color: #282e7d;
 	border-color: #282e7d;
@@ -267,6 +280,10 @@ body {
 	color: #fff !important;
 }
 
+.profile-box img {
+	width: 300px;
+}
+
 /*******************************
     Dashboard Edit Profile
 *******************************/
@@ -291,6 +308,10 @@ body {
 	background-color: #fff;
 }
 
+.dashboard-tabs {
+	margin-bottom: 30px;
+}
+
 .change-profile {
 	padding: 30px 0px;
 	padding-left: 20px;
@@ -301,7 +322,6 @@ body {
 	margin-bottom: 20px;
 	position: relative;
 	height: 150px;
-	border: 1px solid #ddd;
 	overflow: hidden; 
 }
  
@@ -332,7 +352,50 @@ body {
 	visibility: hidden;
 }
 
+#id_description {
+	margin-bottom: 20px;
+}
 
+
+/*******************************
+    Dashboard Events
+*******************************/
+
+#events {
+	padding: 30px;
+}
+
+.events-empty {
+	border: 2px dotted #999;
+	color: #999;
+	font-size: 20px;
+	padding: 30px;
+}
+
+#events form {
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.datepicker.dropdown-menu {
+	width: 300px;
+}
+
+#event-form {
+	display: none;
+}
+
+#event-form-btn {
+	margin-bottom: 20px;
+}
+
+.description-row td {
+	border-top: none !important;
+}
+
+.description-row {
+	display: none;
+}
 
 /*******************************
            Calendar
@@ -415,3 +478,5 @@ body {
 .credits p {
 	margin: 0px;
 }
+
+
