@@ -67,7 +67,7 @@ def dashboard(request):
     organization_picture_form = OrganizationPictureForm(request.POST or None,
                                                         instance=organization
                                                        )
-        #Load the forms with data or the instance of the file if POST
+    #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
         organization_form = OrganizationForm(request.POST,
                                              instance=request.user.organization
@@ -86,6 +86,17 @@ def dashboard(request):
                    'events': events,
                   }
                  )
+
+
+def events_view(request, category_name):
+    """
+    This view show all the events based on the category they belong to.
+    """
+    events = paginated_list(request, Event, 20, 'from_date',
+                            from_date__gte=datetime.date.today,
+                            categories__name=category_name)
+    return render(request, 'site/list.html',
+                  {'events' : events})
 
 
 @login_required
