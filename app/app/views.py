@@ -1,8 +1,8 @@
 import datetime
 import json
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
-from django.contrib.auth.decorators import login_required
 from django.utils.dateformat import DateFormat
 from django.utils.formats import get_format
 from django.views.decorators.http import require_POST
@@ -12,40 +12,20 @@ from .functions import paginated_list
 
 def calendar(request):
     """General calendar view, here should be shown all the events"""
-    events = paginated_list(request, Event, 20, '-from_date',
-                            from_date__gte=datetime.date.today)
+    events = paginated_list(request, Event, 20, 'from_date',
+                            from_date__gte=datetime.date.today,
+                            organization__is_active=True)
     return render(request, 'site/calendar.html', {'events': events})
 
 
-def capital(request):
+def category(request, category_name):
     """
     The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
+    an specific  tag in their tag list.
     """
-    organizations = Organization.objects.filter(categories__name="Capital",
-                                                is_active=True)
-    return render(request, 'site/list.html',
-                  {'organizations' : organizations})
-
-
-def connect(request):
-    """
-    The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
-    """
-    organizations = Organization.objects.filter(categories__name="Conecta",
-                                                is_active=True)
-    return render(request, 'site/list.html',
-                  {'organizations' : organizations})
-
-
-def create(request):
-    """
-    The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
-    """
-    organizations = Organization.objects.filter(categories__name="Crea",
-                                                is_active=True)
+    organizations = paginated_list(request, Organization, 20, None,
+                                   categories__name=category_name,
+                                   is_active=True)
     return render(request, 'site/list.html',
                   {'organizations' : organizations})
 
@@ -56,6 +36,7 @@ def dashboard(request):
     user_form = UserProfileChangeForm(request.POST or None,
                                       instance=request.user
                                      )
+    password_form = SetPasswordForm()
     user = UserProfile.objects.get(id=request.user.id)
     organization = Organization.objects.get(id=request.user.organization.id)
     events = Event.objects.filter(organization=user.organization).order_by('-from_date')
@@ -66,7 +47,7 @@ def dashboard(request):
     organization_picture_form = OrganizationPictureForm(request.POST or None,
                                                         instance=organization
                                                        )
-        #Load the forms with data or the instance of the file if POST
+    #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
         organization_form = OrganizationForm(request.POST,
                                              instance=request.user.organization
@@ -85,6 +66,17 @@ def dashboard(request):
                    'events': events,
                   }
                  )
+
+
+def events_view(request, category_name):
+    """
+    This view show all the events based on the category they belong to.
+    """
+    events = paginated_list(request, Event, 20, 'from_date',
+                            from_date__gte=datetime.date.today,
+                            categories__name=category_name)
+    return render(request, 'site/list.html',
+                  {'events' : events})
 
 
 @login_required
@@ -123,17 +115,6 @@ def event_deletion(request, event_id):
     return HttpResponse("The item has been deleted")
 
 
-def guide(request):
-    """
-    The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
-    """
-    organizations = Organization.objects.filter(categories__name="Guia",
-                                                is_active=True)
-    return render(request, 'site/list.html',
-                  {'organizations' : organizations})
-
-
 def index(request):
     """
     The index is where most of the action in the page will happen,
@@ -141,27 +122,6 @@ def index(request):
     available for them here.
     """
     return render(request, 'site/index.html')
-
-
-def inspire(request):
-    """
-    The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
-    """
-    organizations = Organization.objects.filter(categories__name="Inspira",
-                                                is_active=True)
-    return render(request, 'site/list.html',
-                  {'organizations' : organizations})
-
-
-def profile(request, slug):
-    """"Organization profile is displayed here"""
-    organization = get_object_or_404(Organization, slug=slug, is_active=True)
-    profile = UserProfile.objects.get(organization=organization)
-    events = Event.objects.filter(organization=organization).order_by('-from_date')
-    return render(request, 'site/profile.html', {'organization': organization,
-                                                 'profile': profile, 
-                                                 'events':events})
 
 
 @login_required

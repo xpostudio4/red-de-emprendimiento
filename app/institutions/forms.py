@@ -93,6 +93,7 @@ class  UserProfileLoginForm(AuthenticationForm):
         for field in self.fields:
             self.fields[field].widget.attrs.update({'class':'form-control'})
 
+
 class OrganizationForm(forms.ModelForm):
 
     description = forms.CharField(label="Descripción", required=False,
@@ -132,6 +133,7 @@ class OrganizationPictureForm(forms.ModelForm):
                 'logo',
                 )
 
+
 class EventForm(forms.ModelForm):
     """Form to handle event forms"""
     description = forms.CharField(label="Descripción", widget=forms.Textarea(attrs={'rows':'5'}))
@@ -165,6 +167,7 @@ class EventForm(forms.ModelForm):
                 self.fields[field].widget.attrs.update({'class':'form-control'})
             else:
                 self.fields[field].widget.attrs.update({'class':'event-category'})
+
 
 class MailingListForm(forms.ModelForm):
 
