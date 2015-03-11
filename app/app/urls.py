@@ -10,11 +10,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'app.views.index'),
     # Examples:
-    url(r'^capital/$', 'app.views.capital'),
-    url(r'^conecta/$', 'app.views.connect'),
-    url(r'^crea/$', 'app.views.create'),
-    url(r'^guia/$', 'app.views.guide'),
-    url(r'^inspira/$', 'app.views.inspire'),
+    url(r'^category/(?P<category_name>[-\w\d]+)/$', 'app.views.category'),
     url(r'^profile/(?P<slug>[-\w\d]+)/$', 'app.views.profile'),
     url(r'^calendar/$', 'app.views.calendar'),
     url(r'^calendar/(?P<category_name>[-\w\d]+)/$', 'app.views.events_view'),

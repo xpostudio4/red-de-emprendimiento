@@ -17,35 +17,14 @@ def calendar(request):
     return render(request, 'site/calendar.html', {'events': events})
 
 
-def capital(request):
+def category(request, category_name):
     """
     The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
+    an specific  tag in their tag list.
     """
-    organizations = Organization.objects.filter(categories__name="Capital",
-                                                is_active=True)
-    return render(request, 'site/list.html',
-                  {'organizations' : organizations})
-
-
-def connect(request):
-    """
-    The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
-    """
-    organizations = Organization.objects.filter(categories__name="Conecta",
-                                                is_active=True)
-    return render(request, 'site/list.html',
-                  {'organizations' : organizations})
-
-
-def create(request):
-    """
-    The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
-    """
-    organizations = Organization.objects.filter(categories__name="Crea",
-                                                is_active=True)
+    organizations = paginated_list(request, Organization, 20, None,
+                                   categories__name=category_name,
+                                   is_active=True)
     return render(request, 'site/list.html',
                   {'organizations' : organizations})
 
@@ -135,17 +114,6 @@ def event_deletion(request, event_id):
     return HttpResponse("The item has been deleted")
 
 
-def guide(request):
-    """
-    The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
-    """
-    organizations = Organization.objects.filter(categories__name="Guia",
-                                                is_active=True)
-    return render(request, 'site/list.html',
-                  {'organizations' : organizations})
-
-
 def index(request):
     """
     The index is where most of the action in the page will happen,
@@ -153,17 +121,6 @@ def index(request):
     available for them here.
     """
     return render(request, 'site/index.html')
-
-
-def inspire(request):
-    """
-    The purpose of this page is to display all the organizations that have
-    'inspire' tag in their tag list.
-    """
-    organizations = Organization.objects.filter(categories__name="Inspira",
-                                                is_active=True)
-    return render(request, 'site/list.html',
-                  {'organizations' : organizations})
 
 
 @login_required
