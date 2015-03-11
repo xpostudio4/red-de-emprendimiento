@@ -73,7 +73,6 @@ def dashboard(request):
     else:
         organization_form = OrganizationForm(instance=request.user.organization)
         user_form = UserProfileChangeForm(instance=request.user)
-        print organization_form
     return render(request, 'site/dashboard.html',
                   {'organization': organization,
                    'organization_form': organization_form,
@@ -177,8 +176,6 @@ def picture_update(request):
             organization.logo = picture
             organization.save()
             return HttpResponseRedirect('/dashboard/')
-        else:
-            print form.errors
     else:
         return HttpResponseForbidden()
 
