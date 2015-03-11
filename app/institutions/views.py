@@ -3,8 +3,9 @@ from django.contrib.auth import login as django_login, authenticate, logout as d
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import SetPasswordForm
 from django.http import JsonResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_POST
+from .models import Event
 from .forms import (UserProfileLoginForm, CustomUserCreationForm,
                     OrganizationForm, EventForm)
 
@@ -20,8 +21,19 @@ def create_event(request):
         event.organization = request.user.organization
         event.save()
         form.save_m2m()
-        return JsonResponse({'is_created': True})
-    return JsonResponse({'is_created': False, 'reasons': str(form.errors)})
+        return HttpResponseRedirect('/dashboard/')
+
+@require_POST
+@login_required
+def delete_event(request, event_id):
+    """
+    This view deletes the event after receiving a POST request.
+    """
+    event = get_object_or_404(Event, id=event_id)
+    if request.user.organization == event.organization:
+        event.delete()
+        return JsonResponse({"is_deleted": True})
+    return JsonResponse({"is_deleted": False})
 
 
 @require_POST
@@ -42,7 +54,6 @@ def password_change(request):
 
 @require_POST
 def signin(request):
-
     """
     Log in view
     """

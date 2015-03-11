@@ -16,259 +16,65 @@
           <div class="col-sm-4">
            <h3 class="month"><i class="fa fa-arrow-left"></i> Junio <i class="fa fa-arrow-right"></i> </h3>
           </div>
+          {% if user.is_authenticated %}
           <div class="col-sm-5">
-            <a href="" class="btn btn-primary">Agregar Evento</a>
+            <a href="/dashboard/" class="btn btn-primary">Agregar Evento</a>
           </div>
+          {% endif %}
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="calendar-box">
-          <table class="table  table-bordered">
-            <tr>
-              <th>Lunes</th>
-              <th>Martes</th>
-              <th>Miercoles</th>
-              <th>Jueves</th>
-              <th>Viernes</th>
-              <th>Sabado</th>
-              <th>Domingo</th>
-            </tr>
-            <tr>
-              <td class="day">
-                <div>
-                  <p class="day-number">1</p>
-                </div>
-                <div class="activity">
-                  <p class="bg-success">Curso de Emprendedurismo</p>
-                </div>
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">2</p>
-                </div>
-                <div class="activity">
-                  <p class="bg-info">Taller de Inversion</p>
-                </div>
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">3</p>
-                </div>
-                <div class="activity">
-                  <p class="bg-warning">Almuerzo de Empresarios</p>
-                </div>
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">4</p>
-                </div>
-                <div class="activity">
-                  <p class="bg-danger">Charla de Manejo de Finanzas</p>
-                </div>
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">5</p>
-                </div>
-                <div class="activity">
-                  <p class="bg-success">Curso de Emprendedurismo</p>
-                </div>
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">6</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">7</p>
-                </div>
-                
-              </td>
-            </tr>
-            <tr>
-              <td class="day">
-                <div>
-                  <p class="day-number">8</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">9</p>
-                </div>
-              
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">10</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">11</p>
-                </div>
-               
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">12</p>
-                </div>
-               
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">13</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">14</p>
-                </div>
-                
-              </td>
-            </tr>
-            <tr>
-              <td class="day">
-                <div>
-                  <p class="day-number">15</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">16</p>
-                </div>
-              
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">17</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">18</p>
-                </div>
-               
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">19</p>
-                </div>
-               
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">20</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">21</p>
-                </div>
-                
-              </td>
-            </tr>
-            <tr>
-              <td class="day">
-                <div>
-                  <p class="day-number">22</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">23</p>
-                </div>
-              
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">24</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">25</p>
-                </div>
-               
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">26</p>
-                </div>
-               
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">27</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">28</p>
-                </div>
-                
-              </td>
-            </tr>
-            <tr>
-              <td class="day">
-                <div>
-                  <p class="day-number">29</p>
-                </div>
-                
-              </td>
-              <td class="day">
-                <div>
-                  <p class="day-number">30</p>
-                </div>
-              
-              </td>
-              <td class="day day-dark">
-                <div>
-                  <p class="day-number">1</p>
-                </div>
-                
-              </td>
-              <td class="day day-dark">
-                <div>
-                  <p class="day-number">2</p>
-                </div>
-               
-              </td>
-              <td class="day day-dark">
-                <div>
-                  <p class="day-number">3</p>
-                </div>
-               
-              </td>
-              <td class="day day-dark">
-                <div>
-                  <p class="day-number">4</p>
-                </div>
-                
-              </td>
-              <td class="day day-dark">
-                <div>
-                  <p class="day-number">5</p>
-                </div>
-                
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
+      {% if events %}
+      <table>
+        <tr>
+          <th>Nombre</th>
+          <th>Categorias</th>
+          <th>Inicia</th>
+          <th>Termina</th>
+          <th>Costo</th>
+          <th>URL</th>
+        </tr>
+        {% for event in events %}
+          <tr>
+            <td>{{ event.name }}</td>
+            <td>{% for category in event.categories.all %} {{ category.name }} {% endfor %}</td>
+            <td> {{ event.from_date }}</td>
+            <td> {{ event.to_date }}</td>
+            <td> {{ event.cost }}</td>
+            <td> {{ event.url }}</td>
+          </tr>
+        {% empty %}
+        No hay eventos creados aun
+        {% endfor %}
+      </table>
+      {% endif %}
     </div>
   </div><!-- /container -->
 </div><!-- /companies -->
+            {% if events %}
+            <nav>
+                <ul class="pagination">
+                    {% if events.has_previous %}
+                    <li>
+                        <a href="?page={{ events.previous_page_number }}">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    <li><a href="#"><span class="current">{{ events.number }}</span></a></li>
+                    
+                    {% if events.has_next %}
+                    <li>
+                        <a href="?page={{ events.next_page_number }}">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                </ul>
+            </nav>
+            {% endif %}
+
 
 {% endblock content %}

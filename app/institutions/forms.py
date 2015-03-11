@@ -143,7 +143,7 @@ class EventForm(forms.ModelForm):
             'class':'date',
             })
         )
-
+    
     class Meta:
         """Model inheritance settings"""
         model = Event

@@ -309,7 +309,7 @@ body {
 }
 
 .dashboard-tabs {
-	margin-bottom: 30px;
+	margin: 30px 0px;
 }
 
 .change-profile {
@@ -395,6 +395,13 @@ body {
 
 .description-row {
 	display: none;
+}
+
+.category-tag {
+	background-color: #337ab7; 
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 3px
 }
 
 /*******************************

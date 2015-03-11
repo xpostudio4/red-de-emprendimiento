@@ -95,7 +95,7 @@ $(document).ready(function() {
 
 
    $( "#event-form-btn" ).click(function() {
-	  $( "#event-form" ).slideToggle( "slow", "linear" );
+	  $( "#event-form" ).slideToggle( 500, "linear" );
 	});
 
 	// controls dashboard show event description

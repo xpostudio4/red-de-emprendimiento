@@ -3,6 +3,7 @@ from django.contrib.auth.views import logout
 
 urlpatterns = patterns('',
         url(r'^create_event/$', 'institutions.views.create_event'),
+        url(r'^delete_event/(?P<event_id>\d+)/$', 'institutions.views.delete_event'),
         url(r'^logout/$', logout, {'next_page': '/'}, name='logout'),
         url(r'^password_change/$', 'institutions.views.password_change'),
         url(r'^picture/$', 'app.views.picture_update'),

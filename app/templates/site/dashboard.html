@@ -11,14 +11,7 @@
 {% block content %}
 
   <div class="container">
-     <div class="row">
-       <div class="col-sm-12">
-          <h1>Dashboard</h1>
-        </div><!-- /col-sm-12 -->
-        <div class="col-sm-12">
-          
-        </div>
-    </div><!-- /row -->
+
     <div class="row">
       <div class="col-sm-12 ">
         <div class="dashboard-tabs">
@@ -29,7 +22,7 @@
               </li>
               <li role="presentation">
                 <a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a>
-              </li>            
+              </li>
               <li role="presentation">
                 <a href="#change-password" aria-controls="change-password" role="tab" data-toggle="tab">Cambiar contrase&ntilde;a</a>
               </li>
@@ -117,7 +110,6 @@
                   </form>
                 </div><!-- /col-sm -->
               </div><!-- /row -->
-                
               </div><!-- /change-profile -->
             </div><!-- /tab-panel -->
             <div role="tabpanel" class="tab-pane active" id="events">
@@ -230,20 +222,20 @@
 
                     {% for event in events %}
                     <div class="event-row">
-                      <tr>
-                        <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true" data-id="{{ event.id }}">&times;</span></button></td>
-                        <td>{{ event.name }}</td>
+                      <tr id="event-{{ event.id }}">
+                        <td><button type="button" data-id="{{ event.id }}" class="close delete-event" aria-label="close"><span aria-hidden="true">&times;</span></button></td>
+                        <td><a>{{ event.name }}</a></td>
                         <td>
-                          {% for category in event.categories.all %}
+                          <span class="category-tag">{% for category in event.categories.all %}
                             {{ category.name }}
-                          {% endfor %}
+                          {% endfor %}</span>
                         </td>
                         <td>{{ event.from_date }}</td>
                         <td>{{ event.to_date }}</td>
                         <td>{{ event.cost }}</td>
                         <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
                       </tr>
-                      <tr class="description-row">
+                      <tr id="description-{{ event.id }}" class="description-row">
                         <td></td>
                         <td colspan="5">{{ event.description }}</td>
                       </tr>
@@ -297,4 +289,41 @@
       todayHighlight: true
     });
   </script>
+<script>
+var delete_event = $('.delete-event');
+delete_event.click(function(event){
+  event.preventDefault();
+
+  var event_deletion = confirm("Estas seguro que deseas borrar este evento?");
+
+  if(event_deletion == true){
+    var event_id = this.dataset.id;
+
+    $.ajax({
+      url: '/accounts/delete_event/'+ event_id + '/',
+      type: 'POST',
+      data: {csrfmiddlewaretoken:'{{csrf_token}}' },
+      success:
+        function(result){
+        if( result.is_deleted == true){
+        // on success the element and the comment must be deleted
+          var event_div = document.querySelector('#event-' + event_id );
+          var event_desc = document.querySelector('#description-' + event_id );
+          event_div.parentNode.removeChild(event_div);
+          event_desc.parentNode.removeChild(event_desc);
+        }else{
+         alert('El evento no ha podido ser borrado');
+        }
+      },
+      error:
+        function(){
+          alert('El servidor presenta un error intentelo mas tarde.');
+      },
+    });
+
+  }else{
+    return false;
+  }
+});
+</script>
 {% endblock extra_js %}
