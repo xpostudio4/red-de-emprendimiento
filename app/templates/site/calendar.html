@@ -5,12 +5,12 @@
 
 {% block content %}
 
+
 <div class="calendar">
   <div class="container">
-   <div class="calendar-header">
-       <div class="row">
-     
-         <div class="col-sm-3">
+    <div class="row">
+      <div class="calendar-header">
+        <div class="col-sm-3">
             <h1>Calendario</h1>
           </div>
           <div class="col-sm-4">
@@ -22,35 +22,44 @@
           </div>
           {% endif %}
       </div>
-      {% if events %}
-      <table>
-        <tr>
-          <th>Nombre</th>
-          <th>Categorias</th>
-          <th>Inicia</th>
-          <th>Termina</th>
-          <th>Costo</th>
-          <th>URL</th>
-        </tr>
-        {% for event in events %}
-          <tr>
-            <td>{{ event.name }}</td>
-            <td>{% for category in event.categories.all %} {{ category.name }} {% endfor %}</td>
-            <td> {{ event.from_date }}</td>
-            <td> {{ event.to_date }}</td>
-            <td> {{ event.cost }}</td>
-            <td> {{ event.url }}</td>
-          </tr>
-        {% empty %}
-        No hay eventos creados aun
-        {% endfor %}
-      </table>
-      {% endif %}
     </div>
-  </div><!-- /container -->
-</div><!-- /companies -->
-            {% if events %}
-            <nav>
+    <div class="row">
+      <div class="col-sm-12">
+         {% if events %}
+            <table class="table">
+              <tr>
+                <th>Nombre</th>
+                <th>Categorias</th>
+                <th>Inicia</th>
+                <th>Termina</th>
+                <th>Costo</th>
+                <th>Descripción</th>
+              </tr>
+              {% for event in events %}
+                <tr>
+                  <td><a href="{{ event.url }}">{{ event.name }}</a></td>
+                  <td>
+                    {% for category in event.categories.all %}
+                    <span class="category-tag">
+                      {{ category.name }}
+                    </span>
+                    {% endfor %}
+                  </td>
+                  <td> {{ event.from_date }}</td>
+                  <td> {{ event.to_date }}</td>
+                  <td> {{ event.cost }}</td>
+                  <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
+                </tr>
+                <tr id="description-{{ event.id }}" class="description-row">
+                  <td colspan="5">{{ event.description }}</td>
+                </tr>
+              {% empty %}
+              No hay eventos creados aun
+              {% endfor %}
+            </table>
+          {% endif %}
+          {% if events %}
+            <nav class="text-center">
                 <ul class="pagination">
                     {% if events.has_previous %}
                     <li>
@@ -75,6 +84,13 @@
                 </ul>
             </nav>
             {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 {% endblock content %}

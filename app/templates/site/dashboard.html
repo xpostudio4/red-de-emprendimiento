@@ -21,6 +21,9 @@
                 <a href="#events" aria-controls="events" role="tab" data-toggle="tab">Eventos</a>
               </li>
               <li role="presentation">
+                <a href="#users-list" aria-controls="home" role="tab" data-toggle="tab">Usuarios</a>
+              </li>
+              <li role="presentation">
                 <a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a>
               </li>
               <li role="presentation">
@@ -142,9 +145,11 @@
                           <td><button type="button" data-id="{{ event.id }}" class="close delete-event" aria-label="close"><span aria-hidden="true">&times;</span></button></td>
                           <td><a>{{ event.name }}</a></td>
                           <td>
-                            <span class="category-tag">{% for category in event.categories.all %}
+                            {% for category in event.categories.all %}
+                            <span class="category-tag">
                               {{ category.name }}
-                            {% endfor %}</span>
+                            </span>
+                            {% endfor %}
                           </td>
                           <td>{{ event.from_date }}</td>
                           <td>{{ event.to_date }}</td>
@@ -167,6 +172,70 @@
                   </div><!-- /col-sm-12 -->
               </div><!-- /row -->
             
+            </div><!-- /tab-panel -->
+
+            <div role="tabpanel" class="tab-pane" id="users-list">
+              <div class="row">
+                <div class="col-sm-12">
+                  <button class="btn btn-primary" id="add-new-user-btn">Agregar Usuario</button>
+
+                  <div id="add-new-user-form">
+                    <form class="form-horizontal" method="POST">
+                      {% csrf_token %}
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Nombre</label>
+                            <div class="col-sm-9">
+                              <input class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Apellido</label>
+                            <div class="col-sm-9">
+                              <input class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Email</label>
+                            <div class="col-sm-9">
+                              <input class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <button class="btn btn-primary pull-right" type="submit">Agregar</button>
+                        </div>
+                      </div>
+                      
+                    </form>
+                  </div>
+
+                </div>
+                <div class="col-sm-12">
+                  <table class="table">
+                    <tr>
+                      <th></th>
+                      <th>Nombre</th>
+                      <th>Apellido</th>
+                      <th>Email</th>
+                    </tr>
+                    <tr>
+                      <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+                      <td>Vivian</td>
+                      <td>Guillen</td>
+                      <td>vivian@viviangb.com</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div><!-- /tab-panel -->
 
             <div role="tabpanel" class="tab-pane" id="perfil">

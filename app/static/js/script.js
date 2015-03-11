@@ -98,6 +98,13 @@ $(document).ready(function() {
 	  $( "#event-form" ).slideToggle( 500, "linear" );
 	});
 
+   // controls dashboard add user button
+
+
+   $( "#add-new-user-btn" ).click(function() {
+	  $( "#add-new-user-form" ).slideToggle( 500, "linear" );
+	});
+
 	// controls dashboard show event description
 
 
