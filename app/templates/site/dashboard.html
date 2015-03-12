@@ -21,6 +21,9 @@
                 <a href="#events" aria-controls="events" role="tab" data-toggle="tab">Eventos</a>
               </li>
               <li role="presentation">
+                <a href="#users-list" aria-controls="home" role="tab" data-toggle="tab">Usuarios</a>
+              </li>
+              <li role="presentation">
                 <a href="#perfil" aria-controls="home" role="tab" data-toggle="tab">Perfil</a>
               </li>
               <li role="presentation">
@@ -142,9 +145,11 @@
                           <td><button type="button" data-id="{{ event.id }}" class="close delete-event" aria-label="close"><span aria-hidden="true">&times;</span></button></td>
                           <td><a>{{ event.name }}</a></td>
                           <td>
-                            <span class="category-tag">{% for category in event.categories.all %}
+                            {% for category in event.categories.all %}
+                            <span class="category-tag">
                               {{ category.name }}
-                            {% endfor %}</span>
+                            </span>
+                            {% endfor %}
                           </td>
                           <td>{{ event.from_date }}</td>
                           <td>{{ event.to_date }}</td>
@@ -167,6 +172,68 @@
                   </div><!-- /col-sm-12 -->
               </div><!-- /row -->
             
+            </div><!-- /tab-panel -->
+
+            <div role="tabpanel" class="tab-pane" id="users-list">
+              <div class="row">
+                <div class="col-sm-12">
+                  <button class="btn btn-primary" id="add-new-user-btn">Agregar Usuario</button>
+
+                  <div id="add-new-user-form">
+                    <form class="form-horizontal" method="POST">
+                      {% csrf_token %}
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Nombre</label>
+                            <div class="col-sm-9">
+                              <input class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Apellido</label>
+                            <div class="col-sm-9">
+                              <input class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label class="col-sm-3 control-label">Email</label>
+                            <div class="col-sm-9">
+                              <input class="form-control">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <button class="btn btn-primary pull-right" type="submit">Agregar</button>
+                        </div>
+                      </div>
+                      
+                    </form>
+                  </div>
+
+                </div>
+                <div class="col-sm-12">
+                  <table class="table">
+                    <tr>
+                      <th></th>
+                      <th>Nombre Completo</th>
+                      <th>Email</th>
+                    </tr>
+                    <tr>
+                      <td><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+                      <td>Vivian</td>
+                      <td>vivian@viviangb.com</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div><!-- /tab-panel -->
 
             <div role="tabpanel" class="tab-pane" id="perfil">
@@ -357,9 +424,66 @@
               {% endif %}
             </div><!-- /tab-panel -->
 
-            <div role="tabpanel" class="tab-panel" id="change-password">
-
-            </div><!-- /tab-panel -->
+            <div role="tabpanel" class="tab-pane" id="change-password">
+              <div class="row">
+                <div class="col-sm-12">
+                  <form method="POST" action="/profiles/password_change/" id="password-change-form" class="form-horizontal">
+                    {% csrf_token %}
+                    <div class="alert alert-danger hidden" id="change_error_message" role="alert"></div>
+                    <div class="alert alert-success hidden" id="change_success_message" role="alert">La contrase&ntilde;a ha sido cambiada</div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Nueva Contraseña</label>
+                      <div class="col-sm-4">
+                        {{ password_form.new_password1 }}
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Confirmar Nueva Contraseña</label>
+                      <div class="col-sm-4">
+                        {{ password_form.new_password2 }}
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-primary pull-right" id="password-change" type="submit" >Guardar</button>
+                    </div>
+                 </form>
+                </div>
+              </div>
+              
+               <script>
+                  var password_change = $('#password-change');
+                  password_change.click(function(event){
+                    event.preventDefault();
+                    $.ajax({
+                      url: '/profiles/password_change/',
+                      data: $('#password-change-form').serialize(),
+                      type: "POST",
+                      success:
+                        function(result){
+                          //if result.is_changed is true activate message
+                          //telling the user the password has been changed
+                          alert('it happened');
+                        if(result.is_changed){
+                          if(!$('#change_success_message').hasClass('hidden')){
+                              $('#change_success_message').addClass('hidden');
+                          }
+                          $('#change_success_message').removeClass('hidden');;
+                        }else{
+                          //else it should display
+                          if(!$('#change_success_message').hasClass('hidden')){
+                            $('#change_success_message').addClass('hidden');
+                          }
+                          $('#change_error_message').html(result.reasons).removeClass('hidden');
+                        }
+                      },
+                      error:
+                        function(){
+                          $('#change_error_message').val('Estamos experimentando problemas con el servidor. Intentelo luego.').show();
+                      }
+                    });
+                  });
+               </script>
+            </div><!-- /tabpanel -->
 
           </div><!-- /tab-content -->
 

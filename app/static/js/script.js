@@ -98,6 +98,13 @@ $(document).ready(function() {
 	  $( "#event-form" ).slideToggle( 500, "linear" );
 	});
 
+   // controls dashboard add user button
+
+
+   $( "#add-new-user-btn" ).click(function() {
+	  $( "#add-new-user-form" ).slideToggle( 500, "linear" );
+	});
+
 	// controls dashboard show event description
 
 
@@ -105,5 +112,7 @@ $(document).ready(function() {
 	  $( this ).parents('tr').next().slideToggle();
 	});
 
+   // add class to change password form
 
+   $('#id_new_password1, #id_new_password2').addClass('form-control');
 });
