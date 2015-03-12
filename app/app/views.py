@@ -35,25 +35,21 @@ def category(request, category_name):
 def dashboard(request):
     """User and organization edit board, here events are created"""
     user_form = UserProfileChangeForm(request.POST or None,
-                                      instance=request.user
-                                     )
+                                      instance=request.user)
     password_form = SetPasswordForm(user=request.user)
     user = UserProfile.objects.get(id=request.user.id)
     organization = Organization.objects.get(id=request.user.organization.id)
     events = Event.objects.filter(organization=user.organization).order_by('-from_date')
     event_form = EventForm()
     organization_form = OrganizationForm(request.POST or None,
-                                         instance=organization
-                                        )
+                                         instance=organization)
     organization_picture_form = OrganizationPictureForm(request.POST or None,
-                                                        instance=organization
-                                                       )
+                                                        instance=organization)
     new_orgs = Organization.objects.filter(is_active=False)
     #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
         organization_form = OrganizationForm(request.POST,
-                                             instance=request.user.organization
-                                            )
+                                             instance=request.user.organization)
         if organization_form.is_valid():
             organization = organization_form.save()
     else:
