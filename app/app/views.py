@@ -25,7 +25,7 @@ def category(request, category_name):
     an specific  tag in their tag list.
     """
     organizations = paginated_list(request, Organization, 20, None,
-                                   categories__name=category_name,
+                                   categories__name=category_name.capitalize(),
                                    is_active=True)
     return render(request, 'site/list.html',
                   {'organizations' : organizations})
@@ -48,6 +48,7 @@ def dashboard(request):
     organization_picture_form = OrganizationPictureForm(request.POST or None,
                                                         instance=organization
                                                        )
+    new_orgs = Organization.objects.filter(is_active=False)
     #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
         organization_form = OrganizationForm(request.POST,
@@ -59,7 +60,8 @@ def dashboard(request):
         organization_form = OrganizationForm(instance=request.user.organization)
         user_form = UserProfileChangeForm(instance=request.user)
     return render(request, 'site/dashboard.html',
-                  {'organization': organization,
+                  {'new_orgs': new_orgs,
+                   'organization': organization,
                    'organization_form': organization_form,
                    'organization_picture_form': organization_picture_form,
                    'event_form': event_form,

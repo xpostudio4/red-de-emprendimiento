@@ -317,8 +317,8 @@
             </div><!-- /tab-panel -->
             <div role="tabpanel" class="tab-pane" id="approval">
 
-              {% if new_org in new_orgs %}
-              <div class="new-org">
+              {% for new_org in new_orgs %}
+              <div class="new-org" id="org-{{ new_org.id }}" >
                 <div class="row">
                   <div class="col-sm-4">
 
@@ -327,8 +327,7 @@
                     {% else %}
                         <img src="{{ STATIC_URL }}img/companies/default.jpg">
                     {% endif %}
-            
-                  </div> 
+                  </div>
                   <div class="col-sm-8">
 
                     <div class="row">
@@ -407,23 +406,22 @@
                         </div>
                       </div>
 
-                      <button class="btn btn-primary pull-right">Aprobar</button>
+                      <button class="btn btn-primary pull-right new-organization" data-organization-id="{{ new_org.id }}">Aprobar</button>
                   </div>
 
-                      
                 </div><!-- /row -->
               </div><!-- /new-org -->
-              {% else %}
+              {% empty %}
               <div class="empty">
                 <p class="text-center">No hay organizaciones por aprobar</p>
               </div>
-              {% endif %}
+              {% endfor %}
             </div><!-- /tab-panel -->
 
             <div role="tabpanel" class="tab-pane" id="change-password">
               <div class="row">
                 <div class="col-sm-12">
-                  <form method="POST" action="/profiles/password_change/" id="password-change-form" class="form-horizontal">
+                  <form method="POST" action="/accounts/password_change/" id="password-change-form" class="form-horizontal">
                     {% csrf_token %}
                     <div class="alert alert-danger hidden" id="change_error_message" role="alert"></div>
                     <div class="alert alert-success hidden" id="change_success_message" role="alert">La contrase&ntilde;a ha sido cambiada</div>
@@ -518,5 +516,33 @@ delete_event.click(function(event){
     return false;
   }
 });
+
+var new_orgs = $('.new-organization');
+    new_orgs.click(function(event){
+      event.preventDefault();
+      var organization_id = this.dataset.organizationId;
+
+      $.ajax({
+        url: '/accounts/approve/'+ organization_id + '/',
+        type: 'POST',
+        data: {csrfmiddlewaretoken:'{{csrf_token}}' },
+        success:
+          function(result){
+          if( result.is_approved == true){
+          // on success the element and the comment must be deleted
+          var org = document.querySelector('#org-' + organization_id );
+          org.parentNode.removeChild(org);
+
+          }else{
+             alert('El evento no ha podido ser borrado');
+          }
+        },
+        error:
+          function(){
+            alert('El servidor presenta un error intentelo mas tarde.');
+        },
+      });
+
+    });
 </script>
 {% endblock extra_js %}

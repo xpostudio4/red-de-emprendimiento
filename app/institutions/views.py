@@ -1,13 +1,26 @@
-import json
-from django.contrib.auth import login as django_login, authenticate, logout as django_logout
+from django.contrib.auth import (login as django_login, authenticate,
+                                 logout as django_logout)
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import SetPasswordForm
 from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_POST
-from .models import Event
+from .models import Event, Organization
 from .forms import (UserProfileLoginForm, CustomUserCreationForm,
                     OrganizationForm, EventForm)
+
+@require_POST
+@login_required
+def approve_organization(request, organization_id):
+    """This function responde to an ajax request asking to approve an
+    organization"""
+    if request.user.is_admin:
+        organization = Organization.objects.get(id=organization_id)
+        organization.is_active = True
+        organization.save()
+        return JsonResponse({'is_approved': True})
+    return JsonResponse({'is_approved': False,
+                         'reason': 'Solo los administradores pueden aprobar'})
 
 
 @require_POST
