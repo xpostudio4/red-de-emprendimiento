@@ -115,4 +115,46 @@ $(document).ready(function() {
    // add class to change password form
 
    $('#id_new_password1, #id_new_password2').addClass('form-control');
+
+
+
+
+
+
+
+   var password_change = $('#password-change');
+                  password_change.click(function(event){
+                    event.preventDefault();
+                    $.ajax({
+                      url: '/profiles/password_change/',
+                      data: $('#password-change-form').serialize(),
+                      type: "POST",
+                      success:
+                        function(result){
+                          //if result.is_changed is true activate message
+                          //telling the user the password has been changed
+                          alert('it happened');
+                        if(result.is_changed){
+                          if(!$('#change_success_message').hasClass('hidden')){
+                              $('#change_success_message').addClass('hidden');
+                          }
+                          $('#change_success_message').removeClass('hidden');;
+                        }else{
+                          //else it should display
+                          if(!$('#change_success_message').hasClass('hidden')){
+                            $('#change_success_message').addClass('hidden');
+                          }
+                          $('#change_error_message').html(result.reasons).removeClass('hidden');
+                        }
+                      },
+                      error:
+                        function(){
+                          $('#change_error_message').val('Estamos experimentando problemas con el servidor. Intentelo luego.').show();
+                      }
+                    });
+                  });
+
+
+
+
 });

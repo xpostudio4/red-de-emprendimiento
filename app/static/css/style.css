@@ -358,7 +358,7 @@ body {
 
 
 /*******************************
-    Dashboard Events
+    Dashboard
 *******************************/
 
 #events {
@@ -405,9 +405,6 @@ body {
 	margin: 0px 5px;
 }
 
-/*******************************
-    Dashboard Approval
-*******************************/
 
 #approval {
 	padding: 30px;
@@ -425,10 +422,6 @@ body {
 .new-org-field {
 	margin: 10px 0px;
 }
-
-/*******************************
-    Dashboard Users List
-*******************************/
 
 #users-list {
 	padding: 30px;
