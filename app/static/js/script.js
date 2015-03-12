@@ -126,7 +126,7 @@ $(document).ready(function() {
                   password_change.click(function(event){
                     event.preventDefault();
                     $.ajax({
-                      url: '/profiles/password_change/',
+                      url: '/accounts/password_change/',
                       data: $('#password-change-form').serialize(),
                       type: "POST",
                       success:
@@ -138,7 +138,7 @@ $(document).ready(function() {
                           if(!$('#change_success_message').hasClass('hidden')){
                               $('#change_success_message').addClass('hidden');
                           }
-                          $('#change_success_message').removeClass('hidden');;
+                          $('#change_success_message').removeClass('hidden');
                         }else{
                           //else it should display
                           if(!$('#change_success_message').hasClass('hidden')){

@@ -431,7 +431,7 @@
             <div role="tabpanel" class="tab-pane" id="change-password">
               <div class="row">
                 <div class="col-sm-12">
-                  <form method="POST" action="/profiles/password_change/" id="password-change-form" class="form-horizontal">
+                  <form method="POST" action="/accounts/password_change/" id="password-change-form" class="form-horizontal">
                     {% csrf_token %}
                     <div class="alert alert-danger hidden" id="change_error_message" role="alert"></div>
                     <div class="alert alert-success hidden" id="change_success_message" role="alert">La contrase&ntilde;a ha sido cambiada</div>
