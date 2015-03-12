@@ -73,6 +73,8 @@ def signup(request):
     """
     User registration view.
     """
+    if request.user.is_authenticated():
+        return HttpResponseRedirect('/')
     user_form = CustomUserCreationForm(request.POST or None)
     organization_form = OrganizationForm(request.POST or None)
     if request.method == 'POST':
