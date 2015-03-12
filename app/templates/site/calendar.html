@@ -22,65 +22,66 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-         {% if events %}
-            <table class="table">
-              <tr>
-                <th>Nombre</th>
-                <th>Categorias</th>
-                <th>Inicia</th>
-                <th>Termina</th>
-                <th>Costo</th>
-                <th>Descripción</th>
-              </tr>
-              {% for event in events %}
-                <tr>
-                  <td><a href="{{ event.url }}">{{ event.name }}</a></td>
-                  <td>
-                    {% for category in event.categories.all %}
-                    <span class="category-tag">
-                      {{ category.name }}
-                    </span>
-                    {% endfor %}
-                  </td>
-                  <td> {{ event.from_date }}</td>
-                  <td> {{ event.to_date }}</td>
-                  <td> {{ event.cost }}</td>
-                  <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
-                </tr>
-                <tr id="description-{{ event.id }}" class="description-row">
-                  <td colspan="5">{{ event.description }}</td>
-                </tr>
-              {% empty %}
-              No hay eventos creados aun
-              {% endfor %}
-            </table>
-          {% endif %}
-          {% if events %}
-            <nav class="text-center">
-                <ul class="pagination">
-                    {% if events.has_previous %}
-                    <li>
-                        <a href="?page={{ events.previous_page_number }}">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    {% endif %}
 
-                    <li><a href="#"><span class="current">{{ events.number }}</span></a></li>
-                    
-                    {% if events.has_next %}
-                    <li>
-                        <a href="?page={{ events.next_page_number }}">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                    {% endif %}
-                    
-                </ul>
-            </nav>
-            {% endif %}
+      
+      {% for event in events %}
+
+      <div class="event-box">
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <div class="event-day-box ">
+            <h3>{{ event.from_date|date:"M" }}</h3>
+            <h2>{{ event.from_date|date:"d" }}</h2>
+          </div>
+        </div>
+        <div class="col-sm-10">
+          <div class="event-info-box">
+            <a href=""><h3>{{ event.name }}</h3></a>
+            <p>
+              <span style="margin-right:20px;"><b>Costo:</b> {{ event.cost }}</span>
+              <span ><b>Categorías:</b> 
+                {% for category in event.categories.all %}
+                      <span class="category-tag">
+                        <a href="/calendar/{{ category.name }}/">{{ category.name }}</a>
+                      </span>
+                {% endfor %}
+              </span>
+            </p>
+            <p><b>Descripción:</b> <br> {{ event.description }}</p>
+          </div>
+        </div>
+      </div>
+        
+      </div>
+
+        {% endfor %}
+
+        {% if events %}
+        <nav class="text-center">
+            <ul class="pagination">
+                {% if events.has_previous %}
+                <li>
+                    <a href="?page={{ events.previous_page_number }}">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                {% endif %}
+
+                <li><a href="#"><span class="current">{{ events.number }}</span></a></li>
+                
+                {% if events.has_next %}
+                <li>
+                    <a href="?page={{ events.next_page_number }}">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+                {% endif %}
+                
+            </ul>
+        </nav>
+        {% endif %}
 
       </div>
     </div>

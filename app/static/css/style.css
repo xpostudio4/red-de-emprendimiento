@@ -398,11 +398,17 @@ body {
 }
 
 .category-tag {
-	background-color: #337ab7; 
+	background-color: #888; 
 	color: #fff;
 	padding: 5px 10px;
 	border-radius: 3px;
 	margin: 0px 5px;
+}
+
+
+.category-tag a {
+	color: #fff;
+	text-decoration: none;
 }
 
 
@@ -416,7 +422,7 @@ body {
 }
 
 .new-org img {
-	width: 300px
+	width: 250px
 }
 
 .new-org-field {
@@ -450,11 +456,7 @@ body {
 }
 
 .calendar h1 {
-	margin: 10px 0px;
-}
-
-.calendar th {
-	background-color: #F3F3F3;
+	margin-bottom: 30px;
 }
 
 .calendar .btn-primary {
@@ -465,33 +467,34 @@ body {
 	margin-bottom: 10px;
 }
 
-.month i {
-	margin: 0px 30px;
-	color: #D12033;
+.event-box {
+	padding: 0px 10px;
+	margin-bottom: 15px;
 }
 
-.day {
-	padding: 0px !important;
-	background-color: #F9F9F9;
-	width: 150px !important;
-	height: 120px;
-	min-height: 100px
+.event-day-box {
+	color: #d12033;
+	border: 1px solid #ddd;
+	width: 100px;
+	display: block;
+	margin: 0 auto;
+	padding: 15px 10px;
+	border-radius: 5px;
 }
 
-.day-dark {
-	background-color: #fff;
+.event-day-box h3,
+.event-day-box h2 {
+	margin: 5px 0px;
 }
 
-.day-number {
-	padding: 5px 10px;
+.event-info-box p {
+	margin: 15px 0px;
+}
+
+.event-info-box h3 {
 	margin: 0px;
 }
 
-.activity p {
-	padding: 5px;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-}
 
 
 /*******************************
