@@ -495,7 +495,27 @@ body {
 	margin: 0px;
 }
 
+/*******************************
+           About
+*******************************/
 
+.about h3 {
+	color: #d12033;
+}
+
+.about h4 {
+	color: #282e7d;
+}
+
+.eje {
+	margin: 30px 0px;
+}
+
+.about a {
+	font-size: 18px;
+	color: #282e7d;
+	text-decoration: underline;
+}
 
 /*******************************
            Footer
@@ -503,7 +523,13 @@ body {
 
 .footer {
 	background-color: #353740;
-	padding: 50px;
+	padding: 30px;
+}
+
+.footer a {
+	color: #fff;
+	font-size: 50px;
+	margin: 0px 10px;
 }
 
 

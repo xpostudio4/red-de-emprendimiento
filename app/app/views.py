@@ -11,6 +11,10 @@ from institutions.models import Event, Organization, UserProfile
 from institutions.forms import OrganizationForm, EventForm, UserProfileChangeForm, OrganizationPictureForm
 from .functions import paginated_list
 
+
+def about(request):
+    return render(request, 'site/about.html')
+
 def calendar(request):
     """General calendar view, here should be shown all the events"""
     events = paginated_list(request, Event, 20, 'from_date',
