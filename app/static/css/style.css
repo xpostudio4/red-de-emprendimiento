@@ -246,7 +246,9 @@ body {
 }
 
 .company img {
-	width: 300px;
+	max-width: 300px;
+	height: 100px;
+	width: auto;
 }
 
 .company .btn-success:hover {
@@ -407,6 +409,7 @@ body {
 	padding: 5px 10px;
 	border-radius: 3px;
 	margin: 0px 5px;
+	margin-bottom: 10px;
 }
 
 
