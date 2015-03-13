@@ -388,11 +388,11 @@
                            <label>Categor&iacute;as</label>
                         </div>
                         <div class="col-sm-4">
+                          {% for category in new_org.categories.all %}
                             <span class="category-tag">
-                              {% for category in new_org.categories.all %}
-                                {{ category.name }}
-                              {% endfor %}
+                                {{ category.name }}                              
                             </span>
+                          {% endfor %}
                         </div>
                       </div>
                     </div>
