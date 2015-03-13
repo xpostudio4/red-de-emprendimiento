@@ -524,12 +524,17 @@ body {
 .footer {
 	background-color: #353740;
 	padding: 30px;
+	color: #fff;
 }
 
 .footer a {
 	color: #fff;
 	font-size: 50px;
 	margin: 0px 10px;
+}
+
+.footer-logo {
+	height: 100px;
 }
 
 
