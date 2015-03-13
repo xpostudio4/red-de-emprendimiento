@@ -138,9 +138,7 @@ def picture_update(request):
             organization = Organization.objects.get(id=request.user.organization.id)
             organization.logo = picture
             organization.save()
-            return HttpResponseRedirect('/dashboard/')
-    else:
-        return HttpResponseForbidden()
+    return HttpResponseRedirect('/dashboard/')
 
 
 def profile(request, slug):
