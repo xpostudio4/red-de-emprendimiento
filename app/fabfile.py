@@ -13,6 +13,7 @@ from fabric.contrib.files import append
 env.use_ssh_config = True
 env.user = "root"
 env.hosts = ["104.236.29.231"]
+env.hosts = ["45.55.175.61"]
 env.key_filename = "/Users/leonardojimenez/.ssh/id_rsa"
 env.password = "Jesusvictor1"
 
@@ -56,10 +57,10 @@ def create_repository():
 GIT_WORK_TREE=/home/django/app/ git checkout -f master
 GIT_WORK_TREE=/home/django/app git reset --hard
 """
-    run("mkdir /home/django/app")
-    run("mkdir app_repo.git")
-    with cd("app_repo.git"):
-        run("git init --bare")
+    #run("mkdir /home/django/app")
+    #run("mkdir app_repo.git")
+    #with cd("app_repo.git"):
+    #    run("git init --bare")
     with cd("~/app_repo.git/hooks"):
         run("touch post-receive")
         run("chmod +x post-receive")
@@ -97,22 +98,25 @@ def config_nginx():
     with cd("/etc/nginx/sites-enabled/"):
         run("cp django django-copy")
         run("sed -i '19s/.*/        alias ~\/home\/django\/app\/media;/' django")
-
         run("sed -i '24s/.*/        alias ~\/home\/django\/app\/static;/' django")
+        run("service restart nginx")
+
 def config_gunicorn():
     """
     This function configure gunicorn for using our app, also makes a copy of the file
     to avoid spoiling it.
 
     The path for the logs are vim /var/log/nginx/error.log (nginx) and
-    """
     vim /var/log/upstart/gunicorn.log (gunicorn)
+    """
+
     with cd("/etc/init/"):
         run("cp gunicorn.conf gunicorn.conf-copy")
         run("sed -i '11s/.*/chdir \/home\/django\/app/' gunicorn.conf")
         run("sed -i '14s/.*/    --name=app \\\\ /' gunicorn.conf")
         run("sed -i '15s/.*/    --pythonpath=app \\\\/ /' gunicorn.conf")
         run("sed -i '18s/.*/    app.wsgi:application/' gunicorn.conf")
+        run("service gunicorn restart")
 
 def install_supervisor():
     run("apt-get install supervisor")

@@ -29,9 +29,11 @@
               <li role="presentation">
                 <a href="#change-password" aria-controls="change-password" role="tab" data-toggle="tab">Cambiar Contrase&ntilde;a</a>
               </li>
+              {% if request.user.is_admin %}
               <li role="presentation">
                 <a href="#approval" aria-controls="approval" role="tab" data-toggle="tab">Nuevas Organizaciones</a>
               </li>
+              {% endif %}
             </ul>
 
           <div class="tab-content">
@@ -315,6 +317,7 @@
                   </div><!-- /row -->
                 </div><!-- /change-profile -->
             </div><!-- /tab-panel -->
+            {% if user.is_admin %}
             <div role="tabpanel" class="tab-pane" id="approval">
 
               {% for new_org in new_orgs %}
@@ -417,7 +420,7 @@
               </div>
               {% endfor %}
             </div><!-- /tab-panel -->
-
+            {% endif %}
             <div role="tabpanel" class="tab-pane" id="change-password">
               <div class="row">
                 <div class="col-sm-12">
