@@ -8,8 +8,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-4 col-sm-offset-4 user-register-form">
-    <h2>Registro de Instituci&oacute;n</h2>
+    <div class="col-sm-6 col-sm-offset-3 user-register-form">
+    <h2 class="text-center">Registro de la Instituci&oacute;n</h2>
       <form action="." method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
@@ -37,19 +37,19 @@
           {{ organization_form.name }}
         </div>
         <div class="form-group">
-          <h4>Description</h4>
+          <h4>Descripción</h4>
           {{ organization_form.description }}
         </div>
         <div class="form-group">
-          <h4>Telefono</h4>
+          <h4>Teléfono</h4>
           {{ organization_form.phone }}
         </div>
         <div class="form-group">
-          <h4>Pagina Web</h4>
+          <h4>Página Web</h4>
           {{ organization_form.url }}
         </div>
         <div class="form-group">
-          <h4>Direccion</h4>
+          <h4>Dirección</h4>
           {{ organization_form.address }}
         </div>
         <div class="form-group">
