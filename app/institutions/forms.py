@@ -60,6 +60,15 @@ class CustomUserCreationForm(forms.ModelForm):
         return user
 
 
+class DashboardUserCreationForm(forms.ModelForm):
+    """
+    This form is used to create a user from the dashboard.
+    """
+    class Meta:
+        model = UserProfile
+        fields = ('email', 'full_name')
+
+
 class UserProfileChangeForm(forms.ModelForm):
     """A form for updating users. Includes all the fields on
     the user, but replaces the password field with admin's
