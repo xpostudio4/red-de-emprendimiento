@@ -13,7 +13,7 @@ from fabric.contrib.files import append
 env.use_ssh_config = True
 env.user = "root"
 env.hosts = ["104.236.29.231"]
-env.hosts = ["45.55.175.61"]
+#env.hosts = ["45.55.175.61"]
 env.key_filename = "/Users/leonardojimenez/.ssh/id_rsa"
 env.password = "Jesusvictor1"
 

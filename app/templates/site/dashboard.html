@@ -149,7 +149,7 @@
                           <td>
                             {% for category in event.categories.all %}
                             <span class="category-tag">
-                              {{ category.name }}
+                              <a href="/calendar/{{ category.name }}">{{ category.name }}</a>
                             </span>
                             {% endfor %}
                           </td>
@@ -389,9 +389,9 @@
                         </div>
                         <div class="col-sm-4">
                           {% for category in new_org.categories.all %}
-                            <span class="category-tag">
-                                {{ category.name }}                              
-                            </span>
+                            <p class="category-p">
+                               <a href="/category/{{ category.name }}/" class="category-tag">{{ category.name }}</a>                            
+                            </p>
                           {% endfor %}
                         </div>
                       </div>

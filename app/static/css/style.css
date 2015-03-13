@@ -409,13 +409,17 @@ body {
 	padding: 5px 10px;
 	border-radius: 3px;
 	margin: 0px 5px;
-	margin-bottom: 10px;
 }
 
 
 .category-tag a {
 	color: #fff;
 	text-decoration: none;
+}
+
+.category-p {
+	margin-bottom: 15px;
+	float: left;
 }
 
 
@@ -426,6 +430,7 @@ body {
 .new-org {
 	border: 1px solid #ddd;
 	padding: 15px;
+	margin: 10px 0px;
 }
 
 .new-org img {
