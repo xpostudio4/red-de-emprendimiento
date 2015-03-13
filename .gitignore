@@ -53,3 +53,6 @@ staticfiles/
 
 #Mac file types
 .DS_Store
+
+#vim functions related folders
+tags
