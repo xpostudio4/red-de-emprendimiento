@@ -93,8 +93,8 @@ def signup(request):
     if request.method == 'POST':
         if user_form.is_valid() and organization_form.is_valid():
             organization = organization_form.save()
-            user.organization = organization
             user = user_form.save(commit=False)
+            user.organization = organization
             user.save()
 
             return HttpResponseRedirect('/')
