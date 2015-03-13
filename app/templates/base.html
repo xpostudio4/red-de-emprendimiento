@@ -92,7 +92,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancelar</button>
-        <button type="button" id="login-btn" class="btn btn-success">Iniciar Sesi&oacute;n</button>
+        <button type="button" id="signin-btn" class="btn btn-success">Iniciar Sesi&oacute;n</button>
       </div>
       </form>
     </div>
@@ -123,45 +123,18 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="{{ STATIC_URL }}/js/script.js"></script>
-  {% if user.is_anonymous %}
-    <script>
-     var login = $('login-btn');
-
-     login.click(
-      function(event){
-       event.preventDefault();
-         $.ajax({
-           url: '/signin/',
-           data: $('login-form').serialize(),
-           type: 'POST',
-           success:
-             function(result){
-             if(is_loggedin == true){
-              alert('user has been logged in');
-             }else{
-             alert('there was an error, please verify');
-             }
-           },
-           error:
-             function(){
-              alert('some server error');
-           },
-         }); 
-     });
-    </script>
-  {% endif %}
 	{% block extra_js %}
 
-	<script type="text/javascript">
-		var link = $("#signin-btn");
+	<script>
+		var signin = $("#signin-btn");
  
-		link.click(
+		signin.click(
 		    function(event){
 		        //eliminate the default function
 		        event.preventDefault();
 		        $.ajax({
 		            url: '/signin/',
-		            data:  $('#signin-form').serialize(), 
+		            data:  $('#signin-form').serialize(),
 		            type: "POST",
 		            success: 
 		                function(result){
