@@ -94,6 +94,7 @@ def signup(request):
         if user_form.is_valid() and organization_form.is_valid():
             organization = organization_form.save()
             user = user_form.save(commit=False)
+            user.is_admin = False
             user.organization = organization
             user.save()
 
