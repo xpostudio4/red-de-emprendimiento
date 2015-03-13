@@ -67,7 +67,7 @@ class Organization(models.Model):
                             verbose_name="Nombre de la Institucion"
                            )
     slug = models.SlugField(default='', editable=False, unique=True)
-    url = models.URLField(max_length=40,
+    url = models.URLField(max_length=255,
                           verbose_name="Pagina Web",
                           null=True,
                           blank=True
