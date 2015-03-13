@@ -2,13 +2,6 @@
 
 $(document).ready(function() {
 
-	$(function() {
-		if ($('#cover').length > 0) {
-			$('#navbar').addClass('hidden-md hidden-lg');
-		}
-	});
-	
-
 	$( "#cover" ).each(function(){
         var $this = $(this);
         $this.css({'min-height':($(window).height())+'px'});
