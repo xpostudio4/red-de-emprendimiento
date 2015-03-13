@@ -34,7 +34,7 @@ def create_event(request):
         event.organization = request.user.organization
         event.save()
         form.save_m2m()
-        return HttpResponseRedirect('/dashboard/')
+    return HttpResponseRedirect('/dashboard/')
 
 @require_POST
 @login_required

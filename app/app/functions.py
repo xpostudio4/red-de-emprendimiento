@@ -28,5 +28,6 @@ def paginated_list(request, object_class, list_length, order=None, *args, **kwar
     except EmptyPage:
         #if page is out range (e.g. 9999), deliver last page of results.
         objects = paginator.page(paginator.num_pages)
-
     return objects
+
+
