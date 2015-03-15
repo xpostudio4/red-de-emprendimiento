@@ -68,6 +68,14 @@ class DashboardUserCreationForm(forms.ModelForm):
         model = UserProfile
         fields = ('email', 'full_name')
 
+    def __init__(self, *args, **kwargs):
+        super(DashboardUserCreationForm, self).__init__(*args, **kwargs)
+        #change the html class of all the elements of the form to get
+        #bootstrap 3 styling
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class':'form-control'})
+
+
 
 class UserProfileChangeForm(forms.ModelForm):
     """A form for updating users. Includes all the fields on

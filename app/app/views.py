@@ -2,13 +2,16 @@ import datetime
 import json
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import SetPasswordForm
+from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.utils.dateformat import DateFormat
 from django.utils.formats import get_format
 from django.views.decorators.http import require_POST
 from institutions.models import Event, Organization, UserProfile
-from institutions.forms import OrganizationForm, EventForm, UserProfileChangeForm, OrganizationPictureForm
+from institutions.forms import (DashboardUserCreationForm, OrganizationForm,
+                                EventForm, OrganizationPictureForm,
+                                UserProfileChangeForm)
 from .functions import paginated_list
 
 
@@ -40,16 +43,18 @@ def dashboard(request):
     """User and organization edit board, here events are created"""
     user_form = UserProfileChangeForm(request.POST or None,
                                       instance=request.user)
-    password_form = SetPasswordForm(user=request.user)
-    user = UserProfile.objects.get(id=request.user.id)
-    organization = Organization.objects.get(id=request.user.organization.id)
-    events = Event.objects.filter(organization=user.organization).order_by('-from_date')
     event_form = EventForm()
+    events = Event.objects.filter(organization=request.user.organization).order_by('-from_date')
+    new_orgs = Organization.objects.filter(is_active=False)
+    new_user_form = DashboardUserCreationForm()
+    organization = Organization.objects.get(id=request.user.organization.id)
     organization_form = OrganizationForm(request.POST or None,
                                          instance=organization)
     organization_picture_form = OrganizationPictureForm(request.POST or None,
                                                         instance=organization)
-    new_orgs = Organization.objects.filter(is_active=False)
+    password_form = SetPasswordForm(user=request.user)
+    org_users = UserProfile.objects.filter(~Q(id=request.user.id),
+                                           organization=request.user.organization)
     #Load the forms with data or the instance of the file if POST
     if request.method == 'POST':
         organization_form = OrganizationForm(request.POST,
@@ -60,14 +65,16 @@ def dashboard(request):
         organization_form = OrganizationForm(instance=request.user.organization)
         user_form = UserProfileChangeForm(instance=request.user)
     return render(request, 'site/dashboard.html',
-                  {'new_orgs': new_orgs,
+                  {'events': events,
+                   'event_form': event_form,
+                   'new_orgs': new_orgs,
+                   'new_user_form': new_user_form,
                    'organization': organization,
                    'organization_form': organization_form,
                    'organization_picture_form': organization_picture_form,
-                   'event_form': event_form,
-                   'user_form': user_form,
-                   'events': events,
+                   'org_users': org_users,
                    'password_form': password_form,
+                   'user_form': user_form,
                   }
                  )
 

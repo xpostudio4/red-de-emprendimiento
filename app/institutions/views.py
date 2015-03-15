@@ -6,8 +6,10 @@ from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_POST
 from .models import Event, Organization
-from .forms import (UserProfileLoginForm, CustomUserCreationForm,
-                    OrganizationForm, EventForm)
+from .forms import (CustomUserCreationForm,
+                    DashboardUserCreationForm,
+                    EventForm, OrganizationForm,
+                    UserProfileLoginForm)
 
 @require_POST
 @login_required
@@ -35,6 +37,23 @@ def create_event(request):
         event.save()
         form.save_m2m()
     return HttpResponseRedirect('/dashboard/')
+
+
+@require_POST
+@login_required
+def dashboard_usercreation(request):
+    """
+    This view helps to create a new user of the
+    person belonging to the organization.
+    """
+    user_form = DashboardUserCreationForm(request.POST or None)
+    if user_form.is_valid():
+        new_user = user_form.save(commit=False)
+        new_user.organization = request.user.organization
+        new_user.save()
+    return HttpResponseRedirect('/dashboard/')
+        
+
 
 @require_POST
 @login_required
