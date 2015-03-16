@@ -50,15 +50,24 @@ EMAIL_USE_TLS = True
 SERVER_EMAIL = EMAIL_HOST_USER
 ########## END EMAIL CONFIGURATION
 
+########## DEBUG CONFIGURATION
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#debug
+DEBUG = False
+
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
+TEMPLATE_DEBUG = DEBUG
+########## END DEBUG CONFIGURATION
+
+
 ########## DATABASE CONFIGURATION
 DATABASES = {
        'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django',
-        'USER': 'django',
-        'PASSWORD': 'EkPvXR1oUs',
-        'HOST': ''
-    }
+           'ENGINE': 'django.db.backends.sqlite3',
+           'NAME': normpath(join(DJANGO_ROOT, 'default.db')),
+           'USER': '',
+           'PASSWORD': '',
+           'HOST': ''
+        }
         }
 ########## END DATABASE CONFIGURATION
 
@@ -66,10 +75,10 @@ DATABASES = {
 ########## CACHE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#caches
 CACHES = {
-            'default': {
-                        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-                                'LOCATION': '/var/tmp/django_cache',
-                                    }
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/var/tmp/django_cache',
+        }
             }
 ########## END CACHE CONFIGURATION
 
