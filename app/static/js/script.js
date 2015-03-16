@@ -110,44 +110,68 @@ $(document).ready(function() {
    $('#id_new_password1, #id_new_password2').addClass('form-control');
 
 
-
-
-
-
-
+  //password change
    var password_change = $('#password-change');
-                  password_change.click(function(event){
-                    event.preventDefault();
-                    $.ajax({
-                      url: '/accounts/password_change/',
-                      data: $('#password-change-form').serialize(),
-                      type: "POST",
-                      success:
-                        function(result){
-                          //if result.is_changed is true activate message
-                          //telling the user the password has been changed
-                          alert('it happened');
-                        if(result.is_changed){
-                          if(!$('#change_success_message').hasClass('hidden')){
-                              $('#change_success_message').addClass('hidden');
-                          }
-                          $('#change_success_message').removeClass('hidden');
-                        }else{
-                          //else it should display
-                          if(!$('#change_success_message').hasClass('hidden')){
-                            $('#change_success_message').addClass('hidden');
-                          }
-                          $('#change_error_message').html(result.reasons).removeClass('hidden');
-                        }
-                      },
-                      error:
-                        function(){
-                          $('#change_error_message').val('Estamos experimentando problemas con el servidor. Intentelo luego.').show();
-                      }
-                    });
+     password_change.click(function(event){
+       event.preventDefault();
+         $.ajax({
+           url: '/accounts/password_change/',
+           data: $('#password-change-form').serialize(),
+           type: "POST",
+           success:
+           function(result){
+             //if result.is_changed is true activate message
+             //telling the user the password has been changed
+             if(result.is_changed){
+               if(!$('#change_success_message').hasClass('hidden')){
+                 $('#change_success_message').addClass('hidden');
+                 }
+                 $('#change_success_message').removeClass('hidden');
+               }else{
+                 //else it should display
+                 if(!$('#change_success_message').hasClass('hidden')){
+                   $('#change_success_message').addClass('hidden');
+                   }
+                   $('#change_error_message').html(result.reasons).removeClass('hidden');
+                 }
+               },
+           error:
+           function(){
+             $('#change_error_message').val('Estamos experimentando problemas con el servidor. Intentelo luego.').show();
+             }
+             });
                   });
 
+    var users = $('.user');
 
+    users.click(function(event){
+      event.preventDefault();
+      
+      var user_deletion = confirm("Estas seguro que deseas borrar este evento?");
 
+      var id = this.dataset.id;
+      if( user_deletion==true){
+      $.ajax({
+        url: '/accounts/dashboard_userdeletion/'+ id + '/',
+        type: "POST",
+        data: {csrfmiddlewaretoken: csrf_token},
+        success:
+          function(result){
+            if( result.is_deleted == true){
+              var user = document.querySelector('#user-' + id);
+              user.parentNode.removeChild(user);
+            }else{
+            alert('El usuario no pudo ser eliminado, trate mas tarde');
+            }
+          },
+        error:
+          function(){
+            console.log('error');
+          }
+      });
+      }else{
+      return false;
+      }
+    });
 
 });

@@ -221,13 +221,13 @@
                       <th>Nombre Completo</th>
                       <th>Email</th>
                     </tr>
-                    <tr>
                     {% for user in org_users %}
-                    <td><button type="button" id="user-{{ user.id }}" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
+                    <tr id="user-{{ user.id }}">
+                    <td><button type="button" data-id="{{ user.id }}" class="close user" aria-label="Close"><span aria-hidden="true">&times;</span></button></td>
                       <td>{{ user.full_name }}</td>
                       <td>{{ user.email }}</td>
-                    {% endfor %}
                     </tr>
+                    {% endfor %}
                   </table>
                 {% endif %}
                 </div>
@@ -527,8 +527,7 @@ var new_orgs = $('.new-organization');
 
       $.ajax({
         url: '/accounts/approve/'+ organization_id + '/',
-        type: 'POST',
-        data: {csrfmiddlewaretoken:'{{csrf_token}}' },
+        type: 'GET',
         success:
           function(result){
           if( result.is_approved == true){
@@ -547,5 +546,6 @@ var new_orgs = $('.new-organization');
       });
 
     });
+    var csrf_token = "{{ csrf_token }}";
 </script>
 {% endblock extra_js %}

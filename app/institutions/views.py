@@ -5,7 +5,7 @@ from django.contrib.auth.forms import SetPasswordForm
 from django.http import JsonResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_POST
-from .models import Event, Organization
+from .models import Event, Organization, UserProfile
 from .forms import (CustomUserCreationForm,
                     DashboardUserCreationForm,
                     EventForm, OrganizationForm,
@@ -52,7 +52,20 @@ def dashboard_usercreation(request):
         new_user.organization = request.user.organization
         new_user.save()
     return HttpResponseRedirect('/dashboard/')
-        
+
+@require_POST
+@login_required
+def dashboard_userdeletion(request, user_id):
+    """
+    This view helps to delete the users asociated with an
+    organization after validating the user creating the view is
+    not himself or does belong to the organization
+    """
+    user_to_delete = UserProfile.objects.get(pk=user_id)
+    if user_to_delete.organization == request.user.organization:
+        user_to_delete.delete()
+        return JsonResponse({'is_deleted': True})
+    return JsonResponse({'is_deleted': False})
 
 
 @require_POST

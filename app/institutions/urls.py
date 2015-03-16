@@ -11,7 +11,10 @@ urlpatterns = patterns('',
         url(r'^picture/$', 'app.views.picture_update'),
         url(r'^signin/$', 'institutions.views.signin'),
         url(r'^signup/$', 'institutions.views.signup', name='signup'),
-        url(r'^dashboard_usercreation/$', 'institutions.views.dashboard_usercreation'),
+        url(r'^dashboard_usercreation/$',
+            'institutions.views.dashboard_usercreation'),
+        url(r'^dashboard_userdeletion/(?P<user_id>\d+)/$',
+            'institutions.views.dashboard_userdeletion'),
         )
 
 
