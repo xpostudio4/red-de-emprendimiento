@@ -1,20 +1,20 @@
 import datetime
 #Stdlib Imports
 
-from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
+from django.db import models
 from django.templatetags.static import static
 #from templated_email import send_templated_mail
 from .functions import unique_slugify
 
 
 provinces = ['Distrito Nacional', 'Altagracia', 'Azua', 'Bahoruco', 'Barahona',
-    'Dajabon', 'Duarte', 'El Seybo', 'Elias Pi\xc3\xb1a', 'Espaillat', 'Hato Mayor',
-    'Independencia', 'La Romana', 'La Vega', 'Maria Trinidad Sanchez',
-    'Monse\xc3\xb1or Nouel', 'Montecristi', 'Monte Plata', 'Pedernales', 'Peravia',
-    'Puerto Plata', 'Hermanas Mirabal', 'Samana', 'San Cristobal', 'San Juan',
-    'San Pedro de Macoris', 'Sanchez Ramirez', 'Santiago de los Caballeros',
-    'Santiago Rodriguez', 'Valverde', 'San Jose de Ocoa', 'Santo Domingo']
+             'Dajabon', 'Duarte', 'El Seybo', 'Elias Pi\xc3\xb1a', 'Espaillat', 'Hato Mayor',
+             'Independencia', 'La Romana', 'La Vega', 'Maria Trinidad Sanchez',
+             'Monse\xc3\xb1or Nouel', 'Montecristi', 'Monte Plata', 'Pedernales', 'Peravia',
+             'Puerto Plata', 'Hermanas Mirabal', 'Samana', 'San Cristobal', 'San Juan',
+             'San Pedro de Macoris', 'Sanchez Ramirez', 'Santiago de los Caballeros',
+             'Santiago Rodriguez', 'Valverde', 'San Jose de Ocoa', 'Santo Domingo']
 
 PROVINCES = tuple([(province, province) for province in provinces])
 

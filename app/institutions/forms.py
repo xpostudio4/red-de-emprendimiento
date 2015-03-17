@@ -16,14 +16,14 @@ class CustomUserCreationForm(forms.ModelForm):
     fields, plus a repeated password."""
 
     password1 = forms.CharField(label='Password',
-         widget=forms.PasswordInput(attrs={'placeholder':'Contraseña'}))
+                                widget=forms.PasswordInput(attrs={'placeholder':'Contraseña'}))
     password2 = forms.CharField(label='Password confirmation',
-        widget=forms.PasswordInput(attrs={'placeholder':'Confirmar Contraseña'}))
+                                widget=forms.PasswordInput(attrs={'placeholder':'Confirmar Contraseña'}))
     username = forms.CharField(required=False, max_length=30)
     full_name = forms.CharField(max_length=30,
-        widget=forms.TextInput(attrs={"placeholder":'Nombre Completo'}))
+                                widget=forms.TextInput(attrs={"placeholder":'Nombre Completo'}))
     email = forms.CharField(max_length=30,
-        widget=forms.TextInput(attrs={"placeholder":'Email'}))
+                            widget=forms.TextInput(attrs={"placeholder":'Email'}))
 
     class Meta:
         model = UserProfile
@@ -40,7 +40,7 @@ class CustomUserCreationForm(forms.ModelForm):
         password1 = self.cleaned_data.get("password1")
         password2 = self.cleaned_data.get("password2")
         if password1 and password2 and password1 != password2:
-                        raise forms.ValidationError("Passwords don't match")
+            raise forms.ValidationError("Passwords don't match")
         return password2
 
     def __init__(self, *args, **kwargs):
@@ -91,7 +91,8 @@ class UserProfileChangeForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(UserProfileChangeForm, self).__init__(*args, **kwargs)
-        #change the html class of all the elements of the form to get bootstrap 3 styling
+        #change the html class of all the elements of
+        #the form to get bootstrap 3 styling
         for field in self.fields:
             self.fields[field].widget.attrs.update({'class':'form-control'})
 
@@ -100,9 +101,9 @@ class  UserProfileLoginForm(AuthenticationForm):
     """A Form for user login."""
     form_fields = ["username", "password"]
     username = forms.CharField(max_length=254, label="Correo Electronico",
-        widget=forms.TextInput(attrs={"placeholder":'Usuario'}))
+                               widget=forms.TextInput(attrs={"placeholder":'Usuario'}))
     password = forms.CharField(label='Password',
-        widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña'}))
+                               widget=forms.PasswordInput(attrs={'placeholder': 'Contraseña'}))
 
     def __init__(self, *args, **kwargs):
         super(UserProfileLoginForm, self).__init__(*args, **kwargs)
@@ -112,11 +113,15 @@ class  UserProfileLoginForm(AuthenticationForm):
 
 
 class OrganizationForm(forms.ModelForm):
+    """Form used when creating a new organization"""
 
-    description = forms.CharField(label="Descripción", required=False,
-                                  widget=forms.Textarea(attrs={'rows':'2'})
-                                 )
     categories = forms.ModelMultipleChoiceField(queryset=Category.objects.all())
+    description = forms.CharField(label="Descripción", required=False,
+                                  widget=forms.Textarea(attrs={'rows':'2'}))
+    url = forms.URLField(max_length=255,
+                         help_text='Por favor introduzca la URL de la pagina',
+                         initial='http://',
+                         widget=forms.TextInput)
 
     class Meta:
         """declaration of the inherited class"""
