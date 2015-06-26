@@ -7,3 +7,4 @@ South==0.8.2
 Pillow==2.7.0
 coverage
 selenium==2.44.0
+django-password-reset==0.7

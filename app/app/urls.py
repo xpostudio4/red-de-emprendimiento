@@ -23,6 +23,8 @@ urlpatterns = patterns('',
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^user_validation/$', 'app.views.user_validation'),
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    # password recovery urls
+    url(r'^recover/',include('password_reset.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
