@@ -120,8 +120,7 @@ class OrganizationForm(forms.ModelForm):
                                   widget=forms.Textarea(attrs={'rows':'2'}))
     url = forms.URLField(max_length=255,
                          help_text='Por favor introduzca la URL de la pagina',
-                         initial='http://',
-                         widget=forms.TextInput)
+                         widget=forms.TextInput(attrs={'placeholder': 'http://www.website.com'}))
 
     class Meta:
         """declaration of the inherited class"""

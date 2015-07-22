@@ -11,7 +11,6 @@ from .forms import (CustomUserCreationForm,
                     EventForm, OrganizationForm,
                     UserProfileLoginForm)
 
-@require_POST
 @login_required
 def approve_organization(request, organization_id):
     """This function responde to an ajax request asking to approve an
