@@ -11,34 +11,8 @@
     <div class="col-sm-6 col-sm-offset-3 user-register-form">
     <h2 class="text-center">Registro de la Instituci&oacute;n</h2>
       <form action="." method="POST" enctype="multipart/form-data">
-        {% if user_form.errors %}
-          {% for field in user_form %}
-            {% for error in field.errors %}
-              <div class="alert alert-error">
-                <strong>{{ error|escape }}</strong>
-              </div>
-            {% endfor %}
-          {% endfor %}
-          {% for error in user_form.non_field_errors %}
-            <div class="alert alert-error">
-              <strong>{{ error|escape }}</strong>
-            </div>
-          {% endfor %}
-        {% endif %}
-        {% if organization_form.errors %}
-          {% for field in organization_form %}
-            {% for error in field.errors %}
-              <div class="alert alert-error">
-                <strong>{{ error|escape }}</strong>
-              </div>
-            {% endfor %}
-          {% endfor %}
-          {% for error in organization_form.non_field_errors %}
-            <div class="alert alert-error">
-              <strong>{{ error|escape }}</strong>
-            </div>
-          {% endfor %}
-        {% endif %}
+        {{ user_form.errors }}
+        {{ organization_form.errors }}
         {% csrf_token %}
         <div class="form-group">
           <h4>*Nombre de Contacto</h4>
