@@ -155,7 +155,7 @@ def picture_update(request):
 def profile(request, slug):
     """"Organization profile is displayed here"""
     organization = get_object_or_404(Organization, slug=slug, is_active=True)
-    profile = UserProfile.objects.get(organization=organization)
+    profile = UserProfile.objects.filter(organization=organization)[0]
     events = Event.objects.filter(organization=organization).order_by('-from_date')
     return render(request, 'site/profile.html', {'organization': organization,
                                                  'profile': profile,
