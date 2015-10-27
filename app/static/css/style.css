@@ -491,6 +491,10 @@ body {
 	margin-bottom: 30px;
 }
 
+.calendar h4 {
+	color: #000;
+}
+
 .calendar .btn-primary {
 	margin-top: 20px;
 }
