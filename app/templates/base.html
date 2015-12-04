@@ -71,7 +71,7 @@
 {% endblock nav %}
 
 <div class="wrapper">
-  
+
 
 
 	{% block content %}
@@ -123,7 +123,7 @@
           <p>La Red Nacional de Emprendimiento es una organización que busca potenciar una cultura de emprendimiento e innovación como forma de pensar y actuar en la vida, asegurando la competitividad, liderazgo, formación y sostenibilidad de las nuevas empresas que se crean en el país.</p>
           <a href="/signup/" class="btn btn-primary">Registro de Instituciones</a>
         </div>
-        
+
       </div>
       <div class="col-sm-4">
         <!-- Begin MailChimp Signup Form -->
@@ -185,7 +185,7 @@
 
 	<script>
 		var signin = $("#signin-btn");
- 
+
 		signin.click(
 		    function(event){
 		        //eliminate the default function
@@ -194,7 +194,7 @@
 		            url: '/signin/',
 		            data:  $('#signin-form').serialize(),
 		            type: "POST",
-		            success: 
+		            success:
 		                function(result){
 		                	 if (result.is_loggedin){
 				                  window.location = "/";
@@ -202,7 +202,7 @@
 				                $('#signin_error_message').html(result.reason).removeClass('hidden');
 				              }
 		                },
-		            error: 
+		            error:
 		                function(){
 		                    alert("Estamos experimentando problemas, intente más tarde.");
 		                }
@@ -213,4 +213,3 @@
 
 </body>
 </html>
-

@@ -134,18 +134,18 @@ body {
 
 .login-link {
 	color: #777;
-	padding: 10px 10px; 
+	padding: 10px 10px;
 }
 
-.navbar-default .navbar-nav > .open > a, 
-.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
 	background-color: #d12033;
 	color: #fff;
 }
 
 .navbar-default .navbar-nav > li:hover {
-	color: #fff !important;  
+	color: #fff !important;
 }
 
 /*******************************
@@ -202,7 +202,7 @@ body {
 *******************************/
 
 .categories {
-	
+
 	color: #333;
 	font-size: 16px;
 }
@@ -289,11 +289,11 @@ body {
 	color: #d12033;
 }
 
-.profile-box .table > thead > tr > th, 
-.profile-box .table > tbody > tr > th, 
-.profile-box .table > tfoot > tr > th, 
-.profile-box .table > thead > tr > td, 
-.profile-box .table > tbody > tr > td, 
+.profile-box .table > thead > tr > th,
+.profile-box .table > tbody > tr > th,
+.profile-box .table > tfoot > tr > th,
+.profile-box .table > thead > tr > td,
+.profile-box .table > tbody > tr > td,
 .profile-box .table > tfoot > tr > td {
 	border: 0px;
 }
@@ -315,15 +315,15 @@ body {
 *******************************/
 
 
-.dashboard-tabs .nav-tabs>li>a, 
-.dashboard-tabs .nav-tabs>li>a:hover, 
+.dashboard-tabs .nav-tabs>li>a,
+.dashboard-tabs .nav-tabs>li>a:hover,
 .dashboard-tabs .nav-tabs>li>a:focus {
 	border: 1px solid #ddd;
- 
+
 }
- 
-.dashboard-tabs .nav-tabs>li.active>a, 
-.dashboard-tabs .nav-tabs>li.active>a:hover, 
+
+.dashboard-tabs .nav-tabs>li.active>a,
+.dashboard-tabs .nav-tabs>li.active>a:hover,
 .dashboard-tabs .nav-tabs>li.active>a:focus {
 	border-bottom-color: transparent;
 }
@@ -348,27 +348,27 @@ body {
 	margin-bottom: 20px;
 	position: relative;
 	height: 150px;
-	overflow: hidden; 
+	overflow: hidden;
 }
- 
+
 @media (max-width: 992px) {
 	#id_user_pic {
 		width: 120px;
 		height: auto;
-		overflow: visible; 
+		overflow: visible;
 	}
 }
- 
+
 #id_user_pic img {
 	height: 100%;
 }
- 
+
 #id_user_pic #camera {
 	position: absolute;
     left: 10%;
     top: 110px;
 }
- 
+
 #id_user_pic i {
 	font-size: 20px;
 	color: #B7B7B7;
@@ -424,7 +424,7 @@ body {
 }
 
 .category-tag {
-	background-color: #888; 
+	background-color: #888;
 	color: #fff;
 	padding: 5px 10px;
 	border-radius: 3px;
@@ -495,6 +495,10 @@ body {
 	color: #000;
 }
 
+.calendar .nav-tabs > li > a {
+	color: #d12033;
+}
+
 .calendar .btn-primary {
 	margin-top: 20px;
 }
@@ -506,6 +510,7 @@ body {
 .event-box {
 	padding: 0px 10px;
 	margin-bottom: 15px;
+	margin-top: 20px;
 }
 
 .event-day-box {
@@ -592,5 +597,3 @@ body {
 .credits p {
 	margin: 0px;
 }
-
-
