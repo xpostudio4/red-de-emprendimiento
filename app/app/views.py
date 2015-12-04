@@ -24,10 +24,10 @@ def calendar(request):
                             from_date__gte=datetime.date.today,
                             organization__is_active=True)
     
-    past_events = paginated_list(request, Event, 20, 'from_date',
+    past = paginated_list(request, Event, 20, 'from_date',
                             from_date__lt=datetime.date.today,
                             organization__is_active=True)
-    return render(request, 'site/calendar.html', {'events': events, 'past_events': past_events})
+    return render(request, 'site/calendar.html', {'events': events, 'past': past})
 
 
 def category(request, category_name):

@@ -93,7 +93,7 @@
 
             </div>
             <div role="tabpanel" class="tab-pane" id="past-events">
-            {% for event in past_events %}
+            {% for event in past %}
 
                 <div class="event-box">
                 <div class="row">
@@ -126,23 +126,23 @@
 
           {% endfor %}
 
-            {% if past_events %}
+            {% if past %}
             <nav class="text-center">
                 <ul class="pagination">
-                    {% if past_events.has_previous %}
+                    {% if past.has_previous %}
                     <li>
-                        <a href="?page={{ past_events.previous_page_number }}">
+                        <a href="?page={{ past.previous_page_number }}">
                             <span aria-hidden="true">&laquo;</span>
                             <span class="sr-only">Previous</span>
                         </a>
                     </li>
                     {% endif %}
 
-                    <li><a href="#"><span class="current">{{ events.number }}</span></a></li>
+                    <li><a href="#"><span class="current">{{ past.number }}</span></a></li>
 
-                    {% if past_events.has_next %}
+                    {% if past.has_next %}
                     <li>
-                        <a href="?page={{ past_events.next_page_number }}">
+                        <a href="?page={{ past.next_page_number }}">
                             <span aria-hidden="true">&raquo;</span>
                             <span class="sr-only">Next</span>
                         </a>
