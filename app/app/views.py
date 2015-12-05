@@ -90,8 +90,11 @@ def events_view(request, category_name):
     events = paginated_list(request, Event, 20, 'from_date',
                             from_date__gte=datetime.date.today,
                             categories__name=category_name)
+    past = paginated_list(request, Event, 20, 'from_date',
+                            from_date__lt=datetime.date.today,
+                            organization__is_active=True)
     return render(request, 'site/list.html',
-                  {'events' : events})
+            {'events' : events, 'past': past})
 
 
 @login_required
@@ -160,10 +163,12 @@ def profile(request, slug):
     """"Organization profile is displayed here"""
     organization = get_object_or_404(Organization, slug=slug, is_active=True)
     profile = UserProfile.objects.filter(organization=organization)[0]
-    events = Event.objects.filter(organization=organization).order_by('-from_date')
+    events = Event.objects.filter(organization=organization, from_date__gte=datetime.date.today).order_by('-from_date')
+    past = Event.objects.filter(organization=organization, from_date__lt=datetime.date.today).order_by('-from_date')
     return render(request, 'site/profile.html', {'organization': organization,
                                                  'profile': profile,
-                                                 'events':events})
+                                                 'events':events,
+                                                 'past': past})
 
 
 

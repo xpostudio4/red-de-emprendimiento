@@ -56,38 +56,85 @@
             <a href="/dashboard/" class="btn btn-primary btn-event">Crear evento</a>
          {% endif %}
       </div>
-        <div class="col-sm-12">
-           {% if events %}
-              <table class="table">
-                <tr>
-                  <th>Título</th>
-                  <th>Categorías</th>
-                  <th>Inicia</th>
-                  <th>Termina</th>
-                  <th>Costo</th>
-                  <th>Descripción</th>
-                </tr>
 
-                {% for event in events %}
-                <tr>
-                  <td>{{ event.name }}</td>
-                  <td>
-                    {% for category in event.categories.all %}
-                      {{ category.name }}
+        <div class="col-sm-12">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#upcoming-events" aria-controls="upcoming-events" role="tab" data-toggle="tab">Próximos Eventos</a></li>
+            <li role="presentation"><a href="#past-events" aria-controls="past-events" role="tab" data-toggle="tab">Eventos Pasados</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="upcoming-events">
+              {% if events %}
+                  <table class="table">
+                    <tr>
+                      <th>Título</th>
+                      <th>Categorías</th>
+                      <th>Inicia</th>
+                      <th>Termina</th>
+                      <th>Costo</th>
+                      <th>Descripción</th>
+                    </tr>
+
+                    {% for event in events %}
+                    <tr>
+                      <td>{{ event.name }}</td>
+                      <td>
+                        {% for category in event.categories.all %}
+                          {{ category.name }}
+                        {% endfor %}
+                      </td>
+                      <td>{{ event.from_date }}</td>
+                      <td>{{ event.to_date }}</td>
+                      <td>{{ event.cost }}</td>
+                      <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
+                    </tr>
+                    <tr class="description-row">
+                      <td colspan="5">{{ event.description }}</td>
+                    </tr>
                     {% endfor %}
-                  </td>
-                  <td>{{ event.from_date }}</td>
-                  <td>{{ event.to_date }}</td>
-                  <td>{{ event.cost }}</td>
-                  <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
-                </tr>
-                <tr class="description-row">
-                  <td colspan="5">{{ event.description }}</td>
-                </tr>
-                {% endfor %}
-              </table>
-          {% endif %}
-        </div>
+                  </table>
+              {% endif %}
+            </div><!-- /Tabpanel events -->
+
+
+            <div role="tabpanel" class="tab-pane" id="past-events">
+              {% if past %}
+                  <table class="table">
+                    <tr>
+                      <th>Título</th>
+                      <th>Categorías</th>
+                      <th>Inicia</th>
+                      <th>Termina</th>
+                      <th>Costo</th>
+                      <th>Descripción</th>
+                    </tr>
+
+                    {% for event in past %}
+                    <tr>
+                      <td>{{ event.name }}</td>
+                      <td>
+                        {% for category in event.categories.all %}
+                          {{ category.name }}
+                        {% endfor %}
+                      </td>
+                      <td>{{ event.from_date }}</td>
+                      <td>{{ event.to_date }}</td>
+                      <td>{{ event.cost }}</td>
+                      <td><a class="show-description">{{ event.description|truncatechars:9 }}</a></td>
+                    </tr>
+                    <tr class="description-row">
+                      <td colspan="5">{{ event.description }}</td>
+                    </tr>
+                    {% endfor %}
+                  </table>
+              {% endif %}
+
+
+            </div><!-- /Tabpanel events -->
+            </div><!-- /Tabcontent events -->
+
+       </div>
       </div>
     </div>
   </div><!-- /container -->
